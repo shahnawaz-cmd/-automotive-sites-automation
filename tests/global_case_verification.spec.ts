@@ -2,6 +2,7 @@ import { test } from '@playwright/test';
 import { Actor } from '../actors/Actor';
 import { DecodeVinTask } from '../tasks/DecodeVinTask';
 import { SearchAndVerifyErrorTask } from '../tasks/form_error_messages';
+import { FieldValidation } from '../tasks/vin_field_validation';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -39,6 +40,22 @@ test('TC_02 Verify error message on invalid search', async ({ page }) => {
       selectors.errorSelector,
       selectors.expectedMessage
     ));
+  } finally {
+    await page.close();
+  }
+});
+
+test('TC_03 VIN field validation', async ({ page }, testInfo) => {
+  const actor = new Actor('User', page);
+  // Set conditional timeout: 90s for CI, 60s local
+  const timeout = process.env.CI ? 90000 : 60000;
+  testInfo.setTimeout(timeout);
+
+  try {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    
+    await actor.attemptsTo(new FieldValidation());
   } finally {
     await page.close();
   }
