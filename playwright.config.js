@@ -6,7 +6,10 @@ module.exports = defineConfig({
   retries: 1,
   workers: 1,
   fullyParallel: false,
-  reporter: [['html', { open: 'never' }]],
+  reporter: [
+    ['html', { open: 'never' }],
+    ['json', { outputFile: 'results.json' }]
+  ],
   projects: [
     {
       name: 'AccessAutoHistory',
