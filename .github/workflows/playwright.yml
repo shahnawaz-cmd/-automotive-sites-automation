@@ -20,14 +20,25 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --reporter=json > results.json || true
+
     - name: Send Slack Notification
       if: always()
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
-        STATUS="${{ job.status }}"
-        ICON="${{ job.status == 'success' && '✅' || '🚨' }}"
+        TOTAL_TESTS=$(grep -o '"status":' results.json | wc -l || echo "0")
+        FAILED_TESTS=$(grep -o '"status":"failed"' results.json | wc -l || echo "0")
+        
+        # Determine status and icon
+        if [ "$FAILED_TESTS" -eq 0 ]; then
+          ICON="✅"
+          STATUS="Success"
+        else
+          ICON="🚨"
+          STATUS="Failure"
+        fi
+        
         PAYLOAD=$(cat <<EOF
         {
           "text": "AutoSites Regression Sentinel Notification",
@@ -46,7 +57,8 @@ jobs:
             {
               "type": "section",
               "fields": [
-                { "type": "mrkdwn", "text": "*Total Tests:*\n36" },
+                { "type": "mrkdwn", "text": "*Total Tests:*\n$TOTAL_TESTS" },
+                { "type": "mrkdwn", "text": "*Failures:*\n$FAILED_TESTS" },
                 { "type": "mrkdwn", "text": "*Status:*\n$STATUS" }
               ]
             },
