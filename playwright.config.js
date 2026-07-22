@@ -10,7 +10,7 @@ module.exports = defineConfig({
       name: 'AccessAutoHistory',
       use: {
         baseURL: 'https://vsr.accessautohistory.com/',
-        headless: false,
+        headless: !!process.env.CI,
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
@@ -20,7 +20,7 @@ module.exports = defineConfig({
       name: 'MotorcycleVINLookup',
       use: {
         baseURL: 'https://motorcyclevinlookup.com/',
-        headless: false,
+        headless: !!process.env.CI,
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
