@@ -3,7 +3,8 @@ import { Actor } from '../actors/Actor';
 import { DecodeVinTask } from '../tasks/DecodeVinTask';
 import { SearchAndVerifyErrorTask } from '../tasks/form_error_messages';
 import { FieldValidation } from '../tasks/vin_field_validation';
-import { CouponAndPrevCouponVerification, LowToHighCouponFlow } from '../tasks/coupon_flow_validation';
+import { CouponAndPrevCouponVerification, LowToHighCouponFlow, CouponBannerOnOtherPages } from '../tasks/coupon_flow_validation';
+import { LPcases } from '../tasks/LPdecode';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -77,5 +78,26 @@ test('TC_05 Low to High Coupon swap validation', async ({ page }) => {
     await actor.attemptsTo(new LowToHighCouponFlow());
   } finally {
     await page.close();
+  }
+});
+
+test('TC_06 Coupon banner on other pages', async ({ page }) => {
+  const actor = new Actor('User', page);
+  try {
+    await actor.attemptsTo(new CouponBannerOnOtherPages());
+  } finally {
+    await page.close();
+  }
+});
+
+test('TC_07 License Plate search validation', async ({ page }) => {
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    await actor.attemptsTo(new LPcases());
+  } finally {
+    await page.close();
+    console.log('TC_07: page.close() executed.');
   }
 });
