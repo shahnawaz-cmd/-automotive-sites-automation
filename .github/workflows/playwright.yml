@@ -27,19 +27,20 @@ jobs:
       with:
         payload: |
           {
+            "text": "CI Pipeline Execution Finished",
             "attachments": [
               {
                 "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
                 "blocks": [
                   {
                     "type": "header",
-                    "text": { "type": "plain_text", "text": "${{ job.status == 'success' && '✅' || '🚨' }} Test Execution Summary" }
+                    "text": { "type": "plain_text", "text": "${{ job.status == 'success' && '✅' || '🚨' }} AutoSites Regression Sentinel" }
                   },
                   {
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Testing Scope:* Full Regression\n*Test Type:* E2E Automation\n*Environment:* Production (CI/CD)"
+                      "text": "*Summary:*\nAutomated E2E Regression & Stability Monitoring for NextJS Production Environments"
                     }
                   },
                   {
