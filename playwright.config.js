@@ -11,7 +11,7 @@ module.exports = defineConfig({
     {
       name: 'AccessAutoHistory',
       use: {
-        baseURL: 'https://vsr.accessautohistory.com/',
+        baseURL: 'https://vehiclesreport.com/',
         headless: !!process.env.CI,
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },
@@ -38,6 +38,19 @@ module.exports = defineConfig({
       name: 'VehicleHistoryEU',
       use: {
         baseURL: 'https://vehiclehistory.eu/',
+        headless: !!process.env.CI,
+        browserName: 'chromium',
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
+      },
+    },
+    {
+      name: 'VINNumberCA',
+      use: {
+        baseURL: 'https://vinnumber.ca/',
         headless: !!process.env.CI,
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },

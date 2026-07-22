@@ -8,7 +8,9 @@ export interface VinTaskSelectors {
   accessButton: string;
   successText: string;
   successText2: string;
+  successText3: string;
   successHeading: string;
+  successHeading2: string;
 }
 
 export class DecodeVinTask {
@@ -21,7 +23,9 @@ export class DecodeVinTask {
       accessButton: 'Access Records',
       successText: 'Records found for',
       successText2: 'We found historical records for the',
+      successText3: 'Window sticker found for',
       successHeading: 'Success! We found detailed',
+      successHeading2: 'We found detailed information for the',
     }
   ) {}
 
@@ -56,7 +60,10 @@ export class DecodeVinTask {
 
     // Interaction with the search button and wait for navigation
     const startTime = Date.now();
-    await page.getByRole('button', { name: this.selectors.searchButton }).click();
+    // Use the container of the VIN field to find the specific search button
+    const vinInput = (await vinField1.isVisible()) ? vinField1 : vinField2;
+    await vinInput.locator('xpath=../..').getByRole('button', { name: this.selectors.searchButton }).click();
+    
     await page.waitForLoadState('networkidle', { timeout: this.timeout });
     const duration = Date.now() - startTime;
     console.log(`[VIN Decode] Navigation to preview page took ${duration}ms`);
@@ -70,13 +77,17 @@ export class DecodeVinTask {
     // Wait until at least one of the success conditions appears
     const successCondition1 = page.locator(`text=${this.selectors.successText}`);
     const successCondition2 = page.locator(`text=${this.selectors.successText2}`);
-    const successCondition3 = page.getByRole('heading', { name: this.selectors.successHeading });
+    const successCondition3 = page.locator(`text=${this.selectors.successText3}`);
+    const successCondition4 = page.getByRole('heading', { name: this.selectors.successHeading });
+    const successCondition5 = page.getByRole('heading', { name: this.selectors.successHeading2 });
 
     await expect(async () => {
       const isVisible1 = await successCondition1.isVisible();
       const isVisible2 = await successCondition2.isVisible();
       const isVisible3 = await successCondition3.isVisible();
-      if (!isVisible1 && !isVisible2 && !isVisible3) {
+      const isVisible4 = await successCondition4.isVisible();
+      const isVisible5 = await successCondition5.isVisible();
+      if (!isVisible1 && !isVisible2 && !isVisible3 && !isVisible4 && !isVisible5) {
         throw new Error('Success condition not found');
       }
     }).toPass({ timeout: this.timeout });
