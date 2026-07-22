@@ -4,6 +4,8 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  schedule:
+    - cron: '0 */6 * * *'
 jobs:
   test:
     timeout-minutes: 120
@@ -19,6 +21,16 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+    - name: Send Slack Notification
+      uses: slackapi/slack-github-action@v1.26.0
+      if: always()
+      with:
+        payload: |
+          {
+            "text": "${{ job.status == 'success' && '✅' || '🚨' }} *CI Pipeline Status: ${{ job.status }}*\nProject: Automotive Sites Automation\nBranch: ${{ github.ref_name }}\nCheck run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     - uses: actions/upload-artifact@v4
       if: always()
       with:
