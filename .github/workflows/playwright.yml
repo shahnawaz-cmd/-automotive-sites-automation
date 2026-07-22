@@ -27,45 +27,40 @@ jobs:
       with:
         payload: |
           {
-            "text": "CI Pipeline Execution Finished",
-            "attachments": [
+            "text": "CI Pipeline Status: ${{ job.status }}",
+            "blocks": [
               {
-                "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
-                "blocks": [
+                "type": "header",
+                "text": { "type": "plain_text", "text": "${{ job.status == 'success' && '✅' || '🚨' }} AutoSites Regression Sentinel" }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Summary:*\nAutomated E2E Regression & Stability Monitoring for NextJS Production Environments"
+                }
+              },
+              {
+                "type": "section",
+                "fields": [
+                  { "type": "mrkdwn", "text": "*Total Tests:*\n36" },
+                  { "type": "mrkdwn", "text": "*Status:*\n${{ job.status }}" }
+                ]
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Target Websites:*\n• VehiclesReport\n• MotorcycleVINLookup\n• VehicleHistoryEU\n• VINNumberCA"
+                }
+              },
+              {
+                "type": "actions",
+                "elements": [
                   {
-                    "type": "header",
-                    "text": { "type": "plain_text", "text": "${{ job.status == 'success' && '✅' || '🚨' }} AutoSites Regression Sentinel" }
-                  },
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "*Summary:*\nAutomated E2E Regression & Stability Monitoring for NextJS Production Environments"
-                    }
-                  },
-                  {
-                    "type": "section",
-                    "fields": [
-                      { "type": "mrkdwn", "text": "*Total Tests:*\n36" },
-                      { "type": "mrkdwn", "text": "*Status:*\n${{ job.status }}" }
-                    ]
-                  },
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "*Target Websites:*\n• VehiclesReport\n• MotorcycleVINLookup\n• VehicleHistoryEU\n• VINNumberCA"
-                    }
-                  },
-                  {
-                    "type": "actions",
-                    "elements": [
-                      {
-                        "type": "button",
-                        "text": { "type": "plain_text", "text": "View Full Report" },
-                        "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-                      }
-                    ]
+                    "type": "button",
+                    "text": { "type": "plain_text", "text": "View Full Report" },
+                    "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
                   }
                 ]
               }
