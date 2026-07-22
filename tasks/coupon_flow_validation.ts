@@ -75,3 +75,37 @@ export class LowToHighCouponFlow {
     console.log('Passed: Highest coupon (20%) was NOT overridden by lower coupon.');
   }
 }
+
+export class CouponBannerOnOtherPages {
+  async performAs(actor: Actor) {
+    const page = actor.getPage();
+    const verifier = new CouponAndPrevCouponVerification();
+
+    // 1. Apply coupon on base URL and verify
+    await verifier.couponTest(actor, 'preview15', '15%');
+
+    // 2. Detect which path is valid
+    const paths = ['/window-stickers', '/window-sticker'];
+    let validPath = null;
+    
+    for (const path of paths) {
+      const response = await page.goto(path);
+      if (response && response.status() === 200) {
+        validPath = path;
+        break;
+      }
+    }
+
+    if (!validPath) {
+      throw new Error('Failed: Neither /window-stickers nor /window-sticker paths are accessible.');
+    }
+
+    console.log(`Passed: Navigated to valid path: ${validPath}`);
+    await page.waitForLoadState('networkidle');
+
+    // 3. Verify banner is still visible
+    const bannerLocator = page.locator('text=You have received 15% Discount!');
+    await expect(bannerLocator).toBeVisible({ timeout: 5000 });
+    console.log('Passed: Banner persisted on the page: ' + validPath);
+  }
+}
