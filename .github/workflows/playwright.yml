@@ -32,19 +32,29 @@ jobs:
                 "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
                 "blocks": [
                   {
+                    "type": "header",
+                    "text": { "type": "plain_text", "text": "${{ job.status == 'success' && '✅' || '🚨' }} Test Execution Summary" }
+                  },
+                  {
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "${{ job.status == 'success' && '✅' || '🚨' }} *CI Pipeline Status: ${{ job.status }}*"
+                      "text": "*Testing Scope:* Full Regression\n*Test Type:* E2E Automation\n*Environment:* Production (CI/CD)"
                     }
                   },
                   {
                     "type": "section",
                     "fields": [
-                      { "type": "mrkdwn", "text": "*Project:*\nAutomotive Sites Automation" },
-                      { "type": "mrkdwn", "text": "*Branch:*\n${{ github.ref_name }}" },
-                      { "type": "mrkdwn", "text": "*Websites Tested:*\nAccessAutoHistory, MotorcycleVINLookup, VehicleHistoryEU, VINNumberCA" }
+                      { "type": "mrkdwn", "text": "*Total Tests:*\n36" },
+                      { "type": "mrkdwn", "text": "*Status:*\n${{ job.status }}" }
                     ]
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*Target Websites:*\n• VehiclesReport\n• MotorcycleVINLookup\n• VehicleHistoryEU\n• VINNumberCA"
+                    }
                   },
                   {
                     "type": "actions",
