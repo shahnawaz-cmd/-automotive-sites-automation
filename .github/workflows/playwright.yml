@@ -27,7 +27,38 @@ jobs:
       with:
         payload: |
           {
-            "text": "${{ job.status == 'success' && '✅' || '🚨' }} *CI Pipeline Status: ${{ job.status }}*\nProject: Automotive Sites Automation\nBranch: ${{ github.ref_name }}\nCheck run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            "attachments": [
+              {
+                "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "${{ job.status == 'success' && '✅' || '🚨' }} *CI Pipeline Status: ${{ job.status }}*"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "fields": [
+                      { "type": "mrkdwn", "text": "*Project:*\nAutomotive Sites Automation" },
+                      { "type": "mrkdwn", "text": "*Branch:*\n${{ github.ref_name }}" },
+                      { "type": "mrkdwn", "text": "*Websites Tested:*\nAccessAutoHistory, MotorcycleVINLookup, VehicleHistoryEU, VINNumberCA" }
+                    ]
+                  },
+                  {
+                    "type": "actions",
+                    "elements": [
+                      {
+                        "type": "button",
+                        "text": { "type": "plain_text", "text": "View Full Report" },
+                        "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
