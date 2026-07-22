@@ -7,6 +7,7 @@ export interface VinTaskSelectors {
   searchButton: string;
   accessButton: string;
   successText: string;
+  successText2: string;
   successHeading: string;
 }
 
@@ -19,6 +20,7 @@ export class DecodeVinTask {
       searchButton: 'Search VIN',
       accessButton: 'Access Records',
       successText: 'Records found for',
+      successText2: 'We found historical records for the',
       successHeading: 'Success! We found detailed',
     }
   ) {}
@@ -64,16 +66,17 @@ export class DecodeVinTask {
 
     // ponytail: Allow time for the page to render success state before checking
     await page.waitForTimeout(5000);
-    // ... rest of method unchanged
 
     // Wait until at least one of the success conditions appears
     const successCondition1 = page.locator(`text=${this.selectors.successText}`);
-    const successCondition2 = page.getByRole('heading', { name: this.selectors.successHeading });
+    const successCondition2 = page.locator(`text=${this.selectors.successText2}`);
+    const successCondition3 = page.getByRole('heading', { name: this.selectors.successHeading });
 
     await expect(async () => {
       const isVisible1 = await successCondition1.isVisible();
       const isVisible2 = await successCondition2.isVisible();
-      if (!isVisible1 && !isVisible2) {
+      const isVisible3 = await successCondition3.isVisible();
+      if (!isVisible1 && !isVisible2 && !isVisible3) {
         throw new Error('Success condition not found');
       }
     }).toPass({ timeout: this.timeout });

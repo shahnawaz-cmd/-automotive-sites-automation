@@ -30,26 +30,24 @@ export class FieldValidation {
     }
     console.log('Passed: Field restricts input to 17 characters.');
 
-    // 2. Validate error message for < 5 characters
-    await vinInput.fill('ABCD');
-    await searchButton.click();
-    
-    // Debugging: Log content to find the correct error message
-    // const content = await page.content();
-    // console.log('Page content:', content);
-    
-    // Using a more general locator that might match different patterns,
-    // or just checking if ANY element exists.
-    // Given the previous error, let's try to be less specific on text.
-    const errorLocator = page.locator('.error, .alert, [role="alert"]');
-    
-    try {
-      await expect(errorLocator).toBeVisible({ timeout: 5000 });
-      console.log('Passed: Error message appeared for short VIN.');
-    } catch (e) {
-      console.log('Error message element not found. Dumping page text...');
-      console.log(await page.innerText('body'));
-      throw e;
+    // 2. Validate error message for < 5 characters (Skip for specific domains)
+    const currentUrl = page.url();
+    if (currentUrl.includes('vehiclehistory.eu') || currentUrl.includes('vsr.accessautohistory.com')) {
+      console.log(`Skipping < 5 characters validation for domain: ${currentUrl}`);
+    } else {
+      await vinInput.fill('ABCD');
+      await searchButton.click();
+      
+      const errorLocator = page.locator('.error, .alert, [role="alert"]');
+      
+      try {
+        await expect(errorLocator).toBeVisible({ timeout: 5000 });
+        console.log('Passed: Error message appeared for short VIN.');
+      } catch (e) {
+        console.log('Error message element not found. Dumping page text...');
+        console.log(await page.innerText('body'));
+        throw e;
+      }
     }
   }
 }

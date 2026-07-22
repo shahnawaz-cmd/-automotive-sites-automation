@@ -4,6 +4,8 @@ module.exports = defineConfig({
   testDir: './tests',
   timeout: 90000,
   retries: 1,
+  workers: 1,
+  fullyParallel: false,
   reporter: [['html', { open: 'never' }]],
   projects: [
     {
@@ -14,6 +16,9 @@ module.exports = defineConfig({
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
       },
     },
     {
@@ -24,6 +29,22 @@ module.exports = defineConfig({
         browserName: 'chromium',
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
+      },
+    },
+    {
+      name: 'VehicleHistoryEU',
+      use: {
+        baseURL: 'https://vehiclehistory.eu/',
+        headless: !!process.env.CI,
+        browserName: 'chromium',
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
       },
     },
   ],

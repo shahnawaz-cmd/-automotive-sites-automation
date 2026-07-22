@@ -5,6 +5,7 @@ import { SearchAndVerifyErrorTask } from '../tasks/form_error_messages';
 import { FieldValidation } from '../tasks/vin_field_validation';
 import { CouponAndPrevCouponVerification, LowToHighCouponFlow, CouponBannerOnOtherPages } from '../tasks/coupon_flow_validation';
 import { LPcases } from '../tasks/LPdecode';
+import { RevisitBannerFlow } from '../tasks/revisit_banner_flow';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -99,5 +100,17 @@ test('TC_07 License Plate search validation', async ({ page }) => {
   } finally {
     await page.close();
     console.log('TC_07: page.close() executed.');
+  }
+});
+
+test('TC_08 Revisit banner flow', async ({ page }) => {
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    await actor.attemptsTo(new RevisitBannerFlow());
+  } finally {
+    await page.close();
+    console.log('TC_08: page.close() executed.');
   }
 });
