@@ -27,8 +27,12 @@ jobs:
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
-        TOTAL_TESTS=$(grep -o '"status":' results.json | wc -l || echo "0")
-        FAILED_TESTS=$(grep -o '"status":"failed"' results.json | wc -l || echo "0")
+        # Install jq if not present
+        sudo apt-get install -y jq
+        
+        # Parse metrics using jq (more accurate than grep)
+        TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' results.json || echo "0")
+        FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' results.json || echo "0")
         
         # Determine status and icon
         if [ "$FAILED_TESTS" -eq 0 ]; then
