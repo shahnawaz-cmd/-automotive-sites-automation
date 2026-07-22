@@ -3,6 +3,7 @@ import { Actor } from '../actors/Actor';
 import { DecodeVinTask } from '../tasks/DecodeVinTask';
 import { SearchAndVerifyErrorTask } from '../tasks/form_error_messages';
 import { FieldValidation } from '../tasks/vin_field_validation';
+import { CouponAndPrevCouponVerification, LowToHighCouponFlow } from '../tasks/coupon_flow_validation';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -56,6 +57,24 @@ test('TC_03 VIN field validation', async ({ page }, testInfo) => {
     await page.waitForLoadState('networkidle');
     
     await actor.attemptsTo(new FieldValidation());
+  } finally {
+    await page.close();
+  }
+});
+
+test('TC_04 Coupon flow validation', async ({ page }) => {
+  const actor = new Actor('User', page);
+  try {
+    await actor.attemptsTo(new CouponAndPrevCouponVerification());
+  } finally {
+    await page.close();
+  }
+});
+
+test('TC_05 Low to High Coupon swap validation', async ({ page }) => {
+  const actor = new Actor('User', page);
+  try {
+    await actor.attemptsTo(new LowToHighCouponFlow());
   } finally {
     await page.close();
   }
