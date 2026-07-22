@@ -22,52 +22,56 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
     - name: Send Slack Notification
-      uses: slackapi/slack-github-action@v1.26.0
       if: always()
-      with:
-        payload: |
-          {
-            "text": "Test Execution Summary",
-            "blocks": [
-              {
-                "type": "header",
-                "text": { "type": "plain_text", "text": "${{ job.status == 'success' && '✅' || '🚨' }} AutoSites Regression Sentinel" }
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*Summary:*\nAutomated E2E Regression & Stability Monitoring for NextJS Production Environments"
-                }
-              },
-              {
-                "type": "section",
-                "fields": [
-                  { "type": "mrkdwn", "text": "*Total Tests:*\n36" },
-                  { "type": "mrkdwn", "text": "*Status:*\n${{ job.status }}" }
-                ]
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*Target Websites:*\n• VehiclesReport\n• MotorcycleVINLookup\n• VehicleHistoryEU\n• VINNumberCA"
-                }
-              },
-              {
-                "type": "actions",
-                "elements": [
-                  {
-                    "type": "button",
-                    "text": { "type": "plain_text", "text": "View Full Report" },
-                    "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-                  }
-                ]
-              }
-            ]
-          }
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: |
+        STATUS="${{ job.status }}"
+        ICON="${{ job.status == 'success' && '✅' || '🚨' }}"
+        PAYLOAD=$(cat <<EOF
+        {
+          "text": "AutoSites Regression Sentinel Notification",
+          "blocks": [
+            {
+              "type": "header",
+              "text": { "type": "plain_text", "text": "$ICON AutoSites Regression Sentinel" }
+            },
+            {
+              "type": "section",
+              "text": {
+                "type": "mrkdwn",
+                "text": "*Summary:*\nAutomated E2E Regression & Stability Monitoring for NextJS Production Environments"
+              }
+            },
+            {
+              "type": "section",
+              "fields": [
+                { "type": "mrkdwn", "text": "*Total Tests:*\n36" },
+                { "type": "mrkdwn", "text": "*Status:*\n$STATUS" }
+              ]
+            },
+            {
+              "type": "section",
+              "text": {
+                "type": "mrkdwn",
+                "text": "*Target Websites:*\n• VehiclesReport\n• MotorcycleVINLookup\n• VehicleHistoryEU\n• VINNumberCA"
+              }
+            },
+            {
+              "type": "actions",
+              "elements": [
+                {
+                  "type": "button",
+                  "text": { "type": "plain_text", "text": "View Full Report" },
+                  "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                }
+              ]
+            }
+          ]
+        }
+        EOF
+        )
+        curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
     - uses: actions/upload-artifact@v4
       if: always()
       with:
