@@ -19,24 +19,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
-        "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+        "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
+        "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30281255722"
       },
       "gitCommit": {
-        "shortHash": "e3045d5",
-        "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-        "subject": "Add GitHub Pages deployment for Playwright report",
-        "body": "Add GitHub Pages deployment for Playwright report\n",
+        "shortHash": "0837d8e",
+        "hash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+        "subject": "Add GitHub Pages HTML report link to Slack notification",
+        "body": "Add GitHub Pages HTML report link to Slack notification\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785166506000
+          "time": 1785166932000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1785166506000
+          "time": 1785166932000
         },
         "branch": "main"
       },
@@ -50,24 +50,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
-            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30281255722"
           },
           "gitCommit": {
-            "shortHash": "e3045d5",
-            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "subject": "Add GitHub Pages deployment for Playwright report",
-            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "shortHash": "0837d8e",
+            "hash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "subject": "Add GitHub Pages HTML report link to Slack notification",
+            "body": "Add GitHub Pages HTML report link to Slack notification\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "branch": "main"
           },
@@ -88,24 +88,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
-            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30281255722"
           },
           "gitCommit": {
-            "shortHash": "e3045d5",
-            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "subject": "Add GitHub Pages deployment for Playwright report",
-            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "shortHash": "0837d8e",
+            "hash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "subject": "Add GitHub Pages HTML report link to Slack notification",
+            "body": "Add GitHub Pages HTML report link to Slack notification\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "branch": "main"
           },
@@ -126,24 +126,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
-            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30281255722"
           },
           "gitCommit": {
-            "shortHash": "e3045d5",
-            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "subject": "Add GitHub Pages deployment for Playwright report",
-            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "shortHash": "0837d8e",
+            "hash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "subject": "Add GitHub Pages HTML report link to Slack notification",
+            "body": "Add GitHub Pages HTML report link to Slack notification\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "branch": "main"
           },
@@ -164,24 +164,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
-            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30281255722"
           },
           "gitCommit": {
-            "shortHash": "e3045d5",
-            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
-            "subject": "Add GitHub Pages deployment for Playwright report",
-            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "shortHash": "0837d8e",
+            "hash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
+            "subject": "Add GitHub Pages HTML report link to Slack notification",
+            "body": "Add GitHub Pages HTML report link to Slack notification\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1785166506000
+              "time": 1785166932000
             },
             "branch": "main"
           },
@@ -241,11 +241,11 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7518,
+                  "duration": 8082,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83765\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83725\n"
                     },
                     {
                       "text": "[VIN Decode] Navigation to preview page took 79ms\n"
@@ -256,7 +256,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:09.262Z",
+                  "startTime": "2026-07-27T15:46:28.726Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -285,7 +285,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1357,
+                  "duration": 1767,
                   "errors": [],
                   "stdout": [
                     {
@@ -297,7 +297,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:17.052Z",
+                  "startTime": "2026-07-27T15:46:38.111Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -326,7 +326,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1375,
+                  "duration": 1751,
                   "errors": [],
                   "stdout": [
                     {
@@ -338,7 +338,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:18.426Z",
+                  "startTime": "2026-07-27T15:46:39.903Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -367,7 +367,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1805,
+                  "duration": 2170,
                   "errors": [],
                   "stdout": [
                     {
@@ -379,7 +379,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:19.815Z",
+                  "startTime": "2026-07-27T15:46:41.669Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -408,7 +408,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3929,
+                  "duration": 4626,
                   "errors": [],
                   "stdout": [
                     {
@@ -438,7 +438,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:21.634Z",
+                  "startTime": "2026-07-27T15:46:43.855Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -467,7 +467,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3484,
+                  "duration": 11456,
                   "errors": [],
                   "stdout": [
                     {
@@ -485,7 +485,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:25.576Z",
+                  "startTime": "2026-07-27T15:46:48.498Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -513,15 +513,65 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6989,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    12 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    12 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n\n    at LPcases.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts:30:26)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:100:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
+                      "column": 26,
+                      "line": 30
+                    },
+                    "snippet": "   at ../tasks/LPdecode.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m       \n \u001b[90m 29 |\u001b[39m       \u001b[90m// Verify URL pattern after load\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/.*vin-check\\/license-preview/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       \n \u001b[90m 32 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
+                        "column": 26,
+                        "line": 30
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    12 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n\n\n   at ../tasks/LPdecode.ts:30\n\n  28 |       \n  29 |       // Verify URL pattern after load\n> 30 |       await expect(page).toHaveURL(/.*vin-check\\/license-preview/, { timeout: 5000 });\n     |                          ^\n  31 |       \n  32 |       console.log(`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`);\n  33 |\n    at LPcases.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts:30:26)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:100:5"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "LP Tab Found in Website\n"
+                    },
+                    {
+                      "text": "TC_07: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:46:59.969Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-AccessAutoHistory/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
+                    "column": 26,
+                    "line": 30
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15640,
+                  "duration": 14195,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "LP Tab Found in Website\n"
                     },
                     {
-                      "text": "[LP Decode] Navigation to preview page took 4029ms\n"
+                      "text": "[LP Decode] Navigation to preview page took 2328ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -531,13 +581,13 @@
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-27T15:36:29.076Z",
+                  "retry": 1,
+                  "startTime": "2026-07-27T15:47:07.452Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "2e0527a360a5c23f209a-d9fd59fd082bf17a1fce",
@@ -558,17 +608,17 @@
               "projectName": "AccessAutoHistory",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8599,
+                  "duration": 9263,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83784\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83799\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 76ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -588,7 +638,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:44.734Z",
+                  "startTime": "2026-07-27T15:47:21.759Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -614,20 +664,20 @@
               "projectName": "AccessAutoHistory",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10018,
+                  "duration": 10936,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83759\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83762\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 56ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -644,7 +694,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:36:53.348Z",
+                  "startTime": "2026-07-27T15:47:31.037Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -670,17 +720,17 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9496,
+                  "duration": 10940,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83717\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 70ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -688,7 +738,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:03.855Z",
+                  "startTime": "2026-07-27T15:47:42.469Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -714,10 +764,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1321,
+                  "duration": 1811,
                   "errors": [],
                   "stdout": [
                     {
@@ -729,7 +779,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:13.466Z",
+                  "startTime": "2026-07-27T15:47:53.520Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -755,10 +805,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1233,
+                  "duration": 1604,
                   "errors": [],
                   "stdout": [
                     {
@@ -770,7 +820,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:14.801Z",
+                  "startTime": "2026-07-27T15:47:55.344Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -796,10 +846,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1477,
+                  "duration": 1941,
                   "errors": [],
                   "stdout": [
                     {
@@ -811,7 +861,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:16.046Z",
+                  "startTime": "2026-07-27T15:47:56.963Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -837,10 +887,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3459,
+                  "duration": 4927,
                   "errors": [],
                   "stdout": [
                     {
@@ -870,7 +920,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:17.536Z",
+                  "startTime": "2026-07-27T15:47:58.919Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -896,10 +946,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2247,
+                  "duration": 3244,
                   "errors": [],
                   "stdout": [
                     {
@@ -917,7 +967,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:21.008Z",
+                  "startTime": "2026-07-27T15:48:03.857Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -943,10 +993,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1083,
+                  "duration": 1505,
                   "errors": [],
                   "stdout": [
                     {
@@ -958,7 +1008,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:23.269Z",
+                  "startTime": "2026-07-27T15:48:07.116Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -984,17 +1034,17 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9931,
+                  "duration": 11485,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83796\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83733\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 60ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 52ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1014,7 +1064,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:24.368Z",
+                  "startTime": "2026-07-27T15:48:08.637Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1040,20 +1090,20 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9776,
+                  "duration": 11548,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83711\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83722\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 59ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 50ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1070,7 +1120,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:34.322Z",
+                  "startTime": "2026-07-27T15:48:20.141Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1096,17 +1146,17 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9981,
+                  "duration": 11370,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83797\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83788\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 89ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 74ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1114,7 +1164,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:44.581Z",
+                  "startTime": "2026-07-27T15:48:32.184Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1140,10 +1190,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1726,
+                  "duration": 2246,
                   "errors": [],
                   "stdout": [
                     {
@@ -1155,7 +1205,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:54.668Z",
+                  "startTime": "2026-07-27T15:48:43.662Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1181,10 +1231,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1662,
+                  "duration": 2158,
                   "errors": [],
                   "stdout": [
                     {
@@ -1196,7 +1246,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:56.409Z",
+                  "startTime": "2026-07-27T15:48:45.925Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1222,10 +1272,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1702,
+                  "duration": 2111,
                   "errors": [],
                   "stdout": [
                     {
@@ -1237,7 +1287,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:58.088Z",
+                  "startTime": "2026-07-27T15:48:48.102Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1263,10 +1313,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4478,
+                  "duration": 5665,
                   "errors": [],
                   "stdout": [
                     {
@@ -1296,7 +1346,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:37:59.806Z",
+                  "startTime": "2026-07-27T15:48:50.226Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1322,10 +1372,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3547,
+                  "duration": 3978,
                   "errors": [],
                   "stdout": [
                     {
@@ -1343,7 +1393,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:04.302Z",
+                  "startTime": "2026-07-27T15:48:55.906Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1369,10 +1419,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1535,
+                  "duration": 2092,
                   "errors": [],
                   "stdout": [
                     {
@@ -1384,7 +1434,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:07.860Z",
+                  "startTime": "2026-07-27T15:48:59.901Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1410,17 +1460,17 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11279,
+                  "duration": 12175,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83746\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83726\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 74ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 82ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1440,7 +1490,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:09.408Z",
+                  "startTime": "2026-07-27T15:49:02.018Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1466,20 +1516,20 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 16538,
+                  "duration": 11983,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83767\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83781\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 61ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 64ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1496,7 +1546,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:20.701Z",
+                  "startTime": "2026-07-27T15:49:14.208Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1522,17 +1572,17 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9374,
+                  "duration": 10757,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83790\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 79ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 69ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1540,7 +1590,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:37.729Z",
+                  "startTime": "2026-07-27T15:49:26.693Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1566,10 +1616,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1212,
+                  "duration": 1535,
                   "errors": [],
                   "stdout": [
                     {
@@ -1581,7 +1631,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:47.213Z",
+                  "startTime": "2026-07-27T15:49:37.553Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1607,10 +1657,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1221,
+                  "duration": 1655,
                   "errors": [],
                   "stdout": [
                     {
@@ -1622,7 +1672,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:48.439Z",
+                  "startTime": "2026-07-27T15:49:39.106Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1648,10 +1698,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1733,
+                  "duration": 1952,
                   "errors": [],
                   "stdout": [
                     {
@@ -1663,7 +1713,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:49.675Z",
+                  "startTime": "2026-07-27T15:49:40.774Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1689,10 +1739,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3445,
+                  "duration": 4362,
                   "errors": [],
                   "stdout": [
                     {
@@ -1722,7 +1772,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:51.422Z",
+                  "startTime": "2026-07-27T15:49:42.740Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1748,10 +1798,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2574,
+                  "duration": 3197,
                   "errors": [],
                   "stdout": [
                     {
@@ -1769,7 +1819,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:54.881Z",
+                  "startTime": "2026-07-27T15:49:47.118Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1795,10 +1845,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1121,
+                  "duration": 1467,
                   "errors": [],
                   "stdout": [
                     {
@@ -1810,7 +1860,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:57.472Z",
+                  "startTime": "2026-07-27T15:49:50.328Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1836,17 +1886,17 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9743,
+                  "duration": 11810,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83745\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 56ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1866,7 +1916,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:38:58.606Z",
+                  "startTime": "2026-07-27T15:49:51.810Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1892,20 +1942,20 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9976,
+                  "duration": 11313,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83744\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83754\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 55ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1922,7 +1972,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-27T15:39:08.363Z",
+                  "startTime": "2026-07-27T15:50:03.633Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1940,11 +1990,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-27T15:36:08.579Z",
-    "duration": 189825.664,
-    "expected": 36,
+    "startTime": "2026-07-27T15:46:28.050Z",
+    "duration": 226963.117,
+    "expected": 35,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 1
   }
 }
