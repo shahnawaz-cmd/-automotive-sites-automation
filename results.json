@@ -1,0 +1,1950 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/24.18.0/x64/bin/node",
+      "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/node_modules/.bin/playwright",
+      "test",
+      "--reporter=html,json"
+    ],
+    "configFile": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright.config.js",
+    "rootDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
+        "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+      },
+      "gitCommit": {
+        "shortHash": "e3045d5",
+        "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+        "subject": "Add GitHub Pages deployment for Playwright report",
+        "body": "Add GitHub Pages deployment for Playwright report\n",
+        "author": {
+          "name": "shahnawaz",
+          "email": "shahnawaz@empirepixel.com",
+          "time": 1785166506000
+        },
+        "committer": {
+          "name": "shahnawaz",
+          "email": "shahnawaz@empirepixel.com",
+          "time": 1785166506000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
+            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+          },
+          "gitCommit": {
+            "shortHash": "e3045d5",
+            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "subject": "Add GitHub Pages deployment for Playwright report",
+            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "AccessAutoHistory",
+        "name": "AccessAutoHistory",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
+            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+          },
+          "gitCommit": {
+            "shortHash": "e3045d5",
+            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "subject": "Add GitHub Pages deployment for Playwright report",
+            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "MotorcycleVINLookup",
+        "name": "MotorcycleVINLookup",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
+            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+          },
+          "gitCommit": {
+            "shortHash": "e3045d5",
+            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "subject": "Add GitHub Pages deployment for Playwright report",
+            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "VehicleHistoryEU",
+        "name": "VehicleHistoryEU",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/e3045d56fe7252343d36eac78df2cc59a844da51",
+            "commitHash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30280705307"
+          },
+          "gitCommit": {
+            "shortHash": "e3045d5",
+            "hash": "e3045d56fe7252343d36eac78df2cc59a844da51",
+            "subject": "Add GitHub Pages deployment for Playwright report",
+            "body": "Add GitHub Pages deployment for Playwright report\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785166506000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "VINNumberCA",
+        "name": "VINNumberCA",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "global_case_verification.spec.ts",
+      "file": "global_case_verification.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_01 VIN decode verify",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7518,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83765\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 79ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:09.262Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-882ad8074386297b9876",
+          "file": "global_case_verification.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "TC_02 Verify error message on invalid search",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1357,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[Error Verification] Clicking search button: Search VIN\n"
+                    },
+                    {
+                      "text": "Error message verified: \"Please enter a VIN number\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:17.052Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-76f4c599c988399d5542",
+          "file": "global_case_verification.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "TC_03 VIN field validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1375,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Field restricts input to 17 characters.\n"
+                    },
+                    {
+                      "text": "Passed: Error message appeared for short VIN.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:18.426Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-e6cd645c651c3c105e7b",
+          "file": "global_case_verification.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "TC_04 Coupon flow validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1805,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:19.815Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-39e89404b8fb30c0e5ea",
+          "file": "global_case_verification.spec.ts",
+          "line": 68,
+          "column": 5
+        },
+        {
+          "title": "TC_05 Low to High Coupon swap validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3929,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "--- Applying 1st Coupon: preview15 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "--- Applying 2nd Coupon: get20 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie verification (coupon=get20, prev_coupon=preview15)\n"
+                    },
+                    {
+                      "text": "Passed: Banner showed 20% Discount.\n"
+                    },
+                    {
+                      "text": "--- Applying 1st Coupon again to verify no override ---\n"
+                    },
+                    {
+                      "text": "Passed: Highest coupon (20%) was NOT overridden by lower coupon.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:21.634Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-db65024e4862095b996e",
+          "file": "global_case_verification.spec.ts",
+          "line": 77,
+          "column": 5
+        },
+        {
+          "title": "TC_06 Coupon banner on other pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3484,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "Passed: Navigated to valid path: /window-stickers\n"
+                    },
+                    {
+                      "text": "Passed: Banner persisted on the page: /window-stickers\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:25.576Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-67de660b1af176806709",
+          "file": "global_case_verification.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "TC_07 License Plate search validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15640,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "LP Tab Found in Website\n"
+                    },
+                    {
+                      "text": "[LP Decode] Navigation to preview page took 4029ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "TC_07: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:29.076Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-d9fd59fd082bf17a1fce",
+          "file": "global_case_verification.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "TC_08 Revisit banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8599,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83784\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for: https://vehiclesreport.com/\n"
+                    },
+                    {
+                      "text": "Button found. Visible: true, Enabled: true\n"
+                    },
+                    {
+                      "text": "Passed: Revisit banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_08: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:44.734Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-c5fc2ad381e9adff5522",
+          "file": "global_case_verification.spec.ts",
+          "line": 107,
+          "column": 5
+        },
+        {
+          "title": "TC_09 Revisit sticker banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AccessAutoHistory",
+              "projectName": "AccessAutoHistory",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10018,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83759\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 56ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for sticker banner on: https://vehiclesreport.com/window-stickers\n"
+                    },
+                    {
+                      "text": "Passed: Revisit sticker banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_09: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:36:53.348Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-2ad78e9eb43b11dc42a6",
+          "file": "global_case_verification.spec.ts",
+          "line": 119,
+          "column": 5
+        },
+        {
+          "title": "TC_01 VIN decode verify",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9496,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:03.855Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-4e34fff06622e13b7e88",
+          "file": "global_case_verification.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "TC_02 Verify error message on invalid search",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1321,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[Error Verification] Clicking search button: Search VIN\n"
+                    },
+                    {
+                      "text": "Error message verified: \"Please enter a VIN number\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:13.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-80377de31fff0c789268",
+          "file": "global_case_verification.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "TC_03 VIN field validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1233,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Field restricts input to 17 characters.\n"
+                    },
+                    {
+                      "text": "Passed: Error message appeared for short VIN.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:14.801Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-3cf201ba1db2522549e5",
+          "file": "global_case_verification.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "TC_04 Coupon flow validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1477,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:16.046Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-054c620592e86e08cf12",
+          "file": "global_case_verification.spec.ts",
+          "line": 68,
+          "column": 5
+        },
+        {
+          "title": "TC_05 Low to High Coupon swap validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3459,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "--- Applying 1st Coupon: preview15 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "--- Applying 2nd Coupon: get20 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie verification (coupon=get20, prev_coupon=preview15)\n"
+                    },
+                    {
+                      "text": "Passed: Banner showed 20% Discount.\n"
+                    },
+                    {
+                      "text": "--- Applying 1st Coupon again to verify no override ---\n"
+                    },
+                    {
+                      "text": "Passed: Highest coupon (20%) was NOT overridden by lower coupon.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:17.536Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-586f4b228939844c6261",
+          "file": "global_case_verification.spec.ts",
+          "line": 77,
+          "column": 5
+        },
+        {
+          "title": "TC_06 Coupon banner on other pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2247,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "Passed: Navigated to valid path: /window-sticker\n"
+                    },
+                    {
+                      "text": "Passed: Banner persisted on the page: /window-sticker\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:21.008Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-fde4e2fb1b24753003d4",
+          "file": "global_case_verification.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "TC_07 License Plate search validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1083,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Tab not found\n"
+                    },
+                    {
+                      "text": "TC_07: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:23.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-e315a6d729c447ee230a",
+          "file": "global_case_verification.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "TC_08 Revisit banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9931,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83796\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 60ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for: https://motorcyclevinlookup.com/\n"
+                    },
+                    {
+                      "text": "Button found. Visible: true, Enabled: true\n"
+                    },
+                    {
+                      "text": "Passed: Revisit banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_08: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:24.368Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-2b27f02df0d1643cdc78",
+          "file": "global_case_verification.spec.ts",
+          "line": 107,
+          "column": 5
+        },
+        {
+          "title": "TC_09 Revisit sticker banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "MotorcycleVINLookup",
+              "projectName": "MotorcycleVINLookup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9776,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83711\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 59ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for sticker banner on: https://motorcyclevinlookup.com/window-sticker\n"
+                    },
+                    {
+                      "text": "Passed: Revisit sticker banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_09: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:34.322Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-09234d833eea5d7b1bc5",
+          "file": "global_case_verification.spec.ts",
+          "line": 119,
+          "column": 5
+        },
+        {
+          "title": "TC_01 VIN decode verify",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9981,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83797\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 89ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:44.581Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-f00ae6997bce57d7c92d",
+          "file": "global_case_verification.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "TC_02 Verify error message on invalid search",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1726,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[Error Verification] Clicking search button: Search VIN\n"
+                    },
+                    {
+                      "text": "Error message verified: \"Please enter a VIN number\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:54.668Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-650947d49882869e91e3",
+          "file": "global_case_verification.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "TC_03 VIN field validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1662,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Field restricts input to 17 characters.\n"
+                    },
+                    {
+                      "text": "Skipping < 5 characters validation for domain: https://vehiclehistory.eu/\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:56.409Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-626b1411d57410b8523f",
+          "file": "global_case_verification.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "TC_04 Coupon flow validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1702,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:58.088Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-3cad9aab2c94a3f0afc3",
+          "file": "global_case_verification.spec.ts",
+          "line": 68,
+          "column": 5
+        },
+        {
+          "title": "TC_05 Low to High Coupon swap validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4478,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "--- Applying 1st Coupon: preview15 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "--- Applying 2nd Coupon: get20 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie verification (coupon=get20, prev_coupon=preview15)\n"
+                    },
+                    {
+                      "text": "Passed: Banner showed 20% Discount.\n"
+                    },
+                    {
+                      "text": "--- Applying 1st Coupon again to verify no override ---\n"
+                    },
+                    {
+                      "text": "Passed: Highest coupon (20%) was NOT overridden by lower coupon.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:37:59.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-f74e2d514d0232344457",
+          "file": "global_case_verification.spec.ts",
+          "line": 77,
+          "column": 5
+        },
+        {
+          "title": "TC_06 Coupon banner on other pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3547,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "Passed: Navigated to valid path: /window-sticker\n"
+                    },
+                    {
+                      "text": "Passed: Banner persisted on the page: /window-sticker\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:04.302Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-2ae1a9de77374cd1029c",
+          "file": "global_case_verification.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "TC_07 License Plate search validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1535,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Tab not found\n"
+                    },
+                    {
+                      "text": "TC_07: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:07.860Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-98d7368fb927da18a531",
+          "file": "global_case_verification.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "TC_08 Revisit banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11279,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83746\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 74ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for: https://vehiclehistory.eu/\n"
+                    },
+                    {
+                      "text": "Button found. Visible: true, Enabled: true\n"
+                    },
+                    {
+                      "text": "Passed: Revisit banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_08: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:09.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-b22c88f3ed138e7349a7",
+          "file": "global_case_verification.spec.ts",
+          "line": 107,
+          "column": 5
+        },
+        {
+          "title": "TC_09 Revisit sticker banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VehicleHistoryEU",
+              "projectName": "VehicleHistoryEU",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16538,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83767\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 61ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for sticker banner on: https://vehiclehistory.eu/window-sticker\n"
+                    },
+                    {
+                      "text": "Passed: Revisit sticker banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_09: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:20.701Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-9a14d5f4735b13ce13b5",
+          "file": "global_case_verification.spec.ts",
+          "line": 119,
+          "column": 5
+        },
+        {
+          "title": "TC_01 VIN decode verify",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9374,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 79ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:37.729Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-1c7f41be5816add1200d",
+          "file": "global_case_verification.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "TC_02 Verify error message on invalid search",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1212,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[Error Verification] Clicking search button: Search VIN\n"
+                    },
+                    {
+                      "text": "Error message verified: \"Please enter a VIN number\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:47.213Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-76512ac73a0a043f4f68",
+          "file": "global_case_verification.spec.ts",
+          "line": 26,
+          "column": 5
+        },
+        {
+          "title": "TC_03 VIN field validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1221,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Field restricts input to 17 characters.\n"
+                    },
+                    {
+                      "text": "Passed: Error message appeared for short VIN.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:48.439Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-0c5bfd837eb64c7ed91a",
+          "file": "global_case_verification.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "TC_04 Coupon flow validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1733,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:49.675Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-73f52b76d8eaa9b8cc49",
+          "file": "global_case_verification.spec.ts",
+          "line": 68,
+          "column": 5
+        },
+        {
+          "title": "TC_05 Low to High Coupon swap validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3445,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "--- Applying 1st Coupon: preview15 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "--- Applying 2nd Coupon: get20 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie verification (coupon=get20, prev_coupon=preview15)\n"
+                    },
+                    {
+                      "text": "Passed: Banner showed 20% Discount.\n"
+                    },
+                    {
+                      "text": "--- Applying 1st Coupon again to verify no override ---\n"
+                    },
+                    {
+                      "text": "Passed: Highest coupon (20%) was NOT overridden by lower coupon.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:51.422Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-467b1989b064cb34b9ed",
+          "file": "global_case_verification.spec.ts",
+          "line": 77,
+          "column": 5
+        },
+        {
+          "title": "TC_06 Coupon banner on other pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2574,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    },
+                    {
+                      "text": "Passed: Banner appeared with text: \"You have received 15% Discount!\"\n"
+                    },
+                    {
+                      "text": "Passed: Navigated to valid path: /window-sticker\n"
+                    },
+                    {
+                      "text": "Passed: Banner persisted on the page: /window-sticker\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:54.881Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-93773c6a9edbba86fb75",
+          "file": "global_case_verification.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "TC_07 License Plate search validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1121,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Tab not found\n"
+                    },
+                    {
+                      "text": "TC_07: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:57.472Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-b297d2f1ced6731c28f0",
+          "file": "global_case_verification.spec.ts",
+          "line": 95,
+          "column": 5
+        },
+        {
+          "title": "TC_08 Revisit banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9743,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for: https://vinnumber.ca/\n"
+                    },
+                    {
+                      "text": "Button found. Visible: true, Enabled: true\n"
+                    },
+                    {
+                      "text": "Passed: Revisit banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_08: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:38:58.606Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-16475dd643b23c9d8b2e",
+          "file": "global_case_verification.spec.ts",
+          "line": 107,
+          "column": 5
+        },
+        {
+          "title": "TC_09 Revisit sticker banner flow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "VINNumberCA",
+              "projectName": "VINNumberCA",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9976,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83744\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 55ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
+                    },
+                    {
+                      "text": "Checking visibility for sticker banner on: https://vinnumber.ca/window-sticker\n"
+                    },
+                    {
+                      "text": "Passed: Revisit sticker banner flow verified.\n"
+                    },
+                    {
+                      "text": "TC_09: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-27T15:39:08.363Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e0527a360a5c23f209a-cada2bbba0b9e9db2e90",
+          "file": "global_case_verification.spec.ts",
+          "line": 119,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-27T15:36:08.579Z",
+    "duration": 189825.664,
+    "expected": 36,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
