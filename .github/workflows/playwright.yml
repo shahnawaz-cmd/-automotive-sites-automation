@@ -6,6 +6,7 @@ on:
     branches: [ main, master ]
   schedule:
     - cron: '0 */6 * * *'
+
 jobs:
   test:
     timeout-minutes: 120
@@ -20,66 +21,76 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test || true
+      run: |
+        npx playwright test --reporter=html,json || true
+      env:
+        CI: true
+        PLAYWRIGHT_JSON_OUTPUT_NAME: playwright-report/results.json
 
     - name: Send Slack Notification
       if: always()
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
-        # Install jq if not present
         sudo apt-get install -y jq
         
-        # Parse metrics using jq (more accurate than grep)
-        TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' results.json || echo "0")
-        FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' results.json || echo "0")
+        # Parse results.json
+        TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' playwright-report/results.json || echo "0")
+        FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/results.json || echo "0")
+        PASSED_TESTS=$((TOTAL_TESTS - FAILED_TESTS))
         
-        # Determine status and icon
+        # Extract site names dynamically
+        SITES_TESTED=$(jq -r '.config.projects | map(.name) | join(", ")' playwright-report/results.json || echo "N/A")
+        
+        # Get names of up to 3 failed tests
+        FAILED_NAMES=$(jq -r '[.. | select(.status? == "failed") | .title] | .[0:3] | join("\n")' playwright-report/results.json || echo "")
+        [ -n "$FAILED_NAMES" ] && FAILED_SECTION="\n*Failed Tests:*\n\`\`\`$FAILED_NAMES\`\`\`" || FAILED_SECTION=""
+
         if [ "$FAILED_TESTS" -eq 0 ]; then
           ICON="✅"
-          STATUS="Success"
+          STATUS="Passed"
+          COLOR="#36a64f"
         else
           ICON="🚨"
-          STATUS="Failure"
+          STATUS="Failed"
+          COLOR="#ff0000"
         fi
         
+        # Construct Slack Payload
         PAYLOAD=$(cat <<EOF
         {
-          "text": "AutoSites Regression Sentinel Notification",
-          "blocks": [
+          "attachments": [
             {
-              "type": "header",
-              "text": { "type": "plain_text", "text": "$ICON AutoSites Regression Sentinel" }
-            },
-            {
-              "type": "section",
-              "text": {
-                "type": "mrkdwn",
-                "text": "*Summary:*\nAutomated E2E Regression & Stability Monitoring for NextJS Production Environments"
-              }
-            },
-            {
-              "type": "section",
-              "fields": [
-                { "type": "mrkdwn", "text": "*Total Tests:*\n$TOTAL_TESTS" },
-                { "type": "mrkdwn", "text": "*Failures:*\n$FAILED_TESTS" },
-                { "type": "mrkdwn", "text": "*Status:*\n$STATUS" }
-              ]
-            },
-            {
-              "type": "section",
-              "text": {
-                "type": "mrkdwn",
-                "text": "*Target Websites:*\n• VehiclesReport\n• MotorcycleVINLookup\n• VehicleHistoryEU\n• VINNumberCA"
-              }
-            },
-            {
-              "type": "actions",
-              "elements": [
+              "color": "$COLOR",
+              "blocks": [
                 {
-                  "type": "button",
-                  "text": { "type": "plain_text", "text": "View Full Report" },
-                  "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  "type": "header",
+                  "text": { "type": "plain_text", "text": "$ICON Regression Test Result: $STATUS" }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Sites:* \`$SITES_TESTED\`\n*Scope:* \`auth-multiproperty-automation\`\n*Environment:* NextJS & WordPress Production\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Trigger:* ${{ github.event_name }}$FAILED_SECTION"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    { "type": "mrkdwn", "text": "*Total Tests:*\n$TOTAL_TESTS" },
+                    { "type": "mrkdwn", "text": "*Passed:*\n$PASSED_TESTS" },
+                    { "type": "mrkdwn", "text": "*Failed:*\n$FAILED_TESTS" }
+                  ]
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": { "type": "plain_text", "text": "View Workflow Run" },
+                      "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                    }
+                  ]
                 }
               ]
             }
@@ -88,12 +99,11 @@ jobs:
         EOF
         )
         curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
+
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
-        path: |
-          playwright-report/
-          results.json
+        path: playwright-report/
         retention-days: 30
