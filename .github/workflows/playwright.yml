@@ -95,6 +95,11 @@ jobs:
                       "type": "button",
                       "text": { "type": "plain_text", "text": "View Workflow Run" },
                       "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                    },
+                    {
+                      "type": "button",
+                      "text": { "type": "plain_text", "text": "View HTML Report" },
+                      "url": "https://shahnawaz-cmd.github.io/-automotive-sites-automation/"
                     }
                   ]
                 }
