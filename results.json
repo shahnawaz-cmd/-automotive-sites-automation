@@ -21,7 +21,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
         "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30365465558"
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30391131569"
       },
       "gitCommit": {
         "shortHash": "0837d8e",
@@ -52,7 +52,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30365465558"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30391131569"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -90,7 +90,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30365465558"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30391131569"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -128,7 +128,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30365465558"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30391131569"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -166,7 +166,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30365465558"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30391131569"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -241,14 +241,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7957,
+                  "duration": 7860,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83750\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 75ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 85ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -256,7 +256,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:36.578Z",
+                  "startTime": "2026-07-28T19:16:37.383Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -285,7 +285,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1868,
+                  "duration": 1918,
                   "errors": [],
                   "stdout": [
                     {
@@ -297,7 +297,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:44.785Z",
+                  "startTime": "2026-07-28T19:16:45.501Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -326,7 +326,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1689,
+                  "duration": 1680,
                   "errors": [],
                   "stdout": [
                     {
@@ -338,7 +338,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:46.671Z",
+                  "startTime": "2026-07-28T19:16:47.433Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -367,7 +367,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2120,
+                  "duration": 2248,
                   "errors": [],
                   "stdout": [
                     {
@@ -379,7 +379,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:48.381Z",
+                  "startTime": "2026-07-28T19:16:49.125Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -408,7 +408,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4782,
+                  "duration": 4657,
                   "errors": [],
                   "stdout": [
                     {
@@ -438,7 +438,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:50.515Z",
+                  "startTime": "2026-07-28T19:16:51.386Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -467,7 +467,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4542,
+                  "duration": 4400,
                   "errors": [],
                   "stdout": [
                     {
@@ -485,7 +485,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:55.311Z",
+                  "startTime": "2026-07-28T19:16:56.055Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -514,14 +514,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15154,
+                  "duration": 15590,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "LP Tab Found in Website\n"
                     },
                     {
-                      "text": "[LP Decode] Navigation to preview page took 3445ms\n"
+                      "text": "[LP Decode] Navigation to preview page took 3873ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -532,7 +532,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:52:59.869Z",
+                  "startTime": "2026-07-28T19:17:00.486Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -561,14 +561,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9300,
+                  "duration": 8705,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83709\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83768\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 74ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 73ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -588,7 +588,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:15.037Z",
+                  "startTime": "2026-07-28T19:17:16.089Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -617,17 +617,17 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11290,
+                  "duration": 11853,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83775\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83770\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 72ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 70ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -644,7 +644,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:24.351Z",
+                  "startTime": "2026-07-28T19:17:24.820Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -673,14 +673,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10886,
+                  "duration": 10901,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83783\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 53ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 64ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -688,7 +688,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:36.147Z",
+                  "startTime": "2026-07-28T19:17:37.156Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -717,7 +717,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1845,
+                  "duration": 1774,
                   "errors": [],
                   "stdout": [
                     {
@@ -729,7 +729,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:47.148Z",
+                  "startTime": "2026-07-28T19:17:48.178Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -758,7 +758,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1747,
+                  "duration": 1545,
                   "errors": [],
                   "stdout": [
                     {
@@ -770,7 +770,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:49.009Z",
+                  "startTime": "2026-07-28T19:17:49.968Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -799,7 +799,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1842,
+                  "duration": 2064,
                   "errors": [],
                   "stdout": [
                     {
@@ -811,7 +811,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:50.769Z",
+                  "startTime": "2026-07-28T19:17:51.527Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -840,7 +840,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4624,
+                  "duration": 4900,
                   "errors": [],
                   "stdout": [
                     {
@@ -870,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:52.624Z",
+                  "startTime": "2026-07-28T19:17:53.606Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -899,7 +899,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3455,
+                  "duration": 3223,
                   "errors": [],
                   "stdout": [
                     {
@@ -917,7 +917,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:53:57.261Z",
+                  "startTime": "2026-07-28T19:17:58.518Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -946,7 +946,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1475,
+                  "duration": 1534,
                   "errors": [],
                   "stdout": [
                     {
@@ -958,7 +958,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:00.735Z",
+                  "startTime": "2026-07-28T19:18:01.758Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -987,14 +987,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11494,
+                  "duration": 11793,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83741\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83703\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 62ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 58ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1014,7 +1014,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:02.225Z",
+                  "startTime": "2026-07-28T19:18:03.306Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1043,17 +1043,17 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11588,
+                  "duration": 11590,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83765\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83748\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 54ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 62ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1070,7 +1070,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:13.731Z",
+                  "startTime": "2026-07-28T19:18:15.111Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1099,14 +1099,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11449,
+                  "duration": 11817,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83787\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83780\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 75ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 78ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1114,7 +1114,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:25.793Z",
+                  "startTime": "2026-07-28T19:18:27.188Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1143,7 +1143,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2386,
+                  "duration": 2434,
                   "errors": [],
                   "stdout": [
                     {
@@ -1155,7 +1155,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:37.365Z",
+                  "startTime": "2026-07-28T19:18:39.119Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1184,7 +1184,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2138,
+                  "duration": 2340,
                   "errors": [],
                   "stdout": [
                     {
@@ -1196,7 +1196,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:39.767Z",
+                  "startTime": "2026-07-28T19:18:41.567Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1225,7 +1225,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2112,
+                  "duration": 2199,
                   "errors": [],
                   "stdout": [
                     {
@@ -1237,7 +1237,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:41.922Z",
+                  "startTime": "2026-07-28T19:18:43.922Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1266,7 +1266,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5121,
+                  "duration": 5001,
                   "errors": [],
                   "stdout": [
                     {
@@ -1296,7 +1296,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:44.049Z",
+                  "startTime": "2026-07-28T19:18:46.135Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1325,7 +1325,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3710,
+                  "duration": 3781,
                   "errors": [],
                   "stdout": [
                     {
@@ -1343,7 +1343,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:49.189Z",
+                  "startTime": "2026-07-28T19:18:51.154Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1372,7 +1372,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2059,
+                  "duration": 2115,
                   "errors": [],
                   "stdout": [
                     {
@@ -1384,7 +1384,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:52.914Z",
+                  "startTime": "2026-07-28T19:18:54.947Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1413,14 +1413,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12389,
+                  "duration": 12087,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83769\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83773\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 79ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 82ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1440,7 +1440,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:54:54.984Z",
+                  "startTime": "2026-07-28T19:18:57.096Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1469,17 +1469,17 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11969,
+                  "duration": 12008,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83783\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83726\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 72ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 67ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1496,7 +1496,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:07.385Z",
+                  "startTime": "2026-07-28T19:19:09.197Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1525,14 +1525,14 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10757,
+                  "duration": 10831,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83742\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83734\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 73ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 75ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1540,7 +1540,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:19.860Z",
+                  "startTime": "2026-07-28T19:19:21.693Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1569,7 +1569,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1651,
+                  "duration": 1647,
                   "errors": [],
                   "stdout": [
                     {
@@ -1581,7 +1581,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:30.725Z",
+                  "startTime": "2026-07-28T19:19:32.628Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1610,7 +1610,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1567,
+                  "duration": 1721,
                   "errors": [],
                   "stdout": [
                     {
@@ -1622,7 +1622,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:32.390Z",
+                  "startTime": "2026-07-28T19:19:34.288Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1651,7 +1651,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1505,
+                  "duration": 1876,
                   "errors": [],
                   "stdout": [
                     {
@@ -1663,7 +1663,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:33.972Z",
+                  "startTime": "2026-07-28T19:19:36.028Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1692,7 +1692,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4217,
+                  "duration": 4439,
                   "errors": [],
                   "stdout": [
                     {
@@ -1722,7 +1722,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:35.494Z",
+                  "startTime": "2026-07-28T19:19:37.918Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1751,7 +1751,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3131,
+                  "duration": 3135,
                   "errors": [],
                   "stdout": [
                     {
@@ -1769,7 +1769,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:39.730Z",
+                  "startTime": "2026-07-28T19:19:42.374Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1798,7 +1798,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1502,
+                  "duration": 1466,
                   "errors": [],
                   "stdout": [
                     {
@@ -1810,7 +1810,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:42.876Z",
+                  "startTime": "2026-07-28T19:19:45.523Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1839,14 +1839,14 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11292,
+                  "duration": 11069,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83766\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83705\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 57ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1866,7 +1866,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:44.391Z",
+                  "startTime": "2026-07-28T19:19:47.005Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1895,17 +1895,17 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11419,
+                  "duration": 11520,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83754\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 58ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 62ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1922,7 +1922,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-28T13:55:55.697Z",
+                  "startTime": "2026-07-28T19:19:58.087Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1940,8 +1940,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-28T13:52:35.905Z",
-    "duration": 211278.94,
+    "startTime": "2026-07-28T19:16:36.669Z",
+    "duration": 212999.66700000002,
     "expected": 36,
     "skipped": 0,
     "unexpected": 0,
