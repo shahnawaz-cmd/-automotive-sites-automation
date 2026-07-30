@@ -1,0 +1,1795 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/24.18.0/x64/bin/node",
+      "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/node_modules/.bin/playwright",
+      "test",
+      "--workers=2",
+      "--output=playwright-report/batch1",
+      "--grep",
+      "TC_(01|02|04|05|06|07|08|09|10|11)_",
+      "--reporter=html,json"
+    ],
+    "configFile": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright.config.js",
+    "rootDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+        "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30556735673"
+      },
+      "gitCommit": {
+        "shortHash": "7bde2e5",
+        "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+        "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+        "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+        "author": {
+          "name": "shahnawaz",
+          "email": "shahnawaz@empirepixel.com",
+          "time": 1785262157000
+        },
+        "committer": {
+          "name": "shahnawaz",
+          "email": "shahnawaz@empirepixel.com",
+          "time": 1785262157000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30556735673"
+          },
+          "gitCommit": {
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 2
+        },
+        "id": "Desktop Chrome",
+        "name": "Desktop Chrome",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30556735673"
+          },
+          "gitCommit": {
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 2
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30556735673"
+          },
+          "gitCommit": {
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 2
+        },
+        "id": "Mobile Edge",
+        "name": "Mobile Edge",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "commitHash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30556735673"
+          },
+          "gitCommit": {
+            "shortHash": "7bde2e5",
+            "hash": "7bde2e540e4ac81f42fed3046720bb41f81814ff",
+            "subject": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks",
+            "body": "Refactor: update PreviewPage.js select plan index selector, fix playwright.yml pipeline failure outcome step, and update slack-notify.js status checks\n",
+            "author": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "committer": {
+              "name": "shahnawaz",
+              "email": "shahnawaz@empirepixel.com",
+              "time": 1785262157000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 2
+        },
+        "id": "Samsung Internet",
+        "name": "Samsung Internet",
+        "testDir": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "streaming2-e2e.spec.js",
+      "file": "streaming2-e2e.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_01_VIN_Decode_17_Character_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43321,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 584
+                    },
+                    {
+                      "title": "Decode 17-Character VIN",
+                      "duration": 1562
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 40862
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 129
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:28:27.255Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-a1296e332a070914a8f4",
+          "file": "streaming2-e2e.spec.js",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "TC_02_VIN_Decode_Classic_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3949,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 629
+                    },
+                    {
+                      "title": "Decode Classic VIN",
+                      "duration": 1549
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 1410
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 150
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:28:27.213Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-9bde9c92dbe72f651316",
+          "file": "streaming2-e2e.spec.js",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "TC_04_Revisit_Banner_Interaction_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6158,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1963
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 638
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 2646
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 757
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:28:31.645Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-0a16f0fd84d1d5915075",
+          "file": "streaming2-e2e.spec.js",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6984,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Window Sticker & Decode VIN",
+                      "duration": 2845
+                    },
+                    {
+                      "title": "Verify Window Sticker Specs",
+                      "duration": 1187
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 2061
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 689
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:28:37.834Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-7ce87d6a7bb6dadc3fab",
+          "file": "streaming2-e2e.spec.js",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "TC_06_Preview_Page_Plan_Selection_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 39503,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1677
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 37262
+                    },
+                    {
+                      "title": "Select each report plan and verify selection",
+                      "duration": 327
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:28:44.843Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-ccf7d568e9a88a26da1a",
+          "file": "streaming2-e2e.spec.js",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "TC_07_Exit_Intent_Popup_Trigger_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:29:11.010Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-71006121b184a6aafeae",
+          "file": "streaming2-e2e.spec.js",
+          "line": 124,
+          "column": 1
+        },
+        {
+          "title": "TC_08_Home_To_Checkout_Flow_Integration_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 93941,
+                  "error": {
+                    "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\n    at PreviewPage.verifySpecsVisible (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js:143:17",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/pages/PreviewPage.js",
+                      "column": 21,
+                      "line": 46
+                    },
+                    "snippet": "   at pages/PreviewPage.js:46\n\n\u001b[0m \u001b[90m 44 |\u001b[39m   \u001b[36masync\u001b[39m verifySpecsVisible(expectedText \u001b[33m=\u001b[39m \u001b[32m'Records found for'\u001b[39m\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[33mTIMEOUT\u001b[39m) {\n \u001b[90m 45 |\u001b[39m     \u001b[90m// Wait for the specific text to appear\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`text=${expectedText}`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m   }\n \u001b[90m 48 |\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36masync\u001b[39m verifyAccessRecordButton() {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/pages/PreviewPage.js",
+                        "column": 21,
+                        "line": 46
+                      },
+                      "message": "TimeoutError: page.waitForSelector: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=Records found for') to be visible\u001b[22m\n\n\n   at pages/PreviewPage.js:46\n\n  44 |   async verifySpecsVisible(expectedText = 'Records found for', timeout = TIMEOUT) {\n  45 |     // Wait for the specific text to appear\n> 46 |     await this.page.waitForSelector(`text=${expectedText}`, { timeout: timeout });\n     |                     ^\n  47 |   }\n  48 |\n  49 |   async verifyAccessRecordButton() {\n    at PreviewPage.verifySpecsVisible (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/pages/PreviewPage.js:46:21)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js:143:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:29:21.711Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1/streaming2-e2e-TC-08-Home--786e1-Flow-Integration-Validation-Desktop-Chrome/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1/streaming2-e2e-TC-08-Home--786e1-Flow-Integration-Validation-Desktop-Chrome/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1/streaming2-e2e-TC-08-Home--786e1-Flow-Integration-Validation-Desktop-Chrome/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/pages/PreviewPage.js",
+                    "column": 21,
+                    "line": 46
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9282,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-07-30T15:30:56.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/playwright-report/batch1/streaming2-e2e-TC-08-Home--786e1-Flow-Integration-Validation-Desktop-Chrome-retry1/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "51124a558cf768cdf755-00ca89d0b0ccfd199d0e",
+          "file": "streaming2-e2e.spec.js",
+          "line": 138,
+          "column": 1
+        },
+        {
+          "title": "TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 24236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:29:24.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-e93b0fc4da58440bf91c",
+          "file": "streaming2-e2e.spec.js",
+          "line": 190,
+          "column": 1
+        },
+        {
+          "title": "TC_01_VIN_Decode_17_Character_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 386
+                    },
+                    {
+                      "title": "Decode 17-Character VIN",
+                      "duration": 1393
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 1584
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 93
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:29:49.102Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-d03a218012c0ab4655d7",
+          "file": "streaming2-e2e.spec.js",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "TC_02_VIN_Decode_Classic_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3568,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 375
+                    },
+                    {
+                      "title": "Decode Classic VIN",
+                      "duration": 1333
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 1577
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 91
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:29:52.887Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-2caec6dac5430379c29e",
+          "file": "streaming2-e2e.spec.js",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "TC_04_Revisit_Banner_Interaction_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12863,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1644
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 1483
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 8502
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 1131
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:29:56.474Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-8162597d31d4d637ff72",
+          "file": "streaming2-e2e.spec.js",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 31692,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Window Sticker & Decode VIN",
+                      "duration": 3495
+                    },
+                    {
+                      "title": "Verify Window Sticker Specs",
+                      "duration": 18901
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 8254
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 946
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:30:09.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-2a1191202293608580d4",
+          "file": "streaming2-e2e.spec.js",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "TC_06_Preview_Page_Plan_Selection_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12138,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1502
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 10338
+                    },
+                    {
+                      "title": "Select each report plan and verify selection",
+                      "duration": 197
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:30:41.056Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-f912169be5f58035a720",
+          "file": "streaming2-e2e.spec.js",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "TC_07_Exit_Intent_Popup_Trigger_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Skipping exit intent validation on mobile browsers",
+                  "location": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js",
+                    "line": 125,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:30:53.204Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Skipping exit intent validation on mobile browsers",
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js",
+                        "line": 125,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "51124a558cf768cdf755-464bfcd75c09c26d596e",
+          "file": "streaming2-e2e.spec.js",
+          "line": 124,
+          "column": 1
+        },
+        {
+          "title": "TC_08_Home_To_Checkout_Flow_Integration_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:30:53.330Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-2b25b0b3d3c545ac506c",
+          "file": "streaming2-e2e.spec.js",
+          "line": 138,
+          "column": 1
+        },
+        {
+          "title": "TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12766,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:30:57.960Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-c708ab5d05a114ff149c",
+          "file": "streaming2-e2e.spec.js",
+          "line": 190,
+          "column": 1
+        },
+        {
+          "title": "TC_01_VIN_Decode_17_Character_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3447,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 300
+                    },
+                    {
+                      "title": "Decode 17-Character VIN",
+                      "duration": 1326
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 1558
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 112
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:06.410Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-34c41536ba4a902cdf6f",
+          "file": "streaming2-e2e.spec.js",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "TC_02_VIN_Decode_Classic_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 287
+                    },
+                    {
+                      "title": "Decode Classic VIN",
+                      "duration": 1493
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 267
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 274
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:09.950Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-d7dc8401c6ec67dd2c12",
+          "file": "streaming2-e2e.spec.js",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "TC_04_Revisit_Banner_Interaction_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 21463,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 2006
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 9512
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 8994
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 819
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:11.181Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-9ac1bd88017a1b615779",
+          "file": "streaming2-e2e.spec.js",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22795,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Window Sticker & Decode VIN",
+                      "duration": 2907
+                    },
+                    {
+                      "title": "Verify Window Sticker Specs",
+                      "duration": 11364
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 7409
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 957
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:12.414Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-d1883153adfeb2f12f95",
+          "file": "streaming2-e2e.spec.js",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "TC_06_Preview_Page_Plan_Selection_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1739
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 2056
+                    },
+                    {
+                      "title": "Select each report plan and verify selection",
+                      "duration": 227
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:32.756Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-3f244865f3ff0db186fe",
+          "file": "streaming2-e2e.spec.js",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "TC_07_Exit_Intent_Popup_Trigger_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Skipping exit intent validation on mobile browsers",
+                  "location": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js",
+                    "line": 125,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:31:35.223Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Skipping exit intent validation on mobile browsers",
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js",
+                        "line": 125,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "51124a558cf768cdf755-3dd1cb0733b383f4f75d",
+          "file": "streaming2-e2e.spec.js",
+          "line": 124,
+          "column": 1
+        },
+        {
+          "title": "TC_08_Home_To_Checkout_Flow_Integration_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:31:35.426Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-f7c240d6e8e31e35d5d2",
+          "file": "streaming2-e2e.spec.js",
+          "line": 138,
+          "column": 1
+        },
+        {
+          "title": "TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Edge",
+              "projectName": "Mobile Edge",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:31:37.014Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-a59fe0e7ecde2a511235",
+          "file": "streaming2-e2e.spec.js",
+          "line": 190,
+          "column": 1
+        },
+        {
+          "title": "TC_01_VIN_Decode_17_Character_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16156,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 349
+                    },
+                    {
+                      "title": "Decode 17-Character VIN",
+                      "duration": 1549
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 13987
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 102
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:48.008Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-6bc45ecda423d32c3524",
+          "file": "streaming2-e2e.spec.js",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "TC_02_VIN_Decode_Classic_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2471,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home",
+                      "duration": 336
+                    },
+                    {
+                      "title": "Decode Classic VIN",
+                      "duration": 1386
+                    },
+                    {
+                      "title": "Verify Specs and Access Record Button",
+                      "duration": 149
+                    },
+                    {
+                      "title": "Interact with Access Record Popup",
+                      "duration": 427
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:49.152Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-2d8d01c27d255d07adc1",
+          "file": "streaming2-e2e.spec.js",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "TC_04_Revisit_Banner_Interaction_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 14785,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1541
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 1545
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 10950
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 661
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:31:51.741Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-aea64bcd57dd18c33dae",
+          "file": "streaming2-e2e.spec.js",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "TC_05_Window_Sticker_Revisit_Banner_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Window Sticker & Decode VIN",
+                      "duration": 3102
+                    },
+                    {
+                      "title": "Verify Window Sticker Specs",
+                      "duration": 1071
+                    },
+                    {
+                      "title": "Go Back & Verify Revisit Banner",
+                      "duration": 8067
+                    },
+                    {
+                      "title": "Verify Revisit Redirection URL",
+                      "duration": 777
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:32:04.280Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-8313a2f83a6d3abca389",
+          "file": "streaming2-e2e.spec.js",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "TC_06_Preview_Page_Plan_Selection_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Home & Decode VIN",
+                      "duration": 1793
+                    },
+                    {
+                      "title": "Verify Specs Visible",
+                      "duration": 1608
+                    },
+                    {
+                      "title": "Select each report plan and verify selection",
+                      "duration": 225
+                    }
+                  ],
+                  "startTime": "2026-07-30T15:32:06.538Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-8aba541126cdcf37fbda",
+          "file": "streaming2-e2e.spec.js",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "TC_07_Exit_Intent_Popup_Trigger_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Skipping exit intent validation on mobile browsers",
+                  "location": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js",
+                    "line": 125,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 186,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:32:10.318Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Skipping exit intent validation on mobile browsers",
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/streaming2-e2e.spec.js",
+                        "line": 125,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "51124a558cf768cdf755-b763f0b224c1daaf6c84",
+          "file": "streaming2-e2e.spec.js",
+          "line": 124,
+          "column": 1
+        },
+        {
+          "title": "TC_08_Home_To_Checkout_Flow_Integration_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:32:10.516Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-c6a8297185d188c2ab23",
+          "file": "streaming2-e2e.spec.js",
+          "line": 138,
+          "column": 1
+        },
+        {
+          "title": "TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Samsung Internet",
+              "projectName": "Samsung Internet",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 10840,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:32:15.607Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "51124a558cf768cdf755-f14e22c4b1451e784636",
+          "file": "streaming2-e2e.spec.js",
+          "line": 190,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-30T15:28:26.719Z",
+    "duration": 239839.288,
+    "expected": 28,
+    "skipped": 3,
+    "unexpected": 0,
+    "flaky": 1
+  }
+}
