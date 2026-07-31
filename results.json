@@ -21,7 +21,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
         "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30596084230"
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30616220230"
       },
       "gitCommit": {
         "shortHash": "0837d8e",
@@ -52,7 +52,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30596084230"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30616220230"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -90,7 +90,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30596084230"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30616220230"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -128,7 +128,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30596084230"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30616220230"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -166,7 +166,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30596084230"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30616220230"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -241,14 +241,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7940,
+                  "duration": 7395,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83712\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83740\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 78ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 68ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -256,7 +256,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:21:56.172Z",
+                  "startTime": "2026-07-31T08:25:52.704Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -285,7 +285,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1770,
+                  "duration": 1377,
                   "errors": [],
                   "stdout": [
                     {
@@ -297,7 +297,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:04.782Z",
+                  "startTime": "2026-07-31T08:26:01.472Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -326,7 +326,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1751,
+                  "duration": 1302,
                   "errors": [],
                   "stdout": [
                     {
@@ -338,7 +338,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:06.571Z",
+                  "startTime": "2026-07-31T08:26:02.872Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -367,7 +367,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2314,
+                  "duration": 1886,
                   "errors": [],
                   "stdout": [
                     {
@@ -379,7 +379,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:08.337Z",
+                  "startTime": "2026-07-31T08:26:04.190Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -408,7 +408,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5009,
+                  "duration": 4156,
                   "errors": [],
                   "stdout": [
                     {
@@ -438,7 +438,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:10.665Z",
+                  "startTime": "2026-07-31T08:26:06.091Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -467,7 +467,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4955,
+                  "duration": 4161,
                   "errors": [],
                   "stdout": [
                     {
@@ -485,7 +485,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:15.687Z",
+                  "startTime": "2026-07-31T08:26:10.262Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -514,14 +514,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14184,
+                  "duration": 15656,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "LP Tab Found in Website\n"
                     },
                     {
-                      "text": "[LP Decode] Navigation to preview page took 2346ms\n"
+                      "text": "[LP Decode] Navigation to preview page took 4094ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -532,7 +532,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:20.656Z",
+                  "startTime": "2026-07-31T08:26:14.438Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -561,14 +561,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9308,
+                  "duration": 8830,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83755\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83749\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 69ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 70ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -588,7 +588,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:34.853Z",
+                  "startTime": "2026-07-31T08:26:30.109Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -617,17 +617,17 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11806,
+                  "duration": 11064,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83703\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83728\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 61ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 60ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -644,7 +644,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:44.172Z",
+                  "startTime": "2026-07-31T08:26:38.954Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -673,14 +673,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10892,
+                  "duration": 9381,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83750\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83796\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 68ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -688,7 +688,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:22:56.446Z",
+                  "startTime": "2026-07-31T08:26:50.492Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -717,7 +717,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1784,
+                  "duration": 1176,
                   "errors": [],
                   "stdout": [
                     {
@@ -729,7 +729,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:07.456Z",
+                  "startTime": "2026-07-31T08:26:59.991Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -758,7 +758,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1546,
+                  "duration": 1258,
                   "errors": [],
                   "stdout": [
                     {
@@ -770,7 +770,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:09.255Z",
+                  "startTime": "2026-07-31T08:27:01.181Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -799,7 +799,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2052,
+                  "duration": 1743,
                   "errors": [],
                   "stdout": [
                     {
@@ -811,7 +811,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:10.815Z",
+                  "startTime": "2026-07-31T08:27:02.452Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -840,7 +840,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4460,
+                  "duration": 4218,
                   "errors": [],
                   "stdout": [
                     {
@@ -870,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:12.882Z",
+                  "startTime": "2026-07-31T08:27:04.208Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -899,7 +899,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3574,
+                  "duration": 2381,
                   "errors": [],
                   "stdout": [
                     {
@@ -917,7 +917,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:17.354Z",
+                  "startTime": "2026-07-31T08:27:08.443Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -946,7 +946,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1538,
+                  "duration": 1208,
                   "errors": [],
                   "stdout": [
                     {
@@ -958,7 +958,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:20.946Z",
+                  "startTime": "2026-07-31T08:27:10.847Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -987,14 +987,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11747,
+                  "duration": 10140,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83745\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 57ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 56ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1014,7 +1014,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:22.500Z",
+                  "startTime": "2026-07-31T08:27:12.071Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1043,17 +1043,17 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11411,
+                  "duration": 9891,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83753\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83732\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 60ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 56ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1070,7 +1070,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:34.259Z",
+                  "startTime": "2026-07-31T08:27:22.241Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1099,14 +1099,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11827,
+                  "duration": 9752,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83778\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83725\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 82ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 83ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1114,7 +1114,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:46.142Z",
+                  "startTime": "2026-07-31T08:27:32.619Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1143,7 +1143,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2087,
+                  "duration": 1791,
                   "errors": [],
                   "stdout": [
                     {
@@ -1155,7 +1155,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:23:58.074Z",
+                  "startTime": "2026-07-31T08:27:42.477Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1184,7 +1184,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2104,
+                  "duration": 1607,
                   "errors": [],
                   "stdout": [
                     {
@@ -1196,7 +1196,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:00.176Z",
+                  "startTime": "2026-07-31T08:27:44.281Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1225,7 +1225,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2323,
+                  "duration": 1721,
                   "errors": [],
                   "stdout": [
                     {
@@ -1237,7 +1237,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:02.295Z",
+                  "startTime": "2026-07-31T08:27:45.902Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1266,7 +1266,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4978,
+                  "duration": 4191,
                   "errors": [],
                   "stdout": [
                     {
@@ -1296,7 +1296,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:04.633Z",
+                  "startTime": "2026-07-31T08:27:47.636Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1325,7 +1325,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3900,
+                  "duration": 2919,
                   "errors": [],
                   "stdout": [
                     {
@@ -1343,7 +1343,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:09.624Z",
+                  "startTime": "2026-07-31T08:27:51.843Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1372,7 +1372,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2014,
+                  "duration": 1574,
                   "errors": [],
                   "stdout": [
                     {
@@ -1384,7 +1384,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:13.536Z",
+                  "startTime": "2026-07-31T08:27:54.779Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1413,14 +1413,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12054,
+                  "duration": 10861,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83712\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83760\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 77ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 73ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1440,7 +1440,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:15.562Z",
+                  "startTime": "2026-07-31T08:27:56.366Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1469,17 +1469,17 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11766,
+                  "duration": 10246,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83774\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83794\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 59ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 69ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1496,7 +1496,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:27.631Z",
+                  "startTime": "2026-07-31T08:28:07.242Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1525,7 +1525,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90086,
+                  "duration": 90085,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1546,7 +1546,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:24:39.869Z",
+                  "startTime": "2026-07-31T08:28:17.963Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1560,7 +1560,7 @@
                   "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90083,
+                  "duration": 90084,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1581,7 +1581,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:26:10.516Z",
+                  "startTime": "2026-07-31T08:29:48.615Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1616,7 +1616,7 @@
                   "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90090,
+                  "duration": 90087,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1637,7 +1637,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:27:41.158Z",
+                  "startTime": "2026-07-31T08:31:19.258Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1651,7 +1651,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90085,
+                  "duration": 90088,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1672,7 +1672,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:29:11.806Z",
+                  "startTime": "2026-07-31T08:32:49.914Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1707,7 +1707,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90085,
+                  "duration": 90081,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1728,7 +1728,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:30:42.456Z",
+                  "startTime": "2026-07-31T08:34:20.572Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1742,7 +1742,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90091,
+                  "duration": 90090,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1763,7 +1763,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:32:13.100Z",
+                  "startTime": "2026-07-31T08:35:51.213Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1819,7 +1819,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:33:43.762Z",
+                  "startTime": "2026-07-31T08:37:21.877Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1833,7 +1833,7 @@
                   "workerIndex": 10,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90092,
+                  "duration": 90089,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1854,7 +1854,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:35:14.411Z",
+                  "startTime": "2026-07-31T08:38:52.521Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1889,7 +1889,7 @@
                   "workerIndex": 11,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90092,
+                  "duration": 90084,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1914,7 +1914,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:36:45.061Z",
+                  "startTime": "2026-07-31T08:40:23.174Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1928,7 +1928,7 @@
                   "workerIndex": 12,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90087,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1953,7 +1953,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:38:15.730Z",
+                  "startTime": "2026-07-31T08:41:53.811Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1988,7 +1988,7 @@
                   "workerIndex": 13,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90087,
+                  "duration": 90093,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2009,7 +2009,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:39:46.373Z",
+                  "startTime": "2026-07-31T08:43:24.460Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2023,7 +2023,7 @@
                   "workerIndex": 14,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90094,
+                  "duration": 90085,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2044,7 +2044,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:41:17.016Z",
+                  "startTime": "2026-07-31T08:44:55.114Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2079,7 +2079,7 @@
                   "workerIndex": 15,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90091,
+                  "duration": 90088,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2104,7 +2104,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:42:47.683Z",
+                  "startTime": "2026-07-31T08:46:25.758Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2118,7 +2118,7 @@
                   "workerIndex": 16,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90095,
+                  "duration": 90081,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2143,7 +2143,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:44:18.344Z",
+                  "startTime": "2026-07-31T08:47:56.415Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2178,7 +2178,7 @@
                   "workerIndex": 17,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90092,
+                  "duration": 90087,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2203,7 +2203,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:45:49.003Z",
+                  "startTime": "2026-07-31T08:49:27.050Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2217,7 +2217,7 @@
                   "workerIndex": 18,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90090,
+                  "duration": 90089,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2242,7 +2242,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:47:19.653Z",
+                  "startTime": "2026-07-31T08:50:57.688Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2277,7 +2277,7 @@
                   "workerIndex": 19,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90097,
+                  "duration": 90098,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2305,7 +2305,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T01:48:50.316Z",
+                  "startTime": "2026-07-31T08:52:28.343Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2319,7 +2319,7 @@
                   "workerIndex": 20,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90099,
+                  "duration": 90103,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2347,7 +2347,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-07-31T01:50:20.971Z",
+                  "startTime": "2026-07-31T08:53:58.989Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2371,8 +2371,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-31T01:21:55.513Z",
-    "duration": 1795700.351,
+    "startTime": "2026-07-31T08:25:52.054Z",
+    "duration": 1777188.408,
     "expected": 27,
     "skipped": 0,
     "unexpected": 9,
