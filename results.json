@@ -21,7 +21,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
         "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30965705473"
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30987928992"
       },
       "gitCommit": {
         "shortHash": "0837d8e",
@@ -52,7 +52,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30965705473"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30987928992"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -90,7 +90,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30965705473"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30987928992"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -128,7 +128,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30965705473"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30987928992"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -166,7 +166,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30965705473"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/30987928992"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -241,14 +241,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7945,
+                  "duration": 7574,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83735\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83793\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 87ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 81ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -256,7 +256,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:13:51.206Z",
+                  "startTime": "2026-08-05T08:11:18.301Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -285,7 +285,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1849,
+                  "duration": 1516,
                   "errors": [],
                   "stdout": [
                     {
@@ -297,7 +297,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:00.684Z",
+                  "startTime": "2026-08-05T08:11:27.247Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -326,7 +326,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1736,
+                  "duration": 1396,
                   "errors": [],
                   "stdout": [
                     {
@@ -338,7 +338,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:02.551Z",
+                  "startTime": "2026-08-05T08:11:28.785Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -367,7 +367,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2165,
+                  "duration": 1978,
                   "errors": [],
                   "stdout": [
                     {
@@ -379,7 +379,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:04.302Z",
+                  "startTime": "2026-08-05T08:11:30.196Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -408,7 +408,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5189,
+                  "duration": 4151,
                   "errors": [],
                   "stdout": [
                     {
@@ -438,7 +438,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:06.484Z",
+                  "startTime": "2026-08-05T08:11:32.190Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -467,7 +467,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4561,
+                  "duration": 4458,
                   "errors": [],
                   "stdout": [
                     {
@@ -485,7 +485,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:11.693Z",
+                  "startTime": "2026-08-05T08:11:36.352Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -514,14 +514,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14684,
+                  "duration": 13836,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "LP Tab Found in Website\n"
                     },
                     {
-                      "text": "[LP Decode] Navigation to preview page took 2841ms\n"
+                      "text": "[LP Decode] Navigation to preview page took 2211ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -532,7 +532,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:16.273Z",
+                  "startTime": "2026-08-05T08:11:40.823Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -561,14 +561,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9377,
+                  "duration": 9200,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83787\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83760\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 65ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 67ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -588,7 +588,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:30.971Z",
+                  "startTime": "2026-08-05T08:11:54.670Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -617,17 +617,17 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12346,
+                  "duration": 10494,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83773\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83766\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 72ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -644,7 +644,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:40.361Z",
+                  "startTime": "2026-08-05T08:12:03.882Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -673,14 +673,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10742,
+                  "duration": 9369,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83773\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83756\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 66ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 64ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -688,7 +688,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:14:53.204Z",
+                  "startTime": "2026-08-05T08:12:14.834Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -717,7 +717,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1464,
+                  "duration": 1066,
                   "errors": [],
                   "stdout": [
                     {
@@ -729,7 +729,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:04.067Z",
+                  "startTime": "2026-08-05T08:12:24.320Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -758,7 +758,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1519,
+                  "duration": 1167,
                   "errors": [],
                   "stdout": [
                     {
@@ -770,7 +770,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:05.545Z",
+                  "startTime": "2026-08-05T08:12:25.400Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -799,7 +799,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2141,
+                  "duration": 1757,
                   "errors": [],
                   "stdout": [
                     {
@@ -811,7 +811,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:07.078Z",
+                  "startTime": "2026-08-05T08:12:26.580Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -840,7 +840,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4348,
+                  "duration": 3639,
                   "errors": [],
                   "stdout": [
                     {
@@ -870,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:09.233Z",
+                  "startTime": "2026-08-05T08:12:28.350Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -899,7 +899,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3109,
+                  "duration": 2385,
                   "errors": [],
                   "stdout": [
                     {
@@ -917,7 +917,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:13.594Z",
+                  "startTime": "2026-08-05T08:12:32.001Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -946,7 +946,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1293,
+                  "duration": 1030,
                   "errors": [],
                   "stdout": [
                     {
@@ -958,7 +958,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:16.720Z",
+                  "startTime": "2026-08-05T08:12:34.399Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -987,14 +987,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11685,
+                  "duration": 10558,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83730\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83718\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 61ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 46ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1014,7 +1014,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:18.029Z",
+                  "startTime": "2026-08-05T08:12:35.443Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1043,7 +1043,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11515,
+                  "duration": 9909,
                   "errors": [],
                   "stdout": [
                     {
@@ -1053,7 +1053,7 @@
                       "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83769\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 57ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1070,7 +1070,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:29.725Z",
+                  "startTime": "2026-08-05T08:12:46.011Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1099,14 +1099,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11319,
+                  "duration": 10928,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83700\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83756\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 78ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 90ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1114,7 +1114,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:41.729Z",
+                  "startTime": "2026-08-05T08:12:56.384Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1143,7 +1143,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2003,
+                  "duration": 1561,
                   "errors": [],
                   "stdout": [
                     {
@@ -1155,7 +1155,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:53.164Z",
+                  "startTime": "2026-08-05T08:13:07.431Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1184,7 +1184,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2232,
+                  "duration": 1531,
                   "errors": [],
                   "stdout": [
                     {
@@ -1196,7 +1196,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:55.185Z",
+                  "startTime": "2026-08-05T08:13:09.010Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1225,7 +1225,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2107,
+                  "duration": 1882,
                   "errors": [],
                   "stdout": [
                     {
@@ -1237,7 +1237,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:57.434Z",
+                  "startTime": "2026-08-05T08:13:10.553Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1266,7 +1266,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5220,
+                  "duration": 4143,
                   "errors": [],
                   "stdout": [
                     {
@@ -1296,7 +1296,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:15:59.556Z",
+                  "startTime": "2026-08-05T08:13:12.447Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1325,7 +1325,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3603,
+                  "duration": 2923,
                   "errors": [],
                   "stdout": [
                     {
@@ -1343,7 +1343,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:16:04.793Z",
+                  "startTime": "2026-08-05T08:13:16.604Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1372,7 +1372,7 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1939,
+                  "duration": 1478,
                   "errors": [],
                   "stdout": [
                     {
@@ -1384,7 +1384,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:16:08.410Z",
+                  "startTime": "2026-08-05T08:13:19.537Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1413,14 +1413,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11931,
+                  "duration": 10912,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83718\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83769\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 80ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 90ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1440,7 +1440,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:16:10.363Z",
+                  "startTime": "2026-08-05T08:13:21.034Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1469,17 +1469,17 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12069,
+                  "duration": 10367,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83749\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 62ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1496,7 +1496,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:16:22.306Z",
+                  "startTime": "2026-08-05T08:13:31.967Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1525,7 +1525,7 @@
                   "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90091,
+                  "duration": 90082,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1546,7 +1546,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:16:34.871Z",
+                  "startTime": "2026-08-05T08:13:42.799Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1560,7 +1560,7 @@
                   "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90091,
+                  "duration": 90085,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1581,7 +1581,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:18:05.533Z",
+                  "startTime": "2026-08-05T08:15:13.459Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1616,7 +1616,7 @@
                   "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90082,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1637,7 +1637,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:19:36.176Z",
+                  "startTime": "2026-08-05T08:16:44.093Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1651,7 +1651,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90091,
+                  "duration": 90075,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1672,7 +1672,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:21:06.821Z",
+                  "startTime": "2026-08-05T08:18:14.720Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1693,7 +1693,7 @@
         },
         {
           "title": "TC_03 VIN field validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -1728,7 +1728,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:22:37.460Z",
+                  "startTime": "2026-08-05T08:19:45.352Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1741,40 +1741,25 @@
                 {
                   "workerIndex": 8,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90095,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 1239,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                      "text": "Passed: Field restricts input to 17 characters.\n"
                     },
                     {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
-                        "column": 16,
-                        "line": 60
-                      },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n  58 |   try {\n  59 |     await page.goto('/');\n> 60 |     await page.waitForLoadState('networkidle');\n     |                ^\n  61 |     \n  62 |     await actor.attemptsTo(new FieldValidation());\n  63 |   } finally {\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:60:16"
+                      "text": "Passed: Error message appeared for short VIN.\n"
                     }
                   ],
-                  "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:24:08.086Z",
+                  "startTime": "2026-08-05T08:21:15.982Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-03-VIN-field-validation-VINNumberCA-retry1/error-context.md"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "flaky"
             }
           ],
           "id": "2e0527a360a5c23f209a-0c5bfd837eb64c7ed91a",
@@ -1795,31 +1780,42 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 8,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90081,
+                  "status": "failed",
+                  "duration": 21862,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponAndPrevCouponVerification.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:6:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:71:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                      "column": 35,
+                      "line": 30
+                    },
+                    "snippet": "   at ../tasks/coupon_flow_validation.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[90m// Conditional timeout: Wait up to 10s for the banner to appear\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(bannerLocator)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36mcatch\u001b[39m (e) {\n \u001b[90m 33 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
+                        "column": 35,
+                        "line": 30
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at CouponAndPrevCouponVerification.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:6:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:71:5"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n\n   at ../tasks/coupon_flow_validation.ts:30\n\n  28 |     // Conditional timeout: Wait up to 10s for the banner to appear\n  29 |     try {\n> 30 |       await expect(bannerLocator).toBeVisible({ timeout: 10000 });\n     |                                   ^\n  31 |       console.log(`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`);\n  32 |     } catch (e) {\n  33 |       console.error(`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`);\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponAndPrevCouponVerification.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:6:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:71:5"
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Failed: Banner with text \"You have received 15% Discount!\" did not appear.\n"
+                    }
+                  ],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:25:38.738Z",
+                  "startTime": "2026-08-05T08:21:17.328Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1827,34 +1823,50 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-04-Coupon-flow-validation-VINNumberCA/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                    "column": 35,
+                    "line": 30
+                  }
                 },
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 9,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90092,
+                  "status": "failed",
+                  "duration": 21532,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponAndPrevCouponVerification.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:6:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:71:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                      "column": 35,
+                      "line": 30
+                    },
+                    "snippet": "   at ../tasks/coupon_flow_validation.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[90m// Conditional timeout: Wait up to 10s for the banner to appear\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(bannerLocator)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36mcatch\u001b[39m (e) {\n \u001b[90m 33 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
+                        "column": 35,
+                        "line": 30
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at CouponAndPrevCouponVerification.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:6:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:71:5"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n\n   at ../tasks/coupon_flow_validation.ts:30\n\n  28 |     // Conditional timeout: Wait up to 10s for the banner to appear\n  29 |     try {\n> 30 |       await expect(bannerLocator).toBeVisible({ timeout: 10000 });\n     |                                   ^\n  31 |       console.log(`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`);\n  32 |     } catch (e) {\n  33 |       console.error(`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`);\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponAndPrevCouponVerification.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:6:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:71:5"
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Failed: Banner with text \"You have received 15% Discount!\" did not appear.\n"
+                    }
+                  ],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:27:09.358Z",
+                  "startTime": "2026-08-05T08:21:39.655Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1862,7 +1874,12 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-04-Coupon-flow-validation-VINNumberCA-retry1/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                    "column": 35,
+                    "line": 30
+                  }
                 }
               ],
               "status": "unexpected"
@@ -1886,25 +1903,28 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 11,
+                  "workerIndex": 10,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90089,
+                  "status": "failed",
+                  "duration": 890,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: Failed: Coupon cookie not found.",
+                    "stack": "Error: Failed: Coupon cookie not found.\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:20:13)\n    at LowToHighCouponFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:46:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:80:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                      "column": 13,
+                      "line": 20
+                    },
+                    "snippet": "   at ../tasks/coupon_flow_validation.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m     \u001b[36mconst\u001b[39m couponCookie \u001b[33m=\u001b[39m cookies\u001b[33m.\u001b[39mfind(c \u001b[33m=>\u001b[39m c\u001b[33m.\u001b[39mname \u001b[33m===\u001b[39m \u001b[32m'coupon'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mcouponCookie) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m       \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed: Coupon cookie not found.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     }\n \u001b[90m 22 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`Passed: Cookie found. Name: ${couponCookie.name}, Value: ${couponCookie.value}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
+                        "column": 13,
+                        "line": 20
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at LowToHighCouponFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:46:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:80:5"
+                      "message": "Error: Failed: Coupon cookie not found.\n\n   at ../tasks/coupon_flow_validation.ts:20\n\n  18 |     const couponCookie = cookies.find(c => c.name === 'coupon');\n  19 |     if (!couponCookie) {\n> 20 |       throw new Error('Failed: Coupon cookie not found.');\n     |             ^\n  21 |     }\n  22 |     console.log(`Passed: Cookie found. Name: ${couponCookie.name}, Value: ${couponCookie.value}`);\n  23 |\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:20:13)\n    at LowToHighCouponFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:46:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:80:5"
                     }
                   ],
                   "stdout": [
@@ -1914,7 +1934,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:28:40.008Z",
+                  "startTime": "2026-08-05T08:22:01.741Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1922,38 +1942,53 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-eeb18-High-Coupon-swap-validation-VINNumberCA/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                    "column": 13,
+                    "line": 20
+                  }
                 },
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 11,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90087,
+                  "status": "failed",
+                  "duration": 21894,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at LowToHighCouponFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:46:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:80:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                      "column": 35,
+                      "line": 30
+                    },
+                    "snippet": "   at ../tasks/coupon_flow_validation.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[90m// Conditional timeout: Wait up to 10s for the banner to appear\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(bannerLocator)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36mcatch\u001b[39m (e) {\n \u001b[90m 33 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
+                        "column": 35,
+                        "line": 30
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at LowToHighCouponFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:46:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:80:5"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n\n   at ../tasks/coupon_flow_validation.ts:30\n\n  28 |     // Conditional timeout: Wait up to 10s for the banner to appear\n  29 |     try {\n> 30 |       await expect(bannerLocator).toBeVisible({ timeout: 10000 });\n     |                                   ^\n  31 |       console.log(`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`);\n  32 |     } catch (e) {\n  33 |       console.error(`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`);\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at LowToHighCouponFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:46:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:80:5"
                     }
                   ],
                   "stdout": [
                     {
                       "text": "--- Applying 1st Coupon: preview15 ---\n"
+                    },
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
                     }
                   ],
-                  "stderr": [],
+                  "stderr": [
+                    {
+                      "text": "Failed: Banner with text \"You have received 15% Discount!\" did not appear.\n"
+                    }
+                  ],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:30:10.648Z",
+                  "startTime": "2026-08-05T08:22:03.181Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1961,7 +1996,12 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-eeb18-High-Coupon-swap-validation-VINNumberCA-retry1/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                    "column": 35,
+                    "line": 30
+                  }
                 }
               ],
               "status": "unexpected"
@@ -1985,31 +2025,42 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 12,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90083,
+                  "status": "failed",
+                  "duration": 21589,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                      "column": 35,
+                      "line": 30
+                    },
+                    "snippet": "   at ../tasks/coupon_flow_validation.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[90m// Conditional timeout: Wait up to 10s for the banner to appear\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(bannerLocator)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36mcatch\u001b[39m (e) {\n \u001b[90m 33 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
+                        "column": 35,
+                        "line": 30
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n\n   at ../tasks/coupon_flow_validation.ts:30\n\n  28 |     // Conditional timeout: Wait up to 10s for the banner to appear\n  29 |     try {\n> 30 |       await expect(bannerLocator).toBeVisible({ timeout: 10000 });\n     |                                   ^\n  31 |       console.log(`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`);\n  32 |     } catch (e) {\n  33 |       console.error(`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`);\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5"
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Failed: Banner with text \"You have received 15% Discount!\" did not appear.\n"
+                    }
+                  ],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:31:41.285Z",
+                  "startTime": "2026-08-05T08:22:25.628Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2017,34 +2068,50 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-06-Coupon-banner-on-other-pages-VINNumberCA/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                    "column": 35,
+                    "line": 30
+                  }
                 },
                 {
-                  "workerIndex": 14,
+                  "workerIndex": 13,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90087,
+                  "status": "failed",
+                  "duration": 21895,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                      "column": 35,
+                      "line": 30
+                    },
+                    "snippet": "   at ../tasks/coupon_flow_validation.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[90m// Conditional timeout: Wait up to 10s for the banner to appear\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mtry\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(bannerLocator)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     } \u001b[36mcatch\u001b[39m (e) {\n \u001b[90m 33 |\u001b[39m       console\u001b[33m.\u001b[39merror(\u001b[32m`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
                         "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
+                        "column": 35,
+                        "line": 30
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=You have received 15% Discount!')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=You have received 15% Discount!')\u001b[22m\n\n\n   at ../tasks/coupon_flow_validation.ts:30\n\n  28 |     // Conditional timeout: Wait up to 10s for the banner to appear\n  29 |     try {\n> 30 |       await expect(bannerLocator).toBeVisible({ timeout: 10000 });\n     |                                   ^\n  31 |       console.log(`Passed: Banner appeared with text: \"You have received ${expectedDiscount} Discount!\"`);\n  32 |     } catch (e) {\n  33 |       console.error(`Failed: Banner with text \"You have received ${expectedDiscount} Discount!\" did not appear.`);\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:30:35)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5"
                     }
                   ],
-                  "stdout": [],
-                  "stderr": [],
+                  "stdout": [
+                    {
+                      "text": "Passed: Cookie found. Name: coupon, Value: preview15\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Failed: Banner with text \"You have received 15% Discount!\" did not appear.\n"
+                    }
+                  ],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:33:11.920Z",
+                  "startTime": "2026-08-05T08:22:47.785Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2052,7 +2119,12 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-06-Coupon-banner-on-other-pages-VINNumberCA-retry1/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                    "column": 35,
+                    "line": 30
+                  }
                 }
               ],
               "status": "unexpected"
@@ -2065,7 +2137,7 @@
         },
         {
           "title": "TC_07 License Plate search validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -2076,85 +2148,27 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 15,
+                  "workerIndex": 14,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90084,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
-                        "column": 16,
-                        "line": 99
-                      },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   97 |   try {\n   98 |     await page.goto('/');\n>  99 |     await page.waitForLoadState('networkidle');\n      |                ^\n  100 |     await actor.attemptsTo(new LPcases());\n  101 |   } finally {\n  102 |     await page.close();\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:99:16"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 1152,
+                  "errors": [],
                   "stdout": [
+                    {
+                      "text": "Tab not found\n"
+                    },
                     {
                       "text": "TC_07: page.close() executed.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:34:42.553Z",
+                  "startTime": "2026-08-05T08:23:10.236Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-VINNumberCA/error-context.md"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 16,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90080,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
-                        "column": 16,
-                        "line": 99
-                      },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   97 |   try {\n   98 |     await page.goto('/');\n>  99 |     await page.waitForLoadState('networkidle');\n      |                ^\n  100 |     await actor.attemptsTo(new LPcases());\n  101 |   } finally {\n  102 |     await page.close();\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:99:16"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "TC_07: page.close() executed.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-08-05T01:36:13.210Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-VINNumberCA-retry1/error-context.md"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "2e0527a360a5c23f209a-b297d2f1ced6731c28f0",
@@ -2175,35 +2189,44 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 14,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90088,
+                  "status": "failed",
+                  "duration": 66021,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+                    "stack": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_banner_flow.ts:11:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:112:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                      "column": 8,
+                      "line": 93
+                    },
+                    "snippet": "   at ../tasks/DecodeVinTask.ts:93\n\n\u001b[0m \u001b[90m 91 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Success condition not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m       }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m     })\u001b[33m.\u001b[39mtoPass({ timeout\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Success condition met.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m   }\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
-                        "column": 16,
-                        "line": 111
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                        "column": 8,
+                        "line": 93
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n  109 |   try {\n  110 |     await page.goto('/');\n> 111 |     await page.waitForLoadState('networkidle');\n      |                ^\n  112 |     await actor.attemptsTo(new RevisitBannerFlow());\n  113 |   } finally {\n  114 |     await page.close();\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:111:16"
+                      "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n\n   at ../tasks/DecodeVinTask.ts:93\n\n  91 |         throw new Error('Success condition not found');\n  92 |       }\n> 93 |     }).toPass({ timeout: this.timeout });\n     |        ^\n  94 |\n  95 |     console.log('Success condition met.');\n  96 |   }\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_banner_flow.ts:11:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:112:5"
                     }
                   ],
                   "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83776\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 68ms\n"
+                    },
                     {
                       "text": "TC_08: page.close() executed.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:37:43.839Z",
+                  "startTime": "2026-08-05T08:23:11.499Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2211,38 +2234,52 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-08-Revisit-banner-flow-VINNumberCA/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                    "column": 8,
+                    "line": 93
+                  }
                 },
                 {
-                  "workerIndex": 18,
+                  "workerIndex": 15,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90081,
+                  "status": "failed",
+                  "duration": 65862,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+                    "stack": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_banner_flow.ts:11:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:112:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                      "column": 8,
+                      "line": 93
+                    },
+                    "snippet": "   at ../tasks/DecodeVinTask.ts:93\n\n\u001b[0m \u001b[90m 91 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Success condition not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m       }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m     })\u001b[33m.\u001b[39mtoPass({ timeout\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Success condition met.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m   }\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
-                        "column": 16,
-                        "line": 111
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                        "column": 8,
+                        "line": 93
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n  109 |   try {\n  110 |     await page.goto('/');\n> 111 |     await page.waitForLoadState('networkidle');\n      |                ^\n  112 |     await actor.attemptsTo(new RevisitBannerFlow());\n  113 |   } finally {\n  114 |     await page.close();\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:111:16"
+                      "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n\n   at ../tasks/DecodeVinTask.ts:93\n\n  91 |         throw new Error('Success condition not found');\n  92 |       }\n> 93 |     }).toPass({ timeout: this.timeout });\n     |        ^\n  94 |\n  95 |     console.log('Success condition met.');\n  96 |   }\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_banner_flow.ts:11:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:112:5"
                     }
                   ],
                   "stdout": [
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83709\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 58ms\n"
+                    },
                     {
                       "text": "TC_08: page.close() executed.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:39:14.470Z",
+                  "startTime": "2026-08-05T08:24:17.993Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2250,7 +2287,12 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-08-Revisit-banner-flow-VINNumberCA-retry1/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                    "column": 8,
+                    "line": 93
+                  }
                 }
               ],
               "status": "unexpected"
@@ -2274,30 +2316,39 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 19,
+                  "workerIndex": 16,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90091,
+                  "status": "failed",
+                  "duration": 65981,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+                    "stack": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitStickerBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts:29:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:122:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                      "column": 8,
+                      "line": 93
+                    },
+                    "snippet": "   at ../tasks/DecodeVinTask.ts:93\n\n\u001b[0m \u001b[90m 91 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Success condition not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m       }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m     })\u001b[33m.\u001b[39mtoPass({ timeout\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Success condition met.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m   }\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts",
-                        "column": 16,
-                        "line": 26
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                        "column": 8,
+                        "line": 93
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/revisit_sticker_banner_flow.ts:26\n\n  24 |     }\n  25 |     console.log(`Passed: Navigated to valid sticker path: ${validPath}`);\n> 26 |     await page.waitForLoadState('networkidle');\n     |                ^\n  27 |\n  28 |     // 2. Perform VIN Decode\n  29 |     await actor.attemptsTo(decoder);\n    at RevisitStickerBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts:26:16)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:122:5"
+                      "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n\n   at ../tasks/DecodeVinTask.ts:93\n\n  91 |         throw new Error('Success condition not found');\n  92 |       }\n> 93 |     }).toPass({ timeout: this.timeout });\n     |        ^\n  94 |\n  95 |     console.log('Success condition met.');\n  96 |   }\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitStickerBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts:29:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:122:5"
                     }
                   ],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83737\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 59ms\n"
                     },
                     {
                       "text": "TC_09: page.close() executed.\n"
@@ -2305,7 +2356,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-05T01:40:45.099Z",
+                  "startTime": "2026-08-05T08:25:24.409Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2313,28 +2364,36 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-09-Revisit-sticker-banner-flow-VINNumberCA/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                    "column": 8,
+                    "line": 93
+                  }
                 },
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 17,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90104,
+                  "status": "failed",
+                  "duration": 65988,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+                    "stack": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitStickerBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts:29:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:122:5",
+                    "location": {
+                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                      "column": 8,
+                      "line": 93
+                    },
+                    "snippet": "   at ../tasks/DecodeVinTask.ts:93\n\n\u001b[0m \u001b[90m 91 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Success condition not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m       }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 93 |\u001b[39m     })\u001b[33m.\u001b[39mtoPass({ timeout\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtimeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'Success condition met.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m   }\u001b[0m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
                       "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts",
-                        "column": 16,
-                        "line": 26
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                        "column": 8,
+                        "line": 93
                       },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/revisit_sticker_banner_flow.ts:26\n\n  24 |     }\n  25 |     console.log(`Passed: Navigated to valid sticker path: ${validPath}`);\n> 26 |     await page.waitForLoadState('networkidle');\n     |                ^\n  27 |\n  28 |     // 2. Perform VIN Decode\n  29 |     await actor.attemptsTo(decoder);\n    at RevisitStickerBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts:26:16)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:122:5"
+                      "message": "Error: Success condition not found\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate\n\n   at ../tasks/DecodeVinTask.ts:93\n\n  91 |         throw new Error('Success condition not found');\n  92 |       }\n> 93 |     }).toPass({ timeout: this.timeout });\n     |        ^\n  94 |\n  95 |     console.log('Success condition met.');\n  96 |   }\n    at DecodeVinTask.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts:93:8)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at RevisitStickerBannerFlow.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/revisit_sticker_banner_flow.ts:29:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:122:5"
                     }
                   ],
                   "stdout": [
@@ -2342,12 +2401,18 @@
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83790\n"
+                    },
+                    {
+                      "text": "[VIN Decode] Navigation to preview page took 69ms\n"
+                    },
+                    {
                       "text": "TC_09: page.close() executed.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-05T01:42:15.755Z",
+                  "startTime": "2026-08-05T08:26:30.946Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2355,7 +2420,12 @@
                       "contentType": "text/markdown",
                       "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-09-Revisit-sticker-banner-flow-VINNumberCA-retry1/error-context.md"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/DecodeVinTask.ts",
+                    "column": 8,
+                    "line": 93
+                  }
                 }
               ],
               "status": "unexpected"
@@ -2371,11 +2441,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-05T01:13:50.513Z",
-    "duration": 1795493.6230000001,
-    "expected": 27,
+    "startTime": "2026-08-05T08:11:17.655Z",
+    "duration": 979428.998,
+    "expected": 28,
     "skipped": 0,
-    "unexpected": 9,
-    "flaky": 0
+    "unexpected": 7,
+    "flaky": 1
   }
 }
