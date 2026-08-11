@@ -21,7 +21,7 @@
       "ci": {
         "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
         "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31491784296"
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31524019200"
       },
       "gitCommit": {
         "shortHash": "0837d8e",
@@ -52,7 +52,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31491784296"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31524019200"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -90,7 +90,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31491784296"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31524019200"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -128,7 +128,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31491784296"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31524019200"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -166,7 +166,7 @@
           "ci": {
             "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/0837d8e93afcc10864002636dc03bcb04c1017cc",
             "commitHash": "0837d8e93afcc10864002636dc03bcb04c1017cc",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31491784296"
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31524019200"
           },
           "gitCommit": {
             "shortHash": "0837d8e",
@@ -241,14 +241,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8622,
+                  "duration": 7866,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83797\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83759\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 89ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 67ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -256,7 +256,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:34:40.577Z",
+                  "startTime": "2026-08-11T18:42:16.516Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -285,7 +285,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1996,
+                  "duration": 1669,
                   "errors": [],
                   "stdout": [
                     {
@@ -297,7 +297,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:34:49.438Z",
+                  "startTime": "2026-08-11T18:42:24.625Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -326,7 +326,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1995,
+                  "duration": 1671,
                   "errors": [],
                   "stdout": [
                     {
@@ -338,7 +338,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:34:51.456Z",
+                  "startTime": "2026-08-11T18:42:26.309Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -367,7 +367,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2036,
+                  "duration": 2235,
                   "errors": [],
                   "stdout": [
                     {
@@ -379,7 +379,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:34:53.465Z",
+                  "startTime": "2026-08-11T18:42:27.991Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -408,7 +408,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4858,
+                  "duration": 4441,
                   "errors": [],
                   "stdout": [
                     {
@@ -438,7 +438,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:34:55.516Z",
+                  "startTime": "2026-08-11T18:42:30.248Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -467,7 +467,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6082,
+                  "duration": 4490,
                   "errors": [],
                   "stdout": [
                     {
@@ -485,7 +485,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:00.390Z",
+                  "startTime": "2026-08-11T18:42:34.716Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -500,7 +500,7 @@
         },
         {
           "title": "TC_07 License Plate search validation",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -513,31 +513,18 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 7080,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n\n    at LPcases.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts:30:26)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:100:5",
-                    "location": {
-                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
-                      "column": 26,
-                      "line": 30
-                    },
-                    "snippet": "   at ../tasks/LPdecode.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m       \n \u001b[90m 29 |\u001b[39m       \u001b[90m// Verify URL pattern after load\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/.*vin-check\\/license-preview/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       \n \u001b[90m 32 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
-                        "column": 26,
-                        "line": 30
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n\n\n   at ../tasks/LPdecode.ts:30\n\n  28 |       \n  29 |       // Verify URL pattern after load\n> 30 |       await expect(page).toHaveURL(/.*vin-check\\/license-preview/, { timeout: 5000 });\n     |                          ^\n  31 |       \n  32 |       console.log(`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`);\n  33 |\n    at LPcases.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts:30:26)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:100:5"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 16652,
+                  "errors": [],
                   "stdout": [
                     {
                       "text": "LP Tab Found in Website\n"
+                    },
+                    {
+                      "text": "[LP Decode] Navigation to preview page took 4975ms\n"
+                    },
+                    {
+                      "text": "Success condition met.\n"
                     },
                     {
                       "text": "TC_07: page.close() executed.\n"
@@ -545,73 +532,12 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:06.488Z",
+                  "startTime": "2026-08-11T18:42:39.222Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-AccessAutoHistory/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
-                    "column": 26,
-                    "line": 30
-                  }
-                },
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 7218,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n\n    at LPcases.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts:30:26)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:100:5",
-                    "location": {
-                      "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
-                      "column": 26,
-                      "line": 30
-                    },
-                    "snippet": "   at ../tasks/LPdecode.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m       \n \u001b[90m 29 |\u001b[39m       \u001b[90m// Verify URL pattern after load\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/.*vin-check\\/license-preview/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m       \n \u001b[90m 32 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
-                        "column": 26,
-                        "line": 30
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/.*vin-check\\/license-preview/\u001b[39m\nReceived string:  \u001b[31m\"https://vehiclesreport.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"https://vehiclesreport.com/\"\u001b[22m\n\n\n   at ../tasks/LPdecode.ts:30\n\n  28 |       \n  29 |       // Verify URL pattern after load\n> 30 |       await expect(page).toHaveURL(/.*vin-check\\/license-preview/, { timeout: 5000 });\n     |                          ^\n  31 |       \n  32 |       console.log(`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`);\n  33 |\n    at LPcases.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts:30:26)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:100:5"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "LP Tab Found in Website\n"
-                    },
-                    {
-                      "text": "TC_07: page.close() executed.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-08-11T12:35:14.042Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-AccessAutoHistory-retry1/error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/LPdecode.ts",
-                    "column": 26,
-                    "line": 30
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "2e0527a360a5c23f209a-d9fd59fd082bf17a1fce",
@@ -632,17 +558,17 @@
               "projectName": "AccessAutoHistory",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10176,
+                  "duration": 9372,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83782\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83736\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 79ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 57ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -662,7 +588,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:21.828Z",
+                  "startTime": "2026-08-11T18:42:55.887Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -688,20 +614,20 @@
               "projectName": "AccessAutoHistory",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12256,
+                  "duration": 11795,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83774\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83719\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 70ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 64ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -718,7 +644,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:32.113Z",
+                  "startTime": "2026-08-11T18:43:05.273Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -744,17 +670,17 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10710,
+                  "duration": 9569,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83705\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83799\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 65ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 51ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -762,7 +688,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:44.837Z",
+                  "startTime": "2026-08-11T18:43:17.524Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -788,10 +714,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1554,
+                  "duration": 1279,
                   "errors": [],
                   "stdout": [
                     {
@@ -803,7 +729,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:55.651Z",
+                  "startTime": "2026-08-11T18:43:27.202Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -829,10 +755,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1530,
+                  "duration": 1294,
                   "errors": [],
                   "stdout": [
                     {
@@ -844,7 +770,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:57.223Z",
+                  "startTime": "2026-08-11T18:43:28.495Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -870,10 +796,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2341,
+                  "duration": 2142,
                   "errors": [],
                   "stdout": [
                     {
@@ -885,7 +811,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:35:58.767Z",
+                  "startTime": "2026-08-11T18:43:29.801Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -911,10 +837,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4519,
+                  "duration": 4146,
                   "errors": [],
                   "stdout": [
                     {
@@ -944,7 +870,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:01.122Z",
+                  "startTime": "2026-08-11T18:43:31.959Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -970,10 +896,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3334,
+                  "duration": 2936,
                   "errors": [],
                   "stdout": [
                     {
@@ -991,7 +917,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:05.654Z",
+                  "startTime": "2026-08-11T18:43:36.117Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1017,10 +943,10 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1573,
+                  "duration": 1173,
                   "errors": [],
                   "stdout": [
                     {
@@ -1032,7 +958,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:09.005Z",
+                  "startTime": "2026-08-11T18:43:39.067Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1058,17 +984,17 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11600,
+                  "duration": 10383,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83780\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83752\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 61ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 43ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1088,7 +1014,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:10.593Z",
+                  "startTime": "2026-08-11T18:43:40.253Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1114,20 +1040,20 @@
               "projectName": "MotorcycleVINLookup",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11739,
+                  "duration": 10581,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83703\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83773\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 42ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 54ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1144,7 +1070,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:22.205Z",
+                  "startTime": "2026-08-11T18:43:50.647Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1170,17 +1096,17 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11564,
+                  "duration": 10866,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83749\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83743\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 83ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 69ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1188,7 +1114,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:34.422Z",
+                  "startTime": "2026-08-11T18:44:01.688Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1214,10 +1140,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1920,
+                  "duration": 1772,
                   "errors": [],
                   "stdout": [
                     {
@@ -1229,7 +1155,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:46.102Z",
+                  "startTime": "2026-08-11T18:44:12.657Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1255,10 +1181,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2045,
+                  "duration": 1726,
                   "errors": [],
                   "stdout": [
                     {
@@ -1270,7 +1196,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:48.037Z",
+                  "startTime": "2026-08-11T18:44:14.446Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1296,10 +1222,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2156,
+                  "duration": 1907,
                   "errors": [],
                   "stdout": [
                     {
@@ -1311,7 +1237,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:50.096Z",
+                  "startTime": "2026-08-11T18:44:16.187Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1337,10 +1263,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5040,
+                  "duration": 4623,
                   "errors": [],
                   "stdout": [
                     {
@@ -1370,7 +1296,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:52.267Z",
+                  "startTime": "2026-08-11T18:44:18.109Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1396,10 +1322,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3963,
+                  "duration": 3659,
                   "errors": [],
                   "stdout": [
                     {
@@ -1417,7 +1343,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:36:57.326Z",
+                  "startTime": "2026-08-11T18:44:22.746Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1443,10 +1369,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1977,
+                  "duration": 1633,
                   "errors": [],
                   "stdout": [
                     {
@@ -1458,7 +1384,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:37:01.300Z",
+                  "startTime": "2026-08-11T18:44:26.419Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1484,17 +1410,17 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12000,
+                  "duration": 10623,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83758\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83766\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 65ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 63ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1514,7 +1440,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:37:03.290Z",
+                  "startTime": "2026-08-11T18:44:28.064Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1540,20 +1466,20 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12012,
+                  "duration": 10675,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83704\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83725\n"
                     },
                     {
-                      "text": "[VIN Decode] Navigation to preview page took 58ms\n"
+                      "text": "[VIN Decode] Navigation to preview page took 62ms\n"
                     },
                     {
                       "text": "Success condition met.\n"
@@ -1570,7 +1496,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:37:15.304Z",
+                  "startTime": "2026-08-11T18:44:38.698Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1596,10 +1522,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90090,
+                  "duration": 90086,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1620,7 +1546,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:37:27.810Z",
+                  "startTime": "2026-08-11T18:44:49.836Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1631,10 +1557,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 6,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90081,
+                  "duration": 90080,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1655,7 +1581,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:38:58.445Z",
+                  "startTime": "2026-08-11T18:46:20.494Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1687,10 +1613,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 7,
+                  "workerIndex": 5,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90090,
+                  "duration": 90082,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1711,7 +1637,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:40:29.076Z",
+                  "startTime": "2026-08-11T18:47:51.121Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1722,10 +1648,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 8,
+                  "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90085,
+                  "duration": 90088,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1746,7 +1672,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:41:59.732Z",
+                  "startTime": "2026-08-11T18:49:21.757Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1778,10 +1704,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 9,
+                  "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90082,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1802,7 +1728,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:43:30.379Z",
+                  "startTime": "2026-08-11T18:50:52.415Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1813,10 +1739,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90081,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1837,7 +1763,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:45:01.006Z",
+                  "startTime": "2026-08-11T18:52:23.077Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1869,10 +1795,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 11,
+                  "workerIndex": 9,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90086,
+                  "duration": 90082,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1893,7 +1819,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:46:31.630Z",
+                  "startTime": "2026-08-11T18:53:53.729Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1904,10 +1830,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 10,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90086,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1928,7 +1854,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:48:02.255Z",
+                  "startTime": "2026-08-11T18:55:24.369Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1960,10 +1886,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 11,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90084,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -1988,7 +1914,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:49:32.890Z",
+                  "startTime": "2026-08-11T18:56:54.990Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -1999,10 +1925,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 14,
+                  "workerIndex": 12,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90087,
+                  "duration": 90079,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2027,7 +1953,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:51:03.529Z",
+                  "startTime": "2026-08-11T18:58:25.620Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2059,42 +1985,7 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 15,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90087,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
-                        "column": 16,
-                        "line": 14
-                      },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-11T12:52:34.177Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-06-Coupon-banner-on-other-pages-VINNumberCA/error-context.md"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 16,
+                  "workerIndex": 13,
                   "parallelIndex": 0,
                   "status": "timedOut",
                   "duration": 90080,
@@ -2117,8 +2008,43 @@
                   ],
                   "stdout": [],
                   "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-11T18:59:56.240Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-TC-06-Coupon-banner-on-other-pages-VINNumberCA/error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 90084,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts",
+                        "column": 16,
+                        "line": 14
+                      },
+                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   at ../tasks/coupon_flow_validation.ts:14\n\n  12 |     // 1. Apply coupon via URL\n  13 |     await page.goto(`/?offer=${couponCode}`);\n> 14 |     await page.waitForLoadState('networkidle');\n     |                ^\n  15 |\n  16 |     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)\n  17 |     const cookies = await page.context().cookies();\n    at CouponAndPrevCouponVerification.couponTest (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:14:16)\n    at CouponBannerOnOtherPages.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/coupon_flow_validation.ts:85:5)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:89:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:54:04.824Z",
+                  "startTime": "2026-08-11T19:01:26.866Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2150,7 +2076,46 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 17,
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 90081,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
+                        "column": 16,
+                        "line": 99
+                      },
+                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   97 |   try {\n   98 |     await page.goto('/');\n>  99 |     await page.waitForLoadState('networkidle');\n      |                ^\n  100 |     await actor.attemptsTo(new LPcases());\n  101 |   } finally {\n  102 |     await page.close();\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:99:16"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "TC_07: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-11T19:02:57.499Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-VINNumberCA/error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 16,
                   "parallelIndex": 0,
                   "status": "timedOut",
                   "duration": 90080,
@@ -2177,47 +2142,8 @@
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-11T12:55:35.457Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/global_case_verification-T-ff3a2-nse-Plate-search-validation-VINNumberCA/error-context.md"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 18,
-                  "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90087,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts",
-                        "column": 16,
-                        "line": 99
-                      },
-                      "message": "Error: page.waitForLoadState: Test timeout of 90000ms exceeded.\n\n   97 |   try {\n   98 |     await page.goto('/');\n>  99 |     await page.waitForLoadState('networkidle');\n      |                ^\n  100 |     await actor.attemptsTo(new LPcases());\n  101 |   } finally {\n  102 |     await page.close();\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:99:16"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "TC_07: page.close() executed.\n"
-                    }
-                  ],
-                  "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T12:57:06.074Z",
+                  "startTime": "2026-08-11T19:04:28.136Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2249,10 +2175,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 19,
+                  "workerIndex": 17,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90082,
+                  "duration": 90081,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2277,7 +2203,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T12:58:36.707Z",
+                  "startTime": "2026-08-11T19:05:58.765Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2288,10 +2214,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 20,
+                  "workerIndex": 18,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90087,
+                  "duration": 90083,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2316,7 +2242,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T13:00:07.335Z",
+                  "startTime": "2026-08-11T19:07:29.390Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2348,10 +2274,10 @@
               "projectName": "VINNumberCA",
               "results": [
                 {
-                  "workerIndex": 21,
+                  "workerIndex": 19,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90100,
+                  "duration": 90093,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2379,7 +2305,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-11T13:01:37.984Z",
+                  "startTime": "2026-08-11T19:09:00.019Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2390,10 +2316,10 @@
                   ]
                 },
                 {
-                  "workerIndex": 22,
+                  "workerIndex": 20,
                   "parallelIndex": 0,
                   "status": "timedOut",
-                  "duration": 90095,
+                  "duration": 90093,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -2421,7 +2347,7 @@
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-08-11T13:03:08.624Z",
+                  "startTime": "2026-08-11T19:10:30.674Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -2445,11 +2371,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-11T12:34:39.910Z",
-    "duration": 1798955.66,
-    "expected": 26,
+    "startTime": "2026-08-11T18:42:15.838Z",
+    "duration": 1785067.233,
+    "expected": 27,
     "skipped": 0,
-    "unexpected": 10,
+    "unexpected": 9,
     "flaky": 0
   }
 }
