@@ -12,24 +12,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-        "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+        "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+        "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+        "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
       },
       "gitCommit": {
-        "shortHash": "a64d7ad",
-        "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-        "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-        "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+        "shortHash": "37fd05b",
+        "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+        "subject": "chore: apply latest user changes to workflow",
+        "body": "chore: apply latest user changes to workflow\n",
         "author": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1786549295000
+          "time": 1786550797000
         },
         "committer": {
           "name": "shahnawaz",
           "email": "shahnawaz@empirepixel.com",
-          "time": 1786549295000
+          "time": 1786550797000
         },
         "branch": "main"
       },
@@ -43,24 +43,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -80,24 +80,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -117,24 +117,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -154,24 +154,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -191,24 +191,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -228,24 +228,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -265,24 +265,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -302,24 +302,24 @@
         "retries": 1,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "commitHash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31613722863"
+            "commitHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/commit/37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "commitHash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "buildHref": "https://github.com/shahnawaz-cmd/-automotive-sites-automation/actions/runs/31615952752"
           },
           "gitCommit": {
-            "shortHash": "a64d7ad",
-            "hash": "a64d7ad322babdf6eac3e287668dc71e0cf42b58",
-            "subject": "feat: add caching for npm dependencies and playwright browsers to speed up CI",
-            "body": "feat: add caching for npm dependencies and playwright browsers to speed up CI\n",
+            "shortHash": "37fd05b",
+            "hash": "37fd05b39a9d11b0c959333b3e6dc477a849a5e1",
+            "subject": "chore: apply latest user changes to workflow",
+            "body": "chore: apply latest user changes to workflow\n",
             "author": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "committer": {
               "name": "shahnawaz",
               "email": "shahnawaz@empirepixel.com",
-              "time": 1786549295000
+              "time": 1786550797000
             },
             "branch": "main"
           },
@@ -375,11 +375,11 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8464,
+                  "duration": 8957,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83735\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83790\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -390,7 +390,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:42:59.476Z",
+                  "startTime": "2026-08-12T16:07:18.735Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -418,7 +418,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1304,
+                  "duration": 1370,
                   "errors": [],
                   "stdout": [
                     {
@@ -430,7 +430,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:08.187Z",
+                  "startTime": "2026-08-12T16:07:27.886Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -458,7 +458,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1359,
+                  "duration": 1445,
                   "errors": [],
                   "stdout": [
                     {
@@ -470,7 +470,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:09.505Z",
+                  "startTime": "2026-08-12T16:07:29.269Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -498,7 +498,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3421,
+                  "duration": 4051,
                   "errors": [],
                   "stdout": [
                     {
@@ -510,7 +510,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:10.876Z",
+                  "startTime": "2026-08-12T16:07:30.727Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -538,7 +538,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5892,
+                  "duration": 6126,
                   "errors": [],
                   "stdout": [
                     {
@@ -568,7 +568,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:14.309Z",
+                  "startTime": "2026-08-12T16:07:34.790Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -596,7 +596,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4395,
+                  "duration": 4972,
                   "errors": [],
                   "stdout": [
                     {
@@ -614,7 +614,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:20.212Z",
+                  "startTime": "2026-08-12T16:07:40.928Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -642,7 +642,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1235,
+                  "duration": 1338,
                   "errors": [],
                   "stdout": [
                     {
@@ -654,7 +654,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:24.622Z",
+                  "startTime": "2026-08-12T16:07:45.917Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -682,11 +682,11 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10029,
+                  "duration": 10624,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83760\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83732\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -709,7 +709,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:25.871Z",
+                  "startTime": "2026-08-12T16:07:47.268Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -737,14 +737,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10157,
+                  "duration": 10934,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83752\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83783\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -764,7 +764,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:35.912Z",
+                  "startTime": "2026-08-12T16:07:57.904Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -807,7 +807,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:46.081Z",
+                  "startTime": "2026-08-12T16:08:08.851Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -855,12 +855,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 40,
+                  "duration": 38,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:46.139Z",
+                  "startTime": "2026-08-12T16:08:08.910Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -898,7 +898,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15701,
+                  "duration": 17646,
                   "errors": [],
                   "stdout": [
                     {
@@ -914,22 +914,16 @@
                       "text": "📦 [JSON Data]:\n\"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyIsInNhbXBsZVN0aWNrZXIiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyJ9\"\n"
                     },
                     {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/sticker-plans?user_type=user (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"959\",\n      \"name\": \"Unlimited Stickers\",\n      \"code\": \"MVLSTU\",\n      \"price\": \"29.99\",\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"MVLSTU\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"recurring\": \"monthly\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"953\",\n      \"name\": \"Basic\",\n      \"code\": \"MVLST1\",\n      \"price\": \"19.99\",\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST1\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"19.99\"\n    },\n    {\n      \"id\": \"954\",\n      \"name\": \"Silver\",\n      \"code\": \"MVLST2\",\n      \"price\": \"29.99\",\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST2\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"29.99\"\n    },\n    {\n      \"id\": \"955\",\n      \"name\": \"Gold\",\n      \"code\": \"MVLST5\",\n      \"price\": \"59.99\",\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"59.99\"\n    },\n    {\n      \"id\": \"956\",\n      \"name\": \"Platinum\",\n      \"code\": \"MVLST10\",\n      \"price\": \"79.99\",\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST10\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"79.99\"\n    },\n    {\n      \"id\": \"957\",\n      \"name\": \"Diamond\",\n      \"code\": \"MVLST25\",\n      \"price\": \"174.99\",\n      \"nos\": \"25\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"174.99\"\n    },\n    {\n      \"id\": \"958\",\n      \"name\": \"Executive\",\n      \"code\": \"MVLST50\",\n      \"price\": \"299.99\",\n      \"nos\": \"50\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"299.99\"\n    }\n  ]\n}\n"
-                    },
-                    {
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/plans?user_type=user (Status: 200)\n"
                     },
                     {
                       "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": \"\",\n  \"uvc_subscription_plan\": [\n    {\n      \"id\": \"952\",\n      \"name\": \"Unlimited VIN Checks\",\n      \"code\": \"MVLUVC\",\n      \"price\": \"29.99\",\n      \"nos\": \"-1\",\n      \"type\": \"unlimited_vin_check_premium\",\n      \"gumroad\": \"MVLUVC\",\n      \"discount\": \"50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"recurring\": \"monthly\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"name\": \"Basic\",\n      \"code\": \"MVL1\",\n      \"price\": \"19.99\",\n      \"nos\": \"1\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL1\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"19.99\"\n    },\n    {\n      \"name\": \"Silver\",\n      \"code\": \"MVL2\",\n      \"price\": \"29.99\",\n      \"nos\": \"2\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL2\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"29.99\"\n    },\n    {\n      \"name\": \"Gold\",\n      \"code\": \"MVL5\",\n      \"price\": \"59.99\",\n      \"nos\": \"5\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL5\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"59.99\"\n    },\n    {\n      \"name\": \"Platinum\",\n      \"code\": \"MVL10\",\n      \"price\": \"119.99\",\n      \"nos\": \"10\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL10\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"119.99\"\n    },\n    {\n      \"name\": \"Diamond\",\n      \"code\": \"MVL25\",\n      \"price\": \"169.99\",\n      \"nos\": \"25\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL25\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"169.99\"\n    },\n    {\n      \"name\": \"Executive\",\n      \"code\": \"MVL50\",\n      \"price\": \"249.99\",\n      \"nos\": \"50\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"249.99\"\n    }\n  ]\n}\n"
                     },
                     {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_make?year=1970 (Status: 200)\n"
+                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/sticker-plans?user_type=user (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Hercules\",\n    \"Datsun\",\n    \"De Tomaso\",\n    \"Dnepr\",\n    \"Dodge\",\n    \"Ducati\",\n    \"FSO\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilera\",\n    \"Ginetta\",\n    \"Harley Davidson\",\n    \"Daimler\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"ISO\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Isuzu\",\n    \"Izh\",\n    \"Jaguar\",\n    \"Jawa\",\n    \"Jeep\",\n    \"Jensen\",\n    \"Kawasaki\",\n    \"Bond\",\n    \"AC\",\n    \"AMC\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Alfa Romeo\",\n    \"Alpine\",\n    \"Aston Martin\",\n    \"Audi\",\n    \"Austin\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"BSA\",\n    \"Balkan\",\n    \"Bentley\",\n    \"Lada\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Casal\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cord\",\n    \"DE Tomaso\",\n    \"Dacia\",\n    \"Daihatsu\",\n    \"Talbot\",\n    \"Porsche\",\n    \"Premier\",\n    \"Puch\",\n    \"Puma\",\n    \"Reliant\",\n    \"Renault\",\n    \"Rover\",\n    \"Saab\",\n    \"Seat\",\n    \"Skoda\",\n    \"Subaru\",\n    \"Sunbeam\",\n    \"Suzuki\",\n    \"TVR\",\n    \"Pontiac\",\n    \"Tatra\",\n    \"Toyota\",\n    \"Trabant\",\n    \"Trident\",\n    \"Triumph\",\n    \"Ural\",\n    \"VW-Porsche\",\n    \"Vauxhall\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Wartburg\",\n    \"Yamaha\",\n    \"ZAZ\",\n    \"Montesa\",\n    \"Lamborghini\",\n    \"Lancia\",\n    \"Land Rover\",\n    \"Laverda\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MBK\",\n    \"MG\",\n    \"Marcos\",\n    \"Maserati\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Mitsubishi\",\n    \"ZIL\",\n    \"Monteverdi\",\n    \"Morgan\",\n    \"Morris\",\n    \"Moskvich\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"NSU\",\n    \"Nissan\",\n    \"Norton\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Peugeot\",\n    \"Plymouth\"\n  ]\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"959\",\n      \"name\": \"Unlimited Stickers\",\n      \"code\": \"MVLSTU\",\n      \"price\": \"29.99\",\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"MVLSTU\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"recurring\": \"monthly\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"953\",\n      \"name\": \"Basic\",\n      \"code\": \"MVLST1\",\n      \"price\": \"19.99\",\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST1\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"19.99\"\n    },\n    {\n      \"id\": \"954\",\n      \"name\": \"Silver\",\n      \"code\": \"MVLST2\",\n      \"price\": \"29.99\",\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST2\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"29.99\"\n    },\n    {\n      \"id\": \"955\",\n      \"name\": \"Gold\",\n      \"code\": \"MVLST5\",\n      \"price\": \"59.99\",\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"59.99\"\n    },\n    {\n      \"id\": \"956\",\n      \"name\": \"Platinum\",\n      \"code\": \"MVLST10\",\n      \"price\": \"79.99\",\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST10\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"79.99\"\n    },\n    {\n      \"id\": \"957\",\n      \"name\": \"Diamond\",\n      \"code\": \"MVLST25\",\n      \"price\": \"174.99\",\n      \"nos\": \"25\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"174.99\"\n    },\n    {\n      \"id\": \"958\",\n      \"name\": \"Executive\",\n      \"code\": \"MVLST50\",\n      \"price\": \"299.99\",\n      \"nos\": \"50\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"299.99\"\n    }\n  ]\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_model?year=1970&make=pontiac (Status: 200)\n"
@@ -938,10 +932,16 @@
                       "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"model\": []\n}\n"
                     },
                     {
+                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_make?year=1970 (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Hercules\",\n    \"Datsun\",\n    \"De Tomaso\",\n    \"Dnepr\",\n    \"Dodge\",\n    \"Ducati\",\n    \"FSO\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilera\",\n    \"Ginetta\",\n    \"Harley Davidson\",\n    \"Daimler\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"ISO\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Isuzu\",\n    \"Izh\",\n    \"Jaguar\",\n    \"Jawa\",\n    \"Jeep\",\n    \"Jensen\",\n    \"Kawasaki\",\n    \"Bond\",\n    \"AC\",\n    \"AMC\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Alfa Romeo\",\n    \"Alpine\",\n    \"Aston Martin\",\n    \"Audi\",\n    \"Austin\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"BSA\",\n    \"Balkan\",\n    \"Bentley\",\n    \"Lada\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Casal\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cord\",\n    \"DE Tomaso\",\n    \"Dacia\",\n    \"Daihatsu\",\n    \"Talbot\",\n    \"Porsche\",\n    \"Premier\",\n    \"Puch\",\n    \"Puma\",\n    \"Reliant\",\n    \"Renault\",\n    \"Rover\",\n    \"Saab\",\n    \"Seat\",\n    \"Skoda\",\n    \"Subaru\",\n    \"Sunbeam\",\n    \"Suzuki\",\n    \"TVR\",\n    \"Pontiac\",\n    \"Tatra\",\n    \"Toyota\",\n    \"Trabant\",\n    \"Trident\",\n    \"Triumph\",\n    \"Ural\",\n    \"VW-Porsche\",\n    \"Vauxhall\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Wartburg\",\n    \"Yamaha\",\n    \"ZAZ\",\n    \"Montesa\",\n    \"Lamborghini\",\n    \"Lancia\",\n    \"Land Rover\",\n    \"Laverda\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MBK\",\n    \"MG\",\n    \"Marcos\",\n    \"Maserati\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Mitsubishi\",\n    \"ZIL\",\n    \"Monteverdi\",\n    \"Morgan\",\n    \"Morris\",\n    \"Moskvich\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"NSU\",\n    \"Nissan\",\n    \"Norton\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Peugeot\",\n    \"Plymouth\"\n  ]\n}\n"
+                    },
+                    {
                       "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:DIz_YvmPSeGNBYYaor3BTQ\",\n  \"entity_id\": \"fe3fde8a-9539-4052-b36a-b325f3755668\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:SurDYNEdRPC0_zlg3g32SQ\",\n  \"entity_id\": \"3a7db279-3d47-41bc-b516-12490ca07714\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_year (Status: 200)\n"
@@ -971,7 +971,7 @@
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/update-classic-decode (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111383\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111383\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111380\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111380\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
                     },
                     {
                       "text": "TC_12: page.close() executed.\n"
@@ -979,7 +979,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:46.189Z",
+                  "startTime": "2026-08-12T16:08:08.957Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1007,11 +1007,11 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8603,
+                  "duration": 8528,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83756\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -1022,7 +1022,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:42:56.652Z",
+                  "startTime": "2026-08-12T16:07:10.165Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1050,7 +1050,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1357,
+                  "duration": 1325,
                   "errors": [],
                   "stdout": [
                     {
@@ -1062,7 +1062,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:05.501Z",
+                  "startTime": "2026-08-12T16:07:20.128Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1090,7 +1090,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1354,
+                  "duration": 1368,
                   "errors": [],
                   "stdout": [
                     {
@@ -1102,7 +1102,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:06.874Z",
+                  "startTime": "2026-08-12T16:07:21.469Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1130,7 +1130,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3483,
+                  "duration": 3994,
                   "errors": [],
                   "stdout": [
                     {
@@ -1142,7 +1142,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:08.240Z",
+                  "startTime": "2026-08-12T16:07:22.849Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1170,7 +1170,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5956,
+                  "duration": 5693,
                   "errors": [],
                   "stdout": [
                     {
@@ -1200,7 +1200,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:11.738Z",
+                  "startTime": "2026-08-12T16:07:26.859Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1228,7 +1228,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4486,
+                  "duration": 4485,
                   "errors": [],
                   "stdout": [
                     {
@@ -1246,7 +1246,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:17.706Z",
+                  "startTime": "2026-08-12T16:07:32.564Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1274,7 +1274,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1320,
+                  "duration": 1304,
                   "errors": [],
                   "stdout": [
                     {
@@ -1286,7 +1286,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:22.205Z",
+                  "startTime": "2026-08-12T16:07:37.064Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1314,11 +1314,11 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9598,
+                  "duration": 10045,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83761\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83725\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -1341,7 +1341,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:23.540Z",
+                  "startTime": "2026-08-12T16:07:38.382Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1369,14 +1369,14 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9937,
+                  "duration": 10156,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83746\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83776\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -1396,7 +1396,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:33.159Z",
+                  "startTime": "2026-08-12T16:07:48.438Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1424,7 +1424,7 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8929,
+                  "duration": 8941,
                   "errors": [],
                   "stdout": [
                     {
@@ -1436,7 +1436,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:43.108Z",
+                  "startTime": "2026-08-12T16:07:58.605Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1464,11 +1464,11 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15929,
+                  "duration": 18305,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83767\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83786\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -1482,7 +1482,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:52.049Z",
+                  "startTime": "2026-08-12T16:08:07.558Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1509,95 +1509,8 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 90093,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/classic_editable_specs.ts",
-                        "column": 52,
-                        "line": 60
-                      },
-                      "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Model 16 350ms').first()\u001b[22m\n\u001b[2m    - locator resolved to <h1 class=\"font-bold leading-[24px] text-lg md:text-[28px]\">1961 AJS Model 16 350ms</h1>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div data-state=\"open\" aria-hidden=\"true\" data-aria-hidden=\"true\" class=\"fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div data-state=\"open\" aria-hidden=\"true\" data-aria-hidden=\"true\" class=\"fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  154 × retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\u001b[2m        - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is visible, enabled and stable\u001b[22m\n\u001b[2m        - scrolling into view if needed\u001b[22m\n\u001b[2m        - done scrolling\u001b[22m\n\u001b[2m        - <div data-state=\"open\" aria-hidden=\"true\" data-aria-hidden=\"true\" class=\"fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\"></div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\n\n   at ../tasks/classic_editable_specs.ts:60\n\n  58 |\n  59 |     await page.getByLabel('Model').click();\n> 60 |     await page.getByText('Model 16 350ms').first().click();\n     |                                                    ^\n  61 |\n  62 |     await page.getByLabel('Trim').click();\n  63 |     await page.getByText('Base', { exact: true }).first().click();\n    at Case5VerifyClassicEditableFeature.runDropdownUpdate (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/classic_editable_specs.ts:60:52)\n    at ClassicEditableSpecs.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/classic_editable_specs.ts:130:7)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:168:5"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api/config (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n\"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyIsInNhbXBsZVN0aWNrZXIiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyJ9\"\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api/config (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n\"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyIsInNhbXBsZVN0aWNrZXIiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyJ9\"\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/sticker-plans?user_type=user (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"959\",\n      \"name\": \"Unlimited Stickers\",\n      \"code\": \"MVLSTU\",\n      \"price\": \"29.99\",\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"MVLSTU\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"recurring\": \"monthly\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"953\",\n      \"name\": \"Basic\",\n      \"code\": \"MVLST1\",\n      \"price\": \"19.99\",\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST1\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"19.99\"\n    },\n    {\n      \"id\": \"954\",\n      \"name\": \"Silver\",\n      \"code\": \"MVLST2\",\n      \"price\": \"29.99\",\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST2\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"29.99\"\n    },\n    {\n      \"id\": \"955\",\n      \"name\": \"Gold\",\n      \"code\": \"MVLST5\",\n      \"price\": \"59.99\",\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"59.99\"\n    },\n    {\n      \"id\": \"956\",\n      \"name\": \"Platinum\",\n      \"code\": \"MVLST10\",\n      \"price\": \"79.99\",\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST10\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"79.99\"\n    },\n    {\n      \"id\": \"957\",\n      \"name\": \"Diamond\",\n      \"code\": \"MVLST25\",\n      \"price\": \"174.99\",\n      \"nos\": \"25\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"174.99\"\n    },\n    {\n      \"id\": \"958\",\n      \"name\": \"Executive\",\n      \"code\": \"MVLST50\",\n      \"price\": \"299.99\",\n      \"nos\": \"50\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"MVLST50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"299.99\"\n    }\n  ]\n}\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/plans?user_type=user (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": \"\",\n  \"uvc_subscription_plan\": [\n    {\n      \"id\": \"952\",\n      \"name\": \"Unlimited VIN Checks\",\n      \"code\": \"MVLUVC\",\n      \"price\": \"29.99\",\n      \"nos\": \"-1\",\n      \"type\": \"unlimited_vin_check_premium\",\n      \"gumroad\": \"MVLUVC\",\n      \"discount\": \"50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"recurring\": \"monthly\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"name\": \"Basic\",\n      \"code\": \"MVL1\",\n      \"price\": \"19.99\",\n      \"nos\": \"1\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL1\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"19.99\"\n    },\n    {\n      \"name\": \"Silver\",\n      \"code\": \"MVL2\",\n      \"price\": \"29.99\",\n      \"nos\": \"2\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL2\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"29.99\"\n    },\n    {\n      \"name\": \"Gold\",\n      \"code\": \"MVL5\",\n      \"price\": \"59.99\",\n      \"nos\": \"5\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL5\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"59.99\"\n    },\n    {\n      \"name\": \"Platinum\",\n      \"code\": \"MVL10\",\n      \"price\": \"119.99\",\n      \"nos\": \"10\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL10\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"119.99\"\n    },\n    {\n      \"name\": \"Diamond\",\n      \"code\": \"MVL25\",\n      \"price\": \"169.99\",\n      \"nos\": \"25\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL25\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"169.99\"\n    },\n    {\n      \"name\": \"Executive\",\n      \"code\": \"MVL50\",\n      \"price\": \"249.99\",\n      \"nos\": \"50\",\n      \"type\": \"report\",\n      \"gumroad\": \"MVL50\",\n      \"currency_sign\": \"$\",\n      \"currency_code\": \"USD\",\n      \"c_id\": \"16\",\n      \"usd_price\": \"249.99\"\n    }\n  ]\n}\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:V2HbPIEpQbWBbkhZPHVMuw\",\n  \"entity_id\": \"af577f28-6a0d-4f67-8ca5-343aeb4631a2\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_make?year=1961 (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Greeves\",\n    \"DeSoto\",\n    \"Deutsch-Bonnet\",\n    \"Dodge\",\n    \"Ducati\",\n    \"Dã¼rkopp\",\n    \"Elva\",\n    \"Facel Vega\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilbern\",\n    \"Ginetta\",\n    \"Glas\",\n    \"Datsun\",\n    \"Harley Davidson\",\n    \"Heinkel\",\n    \"Hercules\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Jaguar\",\n    \"James\",\n    \"Junak\",\n    \"Lagonda\",\n    \"Lambretta\",\n    \"BSA\",\n    \"AC\",\n    \"AJS\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Agrati\",\n    \"Alfa Romeo\",\n    \"Alvis\",\n    \"Amphicar\",\n    \"Ariel\",\n    \"Aston Martin\",\n    \"Austin\",\n    \"Austin Healey\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"Lancia\",\n    \"Bentley\",\n    \"Berkeley\",\n    \"Borgward\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cushman\",\n    \"DB\",\n    \"DKW\",\n    \"Sunbeam Talbot\",\n    \"Raleigh\",\n    \"Rambler\",\n    \"Rambler (amc)\",\n    \"Reliant\",\n    \"Renault\",\n    \"Riley\",\n    \"Rover\",\n    \"Saab\",\n    \"Singer\",\n    \"Skoda\",\n    \"Standard\",\n    \"Steyr Puch\",\n    \"Studebaker\",\n    \"Subaru\",\n    \"Puch\",\n    \"TVR\",\n    \"Talbot\",\n    \"Tatra\",\n    \"Tornado\",\n    \"Toyopet-Toyota\",\n    \"Toyota\",\n    \"Triumph\",\n    \"Vauxhall\",\n    \"Velocette\",\n    \"Vespa\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Warwick\",\n    \"ZAZ\",\n    \"Moskvich\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MG\",\n    \"MZ\",\n    \"Maico\",\n    \"Maserati\",\n    \"Matchless\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Messerschmitt\",\n    \"Mikasa\",\n    \"Morgan\",\n    \"Morris\",\n    \"Zundapp\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"Mustang\",\n    \"NSU\",\n    \"Norton\",\n    \"Ogle\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Osca\",\n    \"Panther\",\n    \"Peugeot\",\n    \"Plymouth\",\n    \"Pontiac\",\n    \"Porsche\"\n  ]\n}\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_model?year=1961&make=ajs (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"model\": []\n}\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_year (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"years\": [\n    1901,\n    1902,\n    1903,\n    1904,\n    1905,\n    1906,\n    1907,\n    1908,\n    1909,\n    1910,\n    1911,\n    1912,\n    1913,\n    1914,\n    1915,\n    1916,\n    1917,\n    1918,\n    1919,\n    1920,\n    1921,\n    1922,\n    1923,\n    1924,\n    1925,\n    1926,\n    1927,\n    1928,\n    1929,\n    1930,\n    1931,\n    1932,\n    1933,\n    1934,\n    1935,\n    1936,\n    1937,\n    1938,\n    1939,\n    1940,\n    1941,\n    1942,\n    1943,\n    1944,\n    1945,\n    1946,\n    1947,\n    1948,\n    1949,\n    1950,\n    1951,\n    1952,\n    1953,\n    1954,\n    1955,\n    1956,\n    1957,\n    1958,\n    1959,\n    1960,\n    1961,\n    1962,\n    1963,\n    1964,\n    1965,\n    1966,\n    1967,\n    1968,\n    1969,\n    1970,\n    1971,\n    1972,\n    1973,\n    1974,\n    1975,\n    1976,\n    1977,\n    1978,\n    1979,\n    1980\n  ]\n}\n"
-                    },
-                    {
-                      "text": "TC_12: page.close() executed.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-12T15:44:07.991Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/all-blobs/resources/b623d68860030abaccf52be650c1c0c46dd676fb.markdown"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15532,
+                  "duration": 17858,
                   "errors": [],
                   "stdout": [
                     {
@@ -1628,19 +1541,19 @@
                       "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:rAYXJaCoQKisyLh-peryng\",\n  \"entity_id\": \"780f7429-abb5-4c3b-9a54-3c075a4f58dc\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
-                    },
-                    {
-                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_make?year=1970 (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Hercules\",\n    \"Datsun\",\n    \"De Tomaso\",\n    \"Dnepr\",\n    \"Dodge\",\n    \"Ducati\",\n    \"FSO\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilera\",\n    \"Ginetta\",\n    \"Harley Davidson\",\n    \"Daimler\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"ISO\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Isuzu\",\n    \"Izh\",\n    \"Jaguar\",\n    \"Jawa\",\n    \"Jeep\",\n    \"Jensen\",\n    \"Kawasaki\",\n    \"Bond\",\n    \"AC\",\n    \"AMC\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Alfa Romeo\",\n    \"Alpine\",\n    \"Aston Martin\",\n    \"Audi\",\n    \"Austin\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"BSA\",\n    \"Balkan\",\n    \"Bentley\",\n    \"Lada\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Casal\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cord\",\n    \"DE Tomaso\",\n    \"Dacia\",\n    \"Daihatsu\",\n    \"Talbot\",\n    \"Porsche\",\n    \"Premier\",\n    \"Puch\",\n    \"Puma\",\n    \"Reliant\",\n    \"Renault\",\n    \"Rover\",\n    \"Saab\",\n    \"Seat\",\n    \"Skoda\",\n    \"Subaru\",\n    \"Sunbeam\",\n    \"Suzuki\",\n    \"TVR\",\n    \"Pontiac\",\n    \"Tatra\",\n    \"Toyota\",\n    \"Trabant\",\n    \"Trident\",\n    \"Triumph\",\n    \"Ural\",\n    \"VW-Porsche\",\n    \"Vauxhall\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Wartburg\",\n    \"Yamaha\",\n    \"ZAZ\",\n    \"Montesa\",\n    \"Lamborghini\",\n    \"Lancia\",\n    \"Land Rover\",\n    \"Laverda\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MBK\",\n    \"MG\",\n    \"Marcos\",\n    \"Maserati\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Mitsubishi\",\n    \"ZIL\",\n    \"Monteverdi\",\n    \"Morgan\",\n    \"Morris\",\n    \"Moskvich\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"NSU\",\n    \"Nissan\",\n    \"Norton\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Peugeot\",\n    \"Plymouth\"\n  ]\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:-PLNj3LuQFGuxCASiLH1SQ\",\n  \"entity_id\": \"2bf687dc-139c-48b9-a0c6-271996ceac2c\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_model?year=1970&make=pontiac (Status: 200)\n"
                     },
                     {
                       "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"model\": []\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_make?year=1970 (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Hercules\",\n    \"Datsun\",\n    \"De Tomaso\",\n    \"Dnepr\",\n    \"Dodge\",\n    \"Ducati\",\n    \"FSO\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilera\",\n    \"Ginetta\",\n    \"Harley Davidson\",\n    \"Daimler\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"ISO\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Isuzu\",\n    \"Izh\",\n    \"Jaguar\",\n    \"Jawa\",\n    \"Jeep\",\n    \"Jensen\",\n    \"Kawasaki\",\n    \"Bond\",\n    \"AC\",\n    \"AMC\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Alfa Romeo\",\n    \"Alpine\",\n    \"Aston Martin\",\n    \"Audi\",\n    \"Austin\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"BSA\",\n    \"Balkan\",\n    \"Bentley\",\n    \"Lada\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Casal\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cord\",\n    \"DE Tomaso\",\n    \"Dacia\",\n    \"Daihatsu\",\n    \"Talbot\",\n    \"Porsche\",\n    \"Premier\",\n    \"Puch\",\n    \"Puma\",\n    \"Reliant\",\n    \"Renault\",\n    \"Rover\",\n    \"Saab\",\n    \"Seat\",\n    \"Skoda\",\n    \"Subaru\",\n    \"Sunbeam\",\n    \"Suzuki\",\n    \"TVR\",\n    \"Pontiac\",\n    \"Tatra\",\n    \"Toyota\",\n    \"Trabant\",\n    \"Trident\",\n    \"Triumph\",\n    \"Ural\",\n    \"VW-Porsche\",\n    \"Vauxhall\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Wartburg\",\n    \"Yamaha\",\n    \"ZAZ\",\n    \"Montesa\",\n    \"Lamborghini\",\n    \"Lancia\",\n    \"Land Rover\",\n    \"Laverda\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MBK\",\n    \"MG\",\n    \"Marcos\",\n    \"Maserati\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Mitsubishi\",\n    \"ZIL\",\n    \"Monteverdi\",\n    \"Morgan\",\n    \"Morris\",\n    \"Moskvich\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"NSU\",\n    \"Nissan\",\n    \"Norton\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Peugeot\",\n    \"Plymouth\"\n  ]\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/get_classic_year (Status: 200)\n"
@@ -1670,20 +1583,20 @@
                       "text": "🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/update-classic-decode (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111391\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111391\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111356\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111356\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
                     },
                     {
                       "text": "TC_12: page.close() executed.\n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-08-12T15:45:38.564Z",
+                  "retry": 0,
+                  "startTime": "2026-08-12T16:08:25.873Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "2e0527a360a5c23f209a-bb0d06c00d8ba548a3d9",
@@ -1703,14 +1616,14 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8585,
+                  "duration": 8594,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83709\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83763\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -1721,7 +1634,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:42:58.132Z",
+                  "startTime": "2026-08-12T16:07:18.827Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1746,10 +1659,10 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1425,
+                  "duration": 1424,
                   "errors": [],
                   "stdout": [
                     {
@@ -1761,7 +1674,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:07.955Z",
+                  "startTime": "2026-08-12T16:07:28.044Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1786,10 +1699,10 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1422,
+                  "duration": 1398,
                   "errors": [],
                   "stdout": [
                     {
@@ -1801,7 +1714,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:09.393Z",
+                  "startTime": "2026-08-12T16:07:29.483Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1826,10 +1739,10 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3433,
+                  "duration": 3996,
                   "errors": [],
                   "stdout": [
                     {
@@ -1841,7 +1754,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:10.826Z",
+                  "startTime": "2026-08-12T16:07:30.894Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1866,10 +1779,10 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7508,
+                  "duration": 6008,
                   "errors": [],
                   "stdout": [
                     {
@@ -1899,7 +1812,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:14.272Z",
+                  "startTime": "2026-08-12T16:07:34.901Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1924,10 +1837,10 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4551,
+                  "duration": 4809,
                   "errors": [],
                   "stdout": [
                     {
@@ -1945,7 +1858,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:21.792Z",
+                  "startTime": "2026-08-12T16:07:40.923Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1970,10 +1883,10 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1355,
+                  "duration": 1323,
                   "errors": [],
                   "stdout": [
                     {
@@ -1985,7 +1898,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:26.358Z",
+                  "startTime": "2026-08-12T16:07:45.744Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2010,14 +1923,14 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9949,
+                  "duration": 10164,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83754\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83790\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2040,7 +1953,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:27.735Z",
+                  "startTime": "2026-08-12T16:07:47.078Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2065,17 +1978,17 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10565,
+                  "duration": 11010,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83798\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83719\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2095,7 +2008,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:37.697Z",
+                  "startTime": "2026-08-12T16:07:57.253Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2130,15 +2043,15 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 49,
+                  "duration": 43,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:48.274Z",
+                  "startTime": "2026-08-12T16:08:08.275Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2183,15 +2096,15 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 43,
+                  "duration": 41,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:48.334Z",
+                  "startTime": "2026-08-12T16:08:08.338Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2236,15 +2149,15 @@
               "projectName": "VehicleHistoryEU_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 38,
+                  "duration": 42,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:48.397Z",
+                  "startTime": "2026-08-12T16:08:08.388Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2279,14 +2192,14 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8714,
+                  "duration": 9286,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83737\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83714\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2297,7 +2210,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:03.191Z",
+                  "startTime": "2026-08-12T16:07:31.080Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2322,10 +2235,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1439,
+                  "duration": 1684,
                   "errors": [],
                   "stdout": [
                     {
@@ -2337,7 +2250,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:12.153Z",
+                  "startTime": "2026-08-12T16:07:42.042Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2362,10 +2275,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1405,
+                  "duration": 1534,
                   "errors": [],
                   "stdout": [
                     {
@@ -2377,7 +2290,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:13.609Z",
+                  "startTime": "2026-08-12T16:07:43.745Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2402,10 +2315,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3575,
+                  "duration": 4126,
                   "errors": [],
                   "stdout": [
                     {
@@ -2417,7 +2330,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:15.028Z",
+                  "startTime": "2026-08-12T16:07:45.295Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2442,10 +2355,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5939,
+                  "duration": 6602,
                   "errors": [],
                   "stdout": [
                     {
@@ -2475,7 +2388,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:18.615Z",
+                  "startTime": "2026-08-12T16:07:49.435Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2500,10 +2413,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5044,
+                  "duration": 5541,
                   "errors": [],
                   "stdout": [
                     {
@@ -2521,7 +2434,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:24.567Z",
+                  "startTime": "2026-08-12T16:07:56.051Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2546,10 +2459,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1488,
+                  "duration": 1448,
                   "errors": [],
                   "stdout": [
                     {
@@ -2561,7 +2474,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:29.626Z",
+                  "startTime": "2026-08-12T16:08:01.604Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2586,14 +2499,14 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10444,
+                  "duration": 10594,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83738\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83734\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2616,7 +2529,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:31.128Z",
+                  "startTime": "2026-08-12T16:08:03.066Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2641,17 +2554,17 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10584,
+                  "duration": 11679,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83722\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83759\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2671,7 +2584,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:41.588Z",
+                  "startTime": "2026-08-12T16:08:13.675Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2696,10 +2609,10 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9350,
+                  "duration": 9250,
                   "errors": [],
                   "stdout": [
                     {
@@ -2711,7 +2624,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:52.186Z",
+                  "startTime": "2026-08-12T16:08:25.364Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2736,14 +2649,14 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15777,
+                  "duration": 14270,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83714\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83727\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2757,7 +2670,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:01.551Z",
+                  "startTime": "2026-08-12T16:08:34.649Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2792,15 +2705,15 @@
               "projectName": "VehicleHistoryEU",
               "results": [
                 {
-                  "workerIndex": 4,
+                  "workerIndex": 3,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 49,
+                  "duration": 60,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:17.346Z",
+                  "startTime": "2026-08-12T16:08:48.934Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2835,14 +2748,14 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8531,
+                  "duration": 8974,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83724\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83731\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -2853,7 +2766,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:42:55.304Z",
+                  "startTime": "2026-08-12T16:07:16.224Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2878,10 +2791,10 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1359,
+                  "duration": 1489,
                   "errors": [],
                   "stdout": [
                     {
@@ -2893,7 +2806,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:04.076Z",
+                  "startTime": "2026-08-12T16:07:26.229Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2918,10 +2831,10 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1412,
+                  "duration": 1466,
                   "errors": [],
                   "stdout": [
                     {
@@ -2933,7 +2846,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:05.450Z",
+                  "startTime": "2026-08-12T16:07:27.730Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2958,10 +2871,10 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 17279,
+                  "duration": 17356,
                   "errors": [],
                   "stdout": [
                     {
@@ -2973,7 +2886,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:06.875Z",
+                  "startTime": "2026-08-12T16:07:29.207Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2998,10 +2911,10 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 47593,
+                  "duration": 47629,
                   "errors": [],
                   "stdout": [
                     {
@@ -3031,7 +2944,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:24.167Z",
+                  "startTime": "2026-08-12T16:07:46.575Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3056,10 +2969,10 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 32617,
+                  "duration": 32685,
                   "errors": [],
                   "stdout": [
                     {
@@ -3077,7 +2990,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:11.774Z",
+                  "startTime": "2026-08-12T16:08:34.215Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3102,10 +3015,10 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1291,
+                  "duration": 1342,
                   "errors": [],
                   "stdout": [
                     {
@@ -3117,7 +3030,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:44.415Z",
+                  "startTime": "2026-08-12T16:09:06.909Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3142,14 +3055,14 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38691,
+                  "duration": 38968,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83721\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83767\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -3172,7 +3085,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:45.721Z",
+                  "startTime": "2026-08-12T16:09:08.261Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3197,17 +3110,17 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 37820,
+                  "duration": 37804,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83774\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83723\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -3227,7 +3140,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:45:24.429Z",
+                  "startTime": "2026-08-12T16:09:47.242Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3262,15 +3175,15 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 43,
+                  "duration": 48,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:46:02.267Z",
+                  "startTime": "2026-08-12T16:10:25.057Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -3315,15 +3228,15 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 42,
+                  "duration": 35,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:46:02.321Z",
+                  "startTime": "2026-08-12T16:10:25.113Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -3358,11 +3271,27 @@
               "projectName": "VINNumberCA_MobileChrome",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 4,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 27119,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 90068,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/classic_editable_specs.ts",
+                        "column": 52,
+                        "line": 60
+                      },
+                      "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Model 16 350ms').first()\u001b[22m\n\u001b[2m    - locator resolved to <h1 class=\"font-bold leading-[24px] text-lg md:text-[28px]\">1961 AJS Model 16 350ms</h1>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div data-state=\"open\" aria-hidden=\"true\" data-aria-hidden=\"true\" class=\"fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div data-state=\"open\" aria-hidden=\"true\" data-aria-hidden=\"true\" class=\"fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  127 × retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\u001b[2m        - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is visible, enabled and stable\u001b[22m\n\u001b[2m        - scrolling into view if needed\u001b[22m\n\u001b[2m        - done scrolling\u001b[22m\n\u001b[2m        - <div data-state=\"open\" aria-hidden=\"true\" data-aria-hidden=\"true\" class=\"fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\"></div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\n\n   at ../tasks/classic_editable_specs.ts:60\n\n  58 |\n  59 |     await page.getByLabel('Model').click();\n> 60 |     await page.getByText('Model 16 350ms').first().click();\n     |                                                    ^\n  61 |\n  62 |     await page.getByLabel('Trim').click();\n  63 |     await page.getByText('Base', { exact: true }).first().click();\n    at Case5VerifyClassicEditableFeature.runDropdownUpdate (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/classic_editable_specs.ts:60:52)\n    at ClassicEditableSpecs.performAs (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/classic_editable_specs.ts:130:7)\n    at Actor.attemptsTo (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/actors/Actor.ts:14:5)\n    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tests/global_case_verification.spec.ts:168:5"
+                    }
+                  ],
                   "stdout": [
                     {
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api/config (Status: 200)\n"
@@ -3389,6 +3318,77 @@
                       "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"931\",\n      \"name\": \"Most Popular\",\n      \"code\": \"VNSTUN\",\n      \"price\": 41.77,\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"DVHSTUN\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"927\",\n      \"name\": \"Full Price\",\n      \"code\": \"VNST1\",\n      \"price\": 20.06,\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST1\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"14.4\"\n    },\n    {\n      \"id\": \"928\",\n      \"name\": \"Sticker Silver\",\n      \"code\": \"VNST2\",\n      \"price\": 30.09,\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST2\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"21.6\"\n    },\n    {\n      \"id\": \"929\",\n      \"name\": \"Best Deal\",\n      \"code\": \"VNST5\",\n      \"price\": 40.12,\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST5\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"28.8\"\n    },\n    {\n      \"id\": \"930\",\n      \"name\": \"Sticker Platinum\",\n      \"code\": \"VNST10\",\n      \"price\": 69.65,\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST10\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"50\"\n    }\n  ]\n}\n"
                     },
                     {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_model?year=1961&make=ajs (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"model\": []\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_make?year=1961 (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Greeves\",\n    \"DeSoto\",\n    \"Deutsch-Bonnet\",\n    \"Dodge\",\n    \"Ducati\",\n    \"Dã¼rkopp\",\n    \"Elva\",\n    \"Facel Vega\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilbern\",\n    \"Ginetta\",\n    \"Glas\",\n    \"Datsun\",\n    \"Harley Davidson\",\n    \"Heinkel\",\n    \"Hercules\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Jaguar\",\n    \"James\",\n    \"Junak\",\n    \"Lagonda\",\n    \"Lambretta\",\n    \"BSA\",\n    \"AC\",\n    \"AJS\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Agrati\",\n    \"Alfa Romeo\",\n    \"Alvis\",\n    \"Amphicar\",\n    \"Ariel\",\n    \"Aston Martin\",\n    \"Austin\",\n    \"Austin Healey\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"Lancia\",\n    \"Bentley\",\n    \"Berkeley\",\n    \"Borgward\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cushman\",\n    \"DB\",\n    \"DKW\",\n    \"Sunbeam Talbot\",\n    \"Raleigh\",\n    \"Rambler\",\n    \"Rambler (amc)\",\n    \"Reliant\",\n    \"Renault\",\n    \"Riley\",\n    \"Rover\",\n    \"Saab\",\n    \"Singer\",\n    \"Skoda\",\n    \"Standard\",\n    \"Steyr Puch\",\n    \"Studebaker\",\n    \"Subaru\",\n    \"Puch\",\n    \"TVR\",\n    \"Talbot\",\n    \"Tatra\",\n    \"Tornado\",\n    \"Toyopet-Toyota\",\n    \"Toyota\",\n    \"Triumph\",\n    \"Vauxhall\",\n    \"Velocette\",\n    \"Vespa\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Warwick\",\n    \"ZAZ\",\n    \"Moskvich\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MG\",\n    \"MZ\",\n    \"Maico\",\n    \"Maserati\",\n    \"Matchless\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Messerschmitt\",\n    \"Mikasa\",\n    \"Morgan\",\n    \"Morris\",\n    \"Zundapp\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"Mustang\",\n    \"NSU\",\n    \"Norton\",\n    \"Ogle\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Osca\",\n    \"Panther\",\n    \"Peugeot\",\n    \"Plymouth\",\n    \"Pontiac\",\n    \"Porsche\"\n  ]\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:BtiFB3qCS9GhMkQAnBPJnA\",\n  \"entity_id\": \"18ea054d-a3e8-41c5-bc14-67967dcbd5a3\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_year (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"years\": [\n    1901,\n    1902,\n    1903,\n    1904,\n    1905,\n    1906,\n    1907,\n    1908,\n    1909,\n    1910,\n    1911,\n    1912,\n    1913,\n    1914,\n    1915,\n    1916,\n    1917,\n    1918,\n    1919,\n    1920,\n    1921,\n    1922,\n    1923,\n    1924,\n    1925,\n    1926,\n    1927,\n    1928,\n    1929,\n    1930,\n    1931,\n    1932,\n    1933,\n    1934,\n    1935,\n    1936,\n    1937,\n    1938,\n    1939,\n    1940,\n    1941,\n    1942,\n    1943,\n    1944,\n    1945,\n    1946,\n    1947,\n    1948,\n    1949,\n    1950,\n    1951,\n    1952,\n    1953,\n    1954,\n    1955,\n    1956,\n    1957,\n    1958,\n    1959,\n    1960,\n    1961,\n    1962,\n    1963,\n    1964,\n    1965,\n    1966,\n    1967,\n    1968,\n    1969,\n    1970,\n    1971,\n    1972,\n    1973,\n    1974,\n    1975,\n    1976,\n    1977,\n    1978,\n    1979,\n    1980\n  ]\n}\n"
+                    },
+                    {
+                      "text": "TC_12: page.close() executed.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-12T16:10:25.155Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/all-blobs/resources/e2291b00c9b07ead2fdd012343c0e03f0b8590a3.markdown"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47174,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api/config (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n\"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL3Zpbm51bWJlci5jYS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly92aW5udW1iZXIuY2EvIn0=\"\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api/config (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n\"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL3Zpbm51bWJlci5jYS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly92aW5udW1iZXIuY2EvIn0=\"\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/sticker-plans?user_type=user (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"931\",\n      \"name\": \"Most Popular\",\n      \"code\": \"VNSTUN\",\n      \"price\": 41.77,\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"DVHSTUN\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"927\",\n      \"name\": \"Full Price\",\n      \"code\": \"VNST1\",\n      \"price\": 20.06,\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST1\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"14.4\"\n    },\n    {\n      \"id\": \"928\",\n      \"name\": \"Sticker Silver\",\n      \"code\": \"VNST2\",\n      \"price\": 30.09,\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST2\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"21.6\"\n    },\n    {\n      \"id\": \"929\",\n      \"name\": \"Best Deal\",\n      \"code\": \"VNST5\",\n      \"price\": 40.12,\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST5\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"28.8\"\n    },\n    {\n      \"id\": \"930\",\n      \"name\": \"Sticker Platinum\",\n      \"code\": \"VNST10\",\n      \"price\": 69.65,\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST10\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"50\"\n    }\n  ]\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/plans?user_type=user (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"933\",\n      \"name\": \" Report Subscription \",\n      \"code\": \"VNYRS\",\n      \"price\": 55.7,\n      \"nos\": \"10\",\n      \"type\": \"report_subscription\",\n      \"gumroad\": \"DVHYRS\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"uvc_subscription_plan\": [\n    {\n      \"id\": \"945\",\n      \"name\": \"Unlimited VIN Check\",\n      \"code\": \"VNUVC\",\n      \"price\": 41.77,\n      \"nos\": \"-1\",\n      \"type\": \"unlimited_vin_check_premium\",\n      \"gumroad\": \"\",\n      \"discount\": \"50\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"name\": \"Basic\",\n      \"code\": \"VN1\",\n      \"price\": 20.06,\n      \"nos\": \"1\",\n      \"type\": \"report\",\n      \"gumroad\": \"VN1\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"14.4\"\n    },\n    {\n      \"name\": \"Silver\",\n      \"code\": \"VN2\",\n      \"price\": 30.09,\n      \"nos\": \"2\",\n      \"type\": \"report\",\n      \"gumroad\": \"DVH2\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"21.6\"\n    },\n    {\n      \"name\": \"Gold\",\n      \"code\": \"VN5\",\n      \"price\": 40.12,\n      \"nos\": \"5\",\n      \"type\": \"report\",\n      \"gumroad\": \"DVH5\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"28.8\"\n    },\n    {\n      \"name\": \"Platinum\",\n      \"code\": \"VN10\",\n      \"price\": 69.65,\n      \"nos\": \"10\",\n      \"type\": \"report\",\n      \"gumroad\": \"DVH10\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"50\"\n    }\n  ]\n}\n"
+                    },
+                    {
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_model?year=1970&make=pontiac (Status: 200)\n"
                     },
                     {
@@ -3404,7 +3404,7 @@
                       "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:nm9k0-IeSkyyK1168Y5pyg\",\n  \"entity_id\": \"8fd035d4-b9f5-4331-aab4-fcac34c9ecdc\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:hUbeJfjTRduAFLUPV5VNTg\",\n  \"entity_id\": \"668d3a00-47ac-40c9-872d-2b2c251e6aa1\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_year (Status: 200)\n"
@@ -3434,20 +3434,32 @@
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/update-classic-decode (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111307\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111307\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111375\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111375\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_make?year=1961 (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Greeves\",\n    \"DeSoto\",\n    \"Deutsch-Bonnet\",\n    \"Dodge\",\n    \"Ducati\",\n    \"Dã¼rkopp\",\n    \"Elva\",\n    \"Facel Vega\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilbern\",\n    \"Ginetta\",\n    \"Glas\",\n    \"Datsun\",\n    \"Harley Davidson\",\n    \"Heinkel\",\n    \"Hercules\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Jaguar\",\n    \"James\",\n    \"Junak\",\n    \"Lagonda\",\n    \"Lambretta\",\n    \"BSA\",\n    \"AC\",\n    \"AJS\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Agrati\",\n    \"Alfa Romeo\",\n    \"Alvis\",\n    \"Amphicar\",\n    \"Ariel\",\n    \"Aston Martin\",\n    \"Austin\",\n    \"Austin Healey\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"Lancia\",\n    \"Bentley\",\n    \"Berkeley\",\n    \"Borgward\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cushman\",\n    \"DB\",\n    \"DKW\",\n    \"Sunbeam Talbot\",\n    \"Raleigh\",\n    \"Rambler\",\n    \"Rambler (amc)\",\n    \"Reliant\",\n    \"Renault\",\n    \"Riley\",\n    \"Rover\",\n    \"Saab\",\n    \"Singer\",\n    \"Skoda\",\n    \"Standard\",\n    \"Steyr Puch\",\n    \"Studebaker\",\n    \"Subaru\",\n    \"Puch\",\n    \"TVR\",\n    \"Talbot\",\n    \"Tatra\",\n    \"Tornado\",\n    \"Toyopet-Toyota\",\n    \"Toyota\",\n    \"Triumph\",\n    \"Vauxhall\",\n    \"Velocette\",\n    \"Vespa\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Warwick\",\n    \"ZAZ\",\n    \"Moskvich\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MG\",\n    \"MZ\",\n    \"Maico\",\n    \"Maserati\",\n    \"Matchless\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Messerschmitt\",\n    \"Mikasa\",\n    \"Morgan\",\n    \"Morris\",\n    \"Zundapp\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"Mustang\",\n    \"NSU\",\n    \"Norton\",\n    \"Ogle\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Osca\",\n    \"Panther\",\n    \"Peugeot\",\n    \"Plymouth\",\n    \"Pontiac\",\n    \"Porsche\"\n  ]\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_model?year=1961&make=ajs (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"model\": []\n}\n"
                     },
                     {
                       "text": "TC_12: page.close() executed.\n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-08-12T15:46:02.373Z",
+                  "retry": 1,
+                  "startTime": "2026-08-12T16:11:55.580Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "2e0527a360a5c23f209a-8660308f99c3d2c7d105",
@@ -3470,11 +3482,11 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9446,
+                  "duration": 9497,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83713\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83712\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -3485,7 +3497,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:07.148Z",
+                  "startTime": "2026-08-12T16:07:20.567Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3513,7 +3525,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1744,
+                  "duration": 1638,
                   "errors": [],
                   "stdout": [
                     {
@@ -3525,7 +3537,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:16.796Z",
+                  "startTime": "2026-08-12T16:07:30.259Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3553,7 +3565,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2031,
+                  "duration": 2032,
                   "errors": [],
                   "stdout": [
                     {
@@ -3565,7 +3577,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:18.551Z",
+                  "startTime": "2026-08-12T16:07:31.913Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3593,7 +3605,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 17522,
+                  "duration": 17853,
                   "errors": [],
                   "stdout": [
                     {
@@ -3605,7 +3617,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:20.593Z",
+                  "startTime": "2026-08-12T16:07:33.960Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3633,7 +3645,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 48433,
+                  "duration": 47971,
                   "errors": [],
                   "stdout": [
                     {
@@ -3663,7 +3675,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:38.126Z",
+                  "startTime": "2026-08-12T16:07:51.829Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3691,7 +3703,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 34003,
+                  "duration": 34567,
                   "errors": [],
                   "stdout": [
                     {
@@ -3709,7 +3721,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:26.573Z",
+                  "startTime": "2026-08-12T16:08:39.815Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3737,7 +3749,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1676,
+                  "duration": 2594,
                   "errors": [],
                   "stdout": [
                     {
@@ -3749,7 +3761,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:45:00.596Z",
+                  "startTime": "2026-08-12T16:09:14.407Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3777,11 +3789,11 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 40540,
+                  "duration": 40619,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83708\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83777\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -3804,7 +3816,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:45:02.282Z",
+                  "startTime": "2026-08-12T16:09:17.015Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3832,14 +3844,14 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38913,
+                  "duration": 39170,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-sticker\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83767\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83788\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -3859,7 +3871,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:45:42.834Z",
+                  "startTime": "2026-08-12T16:09:57.649Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3887,7 +3899,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9626,
+                  "duration": 9469,
                   "errors": [],
                   "stdout": [
                     {
@@ -3899,7 +3911,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:46:21.758Z",
+                  "startTime": "2026-08-12T16:10:36.834Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3927,11 +3939,11 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 17051,
+                  "duration": 16843,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83724\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83767\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -3945,7 +3957,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:46:31.403Z",
+                  "startTime": "2026-08-12T16:10:46.315Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -3973,7 +3985,7 @@
                   "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 52326,
+                  "duration": 30191,
                   "errors": [],
                   "stdout": [
                     {
@@ -3989,22 +4001,16 @@
                       "text": "📦 [JSON Data]:\n\"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL3Zpbm51bWJlci5jYS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly92aW5udW1iZXIuY2EvIn0=\"\n"
                     },
                     {
-                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/sticker-plans?user_type=user (Status: 200)\n"
-                    },
-                    {
-                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"931\",\n      \"name\": \"Most Popular\",\n      \"code\": \"VNSTUN\",\n      \"price\": 41.77,\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"DVHSTUN\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"927\",\n      \"name\": \"Full Price\",\n      \"code\": \"VNST1\",\n      \"price\": 20.06,\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST1\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"14.4\"\n    },\n    {\n      \"id\": \"928\",\n      \"name\": \"Sticker Silver\",\n      \"code\": \"VNST2\",\n      \"price\": 30.09,\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST2\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"21.6\"\n    },\n    {\n      \"id\": \"929\",\n      \"name\": \"Best Deal\",\n      \"code\": \"VNST5\",\n      \"price\": 40.12,\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST5\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"28.8\"\n    },\n    {\n      \"id\": \"930\",\n      \"name\": \"Sticker Platinum\",\n      \"code\": \"VNST10\",\n      \"price\": 69.65,\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST10\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"50\"\n    }\n  ]\n}\n"
-                    },
-                    {
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/plans?user_type=user (Status: 200)\n"
                     },
                     {
                       "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"933\",\n      \"name\": \" Report Subscription \",\n      \"code\": \"VNYRS\",\n      \"price\": 55.7,\n      \"nos\": \"10\",\n      \"type\": \"report_subscription\",\n      \"gumroad\": \"DVHYRS\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"uvc_subscription_plan\": [\n    {\n      \"id\": \"945\",\n      \"name\": \"Unlimited VIN Check\",\n      \"code\": \"VNUVC\",\n      \"price\": 41.77,\n      \"nos\": \"-1\",\n      \"type\": \"unlimited_vin_check_premium\",\n      \"gumroad\": \"\",\n      \"discount\": \"50\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"name\": \"Basic\",\n      \"code\": \"VN1\",\n      \"price\": 20.06,\n      \"nos\": \"1\",\n      \"type\": \"report\",\n      \"gumroad\": \"VN1\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"14.4\"\n    },\n    {\n      \"name\": \"Silver\",\n      \"code\": \"VN2\",\n      \"price\": 30.09,\n      \"nos\": \"2\",\n      \"type\": \"report\",\n      \"gumroad\": \"DVH2\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"21.6\"\n    },\n    {\n      \"name\": \"Gold\",\n      \"code\": \"VN5\",\n      \"price\": 40.12,\n      \"nos\": \"5\",\n      \"type\": \"report\",\n      \"gumroad\": \"DVH5\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"28.8\"\n    },\n    {\n      \"name\": \"Platinum\",\n      \"code\": \"VN10\",\n      \"price\": 69.65,\n      \"nos\": \"10\",\n      \"type\": \"report\",\n      \"gumroad\": \"DVH10\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"50\"\n    }\n  ]\n}\n"
                     },
                     {
-                      "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
+                      "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/sticker-plans?user_type=user (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:LOy0-vqDQ_SEKn3G2pgP8A\",\n  \"entity_id\": \"6a202ee5-ed58-4590-b69d-9a2d2dac7edd\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"subscription_plan\": [\n    {\n      \"id\": \"931\",\n      \"name\": \"Most Popular\",\n      \"code\": \"VNSTUN\",\n      \"price\": 41.77,\n      \"nos\": \"20\",\n      \"type\": \"sticker_subscription\",\n      \"gumroad\": \"DVHSTUN\",\n      \"discount\": \"0\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"recurring\": \"monthly\",\n      \"c_id\": \"2\"\n    }\n  ],\n  \"credit_plans\": [\n    {\n      \"id\": \"927\",\n      \"name\": \"Full Price\",\n      \"code\": \"VNST1\",\n      \"price\": 20.06,\n      \"nos\": \"1\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST1\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"14.4\"\n    },\n    {\n      \"id\": \"928\",\n      \"name\": \"Sticker Silver\",\n      \"code\": \"VNST2\",\n      \"price\": 30.09,\n      \"nos\": \"2\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST2\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"21.6\"\n    },\n    {\n      \"id\": \"929\",\n      \"name\": \"Best Deal\",\n      \"code\": \"VNST5\",\n      \"price\": 40.12,\n      \"nos\": \"5\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST5\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"28.8\"\n    },\n    {\n      \"id\": \"930\",\n      \"name\": \"Sticker Platinum\",\n      \"code\": \"VNST10\",\n      \"price\": 69.65,\n      \"nos\": \"10\",\n      \"type\": \"sticker\",\n      \"gumroad\": \"DVHST10\",\n      \"currency_sign\": \"C$\",\n      \"currency_code\": \"CAD\",\n      \"conversion_rate\": \"1.3929\",\n      \"c_id\": \"2\",\n      \"usd_price\": \"50\"\n    }\n  ]\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_model?year=1970&make=pontiac (Status: 200)\n"
@@ -4017,6 +4023,12 @@
                     },
                     {
                       "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"make\": [\n    \"Hercules\",\n    \"Datsun\",\n    \"De Tomaso\",\n    \"Dnepr\",\n    \"Dodge\",\n    \"Ducati\",\n    \"FSO\",\n    \"Ferrari\",\n    \"Fiat\",\n    \"Ford\",\n    \"GAZ\",\n    \"GMC\",\n    \"Gilera\",\n    \"Ginetta\",\n    \"Harley Davidson\",\n    \"Daimler\",\n    \"Hillman\",\n    \"Holden\",\n    \"Honda\",\n    \"ISO\",\n    \"Imperial\",\n    \"Imperial (chrysler)\",\n    \"International\",\n    \"Isuzu\",\n    \"Izh\",\n    \"Jaguar\",\n    \"Jawa\",\n    \"Jeep\",\n    \"Jensen\",\n    \"Kawasaki\",\n    \"Bond\",\n    \"AC\",\n    \"AMC\",\n    \"Abarth\",\n    \"Aermacchi\",\n    \"Alfa Romeo\",\n    \"Alpine\",\n    \"Aston Martin\",\n    \"Audi\",\n    \"Austin\",\n    \"Autobianchi\",\n    \"BMW\",\n    \"BSA\",\n    \"Balkan\",\n    \"Bentley\",\n    \"Lada\",\n    \"Bristol\",\n    \"Buick\",\n    \"Bultaco\",\n    \"Cadillac\",\n    \"Casal\",\n    \"Checker\",\n    \"Chevrolet\",\n    \"Chrysler\",\n    \"Citroen\",\n    \"Cord\",\n    \"DE Tomaso\",\n    \"Dacia\",\n    \"Daihatsu\",\n    \"Talbot\",\n    \"Porsche\",\n    \"Premier\",\n    \"Puch\",\n    \"Puma\",\n    \"Reliant\",\n    \"Renault\",\n    \"Rover\",\n    \"Saab\",\n    \"Seat\",\n    \"Skoda\",\n    \"Subaru\",\n    \"Sunbeam\",\n    \"Suzuki\",\n    \"TVR\",\n    \"Pontiac\",\n    \"Tatra\",\n    \"Toyota\",\n    \"Trabant\",\n    \"Trident\",\n    \"Triumph\",\n    \"Ural\",\n    \"VW-Porsche\",\n    \"Vauxhall\",\n    \"Volkswagen\",\n    \"Volvo\",\n    \"Wartburg\",\n    \"Yamaha\",\n    \"ZAZ\",\n    \"Montesa\",\n    \"Lamborghini\",\n    \"Lancia\",\n    \"Land Rover\",\n    \"Laverda\",\n    \"Lincoln\",\n    \"Lotus\",\n    \"MBK\",\n    \"MG\",\n    \"Marcos\",\n    \"Maserati\",\n    \"Mazda\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"Mitsubishi\",\n    \"ZIL\",\n    \"Monteverdi\",\n    \"Morgan\",\n    \"Morris\",\n    \"Moskvich\",\n    \"Moto Guzzi\",\n    \"Motobi\",\n    \"NSU\",\n    \"Nissan\",\n    \"Norton\",\n    \"Oldsmobile\",\n    \"Opel\",\n    \"Peugeot\",\n    \"Plymouth\"\n  ]\n}\n"
+                    },
+                    {
+                      "text": "🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)\n"
+                    },
+                    {
+                      "text": "📦 [JSON Data]:\n{\n  \"access_token\": \"us-south1:Qsq0ZATSSwqJqk-9R03lcw\",\n  \"entity_id\": \"e51921ae-3bce-429d-87ce-053d5471888d\",\n  \"expires_in\": 14400,\n  \"organization_id\": \"062c9f1b-3fc3-41b6-ba49-28d7749227b0\",\n  \"token_type\": \"Bearer\"\n}\n"
                     },
                     {
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_year (Status: 200)\n"
@@ -4046,7 +4058,7 @@
                       "text": "🌐 [API Response] URL: https://vinnumber.ca/api-cwa/update-classic-decode (Status: 200)\n"
                     },
                     {
-                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111358\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111358\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
+                      "text": "📦 [JSON Data]:\n{\n  \"status\": \"success\",\n  \"data\": {\n    \"vin\": \"242370B111395\",\n    \"year\": \"1961\",\n    \"make\": \"AJS\",\n    \"model\": \"Model 16 350ms\",\n    \"details\": {\n      \"vin\": \"242370B111395\",\n      \"year\": \"1961\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"transmission\": \"3-Speed\",\n      \"fuel\": \"Gasoline\",\n      \"engine\": \"V8\",\n      \"drive\": \"RWD\",\n      \"doors\": \"2\",\n      \"source\": \"Classic\",\n      \"model_id\": null,\n      \"series\": \"Base\"\n    },\n    \"model_id\": null,\n    \"series\": \"Base\",\n    \"mapping\": {\n      \"1st\": null,\n      \"2nd\": null,\n      \"3rd\": null,\n      \"4th\": null,\n      \"5th\": null,\n      \"Additional Information\": null,\n      \"Axle Type\": \"\",\n      \"Battery\": \"\",\n      \"Block Material\": \"\",\n      \"Body\": null,\n      \"Body Maker\": \"\",\n      \"Bore & Stroke\": null,\n      \"Brake Horsepower\": \"\",\n      \"Brakes\": null,\n      \"Capacities\": null,\n      \"Carburetor\": \"\",\n      \"Classic Rating\": \"\",\n      \"Clutch Size\": null,\n      \"Clutch Type\": null,\n      \"Colors\": \"\",\n      \"Compression Ratio-Opt\": null,\n      \"Compression Ratio-Std\": \"6.5:1\",\n      \"Cooling System\": \"\",\n      \"Cylinders\": \"\",\n      \"Differential\": \"{'type': '', 'ratio': ''}\",\n      \"Differential Ratio\": null,\n      \"Dimension\": null,\n      \"Displacement\": \"0.35 L\",\n      \"Emergency\": \"\",\n      \"Engine No. Location\": \"\",\n      \"Engine Numbers\": null,\n      \"Exhaust System\": null,\n      \"Exterior Colors\": \"\",\n      \"Front\": \"\",\n      \"Front Differential\": null,\n      \"Front Size\": \"Expanding brake (drum brake)\",\n      \"Front Tread\": \"\",\n      \"Fuel\": \"\",\n      \"Height\": \"\",\n      \"Ignition System\": \"Magneto\",\n      \"Length\": \"86.2 inches\",\n      \"Lubrication\": \"Wet sump\",\n      \"MSRP\": \"\",\n      \"Main Bearings\": \"\",\n      \"Make\": null,\n      \"Mileage\": \"\",\n      \"Model Number\": \"\",\n      \"Motor's Auto Repair Manual 28th Edition\": \"\",\n      \"No. Of Gears\": \"4\",\n      \"No. Produced\": \"\",\n      \"Oil\": \"\",\n      \"Other Systems Specifications\": null,\n      \"Paint Type\": \"\",\n      \"Passengers\": \"\",\n      \"Radiator\": \"\",\n      \"Rated Horsepower\": \"\",\n      \"Rear\": \"\",\n      \"Rear Differential\": \"\",\n      \"Rear Size\": \"Expanding brake (drum brake)\",\n      \"Rear Tread\": \"\",\n      \"References\": null,\n      \"Reverse\": null,\n      \"Serial No. Book for US Cars 1900-1975 G. Brigham\": null,\n      \"Service\": \"\",\n      \"Size\": null,\n      \"Spare Location\": \"\",\n      \"Standard Catalog of American Cars 1946-1975 Krause Pub.\": \"\",\n      \"Standard/Optional Equipment\": \"\",\n      \"Steering Gear\": \"\",\n      \"Suspension\": null,\n      \"Tire Size\": null,\n      \"Tire Type\": null,\n      \"Torque\": \"\",\n      \"Transfer Case\": null,\n      \"Type\": \"\",\n      \"VIN Description\": null,\n      \"VIN/ID\": null,\n      \"VIN/Serial no.\": null,\n      \"Valve Lifters\": \"\",\n      \"Weight\": \"374.8 lbs\",\n      \"Wheel Mfr\": null,\n      \"Wheel Size\": null,\n      \"Wheel Type\": null,\n      \"Wheelbase\": \"56 inches\",\n      \"Wheels, Rims & Tires\": null,\n      \"Width\": \"28 inches\",\n      \"doors\": \"\",\n      \"drive\": \"\",\n      \"engine\": null,\n      \"fuel\": \"\",\n      \"make\": \"AJS\",\n      \"model\": \"Model 16 350ms\",\n      \"model_id\": 356545,\n      \"series\": \"Base\",\n      \"series_attr\": null,\n      \"title\": \"1961 AJS Model 16 350MS Base\",\n      \"transmission\": \"Chain  (final drive)\",\n      \"year\": 1961,\n      \"market_value\": []\n    },\n    \"marketValue\": {\n      \"market_data\": [\n        {\n          \"market_value\": []\n        }\n      ]\n    },\n    \"isEditable\": true\n  },\n  \"marketValue\": {\n    \"market_data\": [\n      {\n        \"market_value\": []\n      }\n    ]\n  }\n}\n"
                     },
                     {
                       "text": "TC_12: page.close() executed.\n"
@@ -4054,7 +4066,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:46:48.463Z",
+                  "startTime": "2026-08-12T16:11:03.172Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4082,11 +4094,11 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2797,
+                  "duration": 2714,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83728\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83758\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -4097,7 +4109,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:00.839Z",
+                  "startTime": "2026-08-12T16:07:10.419Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4125,7 +4137,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1515,
+                  "duration": 1536,
                   "errors": [],
                   "stdout": [
                     {
@@ -4137,7 +4149,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:04.749Z",
+                  "startTime": "2026-08-12T16:07:13.343Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4165,7 +4177,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1505,
+                  "duration": 1501,
                   "errors": [],
                   "stdout": [
                     {
@@ -4177,7 +4189,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:06.287Z",
+                  "startTime": "2026-08-12T16:07:14.895Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4205,7 +4217,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3831,
+                  "duration": 4201,
                   "errors": [],
                   "stdout": [
                     {
@@ -4217,7 +4229,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:07.807Z",
+                  "startTime": "2026-08-12T16:07:16.409Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4245,7 +4257,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6214,
+                  "duration": 8438,
                   "errors": [],
                   "stdout": [
                     {
@@ -4275,7 +4287,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:11.650Z",
+                  "startTime": "2026-08-12T16:07:20.623Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4303,7 +4315,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6245,
+                  "duration": 6873,
                   "errors": [],
                   "stdout": [
                     {
@@ -4321,7 +4333,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:17.880Z",
+                  "startTime": "2026-08-12T16:07:29.073Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4349,7 +4361,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1352,
+                  "duration": 1374,
                   "errors": [],
                   "stdout": [
                     {
@@ -4361,7 +4373,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:24.138Z",
+                  "startTime": "2026-08-12T16:07:35.956Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4389,11 +4401,11 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4308,
+                  "duration": 5144,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83776\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83775\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -4416,7 +4428,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:25.500Z",
+                  "startTime": "2026-08-12T16:07:37.342Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4444,14 +4456,14 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7212,
+                  "duration": 7483,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83773\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83723\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -4471,7 +4483,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:29.821Z",
+                  "startTime": "2026-08-12T16:07:42.498Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4509,12 +4521,12 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 57,
+                  "duration": 51,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:37.043Z",
+                  "startTime": "2026-08-12T16:07:49.992Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -4562,12 +4574,12 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 40,
+                  "duration": 74,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:37.110Z",
+                  "startTime": "2026-08-12T16:07:50.054Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -4605,7 +4617,7 @@
                   "workerIndex": 7,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 69380,
+                  "duration": 75899,
                   "errors": [],
                   "stdout": [
                     {
@@ -4614,7 +4626,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:37.159Z",
+                  "startTime": "2026-08-12T16:07:50.139Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4642,11 +4654,11 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2783,
+                  "duration": 3334,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83704\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83785\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -4657,7 +4669,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:08.787Z",
+                  "startTime": "2026-08-12T16:07:17.181Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4685,7 +4697,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1545,
+                  "duration": 1915,
                   "errors": [],
                   "stdout": [
                     {
@@ -4697,7 +4709,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:13.136Z",
+                  "startTime": "2026-08-12T16:07:20.723Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4725,7 +4737,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1668,
+                  "duration": 1853,
                   "errors": [],
                   "stdout": [
                     {
@@ -4737,7 +4749,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:14.700Z",
+                  "startTime": "2026-08-12T16:07:22.651Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4765,7 +4777,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4196,
+                  "duration": 4135,
                   "errors": [],
                   "stdout": [
                     {
@@ -4777,7 +4789,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:16.381Z",
+                  "startTime": "2026-08-12T16:07:24.525Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4805,7 +4817,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6888,
+                  "duration": 7798,
                   "errors": [],
                   "stdout": [
                     {
@@ -4835,7 +4847,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:20.592Z",
+                  "startTime": "2026-08-12T16:07:28.678Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4863,7 +4875,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6615,
+                  "duration": 7014,
                   "errors": [],
                   "stdout": [
                     {
@@ -4881,7 +4893,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:27.495Z",
+                  "startTime": "2026-08-12T16:07:36.492Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4909,7 +4921,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14425,
+                  "duration": 19063,
                   "errors": [],
                   "stdout": [
                     {
@@ -4924,7 +4936,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:34.124Z",
+                  "startTime": "2026-08-12T16:07:43.522Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -4952,11 +4964,11 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4083,
+                  "duration": 6183,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83736\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83794\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -4979,7 +4991,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:48.563Z",
+                  "startTime": "2026-08-12T16:08:02.600Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -5007,14 +5019,14 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7692,
+                  "duration": 8532,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "Passed: Navigated to valid sticker path: /window-stickers\n"
                     },
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83772\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83762\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -5034,7 +5046,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:43:52.658Z",
+                  "startTime": "2026-08-12T16:08:08.798Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -5062,7 +5074,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9369,
+                  "duration": 9440,
                   "errors": [],
                   "stdout": [
                     {
@@ -5074,7 +5086,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:00.365Z",
+                  "startTime": "2026-08-12T16:08:17.344Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -5102,11 +5114,11 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2933,
+                  "duration": 4427,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83789\n"
+                      "text": "[VIN Decode] Generated VIN: 1FMCU9GD3JUC83758\n"
                     },
                     {
                       "text": "[VIN Decode] Clicking success element...\n"
@@ -5120,7 +5132,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:09.747Z",
+                  "startTime": "2026-08-12T16:08:26.800Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -5148,7 +5160,7 @@
                   "workerIndex": 8,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 59698,
+                  "duration": 37921,
                   "errors": [],
                   "stdout": [
                     {
@@ -5157,7 +5169,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-12T15:44:12.692Z",
+                  "startTime": "2026-08-12T16:08:31.254Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -5175,8 +5187,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-12T15:42:54.603Z",
-    "duration": 286238.9108886719,
+    "startTime": "2026-08-12T16:07:09.443Z",
+    "duration": 333447.6760253906,
     "expected": 85,
     "skipped": 10,
     "unexpected": 0,
