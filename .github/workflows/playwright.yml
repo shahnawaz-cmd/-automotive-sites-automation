@@ -180,11 +180,24 @@ jobs:
         SKIPPED_TESTS=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/results.json || echo "0")
         PASSED_TESTS=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/results.json || echo "0")
 
-        SITES_TESTED=$(jq -r '.config.projects | map(.name) | join(", ")' playwright-report/results.json || echo "N/A")
+        # --- Group Active Batches by Site and list browser suffixes in parentheses ---
+        SITES_TESTED_BULLETS=$(jq -r '
+          .config.projects | 
+          map(
+            .name as $n | 
+            ($n | split("_")[0]) as $base | 
+            ($n | split("_")[1] // "Desktop") as $browser |
+            {base: $base, browser: $browser}
+          ) | 
+          group_by(.base) | 
+          map("• " + .[0].base + " (" + (map(.browser) | join(", ")) + ")") | 
+          join("\n")
+        ' playwright-report/results.json || echo "N/A")
 
-        # --- Enhancement 1: Pass rate percentage ---
-        if [ "$TOTAL_TESTS" -gt 0 ]; then
-          PASS_RATE=$(( PASSED_TESTS * 100 / TOTAL_TESTS ))
+        # --- Exclude skipped cases from pass rate percentage ---
+        ACTIVE_TESTS=$(( TOTAL_TESTS - SKIPPED_TESTS ))
+        if [ "$ACTIVE_TESTS" -gt 0 ]; then
+          PASS_RATE=$(( PASSED_TESTS * 100 / ACTIVE_TESTS ))
         else
           PASS_RATE=0
         fi
@@ -237,22 +250,19 @@ jobs:
               "blocks": [
                 {
                   "type": "section",
+                  "text": { "type": "mrkdwn", "text": "*Daily Production Website Functional & Cross‑Browser QA Report*" }
+                },
+                {
+                  "type": "section",
                   "text": { "type": "mrkdwn", "text": "*$ICON $TITLE*" }
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*📊 Results:* ${PASS_RATE}% pass rate ($PASSED_TESTS/$TOTAL_TESTS)\n*Total Tests:* $TOTAL_TESTS\n*Passed:* $PASSED_TESTS\n*Failed:* $FAILED_TESTS\n*Flaky:* $FLAKY_TESTS\n*Skipped:* $SKIPPED_TESTS" }
+                  "text": { "type": "mrkdwn", "text": "*📊 Results:* ${PASS_RATE}% pass rate ($PASSED_TESTS/$ACTIVE_TESTS active)\n*Total Tests:* $TOTAL_TESTS\n*Passed:* $PASSED_TESTS\n*Failed:* $FAILED_TESTS\n*Flaky:* $FLAKY_TESTS\n*Skipped:* $SKIPPED_TESTS" }
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Active Batches:* \`$SITES_TESTED\`\n*Scope:* \`auth-multiproperty-automation\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* NextJS & WordPress Production\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
-                },
-                {
-                  "type": "actions",
-                  "elements": [
-                    { "type": "button", "text": { "type": "plain_text", "text": "View Workflow Run" }, "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" },
-                    { "type": "button", "text": { "type": "plain_text", "text": "View HTML Report" }, "url": "https://shahnawaz-cmd.github.io/-automotive-sites-automation/" }
-                  ]
+                  "text": { "type": "mrkdwn", "text": "*Active Batches:*\n$SITES_TESTED_BULLETS\n\n*Scope:* \`Global NextJS Sites - Functional E2E\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* \`Production\`\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}\n\n📥 *Links:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Workflow Run> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View HTML Report>$FAILED_SECTION" }
                 }
               ]
             }
