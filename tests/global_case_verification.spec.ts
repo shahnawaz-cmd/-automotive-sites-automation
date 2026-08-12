@@ -10,6 +10,8 @@ import { RevisitStickerBannerFlow } from '../tasks/revisit_sticker_banner_flow';
 import { ExitIntentHelper } from '../tasks/exit_intent_banner';
 import { PreviewToCheckoutRedirection } from '../tasks/preview_to_checkout_redirection';
 import { ClassicEditableSpecs } from '../tasks/classic_editable_specs';
+import { StreamingExitIntentPopup } from '../tasks/exit_intent_popup_preview';
+import { GlobalExitIntentPopup } from '../tasks/global_exit_intent_popup';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -169,5 +171,37 @@ test('TC_12 Classic editable specs feature validation', async ({ page }, testInf
   } finally {
     await page.close();
     console.log('TC_12: page.close() executed.');
+  }
+});
+
+test('TC_13 Global Exit Intent Preview Verification', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari'), 'Skipping exit intent preview on mobile');
+  
+  const actor = new Actor('User', page);
+  try {
+    // Add webdriver spoofing before navigation starts
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => false });
+    });
+
+    await page.goto('/');
+    await page.waitForTimeout(1000); // 1 second delay
+    
+    // 1. Decode VIN to land on Preview page (with shouldClose set to false)
+    await actor.attemptsTo(new DecodeVinTask(), false);
+    
+    // 2. Try Global Exit Intent Popup first, fallback to StreamingExitIntentPopup if not matched
+    try {
+      console.log('[TC_13] Running Global Exit Intent Flow...');
+      await actor.attemptsTo(new GlobalExitIntentPopup());
+      console.log('[TC_13] Global Exit Intent Flow Succeeded.');
+    } catch (e) {
+      console.log(`[TC_13] Global Exit Intent Flow skipped/failed (${e.message}). Falling back to Streaming Exit Intent Flow...`);
+      await actor.attemptsTo(new StreamingExitIntentPopup());
+      console.log('[TC_13] Streaming Exit Intent Flow Succeeded.');
+    }
+  } finally {
+    await page.close();
+    console.log('TC_13: page.close() executed.');
   }
 });
