@@ -6,8 +6,6 @@ permissions:
   id-token: write
 
 on:
-  push:
-    branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
   schedule:
@@ -174,11 +172,12 @@ jobs:
       run: |
         sudo apt-get install -y jq
 
-        TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' playwright-report/results.json || echo "0")
-        FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/results.json || echo "0")
-        FLAKY_TESTS=$(jq '[.. | .status? | select(. == "flaky")] | length' playwright-report/results.json || echo "0")
-        SKIPPED_TESTS=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/results.json || echo "0")
-        PASSED_TESTS=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/results.json || echo "0")
+        # --- Extract accurate counts from Playwright stats ---
+        PASSED_TESTS=$(jq '.stats.expected // 0' playwright-report/results.json || echo "0")
+        FAILED_TESTS=$(jq '.stats.unexpected // 0' playwright-report/results.json || echo "0")
+        FLAKY_TESTS=$(jq '.stats.flaky // 0' playwright-report/results.json || echo "0")
+        SKIPPED_TESTS=$(jq '.stats.skipped // 0' playwright-report/results.json || echo "0")
+        TOTAL_TESTS=$(( PASSED_TESTS + FAILED_TESTS + FLAKY_TESTS + SKIPPED_TESTS ))
 
         # --- Group Active Batches by Site and list browser suffixes in parentheses ---
         SITES_TESTED_BULLETS=$(jq -r '
