@@ -37,7 +37,7 @@ Test timeout of 90000ms exceeded.
                           - img
                           - heading [level=4]:
                             - generic: Success!
-                            - text: We found detailed information for VIN# 242370B111317
+                            - text: We found detailed information for VIN# 242370B111362
                   - generic:
                     - generic:
                       - generic:
@@ -169,14 +169,13 @@ Test timeout of 90000ms exceeded.
                               - generic:
                                 - radio
                               - heading [level=4]: 5 Reports
-                              - generic: Most Popular
                             - generic:
-                              - generic: CA$8.02
+                              - generic: $12.00
                               - subscript: /Report
-                            - generic: You pay CA$40.12
+                            - generic: You pay $59.99
                             - generic:
-                              - generic: CA$100.30
-                              - generic: Save 60%
+                              - generic: $99.95
+                              - generic: Save 40%
                     - generic:
                       - radio:
                         - generic:
@@ -186,11 +185,11 @@ Test timeout of 90000ms exceeded.
                                 - radio
                               - heading [level=4]: 2 Reports
                             - generic:
-                              - generic: CA$15.05
+                              - generic: $15.00
                               - subscript: /Report
-                            - generic: You pay CA$30.09
+                            - generic: You pay $29.99
                             - generic:
-                              - generic: CA$40.12
+                              - generic: $39.98
                               - generic: Save 25%
                     - generic:
                       - radio [checked]:
@@ -201,11 +200,11 @@ Test timeout of 90000ms exceeded.
                                 - radio [checked]
                               - heading [level=4]: 1 Report
                             - generic:
-                              - generic: CA$20.06
+                              - generic: $19.99
                               - subscript: /Report
-                            - generic: You pay CA$20.06
+                            - generic: You pay $19.99
                             - generic:
-                              - generic: 68% Cheaper Than Carfax
+                              - generic: 56% Cheaper Than Carfax
                     - generic:
                       - generic:
                         - radio:
@@ -214,9 +213,9 @@ Test timeout of 90000ms exceeded.
                           - generic:
                             - generic:
                               - radio
-                              - heading [level=4]: Unlimited VIN Check
+                              - heading [level=4]: Unlimited VIN Checks
                             - generic:
-                              - generic: CA$41.77
+                              - generic: $29.99
                               - subscript: /month
                           - generic:
                             - generic:
@@ -232,10 +231,10 @@ Test timeout of 90000ms exceeded.
                       - checkbox [checked]
                       - generic:
                         - text: Add a window sticker to your purchase
-                        - generic: CA$10.03CA$10.03
+                        - generic: $9.99$9.99
                     - generic:
                       - link:
-                        - /url: https://vinnumber.ca/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
+                        - /url: https://app.motorcyclevinlookup.com/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
                         - text: View Sample Window Sticker
                   - generic:
                     - button:
@@ -244,13 +243,13 @@ Test timeout of 90000ms exceeded.
                       - img
                   - generic:
                     - paragraph:
-                      - text: By selecting "Access Records" you are confirming that you have read and agree to VIN Number
+                      - text: By selecting "Access Records" you are confirming that you have read and agree to Motorcycle VIN Lookup
                       - link:
-                        - /url: https://app.vinnumber.ca//terms-and-conditions
+                        - /url: https://app.motorcyclevinlookup.com//terms-and-conditions
                         - text: Terms of Use
                       - text: and
                       - link:
-                        - /url: https://app.vinnumber.ca//privacy
+                        - /url: https://app.motorcyclevinlookup.com//privacy
                         - text: Privacy Policy
                       - text: .
                   - generic:
@@ -321,14 +320,14 @@ Test timeout of 90000ms exceeded.
                             - img
                             - generic: Loan Verifications
                       - link:
-                        - /url: https://vinnumber.ca/report/vin/2T1BURHE0FC320645
+                        - /url: https://app.motorcyclevinlookup.com/report/vin/2T1BURHE0FC320645
                         - text: View Sample Report
                       - generic:
                         - img
                         - paragraph: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
                       - separator
                       - generic:
-                        - paragraph: © 2026 VIN Number, All Rights Reserved
+                        - paragraph: © 2026 Motorcycle VIN Lookup, All Rights Reserved
   - dialog:
     - generic:
       - heading [level=2]: Update Vehicle Specifications
