@@ -30,7 +30,7 @@ Test timeout of 90000ms exceeded.
           - img "Honda" [ref=e10]
           - generic [ref=e11]:
             - paragraph [ref=e12]: Honda Civic
-            - paragraph [ref=e13]: "VIN: SHHEU88701U002018"
+            - paragraph [ref=e13]: "VIN: SHHEU88701U002013"
         - generic [ref=e14]:
           - generic [ref=e15]: Is this your vehicle?
           - generic [ref=e16]:
@@ -38,7 +38,7 @@ Test timeout of 90000ms exceeded.
             - button "No" [ref=e18]
       - generic [ref=e19]:
         - generic [ref=e20]:
-          - heading "We found detailed information for the VIN# SHHEU88701U002018" [level=4] [ref=e21]
+          - heading "We found detailed information for the VIN# SHHEU88701U002013" [level=4] [ref=e21]
           - generic [ref=e22]:
             - generic [ref=e27]:
               - heading "Honda Civic" [level=2] [ref=e29]

@@ -1,0 +1,187 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_11 Preview to checkout redirection
+- Location: tests/global_case_verification.spec.ts:149:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: locator.waitFor: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('input[name="vin"]').first() to be visible
+
+```
+
+# Test source
+
+```ts
+  1   | import { expect } from '@playwright/test';
+  2   | import { Actor } from '../actors/Actor';
+  3   | 
+  4   | export interface VinTaskSelectors {
+  5   |   vinField1: string;
+  6   |   vinField2: string;
+  7   |   vinField3?: string;
+  8   |   searchButton: string;
+  9   |   accessButton: string;
+  10  |   successText: string;
+  11  |   successText2: string;
+  12  |   successText3: string;
+  13  |   successText4?: string;
+  14  |   successHeading: string;
+  15  |   successHeading2: string;
+  16  | }
+  17  | 
+  18  | export class DecodeVinTask {
+  19  |   constructor(
+  20  |     public shouldClose: boolean = true,
+  21  |     public skipSuccessClick: boolean = false,
+  22  |     private timeout: number = 60000,
+  23  |     private selectors: VinTaskSelectors = {
+  24  |       vinField1: 'Vehicle Identification Number',
+  25  |       vinField2: 'Enter VIN Number',
+  26  |       vinField3: 'Enter Your VIN',
+  27  |       searchButton: 'Search VIN',
+  28  |       accessButton: 'Access Records',
+  29  |       successText: 'Records found for',
+  30  |       successText2: 'We found historical records for the',
+  31  |       successText3: 'Window sticker found for',
+  32  |       successText4: 'Searching records for',
+  33  |       successHeading: 'Success! We found detailed',
+  34  |       successHeading2: 'We found detailed information for the',
+  35  |     }
+  36  |   ) {}
+  37  | 
+  38  |   private generateRandomVin(baseVin: string, numToReplace: number = 1): string {
+  39  |     const randomDigits = Math.floor(Math.random() * Math.pow(10, numToReplace))
+  40  |       .toString()
+  41  |       .padStart(numToReplace, '0');
+  42  |     return baseVin.slice(0, -numToReplace) + randomDigits;
+  43  |   }
+  44  | 
+  45  |   private generateUSVin(isMVL: boolean = false): string {
+  46  |     const baseVin = '1FMCU9GD3JUC83708';
+  47  |     return this.generateRandomVin(baseVin, 2);
+  48  |   }
+  49  | 
+  50  |   private generateEuVin(): string {
+  51  |     const baseVins = [
+  52  |       'VF3YC2MFB12G20874',
+  53  |       'SHHEU88701U002012'
+  54  |     ];
+  55  |     const baseVin = baseVins[Math.floor(Math.random() * baseVins.length)];
+  56  |     return this.generateRandomVin(baseVin, 1);
+  57  |   }
+  58  | 
+  59  |   async performAs(actor: Actor) {
+  60  |     const page = actor.getPage();
+  61  |     const isMVL = page.url().includes('motorcyclevinlookup.com');
+  62  |     const isEU = page.url().includes('vehiclehistory.eu') || this.skipSuccessClick;
+  63  |     const vin = isEU ? this.generateEuVin() : this.generateUSVin(isMVL);
+  64  |     console.log(`[VIN Decode] Generated VIN (${isEU ? 'EU' : 'US'}): ${vin}`);
+  65  | 
+  66  |     const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
+  67  |     const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
+  68  |     const vinField3 = this.selectors.vinField3 ? page.getByRole('textbox', { name: this.selectors.vinField3 }) : null;
+  69  | 
+  70  |     // Wait for input to be attached/visible to handle hydration delay
+  71  |     await page.waitForSelector('input[name="vin"], input[placeholder*="VIN" i], input[aria-label*="VIN" i]', { state: 'attached', timeout: this.timeout }).catch(() => {});
+  72  | 
+  73  |     let vinInput = null;
+  74  |     if (await vinField1.isVisible()) {
+  75  |       vinInput = vinField1;
+  76  |     } else if (await vinField2.isVisible()) {
+  77  |       vinInput = vinField2;
+  78  |     } else if (vinField3 && await vinField3.isVisible()) {
+  79  |       vinInput = vinField3;
+  80  |     }
+  81  | 
+  82  |     if (!vinInput) {
+  83  |       // Fallback selector
+  84  |       vinInput = page.locator('input[name="vin"]').first();
+  85  |     }
+  86  |     
+> 87  |     await vinInput.waitFor({ state: 'visible', timeout: this.timeout });
+      |                    ^ Error: locator.waitFor: Test timeout of 90000ms exceeded.
+  88  |     await vinInput.fill(vin);
+  89  | 
+  90  |     const searchBtn = page.getByRole('button', { name: this.selectors.searchButton }).first();
+  91  |     if (await searchBtn.isVisible()) {
+  92  |       await searchBtn.click();
+  93  |     } else {
+  94  |       await vinInput.locator('xpath=../..').getByRole('button').first().click();
+  95  |     }
+  96  |     
+  97  |     await page.waitForTimeout(1000);
+  98  | // List of potential success elements to check and click
+  99  | // Increased flexibility for locators to cover domain-specific variations
+  100 | const successLocator = page.getByText('Records found for', { exact: false })
+  101 |   .or(page.locator('h1:has-text("Records found for")'))
+  102 |   .or(page.locator('text=We found detailed information for the'))
+  103 |   .or(page.locator('h2:has-text("We found")'))
+  104 |   .or(page.getByRole('heading', { name: 'Success' }))
+  105 |   .or(page.getByRole('heading', { name: 'Success! We found detailed' }))
+  106 |   .or(page.locator('h4:has-text("Success!")'))
+  107 |   .or(page.getByText('Success! We found detailed', { exact: false }))
+  108 |   .or(page.locator('text=Window sticker found for'))
+  109 |   .or(page.locator('text=We found historical records for the'))
+  110 |   .or(page.locator('text=Success!'));
+  111 | 
+  112 | // Wait up to 20 seconds for the success element to render on preview page
+  113 | await successLocator.first().waitFor({ state: 'visible', timeout: 20000 }).catch(() => {
+  114 |   console.log('Timeout waiting for success locator visibility');
+  115 | });
+  116 | 
+  117 | const successLocators = [
+  118 |   page.getByText('Records found for', { exact: false }),
+  119 |   page.locator('h1:has-text("Records found for")'),
+  120 |   page.locator('text=We found detailed information for the'),
+  121 |   page.locator('h2:has-text("We found")'),
+  122 |   page.getByRole('heading', { name: 'Success' }),
+  123 |   page.getByRole('heading', { name: 'Success! We found detailed' }),
+  124 |   page.locator('h4:has-text("Success!")'),
+  125 |   page.getByText('Success! We found detailed', { exact: false }),
+  126 |   page.locator('text=Window sticker found for'),
+  127 |   page.locator('text=We found historical records for the'),
+  128 |   page.locator('text=Success!')
+  129 | ].filter(Boolean);
+  130 | 
+  131 | let successClicked = false;
+  132 | 
+  133 | // If skipSuccessClick is explicitly enabled, skip clicking the success banner
+  134 | if (this.skipSuccessClick) {
+  135 |   console.log('[VIN Decode] Bypassing success banner click as requested by task parameters.');
+  136 |   successClicked = true;
+  137 | } else {
+  138 |   for (const locator of successLocators) {
+  139 |     if (await locator.isVisible()) {
+  140 |       console.log('[VIN Decode] Clicking success element...');
+  141 |       await locator.click().catch(() => {});
+  142 |       successClicked = true;
+  143 |       break;
+  144 |     }
+  145 |   }
+  146 | }
+  147 | 
+  148 | if (!successClicked) {
+  149 |   console.log('Failed to click success condition. Current URL:', page.url());
+  150 |   throw new Error('Success condition not found');
+  151 | }
+  152 | 
+  153 | console.log('Success condition met.');
+  154 | // Page closure is now handled by the caller, not here.
+  155 | }
+  156 | }
+  157 | 
+  158 | 
+```

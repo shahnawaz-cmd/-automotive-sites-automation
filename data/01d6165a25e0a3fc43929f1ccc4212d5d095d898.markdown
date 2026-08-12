@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: global_case_verification.spec.ts >> TC_01 VIN decode verify
-- Location: tests/global_case_verification.spec.ts:17:5
+- Name: global_case_verification.spec.ts >> TC_08 Revisit banner flow
+- Location: tests/global_case_verification.spec.ts:110:5
 
 # Error details
 
@@ -30,7 +30,7 @@ Test timeout of 90000ms exceeded.
           - img "Honda" [ref=e10]
           - generic [ref=e11]:
             - paragraph [ref=e12]: Honda Civic
-            - paragraph [ref=e13]: "VIN: SHHEU88701U002018"
+            - paragraph [ref=e13]: "VIN: SHHEU88701U002010"
         - generic [ref=e14]:
           - generic [ref=e15]: Is this your vehicle?
           - generic [ref=e16]:
@@ -38,7 +38,7 @@ Test timeout of 90000ms exceeded.
             - button "No" [ref=e18]
       - generic [ref=e19]:
         - generic [ref=e20]:
-          - heading "We found historical records for the VIN# SHHEU88701U002018" [level=4] [ref=e21]
+          - heading "We found historical records for the VIN# SHHEU88701U002010" [level=4] [ref=e21]
           - generic [ref=e22]:
             - generic [ref=e23]:
               - generic [ref=e27]:
@@ -157,9 +157,9 @@ Test timeout of 90000ms exceeded.
                   - img [ref=e186]
                   - generic [ref=e188]:
                     - generic [ref=e189]:
-                      - heading "Simão Valentim" [level=4] [ref=e190]
-                      - generic [ref=e191]: Portugal
-                    - paragraph [ref=e192]: Great service! I tried ordering one vehicle history report just to see how it works, and it gave me all the accurate information I was looking for. I’ll be coming back for future reports.
+                      - heading "Primo Rea" [level=4] [ref=e190]
+                      - generic [ref=e191]: Italy
+                    - paragraph [ref=e192]: Finding history for older cars had always been a challenge, but the team here handled it perfectly. They were professional, kept me informed throughout, and provided the precise information I was looking for. A trustworthy service for vehicle history.
                 - generic [ref=e194]:
                   - generic [ref=e195]:
                     - img [ref=e196]

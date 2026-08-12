@@ -7,7 +7,7 @@
 # Test info
 
 - Name: global_case_verification.spec.ts >> TC_12 Classic editable specs feature validation
-- Location: tests/global_case_verification.spec.ts:163:5
+- Location: tests/global_case_verification.spec.ts:161:5
 
 # Error details
 

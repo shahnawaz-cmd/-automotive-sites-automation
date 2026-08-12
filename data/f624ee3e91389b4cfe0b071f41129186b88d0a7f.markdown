@@ -7,7 +7,7 @@
 # Test info
 
 - Name: global_case_verification.spec.ts >> TC_14 EU VIN confirmation flow
-- Location: tests/global_case_verification.spec.ts:210:5
+- Location: tests/global_case_verification.spec.ts:208:5
 
 # Error details
 
@@ -35,9 +35,9 @@ Call log:
       - main [ref=e10]:
         - generic [ref=e14]:
           - img [ref=e15]
-          - heading "Success! We found detailed information for VIN# VF3YC2MFB12G20873" [level=4] [ref=e17]:
+          - heading "Success! We found detailed information for VIN# VF3YC2MFB12G20875" [level=4] [ref=e17]:
             - generic [ref=e18]: Success!
-            - text: We found detailed information for VIN# VF3YC2MFB12G20873
+            - text: We found detailed information for VIN# VF3YC2MFB12G20875
         - generic [ref=e19]:
           - generic [ref=e21]:
             - heading [level=1]

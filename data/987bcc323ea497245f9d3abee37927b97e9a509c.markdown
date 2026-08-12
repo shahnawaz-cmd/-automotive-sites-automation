@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: global_case_verification.spec.ts >> TC_08 Revisit banner flow
-- Location: tests/global_case_verification.spec.ts:110:5
+- Name: global_case_verification.spec.ts >> TC_01 VIN decode verify
+- Location: tests/global_case_verification.spec.ts:17:5
 
 # Error details
 
@@ -134,9 +134,9 @@ Test timeout of 90000ms exceeded.
                   - img [ref=e142]
                   - generic [ref=e144]:
                     - generic [ref=e145]:
-                      - heading "Jolande Claessens" [level=4] [ref=e146]
-                      - generic [ref=e147]: Netherlands
-                    - paragraph [ref=e148]: Great service from start to finish! The team was quick to respond, and the vehicle history report was detailed, accurate, and delivered without any hassle. Perfect for anyone looking for fast and trustworthy information.
+                      - heading "Primo Rea" [level=4] [ref=e146]
+                      - generic [ref=e147]: Italy
+                    - paragraph [ref=e148]: Finding history for older cars had always been a challenge, but the team here handled it perfectly. They were professional, kept me informed throughout, and provided the precise information I was looking for. A trustworthy service for vehicle history.
                 - generic [ref=e150]:
                   - generic [ref=e151]:
                     - img [ref=e152]
