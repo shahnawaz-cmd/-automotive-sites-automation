@@ -7,7 +7,7 @@
 # Test info
 
 - Name: global_case_verification.spec.ts >> TC_12 Classic editable specs feature validation
-- Location: tests/global_case_verification.spec.ts:161:5
+- Location: tests/global_case_verification.spec.ts:163:5
 
 # Error details
 
@@ -37,7 +37,7 @@ Test timeout of 90000ms exceeded.
                           - img
                           - heading [level=4]:
                             - generic: Success!
-                            - text: We found detailed information for VIN# 242370B111328
+                            - text: We found detailed information for VIN# 242370B111317
                   - generic:
                     - generic:
                       - generic:
@@ -67,6 +67,11 @@ Test timeout of 90000ms exceeded.
                       - generic:
                         - generic: Width
                         - generic: 28 inches
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - paragraph: Previously listed for sale online. Get the full vehicle report to unlock records.
                     - generic:
                       - generic:
                         - generic:
@@ -111,6 +116,47 @@ Test timeout of 90000ms exceeded.
                             - generic: Reveal Records
                         - generic:
                           - button: Reveal Records
+                      - generic:
+                        - text: Market value
+                        - paragraph: This is the average price of the vehicle for a private or a dealership sale based on it's condition.
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: Outstanding
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "Dealer Retail:"
+                                  - text: $616,000
+                          - generic:
+                            - generic:
+                              - generic: Clean
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic: "Dealer Retail:"
+                                - text: $515,000
+                          - generic:
+                            - generic:
+                              - generic: Average
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic: "Dealer Retail:"
+                                - text: $410,000*
+                          - generic:
+                            - generic:
+                              - generic: Rough
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic: "Dealer Retail:"
+                                - text: $331,000
                     - generic:
                       - generic:
                         - generic:
@@ -312,7 +358,8 @@ Test timeout of 90000ms exceeded.
     - button:
       - img
       - generic: Close
-  - iframe [ref=e2]:
+  - listbox [active] [ref=e2]
+  - iframe [ref=e3]:
     - generic [active]:
       - generic:
         - main [ref=f1e2]:
@@ -353,5 +400,4 @@ Test timeout of 90000ms exceeded.
           - log [ref=f1e68]
           - log [ref=f1e69]
           - log [ref=f1e70]
-  - listbox [active] [ref=e3]
 ```
