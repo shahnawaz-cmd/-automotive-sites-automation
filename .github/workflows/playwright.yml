@@ -34,10 +34,21 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+        cache: 'npm'
     - name: Install dependencies
       run: npm ci
+    - name: Get Playwright Version
+      id: playwright-version
+      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
     - name: Run Playwright tests
       run: |
         if [ "${{ matrix.browser }}" = "MobileChrome" ]; then
@@ -66,10 +77,21 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+        cache: 'npm'
     - name: Install dependencies
       run: npm ci
+    - name: Get Playwright Version
+      id: playwright-version
+      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Download all Blob Reports
       uses: actions/download-artifact@v4
