@@ -150,6 +150,8 @@ test('TC_11 Preview to checkout redirection', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari'), 'Skipping preview checkout on mobile');
   const actor = new Actor('User', page);
   try {
+    await page.goto('/');
+    await page.waitForTimeout(1000);
     await actor.attemptsTo(new PreviewToCheckoutRedirection());
   } finally {
     await page.close();

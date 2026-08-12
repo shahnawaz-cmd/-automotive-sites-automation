@@ -59,9 +59,10 @@ export class DecodeVinTask {
   async performAs(actor: Actor) {
     const page = actor.getPage();
     const isMVL = page.url().includes('motorcyclevinlookup.com');
-    const isEU = page.url().includes('vehiclehistory.eu') || this.skipSuccessClick;
-    const vin = isEU ? this.generateEuVin() : this.generateUSVin(isMVL);
-    console.log(`[VIN Decode] Generated VIN (${isEU ? 'EU' : 'US'}): ${vin}`);
+    // ONLY TC_14 (which passes skipSuccessClick = true) uses EU VINs. All other cases use US VINs.
+    const isTC14 = this.skipSuccessClick;
+    const vin = isTC14 ? this.generateEuVin() : this.generateUSVin(isMVL);
+    console.log(`[VIN Decode] Generated VIN (${isTC14 ? 'EU' : 'US'}): ${vin}`);
 
     const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
     const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
