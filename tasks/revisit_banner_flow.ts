@@ -7,18 +7,19 @@ export class RevisitBannerFlow {
     const page = actor.getPage();
     const decoder = new DecodeVinTask();
 
-    // 1. Perform VIN Decode
-    await actor.attemptsTo(decoder);
+    // 2. Perform VIN Decode
+    await actor.attemptsTo(new DecodeVinTask(), false);
 
-    // 2. Navigate back to base URL explicitly
-    await page.goto('/');
-    await page.waitForLoadState('networkidle');
+
+    // 2. Navigate back to base URL using browser back
+    await page.goBack();
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // 3. Click dynamic 'Grab it for only' button (case-insensitive, flexible currency symbol)
     const timeout = process.env.CI ? 90000 : 60000;
     
     // Add extra wait to ensure page is fully settled after back navigation
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
     
     // Regex handles 'Grab it for only', 'Grab it for $', 'Grab it for €', etc.
     const grabItButton = page.getByRole('button', { name: /Grab it for/i });

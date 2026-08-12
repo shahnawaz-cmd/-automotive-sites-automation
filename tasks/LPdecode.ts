@@ -4,35 +4,52 @@ import { Actor } from '../actors/Actor';
 export class LPcases {
   async performAs(actor: Actor) {
     const page = actor.getPage();
-    const lpTab = page.getByRole('tab', { name: 'By License Plate' });
     
-    // Set conditional timeout
-    const timeout = process.env.CI ? 90000 : 60000;
+    // Check both potential tab naming patterns
+    const lpTab = page.getByRole('tab', { name: 'By License Plate' });
+    const lpTabAlt = page.getByRole('button', { name: 'By U.S License Plate' });
 
-    // 1. Check for tab existence without failing
+    let activeTab = null;
+
     if (await lpTab.isVisible()) {
+      activeTab = lpTab;
+    } else if (await lpTabAlt.isVisible()) {
+      activeTab = lpTabAlt;
+    }
+
+    if (activeTab) {
       console.log('LP Tab Found in Website');
-      await lpTab.click();
+      await activeTab.click();
+    
+      // Set conditional timeout
+      const timeout = process.env.CI ? 90000 : 60000;
 
-      // 2. Perform Search
+      // Perform requested interactions
       await page.getByRole('textbox', { name: 'Enter License Plate' }).fill('HBL1216');
-      await page.getByRole('combobox', { name: 'State' }).click();
-      await page.getByRole('option', { name: 'Texas TX' }).click();
       
+      // Handle State selection robustly
+      await page.getByRole('combobox').click();
+      await page.getByRole('option', { name: 'Texas' }).click();
+      
+      // Locate and click search button
+      const searchBtn = page.getByRole('button', { name: 'Get Window Sticker' });
+      const altSearchBtn = page.getByRole('button', { name: 'Search License Plate' });
 
-      const startTime = Date.now();
-      await page.getByRole('button', { name: 'Search License Plate' }).click();
-      
+      if (await searchBtn.isVisible()) {
+        await searchBtn.click();
+      } else if (await altSearchBtn.isVisible()) {
+        await altSearchBtn.click();
+      } else {
+        throw new Error('Search button not found');
+      }
+
       // Wait for navigation more robustly
       await page.waitForLoadState('networkidle', { timeout: timeout });
       
       // Verify URL pattern after load
       await expect(page).toHaveURL(/.*vin-check\/license-preview/, { timeout: 5000 });
-      
-      console.log(`[LP Decode] Navigation to preview page took ${Date.now() - startTime}ms`);
 
       // 3. Wait for success conditions
-      // Using conditional wait instead of hardcoded timeout
       await page.waitForTimeout(process.env.CI ? 10000 : 5000); 
       const successText = page.locator('text=Records found for');
       const successHeading = page.getByRole('heading', { name: 'Success! We found detailed' });

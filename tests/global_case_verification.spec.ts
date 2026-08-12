@@ -7,17 +7,18 @@ import { CouponAndPrevCouponVerification, LowToHighCouponFlow, CouponBannerOnOth
 import { LPcases } from '../tasks/LPdecode';
 import { RevisitBannerFlow } from '../tasks/revisit_banner_flow';
 import { RevisitStickerBannerFlow } from '../tasks/revisit_sticker_banner_flow';
+import { ExitIntentHelper } from '../tasks/exit_intent_banner';
+import { PreviewToCheckoutRedirection } from '../tasks/preview_to_checkout_redirection';
+import { ClassicEditableSpecs } from '../tasks/classic_editable_specs';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
   try {
-    // Navigate to the base URL and wait for stability
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
     await page.waitForTimeout(1000); // 1 second delay
     
     // Perform the decoding task
-    await actor.attemptsTo(new DecodeVinTask());
+    await actor.attemptsTo(new DecodeVinTask(), true);
   } finally {
     await page.close();
   }
@@ -28,14 +29,13 @@ test('TC_02 Verify error message on invalid search', async ({ page }) => {
   try {
     // Navigate to the base URL
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000); // 1 second delay
 
-    // Define selectors for error verification
-    // Using text locator to find the error message
+    const isInfiniti = page.url().includes('infinitiwindowsticker.com');
     const selectors = {
-      searchButtonName: 'Search VIN',
-      errorSelector: 'text=Please enter a VIN number', 
-      expectedMessage: 'Please enter a VIN number', 
+      searchButtonName: isInfiniti ? 'Get Window Sticker' : 'Search VIN',
+      errorSelector: isInfiniti ? "text=VIN must be 5-17 characters" : "text=Please enter a VIN number",
+      expectedMessage: isInfiniti ? "VIN must be 5-17 characters" : "Please enter a VIN number",
     };
 
     // Perform the search and error verification task
@@ -57,7 +57,7 @@ test('TC_03 VIN field validation', async ({ page }, testInfo) => {
 
   try {
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000); // 1 second delay
     
     await actor.attemptsTo(new FieldValidation());
   } finally {
@@ -96,7 +96,7 @@ test('TC_07 License Plate search validation', async ({ page }) => {
   const actor = new Actor('User', page);
   try {
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000); // 1 second delay
     await actor.attemptsTo(new LPcases());
   } finally {
     await page.close();
@@ -108,7 +108,7 @@ test('TC_08 Revisit banner flow', async ({ page }) => {
   const actor = new Actor('User', page);
   try {
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000); // 1 second delay
     await actor.attemptsTo(new RevisitBannerFlow());
   } finally {
     await page.close();
@@ -123,5 +123,51 @@ test('TC_09 Revisit sticker banner flow', async ({ page }) => {
   } finally {
     await page.close();
     console.log('TC_09: page.close() executed.');
+  }
+});
+
+test('TC_10 Exit intent banner verification', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari'), 'Skipping exit intent on mobile');
+  const timeout = process.env.CI ? 60000 : 30000;
+  testInfo.setTimeout(timeout);
+
+  try {
+    await page.goto('/');
+    await page.waitForTimeout(1000); // 1 second delay
+    
+    // Trigger the exit intent pop-up logic
+    await ExitIntentHelper.triggerExitIntent(page);
+  } finally {
+    await page.close();
+    console.log('TC_10: page.close() executed.');
+  }
+});
+
+test('TC_11 Preview to checkout redirection', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari'), 'Skipping preview checkout on mobile');
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForTimeout(1000); // 1 second delay
+    await actor.attemptsTo(new PreviewToCheckoutRedirection());
+  } finally {
+    await page.close();
+    console.log('TC_11: page.close() executed.');
+  }
+});
+
+
+test('TC_12 Classic editable specs feature validation', async ({ page }, testInfo) => {
+  const baseURL = testInfo.project.use.baseURL || '';
+  test.skip(baseURL.includes('vehiclehistory.eu'), 'Skipping classic editable specs validation for vehiclehistory.eu');
+
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForTimeout(1000); // 1 second delay
+    await actor.attemptsTo(new ClassicEditableSpecs());
+  } finally {
+    await page.close();
+    console.log('TC_12: page.close() executed.');
   }
 });

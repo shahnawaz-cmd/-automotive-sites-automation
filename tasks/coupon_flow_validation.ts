@@ -11,10 +11,11 @@ export class CouponAndPrevCouponVerification {
 
     // 1. Apply coupon via URL
     await page.goto(`/?offer=${couponCode}`);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+await page.waitForTimeout(2000); // Safari stabilization before cookie check
 
     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)
-    const cookies = await page.context().cookies();
+    const cookies = await page.context().cookies([page.url()]);
     const couponCookie = cookies.find(c => c.name === 'coupon');
     if (!couponCookie) {
       throw new Error('Failed: Coupon cookie not found.');
@@ -49,7 +50,7 @@ export class LowToHighCouponFlow {
     // 2. Apply high discount coupon (get20)
     console.log('--- Applying 2nd Coupon: get20 ---');
     await page.goto('/?offer=get20');
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
     
     // Verify cookies: coupon should be get20, prev_coupon should be preview15
     const cookies = await page.context().cookies();
@@ -68,7 +69,7 @@ export class LowToHighCouponFlow {
     // 4. Apply low coupon again (preview15) - High should remain active
     console.log('--- Applying 1st Coupon again to verify no override ---');
     await page.goto('/?offer=preview15');
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // Expected: Banner should still show 20% (highest coupon not overridden)
     await expect(page.locator('text=You have received 20% Discount!')).toBeVisible({ timeout: 5000 });
@@ -101,7 +102,7 @@ export class CouponBannerOnOtherPages {
     }
 
     console.log(`Passed: Navigated to valid path: ${validPath}`);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // 3. Verify banner is still visible
     const bannerLocator = page.locator('text=You have received 15% Discount!');

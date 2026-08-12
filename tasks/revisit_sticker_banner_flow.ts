@@ -8,7 +8,8 @@ export class RevisitStickerBannerFlow {
     const decoder = new DecodeVinTask();
 
     // 1. Navigate to valid sticker path
-    const paths = ['/window-sticker', '/window-stickers'];
+    const isInfiniti = page.url().includes('infinitiwindowsticker.com');
+    const paths = isInfiniti ? ['/recalls'] : ['/window-sticker', '/window-stickers'];
     let validPath = null;
     
     for (const path of paths) {
@@ -23,14 +24,14 @@ export class RevisitStickerBannerFlow {
       throw new Error('Failed: Neither /window-sticker nor /window-stickers paths are accessible.');
     }
     console.log(`Passed: Navigated to valid sticker path: ${validPath}`);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // 2. Perform VIN Decode
-    await actor.attemptsTo(decoder);
+    await actor.attemptsTo(new DecodeVinTask(), false);
 
     // 3. Return to valid sticker path
     await page.goto(validPath);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // 4. Click dynamic 'Grab it for only' button
     const timeout = process.env.CI ? 90000 : 60000;

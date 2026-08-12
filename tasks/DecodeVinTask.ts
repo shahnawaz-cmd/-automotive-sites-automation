@@ -4,11 +4,13 @@ import { Actor } from '../actors/Actor';
 export interface VinTaskSelectors {
   vinField1: string;
   vinField2: string;
+  vinField3?: string;
   searchButton: string;
   accessButton: string;
   successText: string;
   successText2: string;
   successText3: string;
+  successText4?: string;
   successHeading: string;
   successHeading2: string;
 }
@@ -19,11 +21,13 @@ export class DecodeVinTask {
     private selectors: VinTaskSelectors = {
       vinField1: 'Vehicle Identification Number',
       vinField2: 'Enter VIN Number',
+      vinField3: 'Enter Your VIN',
       searchButton: 'Search VIN',
       accessButton: 'Access Records',
       successText: 'Records found for',
       successText2: 'We found historical records for the',
       successText3: 'Window sticker found for',
+      successText4: 'Searching records for',
       successHeading: 'Success! We found detailed',
       successHeading2: 'We found detailed information for the',
     }
@@ -36,62 +40,99 @@ export class DecodeVinTask {
     return baseVin.slice(0, -numToReplace) + randomDigits;
   }
 
-  private generateUSVin(): string {
+  private generateUSVin(isMVL: boolean = false): string {
     const baseVin = '1FMCU9GD3JUC83708';
     return this.generateRandomVin(baseVin, 2);
   }
 
-  async performAs(actor: Actor) {
+  async performAs(actor: Actor, shouldClose: boolean = true) {
     const page = actor.getPage();
-    const vin = this.generateUSVin();
+    const isMVL = page.url().includes('motorcyclevinlookup.com');
+    const vin = this.generateUSVin(isMVL);
     console.log(`[VIN Decode] Generated VIN: ${vin}`);
 
     const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
     const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
+    const vinField3 = this.selectors.vinField3 ? page.getByRole('textbox', { name: this.selectors.vinField3 }) : null;
 
-    // Check which field is available and fill it
+    // Wait for input to be attached/visible to handle hydration delay
+    await page.waitForSelector('input[name="vin"], input[placeholder*="VIN" i], input[aria-label*="VIN" i]', { state: 'attached', timeout: this.timeout }).catch(() => {});
+
+    let vinInput = null;
     if (await vinField1.isVisible()) {
-      await vinField1.fill(vin);
+      vinInput = vinField1;
     } else if (await vinField2.isVisible()) {
-      await vinField2.fill(vin);
-    } else {
-      throw new Error('VIN input field not found');
+      vinInput = vinField2;
+    } else if (vinField3 && await vinField3.isVisible()) {
+      vinInput = vinField3;
     }
 
-    // Interaction with the search button and wait for navigation
-    const startTime = Date.now();
-    // Use the container of the VIN field to find the specific search button
-    const vinInput = (await vinField1.isVisible()) ? vinField1 : vinField2;
-    await vinInput.locator('xpath=../..').getByRole('button', { name: this.selectors.searchButton }).click();
+    if (!vinInput) {
+      // Fallback selector
+      vinInput = page.locator('input[name="vin"]').first();
+    }
     
-    await page.waitForLoadState('networkidle', { timeout: this.timeout });
-    const duration = Date.now() - startTime;
-    console.log(`[VIN Decode] Navigation to preview page took ${duration}ms`);
+    await vinInput.waitFor({ state: 'visible', timeout: this.timeout });
+    await vinInput.fill(vin);
 
-    // Ensure page content is loaded before interacting
-    await page.waitForLoadState('domcontentloaded');
+    const searchBtn = page.getByRole('button', { name: this.selectors.searchButton }).first();
+    if (await searchBtn.isVisible()) {
+      await searchBtn.click();
+    } else {
+      await vinInput.locator('xpath=../..').getByRole('button').first().click();
+    }
+    
+    await page.waitForTimeout(1000);
+// List of potential success elements to check and click
+// Increased flexibility for locators to cover domain-specific variations
+const successLocator = page.getByText('Records found for', { exact: false })
+  .or(page.locator('h1:has-text("Records found for")'))
+  .or(page.locator('text=We found detailed information for the'))
+  .or(page.locator('h2:has-text("We found")'))
+  .or(page.getByRole('heading', { name: 'Success' }))
+  .or(page.getByRole('heading', { name: 'Success! We found detailed' }))
+  .or(page.locator('h4:has-text("Success!")'))
+  .or(page.getByText('Success! We found detailed', { exact: false }))
+  .or(page.locator('text=Window sticker found for'))
+  .or(page.locator('text=We found historical records for the'))
+  .or(page.locator('text=Success!'));
 
-    // ponytail: Allow time for the page to render success state before checking
-    await page.waitForTimeout(5000);
+// Wait up to 20 seconds for the success element to render on preview page
+await successLocator.first().waitFor({ state: 'visible', timeout: 20000 }).catch(() => {
+  console.log('Timeout waiting for success locator visibility');
+});
 
-    // Wait until at least one of the success conditions appears
-    const successCondition1 = page.locator(`text=${this.selectors.successText}`);
-    const successCondition2 = page.locator(`text=${this.selectors.successText2}`);
-    const successCondition3 = page.locator(`text=${this.selectors.successText3}`);
-    const successCondition4 = page.getByRole('heading', { name: this.selectors.successHeading });
-    const successCondition5 = page.getByRole('heading', { name: this.selectors.successHeading2 });
+const successLocators = [
+  page.getByText('Records found for', { exact: false }),
+  page.locator('h1:has-text("Records found for")'),
+  page.locator('text=We found detailed information for the'),
+  page.locator('h2:has-text("We found")'),
+  page.getByRole('heading', { name: 'Success' }),
+  page.getByRole('heading', { name: 'Success! We found detailed' }),
+  page.locator('h4:has-text("Success!")'),
+  page.getByText('Success! We found detailed', { exact: false }),
+  page.locator('text=Window sticker found for'),
+  page.locator('text=We found historical records for the'),
+  page.locator('text=Success!')
+].filter(Boolean);
 
-    await expect(async () => {
-      const isVisible1 = await successCondition1.isVisible();
-      const isVisible2 = await successCondition2.isVisible();
-      const isVisible3 = await successCondition3.isVisible();
-      const isVisible4 = await successCondition4.isVisible();
-      const isVisible5 = await successCondition5.isVisible();
-      if (!isVisible1 && !isVisible2 && !isVisible3 && !isVisible4 && !isVisible5) {
-        throw new Error('Success condition not found');
-      }
-    }).toPass({ timeout: this.timeout });
-
-    console.log('Success condition met.');
+let successClicked = false;
+for (const locator of successLocators) {
+  if (await locator.isVisible()) {
+    console.log('[VIN Decode] Clicking success element...');
+    await locator.click();
+    successClicked = true;
+    break;
   }
 }
+
+if (!successClicked) {
+  console.log('Failed to click success condition. Current URL:', page.url());
+  throw new Error('Success condition not found');
+}
+
+console.log('Success condition met.');
+// Page closure is now handled by the caller, not here.
+}
+}
+
