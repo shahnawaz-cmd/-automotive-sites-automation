@@ -164,7 +164,7 @@ EOF
         curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
 
     - name: Notify failures in alert channel
-      if: always() && [ "$FAILED_TESTS" -ne 0 ]
+      if: always() && failure()
       env:
         SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
       run: |
