@@ -11,10 +11,14 @@ on:
   pull_request:
     branches: [ main, master ]
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 0 * * 0-5'   # Daily Sun–Fri: core browsers only
+    - cron: '0 0 * * 6'     # Weekly Saturday: core + extended browsers
 
 jobs:
-  test:
+  # ─────────────────────────────────────────────────────────
+  # CORE: Desktop Chromium + Mobile Chrome (runs on ALL triggers)
+  # ─────────────────────────────────────────────────────────
+  test-core:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     strategy:
@@ -51,10 +55,10 @@ jobs:
       if: steps.playwright-cache.outputs.cache-hit != 'true'
     - name: Run Playwright tests
       run: |
-        if [ "${{ matrix.browser }}" = "MobileChrome" ]; then
-          PLAYWRIGHT_PROJECT="${{ matrix.project }}_MobileChrome"
-        else
+        if [ "${{ matrix.browser }}" = "Desktop" ]; then
           PLAYWRIGHT_PROJECT="${{ matrix.project }}"
+        else
+          PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
         fi
         npx playwright test --project=$PLAYWRIGHT_PROJECT --reporter=blob || true
       env:
@@ -68,9 +72,66 @@ jobs:
         path: blob-report/
         retention-days: 1
 
+  # ─────────────────────────────────────────────────────────
+  # EXTENDED: Mobile Edge + Mobile Safari (Saturday only)
+  # ─────────────────────────────────────────────────────────
+  test-extended:
+    if: github.event.schedule == '0 0 * * 6'
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - VSR
+          - MotorcycleVINLookup
+          - VehicleHistoryEU
+          - VINNumberCA
+        browser:
+          - MobileEdge
+          - MobileSafari
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Get Playwright Version
+      id: playwright-version
+      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
+    - name: Cache Playwright Browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+    - name: Run Playwright tests
+      run: |
+        PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
+        npx playwright test --project=$PLAYWRIGHT_PROJECT --reporter=blob || true
+      env:
+        CI: true
+
+    - name: Upload Blob Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}
+        path: blob-report/
+        retention-days: 1
+
+  # ─────────────────────────────────────────────────────────
+  # MERGE: Combine all blob reports into one HTML + JSON report
+  # ─────────────────────────────────────────────────────────
   merge-reports:
     if: always()
-    needs: test
+    needs: [test-core, test-extended]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -121,21 +182,54 @@ jobs:
 
         SITES_TESTED=$(jq -r '.config.projects | map(.name) | join(", ")' playwright-report/results.json || echo "N/A")
 
-        FAILED_NAMES=$(jq -r '[.. | select(.status? == "failed") | .title] | .[0:3] | join("\n")' playwright-report/results.json || echo "")
-        [ -n "$FAILED_NAMES" ] && FAILED_SECTION="\n*Failed Tests:*\n\`\`\`$FAILED_NAMES\`\`\`" || FAILED_SECTION=""
+        # --- Enhancement 1: Pass rate percentage ---
+        if [ "$TOTAL_TESTS" -gt 0 ]; then
+          PASS_RATE=$(( PASSED_TESTS * 100 / TOTAL_TESTS ))
+        else
+          PASS_RATE=0
+        fi
+
+        # --- Enhancement 2: Failed tests with site/project names (up to 5) ---
+        FAILED_DETAILS=$(jq -r '
+          [.suites[]? | .suites[]? |
+            {project: .title} as $proj |
+            .specs[]? | .tests[]? |
+            select(.status == "failed") |
+            "• [" + $proj.project + "] " + .title
+          ] | .[0:5] | join("\n")
+        ' playwright-report/results.json 2>/dev/null || echo "")
+        [ -n "$FAILED_DETAILS" ] && FAILED_SECTION="\n*❌ Failed Tests:*\n\`\`\`$FAILED_DETAILS\`\`\`" || FAILED_SECTION=""
+
+        # --- Enhancement 3: Dynamic title with site-level health ---
+        TOTAL_SITES=$(jq '[.config.projects[] | .name | split("_")[0]] | unique | length' playwright-report/results.json || echo "0")
+        FAILED_SITES=$(jq -r '
+          [.suites[]? | .suites[]? |
+            {project: .title} as $proj |
+            .specs[]? | .tests[]? |
+            select(.status == "failed") |
+            $proj.project | split("_")[0]
+          ] | unique | length
+        ' playwright-report/results.json 2>/dev/null || echo "0")
+
+        # --- Schedule type label ---
+        if [ "${{ github.event.schedule }}" = "0 0 * * 6" ]; then
+          SCHEDULE_LABEL="Weekly Full Cross-Browser"
+        else
+          SCHEDULE_LABEL="Daily Core"
+        fi
 
         if [ "$FAILED_TESTS" -eq 0 ] && [ "$TOTAL_TESTS" -gt 0 ]; then
           ICON="✅"
-          STATUS="Passed"
+          TITLE="PROD STABLE — All $TOTAL_SITES Sites Passing"
           COLOR="#36a64f"
         else
           ICON="🚨"
-          STATUS="Failed"
+          TITLE="PROD STABILITY — $FAILED_SITES/$TOTAL_SITES Sites Failing"
           COLOR="#ff0000"
         fi
 
         RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
-        PAYLOAD=$(cat <<'EOF'
+        PAYLOAD=$(cat <<EOF
         {
           "attachments": [
             {
@@ -143,25 +237,15 @@ jobs:
               "blocks": [
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Daily Production Website Functional & Cross-Browser QA Report*" }
+                  "text": { "type": "mrkdwn", "text": "*$ICON $TITLE*" }
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*$ICON $STATUS – $TOTAL_TESTS tests*" }
+                  "text": { "type": "mrkdwn", "text": "*📊 Results:* ${PASS_RATE}% pass rate ($PASSED_TESTS/$TOTAL_TESTS)\n*Total Tests:* $TOTAL_TESTS\n*Passed:* $PASSED_TESTS\n*Failed:* $FAILED_TESTS\n*Flaky:* $FLAKY_TESTS\n*Skipped:* $SKIPPED_TESTS" }
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Active Batches:* `$SITES_TESTED`\\n*Scope:* `auth-multiproperty-automation`\\n*Environment:* NextJS & WordPress Production\\n*Branch:* `${{ github.ref_name }}`\\n*Commit:* `${{ github.sha }}`\\n*Run time:* $RUN_TIME\\n*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    { "type": "mrkdwn", "text": "*Total Tests:*\n$TOTAL_TESTS" },
-                    { "type": "mrkdwn", "text": "*Passed:*\n$PASSED_TESTS" },
-                    { "type": "mrkdwn", "text": "*Failed:*\n$FAILED_TESTS" },
-                    { "type": "mrkdwn", "text": "*Flaky:*\n$FLAKY_TESTS" },
-                    { "type": "mrkdwn", "text": "*Skipped:*\n$SKIPPED_TESTS" }
-                  ]
+                  "text": { "type": "mrkdwn", "text": "*Active Batches:* \`$SITES_TESTED\`\n*Scope:* \`auth-multiproperty-automation\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* NextJS & WordPress Production\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
                 },
                 {
                   "type": "actions",
@@ -183,6 +267,9 @@ jobs:
       env:
         SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
       run: |
+        sudo apt-get install -y jq
+        FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/results.json || echo "0")
+        TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' playwright-report/results.json || echo "0")
         ALERT_PAYLOAD='{"text": ":warning: Playwright failed ('"$FAILED_TESTS"'/'"$TOTAL_TESTS"'). <@U09UE83AWGP>"}'
         curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" $SLACK_FAILURE_WEBHOOK_URL
 
@@ -200,4 +287,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./playwright-report
-        keep_files: true
+        keep_files: false
