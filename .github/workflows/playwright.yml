@@ -90,23 +90,17 @@ jobs:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
         sudo apt-get install -y jq
-        
-        # Parse merged results.json
+
         TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' playwright-report/results.json || echo "0")
         FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/results.json || echo "0")
         FLAKY_TESTS=$(jq '[.. | .status? | select(. == "flaky")] | length' playwright-report/results.json || echo "0")
         SKIPPED_TESTS=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/results.json || echo "0")
         PASSED_TESTS=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/results.json || echo "0")
-        
-        # Extract site names dynamically from the merged config
+
         SITES_TESTED=$(jq -r '.config.projects | map(.name) | join(", ")' playwright-report/results.json || echo "N/A")
-        
-        # Get names of up to 3 failed tests
+
         FAILED_NAMES=$(jq -r '[.. | select(.status? == "failed") | .title] | .[0:3] | join("\n")' playwright-report/results.json || echo "")
         [ -n "$FAILED_NAMES" ] && FAILED_SECTION="\n*Failed Tests:*\n\`\`\`$FAILED_NAMES\`\`\`" || FAILED_SECTION=""
-        # Get names of up to 3 skipped tests
-        # Skipped test details omitted – only count is shown
-        SKIPPED_SECTION=""
 
         if [ "$FAILED_TESTS" -eq 0 ] && [ "$TOTAL_TESTS" -gt 0 ]; then
           ICON="✅"
@@ -117,8 +111,7 @@ jobs:
           STATUS="Failed"
           COLOR="#ff0000"
         fi
-        
-        # Construct Slack Payload
+
         RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
         PAYLOAD=$(cat <<'EOF'
         {
@@ -159,7 +152,7 @@ jobs:
             }
           ]
         }
-EOF
+        EOF
         )
         curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
 
