@@ -136,13 +136,7 @@ jobs:
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Active Batches:* `$SITES_TESTED`
-*Scope:* `auth-multiproperty-automation`
-*Environment:* NextJS & WordPress Production
-*Branch:* `${{ github.ref_name }}`
-*Commit:* `${{ github.sha }}`
-*Run time:* $RUN_TIME
-*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
+                  "text": { "type": "mrkdwn", "text": "*Active Batches:* `$SITES_TESTED`\\n*Scope:* `auth-multiproperty-automation`\\n*Environment:* NextJS & WordPress Production\\n*Branch:* `${{ github.ref_name }}`\\n*Commit:* `${{ github.sha }}`\\n*Run time:* $RUN_TIME\\n*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
                 },
                 {
                   "type": "section",
