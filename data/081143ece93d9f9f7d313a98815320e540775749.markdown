@@ -1,0 +1,727 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_08 Revisit banner flow
+- Location: tests/global_case_verification.spec.ts:110:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Free VIN Check Europe - Vehicle History Report by VIN Number
+  - generic [ref=e3]:
+    - checkbox "Toggle menu" [ref=e4]
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link "Vehicle History Europe logo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Vehicle History Europe logo" [ref=e8]
+        - navigation [ref=e9]:
+          - link "Vehicle History" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "VIN Check" [ref=e11] [cursor=pointer]:
+            - /url: /vin-check
+          - link "Window Sticker" [ref=e12] [cursor=pointer]:
+            - /url: /window-sticker
+          - link "Pricing" [ref=e13] [cursor=pointer]:
+            - /url: /pricing
+          - link "Sample Reports" [ref=e14] [cursor=pointer]:
+            - /url: /sample-report
+        - generic [ref=e15]:
+          - group [ref=e16]:
+            - generic "🇬🇧 en" [ref=e17] [cursor=pointer]:
+              - generic [ref=e18]: 🇬🇧
+              - generic [ref=e19]: en
+              - img [ref=e20]
+          - generic [ref=e22]:
+            - link "Login" [ref=e23] [cursor=pointer]:
+              - /url: /login
+            - link "Sign Up" [ref=e24] [cursor=pointer]:
+              - /url: /signup
+    - main [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: WVWZZZ3CZWE123456 · 5YJSA1E26MF123456 · NMTER16RX0R073590 · VF15RE20A55268448 ·
+          - generic [ref=e37]: WVWZZZ3CZWE123456 · 5YJSA1E26MF123456 · NMTER16RX0R073590 · VF15RE20A55268448 ·
+          - generic [ref=e38]: WVWZZZ3CZWE123456 · 5YJSA1E26MF123456 · NMTER16RX0R073590 · VF15RE20A55268448 ·
+          - generic [ref=e39]: WVWZZZ3CZWE123456 · 5YJSA1E26MF123456 · NMTER16RX0R073590 · VF15RE20A55268448 ·
+          - generic [ref=e40]: WVWZZZ3CZWE123456 · 5YJSA1E26MF123456 · NMTER16RX0R073590 · VF15RE20A55268448 ·
+          - generic [ref=e41]: WVWZZZ3CZWE123456 · 5YJSA1E26MF123456 · NMTER16RX0R073590 · VF15RE20A55268448 ·
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e45]: Trusted Across Europe
+            - heading "European VIN Check EU VIN Lookup" [level=1] [ref=e48]
+            - paragraph [ref=e49]: Get free VIN decoding and affordable European VIN check for reliable vehicle history - verify title and condition, accidents, auction records, actual mileage and more.
+            - generic [ref=e52]:
+              - generic [ref=e53]: Vehicle Identification Number (VIN)
+              - textbox "Vehicle Identification Number (VIN)" [ref=e55]:
+                - /placeholder: Enter VIN
+              - button "Search VIN" [ref=e56]
+            - generic [ref=e57]:
+              - link "View Sample Report" [ref=e58] [cursor=pointer]:
+                - /url: https://vehiclehistory.eu/sample-report
+                - img [ref=e59]
+                - text: View Sample Report
+              - link "Pan-European Coverage" [ref=e61] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e63]
+                - text: Pan-European Coverage
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - img [ref=e70]
+                - generic [ref=e73]: Reliable
+              - generic [ref=e74]:
+                - img [ref=e76]
+                - generic [ref=e79]: Detailed
+              - generic [ref=e80]:
+                - img [ref=e82]
+                - generic [ref=e85]: Accurate
+              - generic [ref=e86]:
+                - img [ref=e88]
+                - generic [ref=e91]: Affordable
+          - img "Vehicle history report preview" [ref=e94]
+      - generic [ref=e102]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: Protect Your Investment
+          - heading "Save Money and Avoid Costly Mistakes" [level=2] [ref=e108]: Save Money and Avoid Costly Mistakes
+          - paragraph [ref=e110]: Purchasing a vehicle with hidden problems can lead to expensive repairs and decreased resale value. Our comprehensive vehicle history report can save you thousands of euros by revealing potential issues before you buy.
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - img [ref=e114]
+              - generic [ref=e116]: 1 in 3 used cars have a hidden problem
+            - generic [ref=e117]:
+              - img [ref=e119]
+              - generic [ref=e121]: Up to 30% of used cars in Europe have tampered odometers
+            - generic [ref=e122]:
+              - img [ref=e124]
+              - generic [ref=e126]: Around 20% of used cars in Germany have undisclosed damages
+            - generic [ref=e127]:
+              - img [ref=e129]
+              - generic [ref=e131]: Approximately 10% of vehicles on European roads have unresolved recall issues
+          - generic [ref=e132]:
+            - link "View Sample" [ref=e133] [cursor=pointer]:
+              - /url: https://vehiclehistory.eu/sample-report
+            - link "Check Vehicle History!" [ref=e134] [cursor=pointer]:
+              - /url: /#vin-form
+        - img "Damage-car-EN" [ref=e137]
+      - generic [ref=e145]:
+        - generic [ref=e147]:
+          - generic [ref=e148]: Your Car's Fingerprint
+          - heading "What is a VIN Number?" [level=2] [ref=e151]
+          - generic [ref=e152]:
+            - paragraph [ref=e153]: A Vehicle Identification Number (VIN) is a unique 17-character code assigned to every car. It's like a car's fingerprint!
+            - paragraph [ref=e154]: The VIN number contains crucial information, including the vehicle's manufacturer, model, year, engine type, and country of origin. It also tracks the car's history, such as accidents, repairs, and ownership. A VIN is usually found on the car's dashboard, door frame, or engine block.
+        - img "VIN-location-EN" [ref=e157]
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - generic [ref=e166]: Buy With Confidence
+          - heading "Why You Should Run a European VIN Number Check?" [level=2] [ref=e169]
+          - paragraph [ref=e171]: "With over 52% of used vehicles in Europe with hidden history, a European VIN number lookup will help you avoid financial booby traps and cars with bad histories, ensuring you buy with confidence and drive with peace of mind. Here's why running a VIN number check is essential before closing your next car deal:"
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic [ref=e174]:
+              - img [ref=e177]
+              - heading "Reveal Hidden History" [level=3] [ref=e180]
+              - paragraph [ref=e182]: 1 in 3 used cars has a hidden problem. A European VIN check provides detailed information about a car's past, including accidents, repairs, or ownership changes, ensuring you're not blindsided by undisclosed issues.
+            - generic [ref=e183]:
+              - img [ref=e186]
+              - heading "Avoid Accidented Cars" [level=3] [ref=e189]
+              - paragraph [ref=e191]: A car's accident history can reveal whether a car has undergone major repairs that might compromise its safety or performance. A VIN check helps you avoid vehicles with serious damage.
+            - generic [ref=e192]:
+              - img [ref=e195]
+              - heading "Detect Odometer Fraud" [level=3] [ref=e198]
+              - paragraph [ref=e200]: Odometer tampering is common with up to 30% of European used cars with tampered odometers. A VIN check uncovers inconsistencies in mileage records, protecting you from paying more for a vehicle with manipulated mileage.
+            - generic [ref=e201]:
+              - img [ref=e204]
+              - heading "Ensure Title Authenticity" [level=3] [ref=e207]
+              - paragraph [ref=e209]: A VIN number check verifies that the vehicle's title is clean and free from issues like salvage or rebuilt titles, which could affect the car's value and insurability.
+            - generic [ref=e210]:
+              - img [ref=e213]
+              - heading "Check for Open Recalls" [level=3] [ref=e215]
+              - paragraph [ref=e217]: About 10% of vehicles on European roads have unresolved recall issues. A VIN check ensures you're aware of any unresolved recalls, enabling you to address safety concerns before purchasing a car.
+            - generic [ref=e218]:
+              - img [ref=e221]
+              - heading "Avoid Buying Stolen Cars" [level=3] [ref=e224]
+              - paragraph [ref=e226]: EU police recorded an average of 697,000 vehicle thefts between 2015 to 2017. Checking the VIN against international databases helps confirm the vehicle hasn't been reported as stolen, saving you from legal troubles or losing the car.
+          - link "Run a VIN Check now!" [ref=e228] [cursor=pointer]:
+            - /url: "#top"
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - generic [ref=e238]: Three Simple Steps
+          - heading "How to Run a European VIN Check" [level=2] [ref=e241]: How to Run a European VIN Check
+        - generic [ref=e242]:
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - img [ref=e249]
+              - heading "Enter VIN" [level=3] [ref=e252]
+              - paragraph [ref=e253]: Enter the 17-digit VIN into the VIN search form at the top.
+            - generic [ref=e254]:
+              - img [ref=e257]
+              - heading "Provide Details" [level=3] [ref=e260]
+              - paragraph [ref=e261]: Provide your email and phone number so we can deliver your report securely.
+            - generic [ref=e262]:
+              - img [ref=e265]
+              - heading "Start the Check" [level=3] [ref=e271]
+              - paragraph [ref=e272]: Click "Check Vehicle History" to start the process.
+            - generic [ref=e273]:
+              - img [ref=e276]
+              - heading "Review Report" [level=3] [ref=e279]
+              - paragraph [ref=e280]: Review the detailed report to understand the car's history, usage, and condition.
+            - generic [ref=e281]:
+              - img [ref=e284]
+              - heading "Decide with Confidence" [level=3] [ref=e287]
+              - paragraph [ref=e288]: Make an informed decision before buying or selling the vehicle.
+          - paragraph [ref=e290]: It's that easy! Whether you're a buyer or a seller, our tool ensures you have all the facts.
+      - generic [ref=e296]:
+        - generic [ref=e297]:
+          - generic [ref=e298]: Built for Every Buyer
+          - heading "Why You Need European VIN Lookup" [level=2] [ref=e301]: Why You Need European VIN Lookup
+        - generic [ref=e303]:
+          - generic [ref=e304]:
+            - heading "For Car Buyers" [level=3] [ref=e305]
+            - list [ref=e307]:
+              - listitem [ref=e308]:
+                - img [ref=e310]
+                - paragraph [ref=e314]: "Avoid Scams: Know the real story of the car before purchase."
+              - listitem [ref=e315]:
+                - img [ref=e317]
+                - paragraph [ref=e321]: "Check Ownership: Find out how many people owned the car."
+              - listitem [ref=e322]:
+                - img [ref=e324]
+                - paragraph [ref=e328]: "Accident Records: Ensure the vehicle wasn't severely damaged."
+              - listitem [ref=e329]:
+                - img [ref=e331]
+                - paragraph [ref=e335]: "Mileage Accuracy: Spot tampered odometers, avoid odometer fraud easily."
+              - listitem [ref=e336]:
+                - img [ref=e338]
+                - paragraph [ref=e342]: "Service Records: Confirm the car has been well-maintained."
+              - listitem [ref=e343]:
+                - img [ref=e345]
+                - paragraph [ref=e349]: "Theft History: Ensure the car isn't flagged as stolen."
+          - generic [ref=e350]:
+            - heading "For Dealerships and Resellers" [level=3] [ref=e351]
+            - list [ref=e353]:
+              - listitem [ref=e354]:
+                - img [ref=e356]
+                - paragraph [ref=e360]: "Build Trust: Show potential buyers the car's complete history."
+              - listitem [ref=e361]:
+                - img [ref=e363]
+                - paragraph [ref=e367]: "Highlight Value: Use car title and condition to increase appeal."
+              - listitem [ref=e368]:
+                - img [ref=e370]
+                - paragraph [ref=e374]: "Close Sales Faster: Provide detailed reports to eliminate buyer doubts."
+              - listitem [ref=e375]:
+                - img [ref=e377]
+                - paragraph [ref=e381]: "Compliance: Ensure vehicles meet EU legal requirements for sale."
+              - listitem [ref=e382]:
+                - img [ref=e384]
+                - paragraph [ref=e388]: "Better resale value: Shows servicing, set fair, market-aligned prices."
+              - listitem [ref=e389]:
+                - img [ref=e391]
+                - paragraph [ref=e395]: "Boost reputation: Establish trustworthiness, attracting repeat customers and referrals."
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - generic [ref=e405]: What's Inside Your Report
+          - heading "What Can You Learn from Europe Vehicle History Report" [level=2] [ref=e408]: What Can You Learn from Europe Vehicle History Report
+        - generic [ref=e409]:
+          - generic [ref=e410]:
+            - generic [ref=e411]:
+              - heading "Detailed Vehicle Specification" [level=3] [ref=e413]
+              - list [ref=e415]:
+                - listitem [ref=e416]:
+                  - img [ref=e418]
+                  - paragraph [ref=e422]: General specification
+                - listitem [ref=e423]:
+                  - img [ref=e425]
+                  - paragraph [ref=e429]: Number of doors and seats
+                - listitem [ref=e430]:
+                  - img [ref=e432]
+                  - paragraph [ref=e436]: Body type
+                - listitem [ref=e437]:
+                  - img [ref=e439]
+                  - paragraph [ref=e443]: Engine type
+                - listitem [ref=e444]:
+                  - img [ref=e446]
+                  - paragraph [ref=e450]: Fuel type
+                - listitem [ref=e451]:
+                  - img [ref=e453]
+                  - paragraph [ref=e457]: Displacement information
+                - listitem [ref=e458]:
+                  - img [ref=e460]
+                  - paragraph [ref=e464]: Gearbox type
+            - generic [ref=e465]:
+              - heading "Auction Records" [level=3] [ref=e467]
+              - list [ref=e469]:
+                - listitem [ref=e470]:
+                  - img [ref=e472]
+                  - paragraph [ref=e476]: Sales status and history
+                - listitem [ref=e477]:
+                  - img [ref=e479]
+                  - paragraph [ref=e483]: Engine status (Runs and drives, engine starts, and car keys status)
+                - listitem [ref=e484]:
+                  - img [ref=e486]
+                  - paragraph [ref=e490]: Auction type, date and location, type of seller
+            - generic [ref=e491]:
+              - heading "Title and Condition" [level=3] [ref=e493]
+              - list [ref=e495]:
+                - listitem [ref=e496]:
+                  - img [ref=e498]
+                  - paragraph [ref=e502]: Title brand (clean, salvage, etc)
+                - listitem [ref=e503]:
+                  - img [ref=e505]
+                  - paragraph [ref=e509]: Title Description
+                - listitem [ref=e510]:
+                  - img [ref=e512]
+                  - paragraph [ref=e516]: Damage (Primary and secondary)
+            - generic [ref=e517]:
+              - heading "Technical Specs" [level=3] [ref=e519]
+              - list [ref=e521]:
+                - listitem [ref=e522]:
+                  - img [ref=e524]
+                  - paragraph [ref=e528]: Odometer on title
+                - listitem [ref=e529]:
+                  - img [ref=e531]
+                  - paragraph [ref=e535]: Average estimated retail value
+                - listitem [ref=e536]:
+                  - img [ref=e538]
+                  - paragraph [ref=e542]: Vehicle color
+                - listitem [ref=e543]:
+                  - img [ref=e545]
+                  - paragraph [ref=e549]: Transmission
+                - listitem [ref=e550]:
+                  - img [ref=e552]
+                  - paragraph [ref=e556]: Estimated repair cost
+                - listitem [ref=e557]:
+                  - img [ref=e559]
+                  - paragraph [ref=e563]: Damage ratio
+                - listitem [ref=e564]:
+                  - img [ref=e566]
+                  - paragraph [ref=e570]: Estimated retail value
+            - generic [ref=e571]:
+              - heading "Theft Records (Stolen Check)" [level=3] [ref=e573]
+              - list [ref=e575]:
+                - listitem [ref=e576]:
+                  - img [ref=e578]
+                  - paragraph [ref=e582]: Reported as Stolen
+                - listitem [ref=e583]:
+                  - img [ref=e585]
+                  - paragraph [ref=e589]: Stolen Date
+                - listitem [ref=e590]:
+                  - img [ref=e592]
+                  - paragraph [ref=e596]: Location
+                - listitem [ref=e597]:
+                  - img [ref=e599]
+                  - paragraph [ref=e603]: License Plate
+                - listitem [ref=e604]:
+                  - img [ref=e606]
+                  - paragraph [ref=e610]: Color
+          - generic [ref=e611]:
+            - link "Check Sample Report" [ref=e612] [cursor=pointer]:
+              - /url: https://vehiclehistory.eu/report/vin/NMTER16RX0R073590
+            - link "Check VIN Now!" [ref=e613] [cursor=pointer]:
+              - /url: "#top"
+      - generic [ref=e619]:
+        - generic [ref=e620]:
+          - generic [ref=e621]: See the Difference
+          - heading "Our Reports vs. Competitors" [level=2] [ref=e624]: Our Reports vs. Competitors
+          - paragraph [ref=e626]: "Follow these simple steps to get your report:"
+        - table [ref=e630]:
+          - rowgroup [ref=e631]:
+            - row "Features VHR.eu Carfax AutoDNA" [ref=e632]:
+              - columnheader "Features" [ref=e633]:
+                - paragraph [ref=e635]: Features
+              - columnheader "VHR.eu" [ref=e636]:
+                - paragraph [ref=e638]: VHR.eu
+              - columnheader "Carfax" [ref=e639]:
+                - paragraph [ref=e641]: Carfax
+              - columnheader "AutoDNA" [ref=e642]:
+                - paragraph [ref=e644]: AutoDNA
+          - rowgroup [ref=e645]:
+            - row "Sales History" [ref=e646]:
+              - cell "Sales History" [ref=e647]:
+                - paragraph [ref=e649]: Sales History
+              - cell [ref=e650]:
+                - img [ref=e651]
+              - cell [ref=e653]:
+                - img [ref=e654]
+              - cell [ref=e656]:
+                - img [ref=e657]
+            - row "Accident Records" [ref=e659]:
+              - cell "Accident Records" [ref=e660]:
+                - paragraph [ref=e662]: Accident Records
+              - cell [ref=e663]:
+                - img [ref=e664]
+              - cell [ref=e666]:
+                - img [ref=e667]
+              - cell [ref=e669]:
+                - img [ref=e670]
+            - row "Auction Records (NA)" [ref=e672]:
+              - cell "Auction Records (NA)" [ref=e673]:
+                - paragraph [ref=e675]: Auction Records (NA)
+              - cell [ref=e676]:
+                - img [ref=e677]
+              - cell [ref=e679]:
+                - img [ref=e680]
+              - cell [ref=e683]:
+                - img [ref=e684]
+            - row "Mileage Verification Included Included Included" [ref=e687]:
+              - cell "Mileage Verification" [ref=e688]:
+                - paragraph [ref=e690]: Mileage Verification
+              - cell "Included" [ref=e691]:
+                - paragraph [ref=e693]: Included
+              - cell "Included" [ref=e694]:
+                - paragraph [ref=e696]: Included
+              - cell "Included" [ref=e697]:
+                - paragraph [ref=e699]: Included
+            - row "Auction History & Photos Detailed" [ref=e700]:
+              - cell "Auction History & Photos" [ref=e701]:
+                - paragraph [ref=e703]: Auction History & Photos
+              - cell "Detailed" [ref=e704]:
+                - paragraph [ref=e706]: Detailed
+              - cell [ref=e707]:
+                - img [ref=e708]
+              - cell [ref=e711]:
+                - img [ref=e712]
+            - row "Theft Records Recent" [ref=e714]:
+              - cell "Theft Records" [ref=e715]:
+                - paragraph [ref=e717]: Theft Records
+              - cell "Recent" [ref=e718]:
+                - paragraph [ref=e720]: Recent
+              - cell [ref=e721]:
+                - img [ref=e722]
+              - cell [ref=e724]:
+                - img [ref=e725]
+            - row "Free VIN Lookup Included Paid Only Included" [ref=e727]:
+              - cell "Free VIN Lookup" [ref=e728]:
+                - paragraph [ref=e730]: Free VIN Lookup
+              - cell "Included" [ref=e731]:
+                - paragraph [ref=e733]: Included
+              - cell "Paid Only" [ref=e734]:
+                - paragraph [ref=e736]: Paid Only
+              - cell "Included" [ref=e737]:
+                - paragraph [ref=e739]: Included
+            - row "Cost per report €9.99 €39.99 €19.90" [ref=e740]:
+              - cell "Cost per report" [ref=e741]:
+                - paragraph [ref=e743]: Cost per report
+              - cell "€9.99" [ref=e744]:
+                - paragraph [ref=e746]: €9.99
+              - cell "€39.99" [ref=e747]:
+                - paragraph [ref=e749]: €39.99
+              - cell "€19.90" [ref=e750]:
+                - paragraph [ref=e752]: €19.90
+            - row "Report Expiration No Yes (30 days) Yes (12 days)" [ref=e753]:
+              - cell "Report Expiration" [ref=e754]:
+                - paragraph [ref=e756]: Report Expiration
+              - cell "No" [ref=e757]:
+                - paragraph [ref=e759]: "No"
+              - cell "Yes (30 days)" [ref=e760]:
+                - paragraph [ref=e762]: Yes (30 days)
+              - cell "Yes (12 days)" [ref=e763]:
+                - paragraph [ref=e765]: Yes (12 days)
+      - generic [ref=e771]:
+        - generic [ref=e772]:
+          - generic [ref=e773]: The European Standard
+          - heading "Why Choose Our EU VIN Decoder?" [level=2] [ref=e776]
+        - generic [ref=e778]:
+          - generic [ref=e779]:
+            - img [ref=e782]
+            - heading "Fast and Reliable Reports" [level=3] [ref=e784]
+            - paragraph [ref=e786]: Access your report instantly with a user-friendly experience and up-to-date information.
+          - generic [ref=e787]:
+            - img [ref=e790]
+            - heading "Trusted European Databases" [level=3] [ref=e794]
+            - paragraph [ref=e796]: Our data comes directly from reliable sources across Europe, ensuring accuracy.
+          - generic [ref=e797]:
+            - img [ref=e800]
+            - heading "Easy-to-Use Tools" [level=3] [ref=e802]
+            - paragraph [ref=e804]: Simply enter the VIN, and our system does the rest in seconds.
+          - generic [ref=e805]:
+            - img [ref=e808]
+            - heading "Affordable Options" [level=3] [ref=e811]
+            - paragraph [ref=e813]: Choose between free basic checks or detailed premium reports for full insights.
+          - generic [ref=e814]:
+            - img [ref=e817]
+            - heading "Multilingual Support" [level=3] [ref=e820]
+            - paragraph [ref=e822]: Available in multiple languages to cater to all European users.
+          - generic [ref=e823]:
+            - img [ref=e826]
+            - heading "24/7 Customer Service" [level=3] [ref=e828]
+            - paragraph [ref=e830]: Get issues resolved on time. Make informed decisions without delay.
+      - generic [ref=e836]:
+        - generic [ref=e837]:
+          - generic [ref=e838]: Full Continental Coverage
+          - heading "Get EU VIN Check Report by Country" [level=2] [ref=e841]: Get EU VIN Check Report by Country
+          - paragraph [ref=e843]: "No matter where you are in Europe, our VIN check tool has you covered. We provide reports for vehicles across the following European countries:"
+        - generic [ref=e845]:
+          - link "Albania" [ref=e846] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/albania
+          - link "Andorra" [ref=e847] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/andorra
+          - link "Austria" [ref=e848] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/austria
+          - link "Belarus" [ref=e849] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/belarus
+          - link "Belgium" [ref=e850] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/belgium
+          - link "Bosnia" [ref=e851] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/bosnia-hertzegovina
+          - link "Bulgaria" [ref=e852] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/bulgaria
+          - link "Croatia" [ref=e853] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/croatia
+          - link "Czech Republic" [ref=e854] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/czech-republic
+          - link "Denmark" [ref=e855] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/denmark
+          - link "Estonia" [ref=e856] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/estonia
+          - link "Finland" [ref=e857] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/finland
+          - link "France" [ref=e858] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/france
+          - link "Germany" [ref=e859] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/germany
+          - link "Greece" [ref=e860] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/greece
+          - link "Holy See" [ref=e861] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/holy-see
+          - link "Hungary" [ref=e862] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/hungary
+          - link "Iceland" [ref=e863] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/iceland
+          - link "Ireland" [ref=e864] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/ireland
+          - link "Italy" [ref=e865] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/italy
+          - link "Latvia" [ref=e866] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/latvia
+          - link "Liechtenstein" [ref=e867] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/liechtenstein
+          - link "Lithuania" [ref=e868] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/lithuania
+          - link "Luxembourg" [ref=e869] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/luxembourg
+          - link "Malta" [ref=e870] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/malta
+          - link "Moldova" [ref=e871] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/moldova
+          - link "Monaco" [ref=e872] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/monaco
+          - link "Montenegro" [ref=e873] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/montenegro
+          - link "Netherlands" [ref=e874] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/netherlands
+          - link "North Macedonia" [ref=e875] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/north-macedonia
+          - link "Norway" [ref=e876] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/norway
+          - link "Poland" [ref=e877] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/poland
+          - link "Portugal" [ref=e878] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/portugal
+          - link "Romania" [ref=e879] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/romania
+          - link "Russia" [ref=e880] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/russia
+          - link "San Marino" [ref=e881] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/san-marino
+          - link "Serbia" [ref=e882] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/serbia
+          - link "Slovakia" [ref=e883] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/slovakia
+          - link "Slovenia" [ref=e884] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/slovenia
+          - link "Spain" [ref=e885] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/spain
+          - link "Sweden" [ref=e886] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/sweden
+          - link "Switzerland" [ref=e887] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/switzerland
+          - link "Ukraine" [ref=e888] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/ukraine
+          - link "United Kingdom" [ref=e889] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-check/united-kingdom
+      - generic [ref=e896]:
+        - generic [ref=e897]:
+          - generic [ref=e898]: Every Brand Covered
+          - heading "Run VIN Check Europe by Makes" [level=2] [ref=e901]: Run VIN Check Europe by Makes
+          - paragraph [ref=e903]: Get detailed vehicle history reports for popular brands. Just choose your car brand and start your VIN check right away!
+        - generic [ref=e905]:
+          - link "Alfa Romeo" [ref=e906] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/alfa-romeo
+          - link "Audi" [ref=e907] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/audi
+          - link "BMW" [ref=e908] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/bmw
+          - link "Citreon" [ref=e909] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/citroen
+          - link "Fiat" [ref=e910] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/fiat
+          - link "Jaguar" [ref=e911] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/jaguar
+          - link "Land Rover" [ref=e912] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/land-rover
+          - link "Mercedes-Benz" [ref=e913] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/mercedes-benz
+          - link "Mini" [ref=e914] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/mini
+          - link "Peugeot" [ref=e915] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/peugeot
+          - link "Porsche" [ref=e916] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/porsche
+          - link "Renault" [ref=e917] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/renault
+          - link "Saab" [ref=e918] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/saab
+          - link "Volkswagen" [ref=e919] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/volkswagen
+          - link "Volvo" [ref=e920] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/vin-decoder/volvo
+      - generic [ref=e926]:
+        - heading "Blog" [level=3] [ref=e928]: Blog
+        - generic [ref=e929]:
+          - generic [ref=e930]:
+            - link "What is a Good Fuel Economy for a Car? What is a Good Fuel Economy for a Car? Adewale Peter Adewale Peter · Dec 28, 2024 Discover what constitutes good fuel economy for cars. Learn about MPG, mileage, and fuel efficiency to find the most fuel-efficient vehicles in our guide. Read more" [ref=e931] [cursor=pointer]:
+              - /url: /blog/what-is-good-fuel-economy-for-a-car
+              - img "What is a Good Fuel Economy for a Car?" [ref=e933]
+              - generic [ref=e934]:
+                - heading "What is a Good Fuel Economy for a Car?" [level=4] [ref=e935]
+                - generic [ref=e936]:
+                  - img "Adewale Peter" [ref=e937]
+                  - generic [ref=e938]: Adewale Peter
+                  - generic [ref=e939]: ·
+                  - generic [ref=e940]: Dec 28, 2024
+                - paragraph [ref=e941]: Discover what constitutes good fuel economy for cars. Learn about MPG, mileage, and fuel efficiency to find the most fuel-efficient vehicles in our guide.
+                - generic [ref=e942]:
+                  - generic [ref=e943]: Read more
+                  - img [ref=e944]
+            - link "What is Considered Bad Gas Mileage? What is Considered Bad Gas Mileage? Adewale Peter Adewale Peter · Dec 25, 2024 Discover what bad gas mileage means for your vehicle. Learn about MPG, factors affecting fuel economy, and how to maintain optimal car mileage. Read more" [ref=e946] [cursor=pointer]:
+              - /url: /blog/what-is-considered-bad-gas-mileage
+              - img "What is Considered Bad Gas Mileage?" [ref=e948]
+              - generic [ref=e949]:
+                - heading "What is Considered Bad Gas Mileage?" [level=4] [ref=e950]
+                - generic [ref=e951]:
+                  - img "Adewale Peter" [ref=e952]
+                  - generic [ref=e953]: Adewale Peter
+                  - generic [ref=e954]: ·
+                  - generic [ref=e955]: Dec 25, 2024
+                - paragraph [ref=e956]: Discover what bad gas mileage means for your vehicle. Learn about MPG, factors affecting fuel economy, and how to maintain optimal car mileage.
+                - generic [ref=e957]:
+                  - generic [ref=e958]: Read more
+                  - img [ref=e959]
+            - link "What is the Best Used SUV to Buy in? What is the Best Used SUV to Buy in? Adewale Peter Adewale Peter · Nov 30, 2024 Discover the best used SUVs of 2026! Our guide highlights reliable used SUVs, helping you make an informed choice for your next used SUV purchase. Read more" [ref=e961] [cursor=pointer]:
+              - /url: /blog/what-is-the-best-used-suv-to-buy-in
+              - img "What is the Best Used SUV to Buy in?" [ref=e963]
+              - generic [ref=e964]:
+                - heading "What is the Best Used SUV to Buy in?" [level=4] [ref=e965]
+                - generic [ref=e966]:
+                  - img "Adewale Peter" [ref=e967]
+                  - generic [ref=e968]: Adewale Peter
+                  - generic [ref=e969]: ·
+                  - generic [ref=e970]: Nov 30, 2024
+                - paragraph [ref=e971]: Discover the best used SUVs of 2026! Our guide highlights reliable used SUVs, helping you make an informed choice for your next used SUV purchase.
+                - generic [ref=e972]:
+                  - generic [ref=e973]: Read more
+                  - img [ref=e974]
+          - link "View All Posts" [ref=e977] [cursor=pointer]:
+            - /url: /blog
+      - generic [ref=e983]:
+        - generic [ref=e984]:
+          - generic [ref=e985]: Quick Answers
+          - heading "Frequently Asked Questions" [level=2] [ref=e988]: Frequently Asked Questions
+        - generic [ref=e990]:
+          - group [ref=e991]:
+            - generic "What is the difference between free and paid VIN checks?" [ref=e992] [cursor=pointer]:
+              - generic [ref=e993]: What is the difference between free and paid VIN checks?
+          - group [ref=e997]:
+            - generic "Is your VIN check reliable and accurate?" [ref=e998] [cursor=pointer]:
+              - generic [ref=e999]: Is your VIN check reliable and accurate?
+          - group [ref=e1003]:
+            - generic "Where is the VIN number on a car?" [ref=e1004] [cursor=pointer]:
+              - generic [ref=e1005]: Where is the VIN number on a car?
+          - group [ref=e1009]:
+            - generic "What information does a European VIN number contain?" [ref=e1010] [cursor=pointer]:
+              - generic [ref=e1011]: What information does a European VIN number contain?
+          - group [ref=e1015]:
+            - generic "I don't have a VIN number, what can I do?" [ref=e1016] [cursor=pointer]:
+              - generic [ref=e1017]: I don't have a VIN number, what can I do?
+    - contentinfo [ref=e1021]:
+      - generic [ref=e1022]:
+        - generic [ref=e1023]:
+          - generic [ref=e1024]:
+            - link "Vehicle History Europe logo (white)" [ref=e1025] [cursor=pointer]:
+              - /url: /
+              - img "Vehicle History Europe logo (white)" [ref=e1026]
+            - generic [ref=e1027]:
+              - paragraph [ref=e1028]: +(866)-300-0554
+              - paragraph [ref=e1029]: support@vehiclehistory.eu
+          - generic [ref=e1030]:
+            - heading "Company" [level=4] [ref=e1031]
+            - list [ref=e1032]:
+              - listitem [ref=e1033]:
+                - link "About Us" [ref=e1034] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=e1035]:
+                - link "Contact Us" [ref=e1036] [cursor=pointer]:
+                  - /url: /contact-us
+              - listitem [ref=e1037]:
+                - link "Blog" [ref=e1038] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e1039]:
+                - link "Login/Sign Up" [ref=e1040] [cursor=pointer]:
+                  - /url: /login
+          - generic [ref=e1041]:
+            - heading "Sample Reports" [level=4] [ref=e1042]
+            - list [ref=e1043]:
+              - listitem [ref=e1044]:
+                - link "2015 Toyota Corolla" [ref=e1045] [cursor=pointer]:
+                  - /url: https://vehiclehistory.eu/report/vin/NMTER16RX0R073590
+              - listitem [ref=e1046]:
+                - link "2005 Renault Clio" [ref=e1047] [cursor=pointer]:
+                  - /url: https://vehiclehistory.eu/report/vin/VF15RE20A55268448
+              - listitem [ref=e1048]:
+                - link "2017 Vauxhall Astra" [ref=e1049] [cursor=pointer]:
+                  - /url: https://vehiclehistory.eu/report/vin/W0LBF6EC0HG162855
+          - generic [ref=e1050]:
+            - heading "Tools" [level=4] [ref=e1051]
+            - list [ref=e1052]:
+              - listitem [ref=e1053]:
+                - link "VIN Decoder" [ref=e1054] [cursor=pointer]:
+                  - /url: /vin-decoder
+              - listitem [ref=e1055]:
+                - link "VIN Check" [ref=e1056] [cursor=pointer]:
+                  - /url: /vin-check
+              - listitem [ref=e1057]:
+                - link "Window Sticker" [ref=e1058] [cursor=pointer]:
+                  - /url: /window-sticker
+              - listitem [ref=e1059]:
+                - link "Classic Car VIN Lookup" [ref=e1060] [cursor=pointer]:
+                  - /url: https://classicdecoder.com/
+          - generic [ref=e1061]:
+            - heading "Quick Link" [level=4] [ref=e1062]
+            - list [ref=e1063]:
+              - listitem [ref=e1064]:
+                - link "Privacy Policy" [ref=e1065] [cursor=pointer]:
+                  - /url: /privacy-policy
+              - listitem [ref=e1066]:
+                - link "Terms and conditions" [ref=e1067] [cursor=pointer]:
+                  - /url: /terms-of-service
+              - listitem [ref=e1068]:
+                - link "Request a Refund" [ref=e1069] [cursor=pointer]:
+                  - /url: /request-a-refund
+              - listitem [ref=e1070]:
+                - link "FAQs" [ref=e1071] [cursor=pointer]:
+                  - /url: /frequently-asked-questions
+        - paragraph [ref=e1073]: © 2026 Vehicle History Europe. All rights reserved.
+```

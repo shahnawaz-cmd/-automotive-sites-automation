@@ -1,0 +1,217 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_08 Revisit banner flow
+- Location: tests/global_case_verification.spec.ts:110:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - img "Honda" [ref=e10]
+          - generic [ref=e11]:
+            - paragraph [ref=e12]: Honda Civic
+            - paragraph [ref=e13]: "VIN: SHHEU88701U002011"
+        - generic [ref=e14]:
+          - generic [ref=e15]: Is this your vehicle?
+          - generic [ref=e16]:
+            - button "Yes" [ref=e17]
+            - button "No" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "We found historical records for the VIN# SHHEU88701U002011" [level=4] [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e27]:
+              - heading "Honda Civic" [level=2] [ref=e29]
+              - generic [ref=e30]:
+                - generic [ref=e31]:
+                  - generic [ref=e32]: Engine Type
+                  - generic [ref=e33]: L4
+                - generic [ref=e34]:
+                  - generic [ref=e35]: Transmission
+                  - generic [ref=e36]: 4-Speed Automatic
+                - generic [ref=e37]:
+                  - generic [ref=e38]: Drive Type
+                  - generic [ref=e39]: FWD
+                - generic [ref=e40]:
+                  - generic [ref=e41]: Fuel Type
+                  - generic [ref=e42]: Gasoline
+                - generic [ref=e43]:
+                  - generic [ref=e44]: Doors
+                  - generic [ref=e45]: "5"
+                - generic [ref=e46]:
+                  - generic [ref=e47]: Standard Seating
+                  - generic [ref=e48]: "5"
+                - generic [ref=e49]:
+                  - generic [ref=e50]: Horsepower
+                  - generic [ref=e51]: "110"
+                - generic [ref=e52]:
+                  - generic [ref=e53]: Body Type
+                  - generic [ref=e54]: hatchback/wagon
+            - generic [ref=e55]:
+              - generic [ref=e58]:
+                - heading "Reveal the Past. Pick Your Plan." [level=1] [ref=e59]
+                - generic [ref=e61]:
+                  - generic [ref=e62]:
+                    - 'radio "Most Popular 2 Vehicle Reports You can also check motorbikes, trucks, etc. €8.50 /Report You Pay: €17 €19.96 Save 15% Vehicle Details Title information Service history documentation Manufacturer & General Info" [ref=e63] [cursor=pointer]':
+                      - paragraph [ref=e65]: Most Popular
+                      - generic [ref=e67]:
+                        - generic [ref=e68]:
+                          - heading "2 Vehicle Reports" [level=3] [ref=e69]
+                          - paragraph [ref=e70]: You can also check motorbikes, trucks, etc.
+                        - generic [ref=e71]:
+                          - generic [ref=e72]:
+                            - generic [ref=e73]: €8.50
+                            - generic [ref=e74]: /Report
+                          - generic [ref=e75]:
+                            - generic [ref=e76]:
+                              - generic [ref=e77]: "You Pay:"
+                              - generic [ref=e78]: €17
+                              - generic [ref=e79]: €19.96
+                            - paragraph [ref=e80]: Save 15%
+                        - list [ref=e83]:
+                          - listitem [ref=e84]: Vehicle Details
+                          - listitem [ref=e85]: Title information
+                          - listitem [ref=e86]: Service history documentation
+                          - listitem [ref=e87]: Manufacturer & General Info
+                    - radio "78% Cheaper Than Carfax 1 Vehicle Report You can also check motorbikes, trucks, etc. €9.98 /Report Full Price Vehicle Details Title information Service history documentation Manufacturer & General Info" [checked] [ref=e88] [cursor=pointer]:
+                      - paragraph [ref=e90]: 78% Cheaper Than Carfax
+                      - generic [ref=e92]:
+                        - generic [ref=e93]:
+                          - heading "1 Vehicle Report" [level=3] [ref=e94]
+                          - paragraph [ref=e95]: You can also check motorbikes, trucks, etc.
+                        - generic [ref=e96]:
+                          - generic [ref=e97]:
+                            - generic [ref=e98]: €9.98
+                            - generic [ref=e99]: /Report
+                          - paragraph [ref=e101]: Full Price
+                        - list [ref=e104]:
+                          - listitem [ref=e105]: Vehicle Details
+                          - listitem [ref=e106]: Title information
+                          - listitem [ref=e107]: Service history documentation
+                          - listitem [ref=e108]: Manufacturer & General Info
+                  - button "See more packages & save up to 85%" [ref=e109]:
+                    - generic [ref=e110]:
+                      - img [ref=e112]
+                      - generic [ref=e114]: See more packages & save up to 85%
+                    - generic:
+                      - img
+                  - generic [ref=e116]:
+                    - generic [ref=e118]:
+                      - generic [ref=e120]: Save 50%
+                      - button "Get a window sticker just for" [ref=e121]:
+                        - generic [ref=e123]:
+                          - img [ref=e125]
+                          - paragraph [ref=e127]: Get a window sticker just for €4.99 €9.98
+                    - paragraph [ref=e128] [cursor=pointer]:
+                      - link "View Sample Window Sticker" [ref=e129]:
+                        - /url: https://vehiclehistory.eu/sticker/vin/WF0PXXGCHPKP11608-B4D7B4D7-0F0F-BC0D-5C6B-10DB7A44C054
+                  - button "Access Records" [ref=e131]:
+                    - generic [ref=e133]: Access Records
+                    - img [ref=e134]
+              - generic [ref=e136]:
+                - heading "See Why People Love Us" [level=2] [ref=e137]
+                - generic [ref=e140]:
+                  - img [ref=e142]
+                  - generic [ref=e144]:
+                    - generic [ref=e145]:
+                      - heading "Jolande Claessens" [level=4] [ref=e146]
+                      - generic [ref=e147]: Netherlands
+                    - paragraph [ref=e148]: Great service from start to finish! The team was quick to respond, and the vehicle history report was detailed, accurate, and delivered without any hassle. Perfect for anyone looking for fast and trustworthy information.
+                - generic [ref=e150]:
+                  - generic [ref=e151]:
+                    - img [ref=e152]
+                    - generic [ref=e154]: Happy customers across the globe
+                  - generic [ref=e155]:
+                    - img [ref=e156]
+                    - generic [ref=e158]: Instant access
+                  - generic [ref=e159]:
+                    - img [ref=e160]
+                    - generic [ref=e162]: Secure checkout
+                  - generic [ref=e163]:
+                    - img [ref=e164]
+                    - generic [ref=e166]: Downloadable PDF
+              - generic [ref=e167]:
+                - heading "Reveal Records for" [level=3] [ref=e168]
+                - generic [ref=e169]:
+                  - generic [ref=e172]:
+                    - img [ref=e174]
+                    - generic [ref=e177]:
+                      - generic [ref=e178]: Title Issues
+                      - button "Click to reveal details" [ref=e179] [cursor=pointer]
+                  - generic [ref=e182]:
+                    - img [ref=e184]
+                    - generic [ref=e187]:
+                      - generic [ref=e188]: Manufacturer Info
+                      - button "Click to reveal details" [ref=e189] [cursor=pointer]
+                  - generic [ref=e192]:
+                    - img [ref=e194]
+                    - generic [ref=e196]:
+                      - generic [ref=e197]: Performance and Emission
+                      - button "Click to reveal details" [ref=e198] [cursor=pointer]
+                  - generic [ref=e201]:
+                    - img [ref=e203]
+                    - generic [ref=e205]:
+                      - generic [ref=e206]: Usage History
+                      - button "Click to reveal details" [ref=e207] [cursor=pointer]
+              - generic [ref=e208]:
+                - heading "We Check Records for" [level=2] [ref=e209]
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - img [ref=e212]
+                    - generic [ref=e215]: Title Record
+                  - generic [ref=e216]:
+                    - img [ref=e217]
+                    - generic [ref=e220]: Accident Record
+                  - generic [ref=e221]:
+                    - img [ref=e222]
+                    - generic [ref=e225]: Auction Record
+                  - generic [ref=e226]:
+                    - img [ref=e227]
+                    - generic [ref=e230]: Vehicle Specification
+                - generic [ref=e231]:
+                  - button "Reveal all records" [ref=e232]
+                  - button "View Sample Report" [ref=e233]
+          - generic [ref=e235]:
+            - paragraph [ref=e240]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+            - separator [ref=e241]
+            - paragraph [ref=e243]: © 2026 Vehicle History Report - EU, All Rights Reserved
+        - region "Notifications alt+T"
+  - iframe [ref=e245]:
+    - main [ref=f2e2]:
+      - generic [ref=f2e3]:
+        - generic [ref=f2e5]:
+          - generic [ref=f2e6] [cursor=pointer]:
+            - img [ref=f2e9]
+            - generic [ref=f2e13]: Richard Langridge
+          - button "Hide greeting" [ref=f2e14] [cursor=pointer]:
+            - img [ref=f2e15]
+        - generic [ref=f2e18]:
+          - generic [ref=f2e19]:
+            - heading "👋 New here? Reply \"YES\" for a small treat. Share VIN to pull vehicle records" [level=2] [ref=f2e23]
+            - group [ref=f2e24]:
+              - button "YES" [ref=f2e25]
+          - generic [ref=f2e26]:
+            - textbox "Type in your message here" [ref=f2e27]
+            - button "Send a message" [disabled] [ref=f2e28]:
+              - img [ref=f2e29]
+```

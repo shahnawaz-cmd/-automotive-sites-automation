@@ -1,0 +1,455 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_12 Classic editable specs feature validation
+- Location: tests/global_case_verification.spec.ts:163:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: page.waitForTimeout: Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - img [ref=e6]
+      - generic [ref=e9]: Records found for 1970 Pontiac GTO
+    - main [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - heading "1970 Pontiac GTO" [level=1] [ref=e16]
+            - generic [ref=e18]: "VIN: 242370B111300"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - paragraph [ref=e22]:
+              - text: Incorrect information?
+              - button "Click here to update" [ref=e23] [cursor=pointer]
+          - dialog [ref=e25]:
+            - generic [ref=e26]:
+              - generic [ref=e27]:
+                - button "Back" [ref=e28]:
+                  - img [ref=e29]
+                - heading "Update Year / Make / Model" [level=2] [ref=e31]
+              - button "Close" [ref=e32]:
+                - img [ref=e33]
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - generic [ref=e38]:
+                  - generic [ref=e39]: Year *
+                  - generic [ref=e40]:
+                    - textbox "Select year" [ref=e41]: "1970"
+                    - img [ref=e42] [cursor=pointer]
+                - generic [ref=e44]:
+                  - generic [ref=e45]: Make *
+                  - generic [ref=e46]:
+                    - textbox "Select make" [ref=e47]: Pontiac
+                    - img [ref=e48] [cursor=pointer]
+                - generic [ref=e50]:
+                  - generic [ref=e51]: Model *
+                  - generic [ref=e52]:
+                    - textbox "Select model" [ref=e53]: GTO
+                    - img [ref=e54] [cursor=pointer]
+                - generic [ref=e56]:
+                  - generic [ref=e57]: Trim
+                  - generic [ref=e58]:
+                    - textbox "Select trim" [ref=e59]: Convertible
+                    - img [ref=e60] [cursor=pointer]
+              - paragraph [ref=e62]:
+                - text: Can't find your vehicle listed here?
+                - button "Click here" [ref=e63] [cursor=pointer]
+            - generic [ref=e64]:
+              - button "Back" [ref=e65]
+              - button "Continue" [ref=e66]
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - generic [ref=e69]: Axle Type
+              - generic [ref=e70]: Semifloating
+            - generic [ref=e71]:
+              - generic [ref=e72]: Body Maker
+              - generic [ref=e73]: Fisher
+            - generic [ref=e74]:
+              - generic [ref=e75]: Cylinders
+              - generic [ref=e76]: "8"
+            - generic [ref=e77]:
+              - generic [ref=e78]: Displacement
+              - generic [ref=e79]: 400 cu. in.
+            - generic [ref=e80]:
+              - generic [ref=e81]: Front Tread
+              - generic [ref=e82]: 61 inches
+            - generic [ref=e83]:
+              - generic [ref=e84]: Fuel
+              - generic [ref=e85]: 21.5 Gallons
+            - generic [ref=e86]:
+              - generic [ref=e87]: Height
+              - generic [ref=e88]: 52 inches
+            - generic [ref=e89]:
+              - generic [ref=e90]: Length
+              - generic [ref=e91]: 202.9 inches
+            - generic [ref=e92]:
+              - generic [ref=e93]: MSRP
+              - generic [ref=e94]: $3,492.00
+            - generic [ref=e95]:
+              - generic [ref=e96]: Model Number
+              - generic [ref=e97]: "4267"
+            - generic [ref=e98]:
+              - generic [ref=e99]: No. Of Gears
+              - generic [ref=e100]: "3"
+            - generic [ref=e101]:
+              - generic [ref=e102]: Oil
+              - generic [ref=e103]: 5 Quarts
+            - generic [ref=e104]:
+              - generic [ref=e105]: Passengers
+              - generic [ref=e106]: "5"
+            - generic [ref=e107]:
+              - generic [ref=e108]: Rear Tread
+              - generic [ref=e109]: 60 inches
+            - generic [ref=e110]:
+              - generic [ref=e111]: Torque
+              - generic [ref=e112]: 445@3000
+            - generic [ref=e113]:
+              - generic [ref=e114]: Type
+              - generic [ref=e115]: Own, V8, OHV, Downdraft 4-barrel
+            - generic [ref=e116]:
+              - generic [ref=e117]: Weight
+              - generic [ref=e118]: 3,688lbs
+            - generic [ref=e119]:
+              - generic [ref=e120]: Wheelbase
+              - generic [ref=e121]: 112 inches
+            - generic [ref=e122]:
+              - generic [ref=e123]: Width
+              - generic [ref=e124]: 76.7 inches
+            - generic [ref=e125]:
+              - generic [ref=e126]: doors
+              - generic [ref=e127]: "2"
+            - generic [ref=e128]:
+              - generic [ref=e129]: drive
+              - generic [ref=e130]: Rear wheel drive
+            - generic [ref=e131]:
+              - generic [ref=e132]: engine
+              - generic [ref=e133]: Own, V8, OHV, Downdraft 4-barrel
+            - generic [ref=e134]:
+              - generic [ref=e135]: series
+              - generic [ref=e136]: Convertible
+            - generic [ref=e137]:
+              - generic [ref=e138]: transmission
+              - generic [ref=e139]: Turbo Hydramatic
+        - generic [ref=e140]:
+          - heading "Reveal records for this vehicle" [level=2] [ref=e141]
+          - generic [ref=e142]:
+            - generic [ref=e143]:
+              - generic [ref=e144] [cursor=pointer]:
+                - img [ref=e146]
+                - generic [ref=e149]: Accident & Damage
+                - img [ref=e151]
+              - generic [ref=e154] [cursor=pointer]:
+                - img [ref=e156]
+                - generic [ref=e160]: Title & Brand Check
+                - img [ref=e162]
+              - generic [ref=e165] [cursor=pointer]:
+                - img [ref=e167]
+                - generic [ref=e171]: Odometer & Mileage
+                - img [ref=e173]
+              - generic [ref=e176] [cursor=pointer]:
+                - img [ref=e178]
+                - generic [ref=e181]: Theft Records
+                - img [ref=e183]
+              - generic [ref=e186] [cursor=pointer]:
+                - img [ref=e188]
+                - generic [ref=e195]: Auction History
+                - img [ref=e197]
+              - generic [ref=e200] [cursor=pointer]:
+                - img [ref=e202]
+                - generic [ref=e205]: Lien & Loan
+                - img [ref=e207]
+              - generic [ref=e210] [cursor=pointer]:
+                - img [ref=e212]
+                - generic [ref=e217]: Ownership & Sales
+                - img [ref=e219]
+              - generic [ref=e222] [cursor=pointer]:
+                - img [ref=e224]
+                - generic [ref=e228]: Market Value
+                - img [ref=e230]
+            - generic [ref=e233] [cursor=pointer]: Reveal Records
+        - generic [ref=e234]:
+          - complementary [ref=e235]:
+            - heading "Unlock the history — choose your package" [level=2] [ref=e237]
+            - generic [ref=e238]:
+              - button "1 Report $19.99/report $19.99" [pressed] [ref=e239] [cursor=pointer]:
+                - generic [ref=e240]:
+                  - img [ref=e242]
+                  - generic [ref=e244]:
+                    - generic [ref=e245]: 1 Report
+                    - generic [ref=e246]: $19.99/report
+                  - generic [ref=e248]: $19.99
+              - button "5 Reports $12.00/report $59.99 $99.95 Save 40%" [ref=e249] [cursor=pointer]:
+                - generic [ref=e250]:
+                  - generic [ref=e252]:
+                    - generic [ref=e253]: 5 Reports
+                    - generic [ref=e254]: $12.00/report
+                  - generic [ref=e255]:
+                    - generic [ref=e256]: $59.99
+                    - generic [ref=e257]: $99.95
+                    - generic [ref=e258]: Save 40%
+              - button "10 Reports $8.00/report $79.99 $199.90 Save 60%" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]:
+                  - generic [ref=e262]:
+                    - generic [ref=e263]: 10 Reports
+                    - generic [ref=e264]: $8.00/report
+                  - generic [ref=e265]:
+                    - generic [ref=e266]: $79.99
+                    - generic [ref=e267]: $199.90
+                    - generic [ref=e268]: Save 60%
+              - button "Unlimited VIN Check Unlimited access Best Value $29.99/mo +2 Sticker Credits Why choose this? Unlimited VIN Check plan information" [ref=e270] [cursor=pointer]:
+                - generic [ref=e271]:
+                  - generic [ref=e273]:
+                    - generic [ref=e274]: Unlimited VIN Check
+                    - generic [ref=e275]: Unlimited access
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: Best Value
+                    - generic [ref=e278]: $29.99/mo
+                - generic [ref=e279]:
+                  - generic [ref=e280]: +2 Sticker Credits
+                  - generic [ref=e281]:
+                    - generic [ref=e282]: Why choose this?
+                    - button "Unlimited VIN Check plan information" [ref=e283]: "?"
+            - generic [ref=e284] [cursor=pointer]:
+              - checkbox "Save 50%! Add Window Sticker to your purchase $9.99 $19.98" [checked] [ref=e285]
+              - generic [ref=e286]: Save 50%! Add Window Sticker to your purchase $9.99 $19.98
+            - button "Access Records" [ref=e287]:
+              - text: Access Records
+              - img [ref=e288]
+            - paragraph [ref=e290]: Instant access · Secure checkout · Downloadable PDF
+            - generic [ref=e291]:
+              - link "View Sample Report" [ref=e292] [cursor=pointer]:
+                - /url: https://vehiclesreport.com/report/vin/2T1BURHE0FC320645
+              - link "View Sample Window Sticker" [ref=e293] [cursor=pointer]:
+                - /url: https://vehiclesreport.com/sticker/vin/1GNALFEK1DZ134081-76267626-4848-F07A-DC46-290273643B8F
+          - generic [ref=e296]:
+            - generic [ref=e297]:
+              - generic [ref=e298]: Total
+              - generic [ref=e299]: $29.98
+            - button "Access Records" [ref=e300]:
+              - text: Access Records
+              - img [ref=e301]
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - img [ref=e306]
+            - heading "Estimated market value" [level=2] [ref=e309]
+          - generic [ref=e310]:
+            - generic [ref=e311]:
+              - button "Outstanding" [expanded] [ref=e312]:
+                - generic [ref=e313]: Outstanding
+                - img [ref=e314]
+              - generic [ref=e317]:
+                - generic [ref=e318]: Dealer Retail
+                - generic [ref=e319]: $616,000
+            - button "Clean" [ref=e321]:
+              - generic [ref=e322]: Clean
+              - img [ref=e323]
+            - button "Average" [ref=e326]:
+              - generic [ref=e327]: Average
+              - img [ref=e328]
+            - button "Rough" [ref=e331]:
+              - generic [ref=e332]: Rough
+              - img [ref=e333]
+        - generic [ref=e335]:
+          - generic [ref=e336]:
+            - img [ref=e337]
+            - text: Instant access
+          - generic [ref=e340]:
+            - img [ref=e341]
+            - text: Secure checkout
+          - generic [ref=e344]:
+            - img [ref=e345]
+            - text: Downloadable PDF
+          - generic [ref=e349]:
+            - img [ref=e350]
+            - text: Money-back guarantee
+    - contentinfo [ref=e353]:
+      - generic [ref=e354]:
+        - heading "We check for" [level=2] [ref=e355]
+        - list [ref=e356]:
+          - listitem [ref=e357]:
+            - img [ref=e358]
+            - text: Ownership History
+          - listitem [ref=e360]:
+            - img [ref=e361]
+            - text: Odometer Readings
+          - listitem [ref=e363]:
+            - img [ref=e364]
+            - text: Title Information
+          - listitem [ref=e366]:
+            - img [ref=e367]
+            - text: Accident History
+          - listitem [ref=e369]:
+            - img [ref=e370]
+            - text: Junk & Salvage
+          - listitem [ref=e372]:
+            - img [ref=e373]
+            - text: Total Loss History
+          - listitem [ref=e375]:
+            - img [ref=e376]
+            - text: Theft & Recovery
+          - listitem [ref=e378]:
+            - img [ref=e379]
+            - text: Auction Records
+          - listitem [ref=e381]:
+            - img [ref=e382]
+            - text: Recalls & Defects
+          - listitem [ref=e384]:
+            - img [ref=e385]
+            - text: Lien & Loan
+          - listitem [ref=e387]:
+            - img [ref=e388]
+            - text: Market Value
+          - listitem [ref=e390]:
+            - img [ref=e391]
+            - text: Vehicle Specifications
+        - paragraph [ref=e393]: Your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+      - paragraph [ref=e395]:
+        - text: © 2026 Vehicles Report. All Rights Reserved. ·
+        - link "Terms" [ref=e396] [cursor=pointer]:
+          - /url: https://app.vehiclesreport.com/terms-of-service
+        - text: ·
+        - link "Privacy" [ref=e397] [cursor=pointer]:
+          - /url: https://app.vehiclesreport.com/privacy
+```
+
+# Test source
+
+```ts
+  1   | import { Page } from '@playwright/test';
+  2   | import { Actor } from '../actors/Actor';
+  3   | import { generateClassicNumericVin } from './vinHelper';
+  4   | 
+  5   | export class ClassicEditableFeatureYMM {
+  6   |   private timeout = process.env.CI ? 60000 : 90000;
+  7   | 
+  8   |   async run(page: Page) {
+  9   |     const updateBtn = page.getByRole('button', { name: 'Click here to update' });
+  10  |     await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  11  |     await updateBtn.click();
+  12  | 
+  13  |     const ymmBtn = page.getByRole('button', { name: 'Year, Make & Model The' });
+  14  |     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  15  |     await ymmBtn.click();
+  16  | 
+  17  |     // 30s delay to allow popup stabilization as requested
+> 18  |     await page.waitForTimeout(30000);
+      |                ^ Error: page.waitForTimeout: Test timeout of 90000ms exceeded.
+  19  | 
+  20  |     const yearBox = page.getByRole('textbox', { name: 'Select year' });
+  21  |     await yearBox.waitFor({ state: 'visible', timeout: this.timeout });
+  22  |     await yearBox.click();
+  23  |     await page.getByRole('button', { name: '1923' }).first().click();
+  24  | 
+  25  |     await page.getByRole('textbox', { name: 'Select make' }).click();
+  26  |     await page.getByRole('button', { name: 'Ambassador' }).first().click();
+  27  | 
+  28  |     await page.getByRole('textbox', { name: 'Select model' }).click();
+  29  |     await page.getByRole('button', { name: 'R', exact: true }).first().click();
+  30  | 
+  31  |     await page.getByRole('textbox', { name: 'Select trim' }).click();
+  32  |     await page.getByRole('button', { name: 'Touring' }).first().click();
+  33  | 
+  34  |     await page.getByRole('button', { name: 'Continue' }).click();
+  35  |     await page.getByRole('button', { name: 'Confirm & Get Records' }).click();
+  36  |   }
+  37  | }
+  38  | 
+  39  | export class Case5VerifyClassicEditableFeature {
+  40  |   private timeout = process.env.CI ? 60000 : 90000;
+  41  | 
+  42  |   async runDropdownUpdate(page: Page) {
+  43  |     const updateBtn = page.getByRole('button', { name: 'Click here to update' });
+  44  |     await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  45  |     await updateBtn.click();
+  46  | 
+  47  |     const ymmBtn = page.getByRole('button', { name: 'Update Year, Make and Model' });
+  48  |     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  49  |     await ymmBtn.click();
+  50  | 
+  51  |     const yearLabel = page.getByLabel('Year');
+  52  |     await yearLabel.waitFor({ state: 'visible', timeout: this.timeout });
+  53  |     await yearLabel.click();
+  54  |     await page.getByLabel('1961').first().click();
+  55  | 
+  56  |     await page.getByLabel('Make').click();
+  57  |     await page.getByLabel('AJS').first().click();
+  58  | 
+  59  |     await page.getByLabel('Model').click();
+  60  |     await page.getByText('Model 16 350ms').first().click();
+  61  | 
+  62  |     await page.getByLabel('Trim').click();
+  63  |     await page.getByText('Base', { exact: true }).first().click();
+  64  |     
+  65  |     await page.getByRole('button', { name: 'Continue' }).click();
+  66  |     await page.getByRole('button', { name: 'Confirm Selection' }).click();
+  67  |     await page.getByRole('button', { name: 'Submit' }).click();
+  68  |     await page.waitForURL(/cv=/, { timeout: this.timeout * 2 });
+  69  |   }
+  70  | }
+  71  | 
+  72  | export class ClassicEditableSpecs {
+  73  |   private timeout = process.env.CI ? 90000 : 45000;
+  74  | 
+  75  |   async performAs(actor: Actor) {
+  76  |     const page = actor.getPage();
+  77  |     await page.goto('/');
+  78  |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  79  | 
+  80  |     const cookies = await page.context().cookies();
+  81  |     const isStreaming = cookies.some(c => c.name === 'checkout_flow' && c.value === 'streaming');
+  82  | 
+  83  |     const classicVin = generateClassicNumericVin('242370B111346');
+  84  | 
+  85  |     // Robust selector logic for Infiniti and other layouts
+  86  |     const vinInput = page.getByRole('textbox', { name: 'Vehicle Identification Number' })
+  87  |       .or(page.getByRole('textbox', { name: 'Enter VIN Number' }))
+  88  |       .or(page.getByRole('textbox', { name: 'Enter Your VIN' }))
+  89  |       .or(page.locator('input[name="vin"]'))
+  90  |       .or(page.getByPlaceholder(/enter vin/i))
+  91  |       .first();
+  92  | 
+  93  |     await vinInput.waitFor({ state: 'visible', timeout: this.timeout / 3 });
+  94  |     await vinInput.fill(classicVin);
+  95  | 
+  96  |     const submitBtn = page.getByRole('button', { name: /search|decode|get window sticker/i }).first()
+  97  |       .or(page.locator('button[type="submit"]')).first();
+  98  |     await submitBtn.click();
+  99  | 
+  100 |     // Support preview, sticker, ws-preview, and license-preview URLs
+  101 |     await page.waitForURL(/.*(preview|sticker|license-preview|ws-preview).*/, { timeout: this.timeout });
+  102 | 
+  103 |     // Enable API network listener to capture relevant response URLs and payloads
+  104 |     page.on('response', async (response) => {
+  105 |       const url = response.url();
+  106 |       
+  107 |       // Ignore logging/telemetry endpoints as they are not needed
+  108 |       if (url.includes('/logs') || url.includes('/telemetry')) {
+  109 |         return;
+  110 |       }
+  111 | 
+  112 |       const contentType = response.headers()['content-type'] || '';
+  113 |       const resourceType = response.request().resourceType();
+  114 |       
+  115 |       if (resourceType === 'fetch' || resourceType === 'xhr' || contentType.includes('application/json')) {
+  116 |         try {
+  117 |           const status = response.status();
+  118 |           const jsonBody = await response.json();
+```

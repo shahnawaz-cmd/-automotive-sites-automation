@@ -1,0 +1,214 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_01 VIN decode verify
+- Location: tests/global_case_verification.spec.ts:17:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - img "Volkswagen" [ref=e10]
+          - generic [ref=e11]:
+            - paragraph [ref=e12]: Volkswagen Id.every1
+            - paragraph [ref=e13]: "VIN: VF3YC2MFB12G20874"
+        - generic [ref=e14]:
+          - generic [ref=e15]: Is this your vehicle?
+          - generic [ref=e16]:
+            - button "Yes" [ref=e17]
+            - button "No" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "We found historical records for the VIN# VF3YC2MFB12G20874" [level=4] [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e27]:
+              - heading "Volkswagen Id.every1" [level=2] [ref=e29]
+              - generic [ref=e30]:
+                - generic [ref=e31]:
+                  - generic [ref=e32]: Trim
+                  - generic [ref=e33]: 95HP
+                - generic [ref=e34]:
+                  - generic [ref=e35]: Engine Type
+                  - generic [ref=e36]: Electric
+                - generic [ref=e37]:
+                  - generic [ref=e38]: Transmission
+                  - generic [ref=e39]: Manual
+                - generic [ref=e40]:
+                  - generic [ref=e41]: Drive Type
+                  - generic [ref=e42]: FWD
+                - generic [ref=e43]:
+                  - generic [ref=e44]: Doors
+                  - generic [ref=e45]: "5"
+                - generic [ref=e46]:
+                  - generic [ref=e47]: Standard Seating
+                  - generic [ref=e48]: "4"
+                - generic [ref=e49]:
+                  - generic [ref=e50]: Body Type
+                  - generic [ref=e51]: Hatchback
+            - generic [ref=e52]:
+              - generic [ref=e55]:
+                - heading "Reveal the Past. Pick Your Plan." [level=1] [ref=e56]
+                - generic [ref=e58]:
+                  - generic [ref=e59]:
+                    - 'radio "Most Popular 2 Vehicle Reports You can also check motorbikes, trucks, etc. €8.50 /Report You Pay: €17 €19.96 Save 15% Vehicle Details Title information Service history documentation Manufacturer & General Info" [ref=e60] [cursor=pointer]':
+                      - paragraph [ref=e62]: Most Popular
+                      - generic [ref=e64]:
+                        - generic [ref=e65]:
+                          - heading "2 Vehicle Reports" [level=3] [ref=e66]
+                          - paragraph [ref=e67]: You can also check motorbikes, trucks, etc.
+                        - generic [ref=e68]:
+                          - generic [ref=e69]:
+                            - generic [ref=e70]: €8.50
+                            - generic [ref=e71]: /Report
+                          - generic [ref=e72]:
+                            - generic [ref=e73]:
+                              - generic [ref=e74]: "You Pay:"
+                              - generic [ref=e75]: €17
+                              - generic [ref=e76]: €19.96
+                            - paragraph [ref=e77]: Save 15%
+                        - list [ref=e80]:
+                          - listitem [ref=e81]: Vehicle Details
+                          - listitem [ref=e82]: Title information
+                          - listitem [ref=e83]: Service history documentation
+                          - listitem [ref=e84]: Manufacturer & General Info
+                    - radio "78% Cheaper Than Carfax 1 Vehicle Report You can also check motorbikes, trucks, etc. €9.98 /Report Full Price Vehicle Details Title information Service history documentation Manufacturer & General Info" [checked] [ref=e85] [cursor=pointer]:
+                      - paragraph [ref=e87]: 78% Cheaper Than Carfax
+                      - generic [ref=e89]:
+                        - generic [ref=e90]:
+                          - heading "1 Vehicle Report" [level=3] [ref=e91]
+                          - paragraph [ref=e92]: You can also check motorbikes, trucks, etc.
+                        - generic [ref=e93]:
+                          - generic [ref=e94]:
+                            - generic [ref=e95]: €9.98
+                            - generic [ref=e96]: /Report
+                          - paragraph [ref=e98]: Full Price
+                        - list [ref=e101]:
+                          - listitem [ref=e102]: Vehicle Details
+                          - listitem [ref=e103]: Title information
+                          - listitem [ref=e104]: Service history documentation
+                          - listitem [ref=e105]: Manufacturer & General Info
+                  - button "See more packages & save up to 85%" [ref=e106]:
+                    - generic [ref=e107]:
+                      - img [ref=e109]
+                      - generic [ref=e111]: See more packages & save up to 85%
+                    - generic:
+                      - img
+                  - generic [ref=e113]:
+                    - generic [ref=e115]:
+                      - generic [ref=e117]: Save 50%
+                      - button "Get a window sticker just for" [ref=e118]:
+                        - generic [ref=e120]:
+                          - img [ref=e122]
+                          - paragraph [ref=e124]: Get a window sticker just for €4.99 €9.98
+                    - paragraph [ref=e125] [cursor=pointer]:
+                      - link "View Sample Window Sticker" [ref=e126]:
+                        - /url: https://vehiclehistory.eu/sticker/vin/WF0PXXGCHPKP11608-B4D7B4D7-0F0F-BC0D-5C6B-10DB7A44C054
+                  - button "Access Records" [ref=e128]:
+                    - generic [ref=e130]: Access Records
+                    - img [ref=e131]
+              - generic [ref=e133]:
+                - heading "See Why People Love Us" [level=2] [ref=e134]
+                - generic [ref=e137]:
+                  - img [ref=e139]
+                  - generic [ref=e141]:
+                    - generic [ref=e142]:
+                      - heading "Primo Rea" [level=4] [ref=e143]
+                      - generic [ref=e144]: Italy
+                    - paragraph [ref=e145]: Finding history for older cars had always been a challenge, but the team here handled it perfectly. They were professional, kept me informed throughout, and provided the precise information I was looking for. A trustworthy service for vehicle history.
+                - generic [ref=e147]:
+                  - generic [ref=e148]:
+                    - img [ref=e149]
+                    - generic [ref=e151]: Happy customers across the globe
+                  - generic [ref=e152]:
+                    - img [ref=e153]
+                    - generic [ref=e155]: Instant access
+                  - generic [ref=e156]:
+                    - img [ref=e157]
+                    - generic [ref=e159]: Secure checkout
+                  - generic [ref=e160]:
+                    - img [ref=e161]
+                    - generic [ref=e163]: Downloadable PDF
+              - generic [ref=e164]:
+                - heading "Reveal Records for" [level=3] [ref=e165]
+                - generic [ref=e166]:
+                  - generic [ref=e169]:
+                    - img [ref=e171]
+                    - generic [ref=e174]:
+                      - generic [ref=e175]: Title Issues
+                      - button "Click to reveal details" [ref=e176] [cursor=pointer]
+                  - generic [ref=e179]:
+                    - img [ref=e181]
+                    - generic [ref=e184]:
+                      - generic [ref=e185]: Manufacturer Info
+                      - button "Click to reveal details" [ref=e186] [cursor=pointer]
+                  - generic [ref=e189]:
+                    - img [ref=e191]
+                    - generic [ref=e193]:
+                      - generic [ref=e194]: Performance and Emission
+                      - button "Click to reveal details" [ref=e195] [cursor=pointer]
+                  - generic [ref=e198]:
+                    - img [ref=e200]
+                    - generic [ref=e202]:
+                      - generic [ref=e203]: Usage History
+                      - button "Click to reveal details" [ref=e204] [cursor=pointer]
+              - generic [ref=e205]:
+                - heading "We Check Records for" [level=2] [ref=e206]
+                - generic [ref=e207]:
+                  - generic [ref=e208]:
+                    - img [ref=e209]
+                    - generic [ref=e212]: Title Record
+                  - generic [ref=e213]:
+                    - img [ref=e214]
+                    - generic [ref=e217]: Accident Record
+                  - generic [ref=e218]:
+                    - img [ref=e219]
+                    - generic [ref=e222]: Auction Record
+                  - generic [ref=e223]:
+                    - img [ref=e224]
+                    - generic [ref=e227]: Vehicle Specification
+                - generic [ref=e228]:
+                  - button "Reveal all records" [ref=e229]
+                  - button "View Sample Report" [ref=e230]
+          - generic [ref=e232]:
+            - paragraph [ref=e237]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+            - separator [ref=e238]
+            - paragraph [ref=e240]: © 2026 Vehicle History Report - EU, All Rights Reserved
+        - region "Notifications alt+T"
+  - iframe [ref=e242]:
+    - main [ref=f2e2]:
+      - generic [ref=f2e3]:
+        - generic [ref=f2e5]:
+          - generic [ref=f2e6] [cursor=pointer]:
+            - img [ref=f2e9]
+            - generic [ref=f2e13]: Richard Langridge
+          - button "Hide greeting" [ref=f2e14] [cursor=pointer]:
+            - img [ref=f2e15]
+        - generic [ref=f2e18]:
+          - generic [ref=f2e19]:
+            - heading "👋 New here? Reply \"YES\" for a small treat. Share VIN to pull vehicle records" [level=2] [ref=f2e23]
+            - group [ref=f2e24]:
+              - button "YES" [ref=f2e25]
+          - generic [ref=f2e26]:
+            - textbox "Type in your message here" [ref=f2e27]
+            - button "Send a message" [disabled] [ref=f2e28]:
+              - img [ref=f2e29]
+```

@@ -1,0 +1,256 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_14 EU VIN confirmation flow
+- Location: tests/global_case_verification.spec.ts:210:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'No' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e8]:
+      - main [ref=e10]:
+        - generic [ref=e14]:
+          - img [ref=e15]
+          - heading "Success! We found detailed information for VIN# VF3YC2MFB12G20873" [level=4] [ref=e17]:
+            - generic [ref=e18]: Success!
+            - text: We found detailed information for VIN# VF3YC2MFB12G20873
+        - generic [ref=e19]:
+          - generic [ref=e21]:
+            - heading [level=1]
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - img [ref=e25]
+              - generic [ref=e27]:
+                - generic [ref=e28]: Sales History
+                - generic [ref=e29]: Reveal Records
+            - generic [ref=e30]:
+              - img [ref=e31]
+              - generic [ref=e33]:
+                - generic [ref=e34]: Auction Records
+                - generic [ref=e35]: Reveal Records
+            - generic [ref=e36]:
+              - img [ref=e37]
+              - generic [ref=e39]:
+                - generic [ref=e40]: Odometer Checks
+                - generic [ref=e41]: Reveal Records
+            - generic [ref=e42]:
+              - img [ref=e43]
+              - generic [ref=e45]:
+                - generic [ref=e46]: Damage Records
+                - generic [ref=e47]: Reveal Records
+            - generic [ref=e48]:
+              - img [ref=e49]
+              - generic [ref=e51]:
+                - generic [ref=e52]: Title Check
+                - generic [ref=e53]: Reveal Records
+            - generic [ref=e54]:
+              - img [ref=e55]
+              - generic [ref=e57]:
+                - generic [ref=e58]: Theft Records
+                - generic [ref=e59]: Reveal Records
+            - generic [ref=e60]:
+              - img [ref=e61]
+              - generic [ref=e63]:
+                - generic [ref=e64]: Lien/Loan Records
+                - generic [ref=e65]: Reveal Records
+            - generic [ref=e66]:
+              - img [ref=e67]
+              - generic [ref=e69]:
+                - generic [ref=e70]: MSRP
+                - generic [ref=e71]: Reveal Records
+            - button "Reveal Records" [ref=e73]
+      - generic [ref=e75]:
+        - heading "Unlock the history - Choose your package." [level=4] [ref=e76]
+        - generic [ref=e77]:
+          - radio "5 Reports 5 Reports $12.00 /Report You pay $59.99 $99.95 Save 40%" [ref=e79] [cursor=pointer]:
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - radio "5 Reports" [ref=e84]
+                - heading "5 Reports" [level=4] [ref=e85]
+              - generic [ref=e86]:
+                - generic [ref=e87]: $12.00
+                - subscript [ref=e88]: /Report
+              - generic [ref=e89]: You pay $59.99
+              - generic [ref=e90]:
+                - generic [ref=e91]: $99.95
+                - generic [ref=e92]: Save 40%
+          - radio "2 Reports 2 Reports $15.00 /Report You pay $29.99 $39.98 Save 25%" [ref=e94] [cursor=pointer]:
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - radio "2 Reports" [ref=e99]
+                - heading "2 Reports" [level=4] [ref=e100]
+              - generic [ref=e101]:
+                - generic [ref=e102]: $15.00
+                - subscript [ref=e103]: /Report
+              - generic [ref=e104]: You pay $29.99
+              - generic [ref=e105]:
+                - generic [ref=e106]: $39.98
+                - generic [ref=e107]: Save 25%
+          - radio "1 Report 1 Report $19.99 /Report You pay $19.99 56% Cheaper Than Carfax" [checked] [ref=e109] [cursor=pointer]:
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - radio "1 Report" [checked] [ref=e114]
+                - heading "1 Report" [level=4] [ref=e115]
+              - generic [ref=e116]:
+                - generic [ref=e117]: $19.99
+                - subscript [ref=e118]: /Report
+              - generic [ref=e119]: You pay $19.99
+              - generic [ref=e121]: 56% Cheaper Than Carfax
+          - radio "Best Value Unlimited VIN Checks Unlimited VIN Checks $29.99 /month +2 Sticker Credits For Free Why choose this plan? Plan information" [ref=e124] [cursor=pointer]:
+            - generic [ref=e126]: Best Value
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - radio "Unlimited VIN Checks" [ref=e129]
+                - heading "Unlimited VIN Checks" [level=4] [ref=e130]
+              - generic [ref=e131]:
+                - generic [ref=e132]: $29.99
+                - subscript [ref=e133]: /month
+            - generic [ref=e136]:
+              - generic [ref=e137]: +2 Sticker Credits For Free
+              - generic [ref=e138]:
+                - generic [ref=e139]: Why choose this plan?
+                - button "Plan information" [ref=e141]: "?"
+        - checkbox "Save 50% 9.99 Add a window sticker to your purchase $9.99$9.99 View Sample Window Sticker" [checked] [ref=e142] [cursor=pointer]:
+          - generic [ref=e143]:
+            - generic [ref=e144]: Save 50%
+            - checkbox "9.99" [checked] [ref=e145]
+            - generic [ref=e146]:
+              - text: Add a window sticker to your purchase
+              - generic [ref=e147]: $9.99$9.99
+          - link "View Sample Window Sticker" [ref=e149]:
+            - /url: https://app.motorcyclevinlookup.com/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
+        - button "Access Records" [ref=e151]:
+          - img [ref=e152]
+          - text: Access Records
+          - img [ref=e155]
+        - paragraph [ref=e158]:
+          - text: By selecting "Access Records" you are confirming that you have read and agree to Motorcycle VIN Lookup
+          - link "Terms of Use" [ref=e159] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com//terms-and-conditions
+          - text: and
+          - link "Privacy Policy" [ref=e160] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com//privacy
+          - text: .
+        - img "Trustpilot" [ref=e162]
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - img [ref=e167]
+              - paragraph [ref=e170]: Happy customers across the globe
+            - generic [ref=e171]:
+              - img [ref=e172]
+              - paragraph [ref=e175]: Instant access
+            - generic [ref=e176]:
+              - img [ref=e177]
+              - paragraph [ref=e180]: Secure checkout
+            - generic [ref=e181]:
+              - img [ref=e182]
+              - paragraph [ref=e186]: Downloadable PDF
+          - blockquote [ref=e188]:
+            - text: "\"They did a fabulous job with GREAT customer service. Once I entered the VIN number and after only a few minutes my report was in my inbox. The next day I had a follow-up call to ensure I had received everything I ordered and was happy with their service. A very customer-oriented businesses. I only wish there were more companies like this.\""
+            - contentinfo [ref=e189]: — Brian Striemer
+          - generic [ref=e191]:
+            - img "Trustpilot 4.8 stars" [ref=e192]
+            - generic [ref=e193]: 4.8/5
+            - link "Trustpilot" [ref=e194] [cursor=pointer]:
+              - /url: https://www.trustpilot.com/review/detailedvehiclehistory.com
+          - generic [ref=e195]:
+            - generic [ref=e196]: "We check for:"
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - img [ref=e199]
+                - generic [ref=e201]: Ownership History
+              - generic [ref=e202]:
+                - img [ref=e203]
+                - generic [ref=e205]: Junk & Salvage
+              - generic [ref=e206]:
+                - img [ref=e207]
+                - generic [ref=e209]: Vehicle Specifications
+              - generic [ref=e210]:
+                - img [ref=e211]
+                - generic [ref=e213]: Odometer Readings
+              - generic [ref=e214]:
+                - img [ref=e215]
+                - generic [ref=e217]: Total Loss History
+              - generic [ref=e218]:
+                - img [ref=e219]
+                - generic [ref=e221]: Accident History
+              - generic [ref=e222]:
+                - img [ref=e223]
+                - generic [ref=e225]: Structural Damage
+              - generic [ref=e226]:
+                - img [ref=e227]
+                - generic [ref=e229]: Recalls & Defects
+              - generic [ref=e230]:
+                - img [ref=e231]
+                - generic [ref=e233]: Title Information
+              - generic [ref=e234]:
+                - img [ref=e235]
+                - generic [ref=e237]: 60 + Problem Checks
+              - generic [ref=e238]:
+                - img [ref=e239]
+                - generic [ref=e241]: Taxi, Lease, Police Use
+              - generic [ref=e242]:
+                - img [ref=e243]
+                - generic [ref=e245]: Loan Verifications
+          - link "View Sample Report" [ref=e246] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com/report/vin/2T1BURHE0FC320645
+          - generic [ref=e247]:
+            - img "SSL Security" [ref=e248]
+            - paragraph [ref=e249]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+          - separator [ref=e250]
+          - paragraph [ref=e252]: © 2026 Motorcycle VIN Lookup, All Rights Reserved
+```
+
+# Test source
+
+```ts
+  1  | import { expect } from '@playwright/test';
+  2  | import { Actor } from '../actors/Actor';
+  3  | 
+  4  | export class EuVinConfirmationTask {
+  5  |   async performAs(actor: Actor) {
+  6  |     const page = actor.getPage();
+  7  | 
+> 8  |     await page.getByRole('button', { name: 'No' }).click();
+     |                                                    ^ Error: locator.click: Test timeout of 90000ms exceeded.
+  9  |     await page.getByRole('combobox').filter({ hasText: 'Select Year' }).click();
+  10 |     await page.getByRole('button', { name: '2015' }).click();
+  11 |     await page.getByRole('combobox').filter({ hasText: 'Select Make' }).click();
+  12 |     await page.getByRole('button', { name: 'Alfa Romeo' }).click();
+  13 |     await page.getByRole('combobox').filter({ hasText: 'Select Model' }).click();
+  14 |     await page.getByRole('button', { name: 'Giulietta II' }).click();
+  15 |     await page.getByRole('combobox').filter({ hasText: 'Select Trim' }).click();
+  16 |     await page.getByRole('button', { name: '1.4 GLP Turbo 120HP' }).click();
+  17 |     await page.getByRole('button', { name: 'Update Vehicle Details' }).click();
+  18 | 
+  19 |     await page.waitForTimeout(2000);
+  20 |     console.log('✅ EU VIN details updated');
+  21 |   }
+  22 | }
+  23 | 
+```
