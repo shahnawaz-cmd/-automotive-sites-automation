@@ -216,12 +216,7 @@ jobs:
         # --- Enhancement 3: Dynamic title with site-level health ---
         TOTAL_SITES=$(jq '[.config.projects[] | .name | split("_")[0]] | unique | length' playwright-report/results.json || echo "0")
         FAILED_SITES=$(jq -r '
-          [.suites[]? | .suites[]? |
-            {project: .title} as $proj |
-            .specs[]? | .tests[]? |
-            select(.status == "failed") |
-            $proj.project | split("_")[0]
-          ] | unique | length
+          [.suites[]? | .. | select(.status? == "failed") | .projectName? // empty | split("_")[0]] | unique | length
         ' playwright-report/results.json 2>/dev/null || echo "0")
 
         # --- Schedule type label ---

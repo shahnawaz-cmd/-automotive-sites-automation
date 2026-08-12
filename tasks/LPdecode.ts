@@ -43,24 +43,15 @@ export class LPcases {
         throw new Error('Search button not found');
       }
 
-      // Wait for navigation more robustly
-      await page.waitForLoadState('networkidle', { timeout: timeout });
-      
-      // Verify URL pattern after load
-      await expect(page).toHaveURL(/.*vin-check\/license-preview/, { timeout: 5000 });
+      // Wait for navigation and URL match using smart waits
+      await page.waitForURL(/.*vin-check\/license-preview/, { timeout: timeout, waitUntil: 'domcontentloaded' });
 
-      // 3. Wait for success conditions
-      await page.waitForTimeout(process.env.CI ? 10000 : 5000); 
+      // 3. Smart wait for success conditions
       const successText = page.locator('text=Records found for');
       const successHeading = page.getByRole('heading', { name: 'Success! We found detailed' });
+      const combinedSuccess = successText.or(successHeading);
 
-      await expect(async () => {
-        const isVisible1 = await successText.isVisible();
-        const isVisible2 = await successHeading.isVisible();
-        if (!isVisible1 && !isVisible2) {
-          throw new Error('Success condition not found');
-        }
-      }).toPass({ timeout: timeout });
+      await combinedSuccess.first().waitFor({ state: 'visible', timeout: timeout });
 
       console.log('Success condition met.');
     } else {
