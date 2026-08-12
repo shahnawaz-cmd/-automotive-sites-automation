@@ -17,6 +17,8 @@ export interface VinTaskSelectors {
 
 export class DecodeVinTask {
   constructor(
+    public shouldClose: boolean = true,
+    public skipSuccessClick: boolean = false,
     private timeout: number = 60000,
     private selectors: VinTaskSelectors = {
       vinField1: 'Vehicle Identification Number',
@@ -45,11 +47,21 @@ export class DecodeVinTask {
     return this.generateRandomVin(baseVin, 2);
   }
 
-  async performAs(actor: Actor, shouldClose: boolean = true) {
+  private generateEuVin(): string {
+    const baseVins = [
+      'VF3YC2MFB12G20874',
+      'SHHEU88701U002012'
+    ];
+    const baseVin = baseVins[Math.floor(Math.random() * baseVins.length)];
+    return this.generateRandomVin(baseVin, 1);
+  }
+
+  async performAs(actor: Actor) {
     const page = actor.getPage();
     const isMVL = page.url().includes('motorcyclevinlookup.com');
-    const vin = this.generateUSVin(isMVL);
-    console.log(`[VIN Decode] Generated VIN: ${vin}`);
+    const isEU = page.url().includes('vehiclehistory.eu') || this.skipSuccessClick;
+    const vin = isEU ? this.generateEuVin() : this.generateUSVin(isMVL);
+    console.log(`[VIN Decode] Generated VIN (${isEU ? 'EU' : 'US'}): ${vin}`);
 
     const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
     const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
@@ -117,12 +129,19 @@ const successLocators = [
 ].filter(Boolean);
 
 let successClicked = false;
-for (const locator of successLocators) {
-  if (await locator.isVisible()) {
-    console.log('[VIN Decode] Clicking success element...');
-    await locator.click();
-    successClicked = true;
-    break;
+
+// If skipSuccessClick is explicitly enabled, skip clicking the success banner
+if (this.skipSuccessClick) {
+  console.log('[VIN Decode] Bypassing success banner click as requested by task parameters.');
+  successClicked = true;
+} else {
+  for (const locator of successLocators) {
+    if (await locator.isVisible()) {
+      console.log('[VIN Decode] Clicking success element...');
+      await locator.click().catch(() => {});
+      successClicked = true;
+      break;
+    }
   }
 }
 

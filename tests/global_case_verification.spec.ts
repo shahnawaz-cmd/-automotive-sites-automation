@@ -12,6 +12,7 @@ import { PreviewToCheckoutRedirection } from '../tasks/preview_to_checkout_redir
 import { ClassicEditableSpecs } from '../tasks/classic_editable_specs';
 import { StreamingExitIntentPopup } from '../tasks/exit_intent_popup_preview';
 import { GlobalExitIntentPopup } from '../tasks/global_exit_intent_popup';
+import { EuVinConfirmationTask } from '../tasks/eu_vin_confirmation';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -203,5 +204,24 @@ test('TC_13 Global Exit Intent Preview Verification', async ({ page }, testInfo)
   } finally {
     await page.close();
     console.log('TC_13: page.close() executed.');
+  }
+});
+
+test('TC_14 EU VIN confirmation flow', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name.startsWith('VSR'), 'Skipping EU VIN confirmation flow on VSR');
+
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForTimeout(1000);
+    
+    // 1. Decode VIN to land on Preview page (shouldClose = false, skipSuccessClick = true)
+    await actor.attemptsTo(new DecodeVinTask(false, true));
+
+    // 2. Perform EU VIN specification selection on preview page
+    await actor.attemptsTo(new EuVinConfirmationTask());
+  } finally {
+    await page.close();
+    console.log('TC_14: page.close() executed.');
   }
 });
