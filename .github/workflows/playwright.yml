@@ -119,8 +119,8 @@ jobs:
         fi
         
         # Construct Slack Payload
-RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
-        PAYLOAD=$(cat <<EOF
+        RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
+        PAYLOAD=$(cat <<'EOF'
         {
           "attachments": [
             {
@@ -128,7 +128,7 @@ RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
               "blocks": [
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Daily Production Website Functional & Cross‑Browser QA Report*" }
+                  "text": { "type": "mrkdwn", "text": "*Daily Production Website Functional & Cross-Browser QA Report*" }
                 },
                 {
                   "type": "section",
@@ -136,36 +136,36 @@ RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Active Batches:* \`$SITES_TESTED\`\n*Scope:* \`auth-multiproperty-automation\`\n*Environment:* NextJS & WordPress Production\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
+                  "text": { "type": "mrkdwn", "text": "*Active Batches:* `$SITES_TESTED`
+*Scope:* `auth-multiproperty-automation`
+*Environment:* NextJS & WordPress Production
+*Branch:* `${{ github.ref_name }}`
+*Commit:* `${{ github.sha }}`
+*Run time:* $RUN_TIME
+*Trigger:* ${{ github.event_name }}$FAILED_SECTION" }
                 },
                 {
                   "type": "section",
                   "fields": [
                     { "type": "mrkdwn", "text": "*Total Tests:*\n$TOTAL_TESTS" },
                     { "type": "mrkdwn", "text": "*Passed:*\n$PASSED_TESTS" },
-                    { "type": "mrkdwn", "text": "*Failed:*\n$FAILED_TESTS" }
+                    { "type": "mrkdwn", "text": "*Failed:*\n$FAILED_TESTS" },
+                    { "type": "mrkdwn", "text": "*Flaky:*\n$FLAKY_TESTS" },
+                    { "type": "mrkdwn", "text": "*Skipped:*\n$SKIPPED_TESTS" }
                   ]
                 },
                 {
                   "type": "actions",
                   "elements": [
-                    {
-                      "type": "button",
-                      "text": { "type": "plain_text", "text": "View Workflow Run" },
-                      "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-                    },
-                    {
-                      "type": "button",
-                      "text": { "type": "plain_text", "text": "View HTML Report" },
-                      "url": "https://shahnawaz-cmd.github.io/-automotive-sites-automation/"
-                    }
+                    { "type": "button", "text": { "type": "plain_text", "text": "View Workflow Run" }, "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" },
+                    { "type": "button", "text": { "type": "plain_text", "text": "View HTML Report" }, "url": "https://shahnawaz-cmd.github.io/-automotive-sites-automation/" }
                   ]
                 }
               ]
             }
           ]
         }
-        EOF
+EOF
         )
         curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
 
