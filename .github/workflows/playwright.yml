@@ -168,13 +168,7 @@ EOF
       env:
         SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
       run: |
-        # Build a concise failure alert payload
-        ALERT_PAYLOAD=$(cat <<'EOF'
-        {
-          "text": ":warning: Playwright failed ($FAILED_TESTS/$TOTAL_TESTS). <@U09UE83AWGP>"
-        }
-        EOF
-        )
+        ALERT_PAYLOAD='{"text": ":warning: Playwright failed ('"$FAILED_TESTS"'/'"$TOTAL_TESTS"'). <@U09UE83AWGP>"}'
         curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" $SLACK_FAILURE_WEBHOOK_URL
 
     - name: Upload Final Consolidated Report
