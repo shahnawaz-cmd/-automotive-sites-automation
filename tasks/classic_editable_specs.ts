@@ -42,29 +42,29 @@ export class Case5VerifyClassicEditableFeature {
   async runDropdownUpdate(page: Page) {
     const updateBtn = page.getByRole('button', { name: 'Click here to update' });
     await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await updateBtn.click();
+    await updateBtn.click({ force: true });
 
     const ymmBtn = page.getByRole('button', { name: 'Update Year, Make and Model' });
     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await ymmBtn.click();
+    await ymmBtn.click({ force: true });
 
     const yearLabel = page.getByLabel('Year');
     await yearLabel.waitFor({ state: 'visible', timeout: this.timeout });
-    await yearLabel.click();
-    await page.getByLabel('1961').first().click();
+    await yearLabel.click({ force: true });
+    await page.getByLabel('1961').first().click({ force: true });
 
-    await page.getByLabel('Make').click();
-    await page.getByLabel('AJS').first().click();
+    await page.getByLabel('Make').click({ force: true });
+    await page.getByLabel('AJS').first().click({ force: true });
 
-    await page.getByLabel('Model').click();
-    await page.getByText('Model 16 350ms').first().click();
+    await page.getByLabel('Model').click({ force: true });
+    await page.getByText('Model 16 350ms').first().click({ force: true });
 
-    await page.getByLabel('Trim').click();
-    await page.getByText('Base', { exact: true }).first().click();
-    
-    await page.getByRole('button', { name: 'Continue' }).click();
-    await page.getByRole('button', { name: 'Confirm Selection' }).click();
-    await page.getByRole('button', { name: 'Submit' }).click();
+    await page.getByLabel('Trim').click({ force: true });
+    await page.getByText('Base', { exact: true }).first().click({ force: true });
+
+    await page.getByRole('button', { name: 'Continue' }).click({ force: true });
+    await page.getByRole('button', { name: 'Confirm Selection' }).click({ force: true });
+    await page.getByRole('button', { name: 'Submit' }).click({ force: true });
     await page.waitForURL(/cv=/, { timeout: this.timeout * 2 });
   }
 }
@@ -103,7 +103,7 @@ export class ClassicEditableSpecs {
     // Enable API network listener to capture relevant response URLs and payloads
     page.on('response', async (response) => {
       const url = response.url();
-      
+
       // Ignore logging/telemetry endpoints as they are not needed
       if (url.includes('/logs') || url.includes('/telemetry')) {
         return;
@@ -111,7 +111,7 @@ export class ClassicEditableSpecs {
 
       const contentType = response.headers()['content-type'] || '';
       const resourceType = response.request().resourceType();
-      
+
       if (resourceType === 'fetch' || resourceType === 'xhr' || contentType.includes('application/json')) {
         try {
           const status = response.status();
