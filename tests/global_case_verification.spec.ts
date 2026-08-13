@@ -13,6 +13,7 @@ import { ClassicEditableSpecs } from '../tasks/classic_editable_specs';
 import { StreamingExitIntentPopup } from '../tasks/exit_intent_popup_preview';
 import { GlobalExitIntentPopup } from '../tasks/global_exit_intent_popup';
 import { EuVinConfirmationTask } from '../tasks/eu_vin_confirmation';
+import { ClassicEditableSpecsManual } from '../tasks/classic_editable_specs_manual';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -223,5 +224,22 @@ test('TC_14 EU VIN confirmation flow', async ({ page }, testInfo) => {
   } finally {
     await page.close();
     console.log('TC_14: page.close() executed.');
+  }
+});
+
+test('TC_15 Classic editable specs manual update feature validation', async ({ page }, testInfo) => {
+  const baseURL = testInfo.project.use.baseURL || '';
+  const isMobile = testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari');
+  
+  test.skip(!isMobile, 'Skipping classic editable specs manual validation on desktop; runs only on mobile browsers');
+  test.skip(testInfo.project.name.startsWith('VSR'), 'Skipping classic editable specs manual validation on VSR');
+  test.skip(baseURL.includes('vehiclehistory.eu'), 'Skipping classic editable specs manual validation for vehiclehistory.eu');
+
+  const actor = new Actor('User', page);
+  try {
+    await actor.attemptsTo(new ClassicEditableSpecsManual());
+  } finally {
+    await page.close();
+    console.log('TC_15: page.close() executed.');
   }
 });
