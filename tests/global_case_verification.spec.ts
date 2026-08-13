@@ -14,6 +14,7 @@ import { StreamingExitIntentPopup } from '../tasks/exit_intent_popup_preview';
 import { GlobalExitIntentPopup } from '../tasks/global_exit_intent_popup';
 import { EuVinConfirmationTask } from '../tasks/eu_vin_confirmation';
 import { ClassicEditableSpecsManual } from '../tasks/classic_editable_specs_manual';
+import { DefaultPlanPriceCheckTask } from '../tasks/default_plan_price_check';
 
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
@@ -241,5 +242,20 @@ test('TC_15 Classic editable specs manual update feature validation', async ({ p
   } finally {
     await page.close();
     console.log('TC_15: page.close() executed.');
+  }
+});
+
+test('TC_16 Default plan price check verification', async ({ page }, testInfo) => {
+  const isMobile = testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari');
+  test.skip(!isMobile, 'Skipping default plan price check verification on desktop; runs only on mobile devices');
+
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForTimeout(1000);
+    await actor.attemptsTo(new DefaultPlanPriceCheckTask());
+  } finally {
+    await page.close();
+    console.log('TC_16: page.close() executed.');
   }
 });
