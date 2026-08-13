@@ -5,7 +5,7 @@ module.exports = defineConfig({
   timeout: 90000,
   retries: 2,
   workers: 2,
-  fullyParallel: false,
+  fullyParallel: true,
   use: {
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
