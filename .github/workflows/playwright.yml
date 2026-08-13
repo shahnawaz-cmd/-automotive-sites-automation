@@ -268,15 +268,17 @@ jobs:
         curl -X POST -H 'Content-type: application/json' --data "$PAYLOAD" $SLACK_WEBHOOK_URL
 
     - name: Notify failures in alert channel
-      if: always() && failure()
+      if: always()
       env:
         SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
       run: |
         sudo apt-get install -y jq
-        FAILED_TESTS=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/results.json || echo "0")
-        TOTAL_TESTS=$(jq '[.. | .tests? | select(. != null) | .[]] | length' playwright-report/results.json || echo "0")
-        ALERT_PAYLOAD='{"text": ":warning: Playwright failed ('"$FAILED_TESTS"'/'"$TOTAL_TESTS"'). <@U09UE83AWGP>"}'
-        curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" $SLACK_FAILURE_WEBHOOK_URL
+        FAILED_TESTS=$(jq '.stats.unexpected // 0' playwright-report/results.json || echo "0")
+        if [ "$FAILED_TESTS" -gt 0 ] && [ -n "$SLACK_FAILURE_WEBHOOK_URL" ]; then
+          TOTAL_TESTS=$(jq '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped' playwright-report/results.json || echo "0")
+          ALERT_PAYLOAD='{"text": "🚨 *PROD ALERT:* Playwright E2E tests detected '"$FAILED_TESTS"' failure(s) out of '"$TOTAL_TESTS"' total tests. <@U09UE83AWGP>\n<https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View HTML Failure Report>"}'
+          curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
+        fi
 
     - name: Upload Final Consolidated Report
       uses: actions/upload-artifact@v4
