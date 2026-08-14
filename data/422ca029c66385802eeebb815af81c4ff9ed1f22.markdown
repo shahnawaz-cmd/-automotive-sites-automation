@@ -1,0 +1,408 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_14 EU VIN confirmation flow
+- Location: tests/global_case_verification.spec.ts:212:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Back" [ref=e8]:
+          - img [ref=e9]
+          - text: Back
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - heading "Update Vehicle Details" [level=2] [ref=e13]
+            - paragraph [ref=e14]: Easily edit and update your vehicle's Year/Make/Model/Trim information.
+          - generic [ref=e15]:
+            - generic [ref=e16]:
+              - generic [ref=e17]:
+                - generic [ref=e18]: Year*
+                - combobox [expanded] [ref=e20]:
+                  - generic [ref=e21]: Select Year
+                  - img [ref=e22]
+              - generic [ref=e24]:
+                - generic [ref=e25]: Make*
+                - combobox [ref=e27]:
+                  - generic [ref=e28]: Select Make
+                  - img [ref=e29]
+              - generic [ref=e31]:
+                - generic [ref=e32]: Model*
+                - combobox [ref=e34]:
+                  - generic [ref=e35]: Select Model
+                  - img [ref=e36]
+              - generic [ref=e38]:
+                - generic [ref=e39]: Trim*
+                - combobox [ref=e41]:
+                  - generic [ref=e42]: Select Trim
+                  - img [ref=e43]
+            - button "Update Vehicle Details" [ref=e45]
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "We found historical records for the VIN# SHHEU88701U002015" [level=4] [ref=e48]
+          - generic [ref=e49]:
+            - generic [ref=e54]:
+              - heading "Honda Civic" [level=2] [ref=e56]
+              - generic [ref=e57]:
+                - generic [ref=e58]:
+                  - generic [ref=e59]: Engine Type
+                  - generic [ref=e60]: L4
+                - generic [ref=e61]:
+                  - generic [ref=e62]: Transmission
+                  - generic [ref=e63]: 4-Speed Automatic
+                - generic [ref=e64]:
+                  - generic [ref=e65]: Drive Type
+                  - generic [ref=e66]: FWD
+                - generic [ref=e67]:
+                  - generic [ref=e68]: Fuel Type
+                  - generic [ref=e69]: Gasoline
+                - generic [ref=e70]:
+                  - generic [ref=e71]: Doors
+                  - generic [ref=e72]: "5"
+                - generic [ref=e73]:
+                  - generic [ref=e74]: Standard Seating
+                  - generic [ref=e75]: "5"
+                - generic [ref=e76]:
+                  - generic [ref=e77]: Horsepower
+                  - generic [ref=e78]: "110"
+                - generic [ref=e79]:
+                  - generic [ref=e80]: Body Type
+                  - generic [ref=e81]: hatchback/wagon
+            - generic [ref=e82]:
+              - generic [ref=e85]:
+                - heading "Reveal the Past. Pick Your Plan." [level=1] [ref=e86]
+                - generic [ref=e88]:
+                  - generic [ref=e89]:
+                    - 'radio "Most Popular 2 Vehicle Reports You can also check motorbikes, trucks, etc. €8.50 /Report You Pay: €17 €19.96 Save 15% Vehicle Details Title information Service history documentation Manufacturer & General Info" [ref=e90] [cursor=pointer]':
+                      - paragraph [ref=e92]: Most Popular
+                      - generic [ref=e94]:
+                        - generic [ref=e95]:
+                          - heading "2 Vehicle Reports" [level=3] [ref=e96]
+                          - paragraph [ref=e97]: You can also check motorbikes, trucks, etc.
+                        - generic [ref=e98]:
+                          - generic [ref=e99]:
+                            - generic [ref=e100]: €8.50
+                            - generic [ref=e101]: /Report
+                          - generic [ref=e102]:
+                            - generic [ref=e103]:
+                              - generic [ref=e104]: "You Pay:"
+                              - generic [ref=e105]: €17
+                              - generic [ref=e106]: €19.96
+                            - paragraph [ref=e107]: Save 15%
+                        - list [ref=e110]:
+                          - listitem [ref=e111]: Vehicle Details
+                          - listitem [ref=e112]: Title information
+                          - listitem [ref=e113]: Service history documentation
+                          - listitem [ref=e114]: Manufacturer & General Info
+                    - radio "78% Cheaper Than Carfax 1 Vehicle Report You can also check motorbikes, trucks, etc. €9.98 /Report Full Price Vehicle Details Title information Service history documentation Manufacturer & General Info" [checked] [ref=e115] [cursor=pointer]:
+                      - paragraph [ref=e117]: 78% Cheaper Than Carfax
+                      - generic [ref=e119]:
+                        - generic [ref=e120]:
+                          - heading "1 Vehicle Report" [level=3] [ref=e121]
+                          - paragraph [ref=e122]: You can also check motorbikes, trucks, etc.
+                        - generic [ref=e123]:
+                          - generic [ref=e124]:
+                            - generic [ref=e125]: €9.98
+                            - generic [ref=e126]: /Report
+                          - paragraph [ref=e128]: Full Price
+                        - list [ref=e131]:
+                          - listitem [ref=e132]: Vehicle Details
+                          - listitem [ref=e133]: Title information
+                          - listitem [ref=e134]: Service history documentation
+                          - listitem [ref=e135]: Manufacturer & General Info
+                  - button "See more packages & save up to 85%" [ref=e136]:
+                    - generic [ref=e137]:
+                      - img [ref=e139]
+                      - generic [ref=e141]: See more packages & save up to 85%
+                    - generic:
+                      - img
+                  - generic [ref=e143]:
+                    - generic [ref=e145]:
+                      - generic [ref=e147]: Save 50%
+                      - button "Get a window sticker just for" [ref=e148]:
+                        - generic [ref=e150]:
+                          - img [ref=e152]
+                          - paragraph [ref=e154]: Get a window sticker just for €4.99 €9.98
+                    - paragraph [ref=e155] [cursor=pointer]:
+                      - link "View Sample Window Sticker" [ref=e156]:
+                        - /url: https://vehiclehistory.eu/sticker/vin/WF0PXXGCHPKP11608-B4D7B4D7-0F0F-BC0D-5C6B-10DB7A44C054
+                  - button "Access Records" [ref=e158]:
+                    - generic [ref=e160]: Access Records
+                    - img [ref=e161]
+              - generic [ref=e163]:
+                - heading "See Why People Love Us" [level=2] [ref=e164]
+                - generic [ref=e167]:
+                  - img [ref=e169]
+                  - generic [ref=e171]:
+                    - generic [ref=e172]:
+                      - heading "Primo Rea" [level=4] [ref=e173]
+                      - generic [ref=e174]: Italy
+                    - paragraph [ref=e175]: Finding history for older cars had always been a challenge, but the team here handled it perfectly. They were professional, kept me informed throughout, and provided the precise information I was looking for. A trustworthy service for vehicle history.
+                - generic [ref=e177]:
+                  - generic [ref=e178]:
+                    - img [ref=e179]
+                    - generic [ref=e181]: Happy customers across the globe
+                  - generic [ref=e182]:
+                    - img [ref=e183]
+                    - generic [ref=e185]: Instant access
+                  - generic [ref=e186]:
+                    - img [ref=e187]
+                    - generic [ref=e189]: Secure checkout
+                  - generic [ref=e190]:
+                    - img [ref=e191]
+                    - generic [ref=e193]: Downloadable PDF
+              - generic [ref=e194]:
+                - heading "Reveal Records for" [level=3] [ref=e195]
+                - generic [ref=e196]:
+                  - generic [ref=e199]:
+                    - img [ref=e201]
+                    - generic [ref=e204]:
+                      - generic [ref=e205]: Title Issues
+                      - button "Click to reveal details" [ref=e206] [cursor=pointer]
+                  - generic [ref=e209]:
+                    - img [ref=e211]
+                    - generic [ref=e214]:
+                      - generic [ref=e215]: Manufacturer Info
+                      - button "Click to reveal details" [ref=e216] [cursor=pointer]
+                  - generic [ref=e219]:
+                    - img [ref=e221]
+                    - generic [ref=e223]:
+                      - generic [ref=e224]: Performance and Emission
+                      - button "Click to reveal details" [ref=e225] [cursor=pointer]
+                  - generic [ref=e228]:
+                    - img [ref=e230]
+                    - generic [ref=e232]:
+                      - generic [ref=e233]: Usage History
+                      - button "Click to reveal details" [ref=e234] [cursor=pointer]
+              - generic [ref=e235]:
+                - heading "We Check Records for" [level=2] [ref=e236]
+                - generic [ref=e237]:
+                  - generic [ref=e238]:
+                    - img [ref=e239]
+                    - generic [ref=e242]: Title Record
+                  - generic [ref=e243]:
+                    - img [ref=e244]
+                    - generic [ref=e247]: Accident Record
+                  - generic [ref=e248]:
+                    - img [ref=e249]
+                    - generic [ref=e252]: Auction Record
+                  - generic [ref=e253]:
+                    - img [ref=e254]
+                    - generic [ref=e257]: Vehicle Specification
+                - generic [ref=e258]:
+                  - button "Reveal all records" [ref=e259]
+                  - button "View Sample Report" [ref=e260]
+          - generic [ref=e262]:
+            - paragraph [ref=e267]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+            - separator [ref=e268]
+            - paragraph [ref=e270]: © 2026 Vehicle History Report - EU, All Rights Reserved
+        - region "Notifications alt+T"
+  - dialog [ref=e272]:
+    - generic [ref=e274]:
+      - img [ref=e275]
+      - textbox "Search..." [active] [ref=e278]
+    - generic [ref=e279]:
+      - button "2027" [ref=e280]
+      - button "2026" [ref=e281]
+      - button "2025" [ref=e282]
+      - button "2024" [ref=e283]
+      - button "2023" [ref=e284]
+      - button "2022" [ref=e285]
+      - button "2021" [ref=e286]
+      - button "2020" [ref=e287]
+      - button "2019" [ref=e288]
+      - button "2018" [ref=e289]
+      - button "2017" [ref=e290]
+      - button "2016" [ref=e291]
+      - button "2015" [ref=e292]
+      - button "2014" [ref=e293]
+      - button "2013" [ref=e294]
+      - button "2012" [ref=e295]
+      - button "2011" [ref=e296]
+      - button "2010" [ref=e297]
+      - button "2009" [ref=e298]
+      - button "2008" [ref=e299]
+      - button "2007" [ref=e300]
+      - button "2006" [ref=e301]
+      - button "2005" [ref=e302]
+      - button "2004" [ref=e303]
+      - button "2003" [ref=e304]
+      - button "2002" [ref=e305]
+      - button "2001" [ref=e306]
+      - button "2000" [ref=e307]
+      - button "1999" [ref=e308]
+      - button "1998" [ref=e309]
+      - button "1997" [ref=e310]
+      - button "1996" [ref=e311]
+      - button "1995" [ref=e312]
+      - button "1994" [ref=e313]
+      - button "1993" [ref=e314]
+      - button "1992" [ref=e315]
+      - button "1991" [ref=e316]
+      - button "1990" [ref=e317]
+      - button "1989" [ref=e318]
+      - button "1988" [ref=e319]
+      - button "1987" [ref=e320]
+      - button "1986" [ref=e321]
+      - button "1985" [ref=e322]
+      - button "1984" [ref=e323]
+      - button "1983" [ref=e324]
+      - button "1982" [ref=e325]
+      - button "1981" [ref=e326]
+      - button "1980" [ref=e327]
+      - button "1979" [ref=e328]
+      - button "1978" [ref=e329]
+      - button "1977" [ref=e330]
+      - button "1976" [ref=e331]
+      - button "1975" [ref=e332]
+      - button "1974" [ref=e333]
+      - button "1973" [ref=e334]
+      - button "1972" [ref=e335]
+      - button "1971" [ref=e336]
+      - button "1970" [ref=e337]
+      - button "1969" [ref=e338]
+      - button "1968" [ref=e339]
+      - button "1967" [ref=e340]
+      - button "1966" [ref=e341]
+      - button "1965" [ref=e342]
+      - button "1964" [ref=e343]
+      - button "1963" [ref=e344]
+      - button "1962" [ref=e345]
+      - button "1961" [ref=e346]
+      - button "1960" [ref=e347]
+      - button "1959" [ref=e348]
+      - button "1958" [ref=e349]
+      - button "1957" [ref=e350]
+      - button "1956" [ref=e351]
+      - button "1955" [ref=e352]
+      - button "1954" [ref=e353]
+      - button "1953" [ref=e354]
+      - button "1952" [ref=e355]
+      - button "1951" [ref=e356]
+      - button "1950" [ref=e357]
+      - button "1949" [ref=e358]
+      - button "1948" [ref=e359]
+      - button "1947" [ref=e360]
+      - button "1946" [ref=e361]
+      - button "1945" [ref=e362]
+      - button "1944" [ref=e363]
+      - button "1943" [ref=e364]
+      - button "1942" [ref=e365]
+      - button "1941" [ref=e366]
+      - button "1940" [ref=e367]
+      - button "1939" [ref=e368]
+      - button "1938" [ref=e369]
+      - button "1937" [ref=e370]
+      - button "1936" [ref=e371]
+      - button "1935" [ref=e372]
+      - button "1934" [ref=e373]
+      - button "1933" [ref=e374]
+      - button "1932" [ref=e375]
+      - button "1931" [ref=e376]
+      - button "1930" [ref=e377]
+      - button "1929" [ref=e378]
+      - button "1928" [ref=e379]
+      - button "1927" [ref=e380]
+      - button "1926" [ref=e381]
+      - button "1925" [ref=e382]
+      - button "1924" [ref=e383]
+      - button "1923" [ref=e384]
+      - button "1922" [ref=e385]
+      - button "1921" [ref=e386]
+      - button "1920" [ref=e387]
+      - button "1919" [ref=e388]
+      - button "1918" [ref=e389]
+      - button "1917" [ref=e390]
+      - button "1916" [ref=e391]
+      - button "1915" [ref=e392]
+      - button "1914" [ref=e393]
+      - button "1913" [ref=e394]
+      - button "1912" [ref=e395]
+      - button "1911" [ref=e396]
+      - button "1910" [ref=e397]
+      - button "1909" [ref=e398]
+      - button "1908" [ref=e399]
+      - button "1907" [ref=e400]
+      - button "1906" [ref=e401]
+      - button "1905" [ref=e402]
+      - button "1904" [ref=e403]
+      - button "1903" [ref=e404]
+      - button "1898" [ref=e405]
+  - generic [ref=e406]:
+    - iframe [ref=e407]:
+      - generic [active]:
+        - generic:
+          - main [ref=f1e2]:
+            - generic [ref=f1e3]:
+              - generic [ref=f1e5]:
+                - button "Back" [ref=f1e6] [cursor=pointer]:
+                  - img [ref=f1e7]
+                - button "Open menu" [ref=f1e9] [cursor=pointer]:
+                  - img [ref=f1e10]
+              - button "Richard Langridge, Press to collapse details" [ref=f1e12] [cursor=pointer]:
+                - generic [ref=f1e13]:
+                  - generic [ref=f1e14]:
+                    - generic [ref=f1e18]: R
+                    - generic [ref=f1e19]:
+                      - heading "Richard Langridge" [level=1] [ref=f1e20]
+                      - generic [ref=f1e21]: Support Agent
+                  - generic [ref=f1e22]:
+                    - button "Rate as good and open comment modal" [ref=f1e23]:
+                      - img [ref=f1e24]
+                    - button "Rate as bad and open comment modal" [ref=f1e27]:
+                      - img [ref=f1e28]
+              - generic [ref=f1e31]:
+                - button "Minimize window" [ref=f1e32] [cursor=pointer]:
+                  - img [ref=f1e33]
+                - button "Close the chat" [ref=f1e35] [cursor=pointer]:
+                  - img [ref=f1e36]
+            - generic [ref=f1e38]:
+              - grid [ref=f1e42]:
+                - row "👋 Need help with your vehicle report? I can also apply a special discount if you’d like. Should I do that for you? 👉 Reply \"YES\" for the special discount/promo code." [ref=f1e45]:
+                  - gridcell "👋 Need help with your vehicle report? I can also apply a special discount if you’d like. Should I do that for you? 👉 Reply \"YES\" for the special discount/promo code." [ref=f1e47]:
+                    - generic [ref=f1e49]:
+                      - generic [ref=f1e51]:
+                        - generic [ref=f1e52]: 👋 Need help with your vehicle report?
+                        - text: I can also apply a special discount if you’d like.
+                        - text: Should I do that for you?
+                        - generic [ref=f1e53]: 👉 Reply "YES" for the special discount/promo code.
+                      - status
+              - generic [ref=f1e57]:
+                - button "Send a file" [ref=f1e60] [cursor=pointer]:
+                  - img [ref=f1e61]
+                - textbox "Type in your message here" [ref=f1e63]
+                - button "Send a message" [disabled] [ref=f1e65]:
+                  - img [ref=f1e66]
+            - generic [ref=f1e68]:
+              - link "Powered by LiveChat":
+                - /url: https://www.livechat.com/powered-by-livechat/?utm_campaign=vehiclehistory.eu&utm_medium=referral&partner=vehiclehistory.eu&utm_source=chat_window
+                - generic: Powered by
+                - img "LiveChat":
+                  - img
+                  - img
+          - generic:
+            - log [ref=f1e69]
+            - log [ref=f1e70]
+            - log [ref=f1e71]
+            - log [ref=f1e72]
+    - generic [ref=e408]: New message
+```
