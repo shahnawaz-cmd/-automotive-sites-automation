@@ -1,0 +1,481 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_12 Classic editable specs feature validation
+- Location: tests/global_case_verification.spec.ts:165:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for getByLabel('Trim')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e8]:
+      - main [ref=e10]:
+        - generic [ref=e14]:
+          - img [ref=e15]
+          - heading "Success! We found detailed information for VIN# 242370B111347" [level=4] [ref=e17]:
+            - generic [ref=e18]: Success!
+            - text: We found detailed information for VIN# 242370B111347
+        - generic [ref=e19]:
+          - generic [ref=e21]:
+            - img "1961 AJS Model 16 350ms" [ref=e22]
+            - heading "1961 AJS Model 16 350ms" [level=1] [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e28]: Incorrect information?
+            - button "Click here to update" [active] [ref=e29]
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: Displacement
+              - generic [ref=e33]: 0.35 L
+            - generic [ref=e34]:
+              - generic [ref=e35]: Length
+              - generic [ref=e36]: 86.2 inches
+            - generic [ref=e37]:
+              - generic [ref=e38]: No. Of Gears
+              - generic [ref=e39]: "4"
+            - generic [ref=e40]:
+              - generic [ref=e41]: Weight
+              - generic [ref=e42]: 374.8 lbs
+            - generic [ref=e43]:
+              - generic [ref=e44]: Wheelbase
+              - generic [ref=e45]: 56 inches
+            - generic [ref=e46]:
+              - generic [ref=e47]: Width
+              - generic [ref=e48]: 28 inches
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - img [ref=e52]
+                - generic [ref=e54]:
+                  - generic [ref=e55]: Sales History
+                  - generic [ref=e56]: Reveal Records
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - generic [ref=e60]:
+                  - generic [ref=e61]: Auction Records
+                  - generic [ref=e62]: Reveal Records
+              - generic [ref=e63]:
+                - img [ref=e64]
+                - generic [ref=e66]:
+                  - generic [ref=e67]: Odometer Checks
+                  - generic [ref=e68]: Reveal Records
+              - generic [ref=e69]:
+                - img [ref=e70]
+                - generic [ref=e72]:
+                  - generic [ref=e73]: Damage Records
+                  - generic [ref=e74]: Reveal Records
+              - generic [ref=e75]:
+                - img [ref=e76]
+                - generic [ref=e78]:
+                  - generic [ref=e79]: Title Check
+                  - generic [ref=e80]: Reveal Records
+              - generic [ref=e81]:
+                - img [ref=e82]
+                - generic [ref=e84]:
+                  - generic [ref=e85]: Theft Records
+                  - generic [ref=e86]: Reveal Records
+              - generic [ref=e87]:
+                - img [ref=e88]
+                - generic [ref=e90]:
+                  - generic [ref=e91]: Lien/Loan Records
+                  - generic [ref=e92]: Reveal Records
+              - generic [ref=e93]:
+                - img [ref=e94]
+                - generic [ref=e96]:
+                  - generic [ref=e97]: MSRP
+                  - generic [ref=e98]: Reveal Records
+              - button "Reveal Records" [ref=e100]
+            - generic [ref=e101]:
+              - text: Market value
+              - paragraph [ref=e102]: This is the average price of the vehicle for a private or a dealership sale based on it's condition.
+              - generic [ref=e103]:
+                - generic [ref=e104] [cursor=pointer]:
+                  - generic [ref=e105]:
+                    - generic [ref=e106]: Outstanding
+                    - img [ref=e108]
+                  - generic [ref=e113]:
+                    - generic [ref=e114]: "Dealer Retail:"
+                    - text: $616,000
+                - generic [ref=e115] [cursor=pointer]:
+                  - generic [ref=e116]:
+                    - generic [ref=e117]: Clean
+                    - img [ref=e119]
+                  - generic [ref=e123]:
+                    - generic [ref=e124]: "Dealer Retail:"
+                    - text: $515,000
+                - generic [ref=e125] [cursor=pointer]:
+                  - generic [ref=e126]:
+                    - generic [ref=e127]: Average
+                    - img [ref=e129]
+                  - generic [ref=e133]:
+                    - generic [ref=e134]: "Dealer Retail:"
+                    - text: $410,000*
+                - generic [ref=e135] [cursor=pointer]:
+                  - generic [ref=e136]:
+                    - generic [ref=e137]: Rough
+                    - img [ref=e139]
+                  - generic [ref=e143]:
+                    - generic [ref=e144]: "Dealer Retail:"
+                    - text: $331,000
+      - generic [ref=e146]:
+        - heading "Unlock the history - Choose your package." [level=4] [ref=e147]
+        - generic [ref=e148]:
+          - radio "5 Reports 5 Reports $12.00 /Report You pay $59.99 $125 Save 52%" [ref=e150] [cursor=pointer]:
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - radio "5 Reports" [ref=e155]
+                - heading "5 Reports" [level=4] [ref=e156]
+              - generic [ref=e157]:
+                - generic [ref=e158]: $12.00
+                - subscript [ref=e159]: /Report
+              - generic [ref=e160]: You pay $59.99
+              - generic [ref=e161]:
+                - generic [ref=e162]: $125
+                - generic [ref=e163]: Save 52%
+          - radio "2 Reports 2 Reports $15.00 /Report You pay $29.99 $50 Save 40%" [ref=e165] [cursor=pointer]:
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - radio "2 Reports" [ref=e170]
+                - heading "2 Reports" [level=4] [ref=e171]
+              - generic [ref=e172]:
+                - generic [ref=e173]: $15.00
+                - subscript [ref=e174]: /Report
+              - generic [ref=e175]: You pay $29.99
+              - generic [ref=e176]:
+                - generic [ref=e177]: $50
+                - generic [ref=e178]: Save 40%
+          - radio "1 Report 1 Report $25 /Report You pay $25 45% Cheaper Than Carfax" [checked] [ref=e180] [cursor=pointer]:
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - radio "1 Report" [checked] [ref=e185]
+                - heading "1 Report" [level=4] [ref=e186]
+              - generic [ref=e187]:
+                - generic [ref=e188]: $25
+                - subscript [ref=e189]: /Report
+              - generic [ref=e190]: You pay $25
+              - generic [ref=e192]: 45% Cheaper Than Carfax
+          - radio "Best Value Unlimited VIN Checks Unlimited VIN Checks $29.99 /subscription Why choose this plan? Plan information" [ref=e195] [cursor=pointer]:
+            - generic [ref=e197]: Best Value
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - radio "Unlimited VIN Checks" [ref=e200]
+                - heading "Unlimited VIN Checks" [level=4] [ref=e201]
+              - generic [ref=e202]:
+                - generic [ref=e203]: $29.99
+                - subscript [ref=e204]: /subscription
+            - generic [ref=e208]:
+              - generic [ref=e209]: Why choose this plan?
+              - button "Plan information" [ref=e211]: "?"
+        - checkbox "Save 50% 9.99 Add a window sticker to your purchase $9.99$9.99 View Sample Window Sticker" [checked] [ref=e212] [cursor=pointer]:
+          - generic [ref=e213]:
+            - generic [ref=e214]: Save 50%
+            - checkbox "9.99" [checked] [ref=e215]
+            - generic [ref=e216]:
+              - text: Add a window sticker to your purchase
+              - generic [ref=e217]: $9.99$9.99
+          - link "View Sample Window Sticker" [ref=e219]:
+            - /url: https://app.motorcyclevinlookup.com/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
+        - button "Access Records" [ref=e221]:
+          - img [ref=e222]
+          - text: Access Records
+          - img [ref=e225]
+        - paragraph [ref=e228]:
+          - text: By selecting "Access Records" you are confirming that you have read and agree to Motorcycle VIN Lookup
+          - link "Terms of Use" [ref=e229] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com//terms-and-conditions
+          - text: and
+          - link "Privacy Policy" [ref=e230] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com//privacy
+          - text: .
+        - img "Trustpilot" [ref=e232]
+        - generic [ref=e234]:
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - img [ref=e237]
+              - paragraph [ref=e240]: Happy customers across the globe
+            - generic [ref=e241]:
+              - img [ref=e242]
+              - paragraph [ref=e245]: Instant access
+            - generic [ref=e246]:
+              - img [ref=e247]
+              - paragraph [ref=e250]: Secure checkout
+            - generic [ref=e251]:
+              - img [ref=e252]
+              - paragraph [ref=e256]: Downloadable PDF
+          - blockquote [ref=e258]:
+            - text: "\"They did a fabulous job with GREAT customer service. Once I entered the VIN number and after only a few minutes my report was in my inbox. The next day I had a follow-up call to ensure I had received everything I ordered and was happy with their service. A very customer-oriented businesses. I only wish there were more companies like this.\""
+            - contentinfo [ref=e259]: — Brian Striemer
+          - generic [ref=e261]:
+            - img "Trustpilot 4.8 stars" [ref=e262]
+            - generic [ref=e263]: 4.8/5
+            - link "Trustpilot" [ref=e264] [cursor=pointer]:
+              - /url: https://www.trustpilot.com/review/detailedvehiclehistory.com
+          - generic [ref=e265]:
+            - generic [ref=e266]: "We check for:"
+            - generic [ref=e267]:
+              - generic [ref=e268]:
+                - img [ref=e269]
+                - generic [ref=e271]: Ownership History
+              - generic [ref=e272]:
+                - img [ref=e273]
+                - generic [ref=e275]: Junk & Salvage
+              - generic [ref=e276]:
+                - img [ref=e277]
+                - generic [ref=e279]: Vehicle Specifications
+              - generic [ref=e280]:
+                - img [ref=e281]
+                - generic [ref=e283]: Odometer Readings
+              - generic [ref=e284]:
+                - img [ref=e285]
+                - generic [ref=e287]: Total Loss History
+              - generic [ref=e288]:
+                - img [ref=e289]
+                - generic [ref=e291]: Accident History
+              - generic [ref=e292]:
+                - img [ref=e293]
+                - generic [ref=e295]: Structural Damage
+              - generic [ref=e296]:
+                - img [ref=e297]
+                - generic [ref=e299]: Recalls & Defects
+              - generic [ref=e300]:
+                - img [ref=e301]
+                - generic [ref=e303]: Title Information
+              - generic [ref=e304]:
+                - img [ref=e305]
+                - generic [ref=e307]: 60 + Problem Checks
+              - generic [ref=e308]:
+                - img [ref=e309]
+                - generic [ref=e311]: Taxi, Lease, Police Use
+              - generic [ref=e312]:
+                - img [ref=e313]
+                - generic [ref=e315]: Loan Verifications
+          - link "View Sample Report" [ref=e316] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com/report/vin/2T1BURHE0FC320645
+          - generic [ref=e317]:
+            - img "SSL Security" [ref=e318]
+            - paragraph [ref=e319]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+          - separator [ref=e320]
+          - paragraph [ref=e322]: © 2026 Motorcycle VIN Lookup, All Rights Reserved
+  - generic [ref=e323]:
+    - iframe [ref=e324]:
+      - generic [active]:
+        - generic:
+          - main [ref=f1e2]:
+            - generic [ref=f1e3]:
+              - generic [ref=f1e5]:
+                - button "Back" [ref=f1e6] [cursor=pointer]:
+                  - img [ref=f1e7]
+                - button "Open menu" [ref=f1e9] [cursor=pointer]:
+                  - img [ref=f1e10]
+              - button "Richard Langridge, Press to collapse details" [ref=f1e12] [cursor=pointer]:
+                - generic [ref=f1e13]:
+                  - generic [ref=f1e14]:
+                    - generic [ref=f1e18]: R
+                    - generic [ref=f1e19]:
+                      - heading "Richard Langridge" [level=1] [ref=f1e20]
+                      - generic [ref=f1e21]: Support Agent
+                  - generic [ref=f1e22]:
+                    - button "Rate as good and open comment modal" [ref=f1e23]:
+                      - img [ref=f1e24]
+                    - button "Rate as bad and open comment modal" [ref=f1e27]:
+                      - img [ref=f1e28]
+              - generic [ref=f1e31]:
+                - button "Minimize window" [ref=f1e32] [cursor=pointer]:
+                  - img [ref=f1e33]
+                - button "Close the chat" [ref=f1e35] [cursor=pointer]:
+                  - img [ref=f1e36]
+            - generic [ref=f1e38]:
+              - grid [ref=f1e42]:
+                - row "👋 Need help with your vehicle report? I can also apply a special discount if you’d like. Should I do that for you? 👉 Reply \"YES\" for the special discount/promo code." [ref=f1e45]:
+                  - gridcell "👋 Need help with your vehicle report? I can also apply a special discount if you’d like. Should I do that for you? 👉 Reply \"YES\" for the special discount/promo code." [ref=f1e47]:
+                    - generic [ref=f1e49]:
+                      - generic [ref=f1e51]:
+                        - generic [ref=f1e52]: 👋 Need help with your vehicle report?
+                        - text: I can also apply a special discount if you’d like.
+                        - text: Should I do that for you?
+                        - generic [ref=f1e53]: 👉 Reply "YES" for the special discount/promo code.
+                      - status
+              - generic [ref=f1e57]:
+                - button "Send a file" [ref=f1e60] [cursor=pointer]:
+                  - img [ref=f1e61]
+                - textbox "Type in your message here" [ref=f1e63]
+                - button "Send a message" [disabled] [ref=f1e65]:
+                  - img [ref=f1e66]
+            - generic [ref=f1e68]:
+              - link "Powered by LiveChat":
+                - /url: https://www.livechat.com/powered-by-livechat/?utm_campaign=motorcyclevinlookup.com&utm_medium=referral&partner=motorcyclevinlookup.com&utm_source=chat_window
+                - generic: Powered by
+                - img "LiveChat":
+                  - img
+                  - img
+          - generic:
+            - log [ref=f1e69]
+            - log [ref=f1e70]
+            - log [ref=f1e71]
+            - log [ref=f1e72]
+    - generic [ref=e325]: New message
+```
+
+# Test source
+
+```ts
+  1   | import { Page } from '@playwright/test';
+  2   | import { Actor } from '../actors/Actor';
+  3   | import { generateClassicNumericVin } from './vinHelper';
+  4   | 
+  5   | export class ClassicEditableFeatureYMM {
+  6   |   private timeout = process.env.CI ? 60000 : 90000;
+  7   | 
+  8   |   async run(page: Page) {
+  9   |     const updateBtn = page.getByRole('button', { name: 'Click here to update' });
+  10  |     await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  11  |     await updateBtn.click();
+  12  | 
+  13  |     const ymmBtn = page.getByRole('button', { name: 'Year, Make & Model The' });
+  14  |     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  15  |     await ymmBtn.click();
+  16  | 
+  17  |     // 30s delay to allow popup stabilization as requested
+  18  |     await page.waitForTimeout(30000);
+  19  | 
+  20  |     const yearBox = page.getByRole('textbox', { name: 'Select year' });
+  21  |     await yearBox.waitFor({ state: 'visible', timeout: this.timeout });
+  22  |     await yearBox.click();
+  23  |     await page.getByRole('button', { name: '1923' }).first().click();
+  24  | 
+  25  |     await page.getByRole('textbox', { name: 'Select make' }).click();
+  26  |     await page.getByRole('button', { name: 'Ambassador' }).first().click();
+  27  | 
+  28  |     await page.getByRole('textbox', { name: 'Select model' }).click();
+  29  |     await page.getByRole('button', { name: 'R', exact: true }).first().click();
+  30  | 
+  31  |     await page.getByRole('textbox', { name: 'Select trim' }).click();
+  32  |     await page.getByRole('button', { name: 'Touring' }).first().click();
+  33  | 
+  34  |     await page.getByRole('button', { name: 'Continue' }).click();
+  35  |     await page.getByRole('button', { name: 'Confirm & Get Records' }).click();
+  36  |   }
+  37  | }
+  38  | 
+  39  | export class Case5VerifyClassicEditableFeature {
+  40  |   private timeout = process.env.CI ? 60000 : 90000;
+  41  | 
+  42  |   async runDropdownUpdate(page: Page) {
+  43  |     const updateBtn = page.getByRole('button', { name: 'Click here to update' });
+  44  |     await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  45  |     await updateBtn.click({ force: true });
+  46  | 
+  47  |     const ymmBtn = page.getByRole('button', { name: 'Update Year, Make and Model' });
+  48  |     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  49  |     await ymmBtn.click({ force: true });
+  50  | 
+  51  |     const yearLabel = page.getByLabel('Year');
+  52  |     await yearLabel.waitFor({ state: 'visible', timeout: this.timeout });
+  53  |     await yearLabel.click({ force: true });
+  54  |     await page.getByLabel('1961').first().click({ force: true });
+  55  | 
+  56  |     await page.getByLabel('Make').click({ force: true });
+  57  |     await page.getByLabel('AJS').first().click({ force: true });
+  58  | 
+  59  |     await page.getByLabel('Model').click({ force: true });
+  60  |     await page.getByText('Model 16 350ms').first().click({ force: true });
+  61  | 
+> 62  |     await page.getByLabel('Trim').click({ force: true });
+      |                                   ^ Error: locator.click: Test timeout of 90000ms exceeded.
+  63  |     await page.getByText('Base', { exact: true }).first().click({ force: true });
+  64  | 
+  65  |     await page.getByRole('button', { name: 'Continue' }).click({ force: true });
+  66  |     await page.getByRole('button', { name: 'Confirm Selection' }).click({ force: true });
+  67  |     await page.getByRole('button', { name: 'Submit' }).click({ force: true });
+  68  |     await page.waitForURL(/cv=/, { timeout: this.timeout * 2 });
+  69  |   }
+  70  | }
+  71  | 
+  72  | export class ClassicEditableSpecs {
+  73  |   private timeout = process.env.CI ? 90000 : 45000;
+  74  | 
+  75  |   async performAs(actor: Actor) {
+  76  |     const page = actor.getPage();
+  77  |     await page.goto('/');
+  78  |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  79  | 
+  80  |     const cookies = await page.context().cookies();
+  81  |     const isStreaming = cookies.some(c => c.name === 'checkout_flow' && c.value === 'streaming');
+  82  | 
+  83  |     const classicVin = generateClassicNumericVin('242370B111346');
+  84  | 
+  85  |     // Robust selector logic for Infiniti and other layouts
+  86  |     const vinInput = page.getByRole('textbox', { name: 'Vehicle Identification Number' })
+  87  |       .or(page.getByRole('textbox', { name: 'Enter VIN Number' }))
+  88  |       .or(page.getByRole('textbox', { name: 'Enter Your VIN' }))
+  89  |       .or(page.locator('input[name="vin"]'))
+  90  |       .or(page.getByPlaceholder(/enter vin/i))
+  91  |       .first();
+  92  | 
+  93  |     await vinInput.waitFor({ state: 'visible', timeout: this.timeout / 3 });
+  94  |     await vinInput.fill(classicVin);
+  95  | 
+  96  |     const submitBtn = page.getByRole('button', { name: /search|decode|get window sticker/i }).first()
+  97  |       .or(page.locator('button[type="submit"]')).first();
+  98  |     await submitBtn.click();
+  99  | 
+  100 |     // Support preview, sticker, ws-preview, and license-preview URLs
+  101 |     await page.waitForURL(/.*(preview|sticker|license-preview|ws-preview).*/, { timeout: this.timeout });
+  102 | 
+  103 |     // Enable API network listener to capture relevant response URLs and payloads
+  104 |     page.on('response', async (response) => {
+  105 |       const url = response.url();
+  106 | 
+  107 |       // Ignore logging/telemetry endpoints as they are not needed
+  108 |       if (url.includes('/logs') || url.includes('/telemetry')) {
+  109 |         return;
+  110 |       }
+  111 | 
+  112 |       const contentType = response.headers()['content-type'] || '';
+  113 |       const resourceType = response.request().resourceType();
+  114 | 
+  115 |       if (resourceType === 'fetch' || resourceType === 'xhr' || contentType.includes('application/json')) {
+  116 |         try {
+  117 |           const status = response.status();
+  118 |           const jsonBody = await response.json();
+  119 |           console.log(`🌐 [API Response] URL: ${url} (Status: ${status})`);
+  120 |           console.log(`📦 [JSON Data]:\n${JSON.stringify(jsonBody, null, 2)}`);
+  121 |         } catch (e) {
+  122 |           // Handled response payload that is not JSON or cannot be read
+  123 |         }
+  124 |       }
+  125 |     });
+  126 | 
+  127 |     if (isStreaming) {
+  128 |       await new ClassicEditableFeatureYMM().run(page);
+  129 |     } else {
+  130 |       await new Case5VerifyClassicEditableFeature().runDropdownUpdate(page);
+  131 |     }
+  132 |   }
+  133 | }
+  134 | 
+```
