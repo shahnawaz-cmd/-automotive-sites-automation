@@ -1,0 +1,381 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_14 EU VIN confirmation flow
+- Location: tests/global_case_verification.spec.ts:212:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Back" [ref=e8]:
+          - img [ref=e9]
+          - text: Back
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - heading "Update Vehicle Details" [level=2] [ref=e13]
+            - paragraph [ref=e14]: Easily edit and update your vehicle's Year/Make/Model/Trim information.
+          - generic [ref=e15]:
+            - generic [ref=e16]:
+              - generic [ref=e17]:
+                - generic [ref=e18]: Year*
+                - combobox [ref=e20]:
+                  - generic [ref=e21]: "2015"
+                  - img [ref=e22]
+              - generic [ref=e24]:
+                - generic [ref=e25]: Make*
+                - combobox [expanded] [ref=e27]:
+                  - generic [ref=e28]: Select Make
+                  - img [ref=e29]
+              - generic [ref=e31]:
+                - generic [ref=e32]: Model*
+                - combobox [ref=e34]:
+                  - generic [ref=e35]: Select Model
+                  - img [ref=e36]
+              - generic [ref=e38]:
+                - generic [ref=e39]: Trim*
+                - combobox [ref=e41]:
+                  - generic [ref=e42]: Select Trim
+                  - img [ref=e43]
+            - button "Update Vehicle Details" [ref=e45]
+      - generic [ref=e47]:
+        - main [ref=e49]:
+          - generic [ref=e53]:
+            - img [ref=e54]
+            - heading "Success! We found detailed information for VIN# SHHEU88701U002015" [level=4] [ref=e56]:
+              - generic [ref=e57]: Success!
+              - text: We found detailed information for VIN# SHHEU88701U002015
+          - generic [ref=e58]:
+            - generic [ref=e60]:
+              - img "Alfa Romeo Giulietta II" [ref=e61]
+              - heading "Alfa Romeo Giulietta II" [level=1] [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]: Trim
+                - generic [ref=e66]: 1.4 GLP Turbo 120HP Distinctive
+              - generic [ref=e67]:
+                - generic [ref=e68]: Transmission
+                - generic [ref=e69]: Manual
+              - generic [ref=e70]:
+                - generic [ref=e71]: Doors
+                - generic [ref=e72]: "5"
+              - generic [ref=e73]:
+                - generic [ref=e74]: Manufacturer
+                - generic [ref=e75]: Alfa Romeo
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - img [ref=e79]
+                - generic [ref=e81]:
+                  - generic [ref=e82]: Sales History
+                  - generic [ref=e83]: Reveal Records
+              - generic [ref=e84]:
+                - img [ref=e85]
+                - generic [ref=e87]:
+                  - generic [ref=e88]: Auction Records
+                  - generic [ref=e89]: Reveal Records
+              - generic [ref=e90]:
+                - img [ref=e91]
+                - generic [ref=e93]:
+                  - generic [ref=e94]: Odometer Checks
+                  - generic [ref=e95]: Reveal Records
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Damage Records
+                  - generic [ref=e101]: Reveal Records
+              - generic [ref=e102]:
+                - img [ref=e103]
+                - generic [ref=e105]:
+                  - generic [ref=e106]: Title Check
+                  - generic [ref=e107]: Reveal Records
+              - generic [ref=e108]:
+                - img [ref=e109]
+                - generic [ref=e111]:
+                  - generic [ref=e112]: Theft Records
+                  - generic [ref=e113]: Reveal Records
+              - generic [ref=e114]:
+                - img [ref=e115]
+                - generic [ref=e117]:
+                  - generic [ref=e118]: Lien/Loan Records
+                  - generic [ref=e119]: Reveal Records
+              - generic [ref=e120]:
+                - img [ref=e121]
+                - generic [ref=e123]:
+                  - generic [ref=e124]: MSRP
+                  - generic [ref=e125]: Reveal Records
+              - button "Reveal Records" [ref=e127]
+        - generic [ref=e129]:
+          - heading "Unlock the history - Choose your package." [level=4] [ref=e130]
+          - generic [ref=e131]:
+            - radio "5 Reports 5 Reports $12.00 /Report You pay $59.99 $125 Save 52%" [ref=e133] [cursor=pointer]:
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - radio "5 Reports" [ref=e138]
+                  - heading "5 Reports" [level=4] [ref=e139]
+                - generic [ref=e140]:
+                  - generic [ref=e141]: $12.00
+                  - subscript [ref=e142]: /Report
+                - generic [ref=e143]: You pay $59.99
+                - generic [ref=e144]:
+                  - generic [ref=e145]: $125
+                  - generic [ref=e146]: Save 52%
+            - radio "2 Reports 2 Reports $15.00 /Report You pay $29.99 $50 Save 40%" [ref=e148] [cursor=pointer]:
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - radio "2 Reports" [ref=e153]
+                  - heading "2 Reports" [level=4] [ref=e154]
+                - generic [ref=e155]:
+                  - generic [ref=e156]: $15.00
+                  - subscript [ref=e157]: /Report
+                - generic [ref=e158]: You pay $29.99
+                - generic [ref=e159]:
+                  - generic [ref=e160]: $50
+                  - generic [ref=e161]: Save 40%
+            - radio "1 Report 1 Report $25 /Report You pay $25 45% Cheaper Than Carfax" [checked] [ref=e163] [cursor=pointer]:
+              - generic [ref=e165]:
+                - generic [ref=e166]:
+                  - radio "1 Report" [checked] [ref=e168]
+                  - heading "1 Report" [level=4] [ref=e169]
+                - generic [ref=e170]:
+                  - generic [ref=e171]: $25
+                  - subscript [ref=e172]: /Report
+                - generic [ref=e173]: You pay $25
+                - generic [ref=e175]: 45% Cheaper Than Carfax
+            - radio "Best Value Unlimited VIN Checks Unlimited VIN Checks $29.99 /subscription Why choose this plan? Plan information" [ref=e178] [cursor=pointer]:
+              - generic [ref=e180]: Best Value
+              - generic [ref=e181]:
+                - generic [ref=e182]:
+                  - radio "Unlimited VIN Checks" [ref=e183]
+                  - heading "Unlimited VIN Checks" [level=4] [ref=e184]
+                - generic [ref=e185]:
+                  - generic [ref=e186]: $29.99
+                  - subscript [ref=e187]: /subscription
+              - generic [ref=e191]:
+                - generic [ref=e192]: Why choose this plan?
+                - button "Plan information" [ref=e194]: "?"
+          - checkbox "Save 50% 9.99 Add a window sticker to your purchase $9.99$9.99 View Sample Window Sticker" [checked] [ref=e195] [cursor=pointer]:
+            - generic [ref=e196]:
+              - generic [ref=e197]: Save 50%
+              - checkbox "9.99" [checked] [ref=e198]
+              - generic [ref=e199]:
+                - text: Add a window sticker to your purchase
+                - generic [ref=e200]: $9.99$9.99
+            - link "View Sample Window Sticker" [ref=e202]:
+              - /url: https://app.motorcyclevinlookup.com/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
+          - button "Access Records" [ref=e204]:
+            - img [ref=e205]
+            - text: Access Records
+            - img [ref=e208]
+          - paragraph [ref=e211]:
+            - text: By selecting "Access Records" you are confirming that you have read and agree to Motorcycle VIN Lookup
+            - link "Terms of Use" [ref=e212] [cursor=pointer]:
+              - /url: https://app.motorcyclevinlookup.com//terms-and-conditions
+            - text: and
+            - link "Privacy Policy" [ref=e213] [cursor=pointer]:
+              - /url: https://app.motorcyclevinlookup.com//privacy
+            - text: .
+          - img "Trustpilot" [ref=e215]
+          - generic [ref=e217]:
+            - generic [ref=e218]:
+              - generic [ref=e219]:
+                - img [ref=e220]
+                - paragraph [ref=e223]: Happy customers across the globe
+              - generic [ref=e224]:
+                - img [ref=e225]
+                - paragraph [ref=e228]: Instant access
+              - generic [ref=e229]:
+                - img [ref=e230]
+                - paragraph [ref=e233]: Secure checkout
+              - generic [ref=e234]:
+                - img [ref=e235]
+                - paragraph [ref=e239]: Downloadable PDF
+            - blockquote [ref=e241]:
+              - text: "\"They did a fabulous job with GREAT customer service. Once I entered the VIN number and after only a few minutes my report was in my inbox. The next day I had a follow-up call to ensure I had received everything I ordered and was happy with their service. A very customer-oriented businesses. I only wish there were more companies like this.\""
+              - contentinfo [ref=e242]: — Brian Striemer
+            - generic [ref=e244]:
+              - img "Trustpilot 4.8 stars" [ref=e245]
+              - generic [ref=e246]: 4.8/5
+              - link "Trustpilot" [ref=e247] [cursor=pointer]:
+                - /url: https://www.trustpilot.com/review/detailedvehiclehistory.com
+            - generic [ref=e248]:
+              - generic [ref=e249]: "We check for:"
+              - generic [ref=e250]:
+                - generic [ref=e251]:
+                  - img [ref=e252]
+                  - generic [ref=e254]: Ownership History
+                - generic [ref=e255]:
+                  - img [ref=e256]
+                  - generic [ref=e258]: Junk & Salvage
+                - generic [ref=e259]:
+                  - img [ref=e260]
+                  - generic [ref=e262]: Vehicle Specifications
+                - generic [ref=e263]:
+                  - img [ref=e264]
+                  - generic [ref=e266]: Odometer Readings
+                - generic [ref=e267]:
+                  - img [ref=e268]
+                  - generic [ref=e270]: Total Loss History
+                - generic [ref=e271]:
+                  - img [ref=e272]
+                  - generic [ref=e274]: Accident History
+                - generic [ref=e275]:
+                  - img [ref=e276]
+                  - generic [ref=e278]: Structural Damage
+                - generic [ref=e279]:
+                  - img [ref=e280]
+                  - generic [ref=e282]: Recalls & Defects
+                - generic [ref=e283]:
+                  - img [ref=e284]
+                  - generic [ref=e286]: Title Information
+                - generic [ref=e287]:
+                  - img [ref=e288]
+                  - generic [ref=e290]: 60 + Problem Checks
+                - generic [ref=e291]:
+                  - img [ref=e292]
+                  - generic [ref=e294]: Taxi, Lease, Police Use
+                - generic [ref=e295]:
+                  - img [ref=e296]
+                  - generic [ref=e298]: Loan Verifications
+            - link "View Sample Report" [ref=e299] [cursor=pointer]:
+              - /url: https://app.motorcyclevinlookup.com/report/vin/2T1BURHE0FC320645
+            - generic [ref=e300]:
+              - img "SSL Security" [ref=e301]
+              - paragraph [ref=e302]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+            - separator [ref=e303]
+            - paragraph [ref=e305]: © 2026 Motorcycle VIN Lookup, All Rights Reserved
+  - generic [ref=e306]:
+    - iframe [ref=e307]:
+      - generic [active]:
+        - generic:
+          - main [ref=f1e2]:
+            - generic [ref=f1e3]:
+              - generic [ref=f1e5]:
+                - button "Back" [ref=f1e6] [cursor=pointer]:
+                  - img [ref=f1e7]
+                - button "Open menu" [ref=f1e9] [cursor=pointer]:
+                  - img [ref=f1e10]
+              - button "Richard Langridge, Press to collapse details" [ref=f1e12] [cursor=pointer]:
+                - generic [ref=f1e13]:
+                  - generic [ref=f1e14]:
+                    - generic [ref=f1e18]: R
+                    - generic [ref=f1e19]:
+                      - heading "Richard Langridge" [level=1] [ref=f1e20]
+                      - generic [ref=f1e21]: Support Agent
+                  - generic [ref=f1e22]:
+                    - button "Rate as good and open comment modal" [ref=f1e23]:
+                      - img [ref=f1e24]
+                    - button "Rate as bad and open comment modal" [ref=f1e27]:
+                      - img [ref=f1e28]
+              - generic [ref=f1e31]:
+                - button "Minimize window" [ref=f1e32] [cursor=pointer]:
+                  - img [ref=f1e33]
+                - button "Close the chat" [ref=f1e35] [cursor=pointer]:
+                  - img [ref=f1e36]
+            - generic [ref=f1e38]:
+              - grid [ref=f1e42]:
+                - row "👋 Need help with your vehicle report? I can also apply a special discount if you’d like. Should I do that for you? 👉 Reply \"YES\" for the special discount/promo code." [ref=f1e45]:
+                  - gridcell "👋 Need help with your vehicle report? I can also apply a special discount if you’d like. Should I do that for you? 👉 Reply \"YES\" for the special discount/promo code." [ref=f1e47]:
+                    - generic [ref=f1e49]:
+                      - generic [ref=f1e51]:
+                        - generic [ref=f1e52]: 👋 Need help with your vehicle report?
+                        - text: I can also apply a special discount if you’d like.
+                        - text: Should I do that for you?
+                        - generic [ref=f1e53]: 👉 Reply "YES" for the special discount/promo code.
+                      - status
+              - generic [ref=f1e57]:
+                - button "Send a file" [ref=f1e60] [cursor=pointer]:
+                  - img [ref=f1e61]
+                - textbox "Type in your message here" [ref=f1e63]
+                - button "Send a message" [disabled] [ref=f1e65]:
+                  - img [ref=f1e66]
+            - generic [ref=f1e68]:
+              - link "Powered by LiveChat":
+                - /url: https://www.livechat.com/powered-by-livechat/?utm_campaign=motorcyclevinlookup.com&utm_medium=referral&partner=motorcyclevinlookup.com&utm_source=chat_window
+                - generic: Powered by
+                - img "LiveChat":
+                  - img
+                  - img
+          - generic:
+            - log [ref=f1e69]
+            - log [ref=f1e70]
+            - log [ref=f1e71]
+            - log [ref=f1e72]
+    - generic [ref=e308]: New message
+  - dialog [ref=e311]:
+    - generic [ref=e313]:
+      - img [ref=e314]
+      - textbox "Search..." [active] [ref=e317]
+    - generic [ref=e318]:
+      - button "Abarth" [ref=e319]
+      - button "Acura" [ref=e320]
+      - button "Alfa Romeo" [ref=e321]
+      - button "Alpina" [ref=e322]
+      - button "Audi" [ref=e323]
+      - button "Bentley" [ref=e324]
+      - button "BMW" [ref=e325]
+      - button "Buick" [ref=e326]
+      - button "Cadillac" [ref=e327]
+      - button "Chevrolet" [ref=e328]
+      - button "Citroen" [ref=e329]
+      - button "Dacia" [ref=e330]
+      - button "Dodge" [ref=e331]
+      - button "DS" [ref=e332]
+      - button "Ferrari" [ref=e333]
+      - button "Fiat" [ref=e334]
+      - button "Ford" [ref=e335]
+      - button "GTA" [ref=e336]
+      - button "Honda" [ref=e337]
+      - button "Hyundai" [ref=e338]
+      - button "Infiniti" [ref=e339]
+      - button "Isuzu" [ref=e340]
+      - button "Jaguar" [ref=e341]
+      - button "Jeep" [ref=e342]
+      - button "KIA" [ref=e343]
+      - button "Koenigsegg" [ref=e344]
+      - button "Lamborghini" [ref=e345]
+      - button "Lancia" [ref=e346]
+      - button "Land Rover" [ref=e347]
+      - button "Lexus" [ref=e348]
+      - button "Maserati" [ref=e349]
+      - button "Mazda" [ref=e350]
+      - button "Mclaren" [ref=e351]
+      - button "Mercedes-Benz" [ref=e352]
+      - button "Mini" [ref=e353]
+      - button "Mitsubishi" [ref=e354]
+      - button "Morgan" [ref=e355]
+      - button "Nissan" [ref=e356]
+      - button "Opel" [ref=e357]
+      - button "Peugeot" [ref=e358]
+      - button "Porsche" [ref=e359]
+      - button "Renault" [ref=e360]
+      - button "Rolls-Royce" [ref=e361]
+      - button "Seat" [ref=e362]
+      - button "Skoda" [ref=e363]
+      - button "Smart" [ref=e364]
+      - button "Ssangyong" [ref=e365]
+      - button "Subaru" [ref=e366]
+      - button "Suzuki" [ref=e367]
+      - button "Tesla" [ref=e368]
+      - button "Toyota" [ref=e369]
+      - button "Vauxhall" [ref=e370]
+      - button "Volkswagen" [ref=e371]
+      - button "Volvo" [ref=e372]
+```
