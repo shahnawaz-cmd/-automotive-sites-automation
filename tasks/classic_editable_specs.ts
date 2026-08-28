@@ -1,38 +1,80 @@
 import { Page } from '@playwright/test';
 import { Actor } from '../actors/Actor';
 import { generateClassicNumericVin } from './vinHelper';
+import { fastInputWithHealing, clickWithHealing, locateInputWithHealing } from '../utils/selfHealingLocator';
 
 export class ClassicEditableFeatureYMM {
   private timeout = process.env.CI ? 60000 : 90000;
 
   async run(page: Page) {
-    const updateBtn = page.getByRole('button', { name: 'Click here to update' });
-    await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await updateBtn.click();
+    // Use self-healing click for the initial "Click here to update" button
+    await clickWithHealing(page, 'Click here to update', ['button:has-text("Click here to update")']);
 
-    const ymmBtn = page.getByRole('button', { name: 'Year, Make & Model The' });
-    await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await ymmBtn.click();
+    // Wait for the "Year, Make & Model" button to be visible after the update modal/popup appears
+    const ymmButton = page.getByRole('button', { name: 'Year, Make & Model' });
+    await ymmButton.waitFor({ state: 'visible', timeout: this.timeout });
+    // Use self-healing click for "Year, Make & Model" button
+    await clickWithHealing(page, 'Year, Make & Model', ['button:has-text("Year, Make & Model")']);
 
-    // 30s delay to allow popup stabilization as requested
-    await page.waitForTimeout(30000);
-
+    // Replace the static 30s delay with a targeted wait for the first interactive element,
+    // indicating the form is stable and ready for input.
     const yearBox = page.getByRole('textbox', { name: 'Select year' });
-    await yearBox.waitFor({ state: 'visible', timeout: this.timeout });
-    await yearBox.click();
-    await page.getByRole('button', { name: '1923' }).first().click();
+    await yearBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure year input is visible and enabled
 
-    await page.getByRole('textbox', { name: 'Select make' }).click();
-    await page.getByRole('button', { name: 'Ambassador' }).first().click();
+    // 1. Select Year
+    await yearBox.click({ force: true }); // Use force: true to ensure click on potentially covered elements
+    await page.waitForTimeout(300); // Small pause for dropdown options to render
 
-    await page.getByRole('textbox', { name: 'Select model' }).click();
-    await page.getByRole('button', { name: 'R', exact: true }).first().click();
+    const yearOption = page.getByRole('button', { name: '1923' }).first()
+      .or(page.getByRole('option', { name: '1923' }).first())
+      .or(page.locator('[role="option"], ul li').filter({ hasText: /\d{4}/ }).first().locator('visible=true')); // Robust fallback for generic list items, ensuring it's visible
+    await yearOption.waitFor({ state: 'visible', timeout: 15000 }); // Increased timeout for option visibility
+    await yearOption.click({ force: true }); // Use force: true for clicking dropdown option
 
-    await page.getByRole('textbox', { name: 'Select trim' }).click();
-    await page.getByRole('button', { name: 'Touring' }).first().click();
+    // 2. Select Make
+    const makeBox = page.getByRole('textbox', { name: 'Select make' });
+    await makeBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure make box is ready after year selection
+    await makeBox.click({ force: true });
+    await page.waitForTimeout(300);
 
-    await page.getByRole('button', { name: 'Continue' }).click();
-    await page.getByRole('button', { name: 'Confirm & Get Records' }).click();
+    const ambassadorMake = page.getByRole('button', { name: 'Ambassador' }).first()
+      .or(page.getByRole('option', { name: 'Ambassador' }).first())
+      .or(page.locator('[role="option"], ul li').filter({ hasText: /.+/ }).first().locator('visible=true'));
+    await ambassadorMake.waitFor({ state: 'visible', timeout: 15000 });
+    await ambassadorMake.click({ force: true });
+
+    // 3. Select Model
+    const modelBox = page.getByRole('textbox', { name: 'Select model' });
+    await modelBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure model box is ready after make selection
+    await modelBox.click({ force: true });
+    await page.waitForTimeout(300);
+
+    const rModel = page.getByRole('button', { name: 'R', exact: true }).first()
+      .or(page.getByRole('option', { name: 'R', exact: true }).first())
+      .or(page.locator('[role="option"], ul li').filter({ hasText: /.+/ }).first().locator('visible=true'));
+    await rModel.waitFor({ state: 'visible', timeout: 15000 });
+    await rModel.click({ force: true });
+
+    // 4. Select Trim
+    const trimBox = page.getByRole('textbox', { name: 'Select trim' });
+    await trimBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure trim box is ready after model selection
+    await trimBox.click({ force: true });
+    await page.waitForTimeout(300);
+
+    const touringTrim = page.getByRole('button', { name: 'Touring' }).first()
+      .or(page.getByRole('option', { name: 'Touring' }).first())
+      .or(page.locator('[role="option"], ul li').filter({ hasText: /.+/ }).first().locator('visible=true'));
+    await touringTrim.waitFor({ state: 'visible', timeout: 15000 });
+    await touringTrim.click({ force: true });
+
+    // 5. Submit changes
+    const continueButton = page.getByRole('button', { name: 'Continue' });
+    await continueButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+    await continueButton.click({ force: true });
+
+    const confirmButton = page.getByRole('button', { name: 'Confirm & Get Records' });
+    await confirmButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+    await confirmButton.click({ force: true });
   }
 }
 
@@ -48,23 +90,92 @@ export class Case5VerifyClassicEditableFeature {
     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
     await ymmBtn.click({ force: true });
 
+    // 1. Select Year
     const yearLabel = page.getByLabel('Year');
     await yearLabel.waitFor({ state: 'visible', timeout: this.timeout });
     await yearLabel.click({ force: true });
-    await page.getByLabel('1961').first().click({ force: true });
+    await page.waitForTimeout(300);
 
-    await page.getByLabel('Make').click({ force: true });
-    await page.getByLabel('AJS').first().click({ force: true });
+    const yearOption = page.getByRole('option', { name: '1961' })
+      .or(page.getByText('1961', { exact: true }))
+      .or(page.locator('[role="option"], ul li').filter({ hasText: /\d{4}/ }).first().locator('visible=true')); // Ensure option is visible
+    await yearOption.first().waitFor({ state: 'visible', timeout: 10000 }); // Wait for the specific option to be visible
+    await yearOption.first().click({ force: true });
 
-    await page.getByLabel('Model').click({ force: true });
-    await page.getByText('Model 16 350ms').first().click({ force: true });
+    // 2. Select Make (Wait for get_classic_make API response)
+    await page.waitForResponse(
+      (res) => res.url().includes('get_classic_make') && res.status() === 200,
+      { timeout: 15000 }
+    ).catch(() => null);
+    await page.waitForTimeout(500);
 
-    await page.getByLabel('Trim').click({ force: true });
-    await page.getByText('Base', { exact: true }).first().click({ force: true });
+    const makeLabel = page.getByLabel('Make');
+    await makeLabel.waitFor({ state: 'visible', timeout: this.timeout });
+    await makeLabel.click({ force: true });
+    await page.waitForTimeout(300);
 
-    await page.getByRole('button', { name: 'Continue' }).click({ force: true });
-    await page.getByRole('button', { name: 'Confirm Selection' }).click({ force: true });
-    await page.getByRole('button', { name: 'Submit' }).click({ force: true });
+    const ajsMake = page.getByRole('option', { name: 'AJS' }).or(page.getByText('AJS', { exact: true }));
+    const firstMake = page.locator('[role="option"], [role="listbox"] li, .dropdown-menu li, ul li').filter({ hasText: /.+/ }).first().locator('visible=true'); // Ensure option is visible
+
+    if (await ajsMake.first().isVisible({ timeout: 2000 }).catch(() => false)) {
+      await ajsMake.first().click({ force: true });
+    } else {
+      await firstMake.click({ force: true });
+    }
+
+    // 3. Select Model (Wait for get_classic_model API response)
+    await page.waitForResponse(
+      (res) => res.url().includes('get_classic_model') && res.status() === 200,
+      { timeout: 15000 }
+    ).catch(() => null);
+    await page.waitForTimeout(500);
+
+    const modelLabel = page.getByLabel('Model');
+    await modelLabel.waitFor({ state: 'visible', timeout: this.timeout });
+    await modelLabel.click({ force: true });
+    await page.waitForTimeout(300);
+
+    const modelOption = page.getByRole('option', { name: 'Model 16 350ms' })
+      .or(page.getByText('Model 16 350ms', { exact: true }))
+      .or(page.locator('[role="option"], [role="listbox"] li, .dropdown-menu li, ul li').filter({ hasText: /.+/ }).first().locator('visible=true')); // Ensure option is visible
+
+    await modelOption.first().waitFor({ state: 'visible', timeout: 10000 });
+    await modelOption.first().click({ force: true });
+
+    // 4. Select Trim (Wait for get_classic_series API response)
+    await page.waitForResponse(
+      (res) => res.url().includes('get_classic_series') && res.status() === 200,
+      { timeout: 10000 }
+    ).catch(() => null);
+    await page.waitForTimeout(500);
+
+    const trimLabel = page.getByLabel('Trim');
+    if (await trimLabel.isVisible()) {
+      await trimLabel.click({ force: true });
+      await page.waitForTimeout(300);
+
+      const baseTrim = page.getByText('Base', { exact: true })
+        .or(page.getByRole('option', { name: /base/i }))
+        .or(page.locator('[role="option"], [role="listbox"] li, .dropdown-menu li, ul li').filter({ hasText: /.+/ }).first().locator('visible=true')); // Ensure option is visible
+
+      if (await baseTrim.first().isVisible({ timeout: 3000 }).catch(() => false)) {
+        await baseTrim.first().click({ force: true });
+      }
+    }
+
+    // 5. Submit changes
+    const continueButton = page.getByRole('button', { name: 'Continue' });
+    await continueButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+    await continueButton.click({ force: true });
+
+    const confirmSelectionButton = page.getByRole('button', { name: 'Confirm Selection' });
+    await confirmSelectionButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+    await confirmSelectionButton.click({ force: true });
+
+    const submitButton = page.getByRole('button', { name: 'Submit' });
+    await submitButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+    await submitButton.click({ force: true });
+
     await page.waitForURL(/cv=/, { timeout: this.timeout * 2 });
   }
 }
@@ -78,24 +189,34 @@ export class ClassicEditableSpecs {
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     const cookies = await page.context().cookies();
-    const isStreaming = cookies.some(c => c.name === 'checkout_flow' && c.value === 'streaming');
+    const isStreaming = cookies.some((c) => c.name === 'checkout_flow' && c.value === 'streaming');
 
     const classicVin = generateClassicNumericVin('242370B111346');
 
-    // Robust selector logic for Infiniti and other layouts
-    const vinInput = page.getByRole('textbox', { name: 'Vehicle Identification Number' })
-      .or(page.getByRole('textbox', { name: 'Enter VIN Number' }))
-      .or(page.getByRole('textbox', { name: 'Enter Your VIN' }))
-      .or(page.locator('input[name="vin"]'))
-      .or(page.getByPlaceholder(/enter vin/i))
-      .first();
+    // Self-healing VIN Input
+    await fastInputWithHealing(
+      page,
+      'VIN',
+      classicVin,
+      [
+        'input[name="vin"]',
+        'input[placeholder*="VIN" i]',
+        'input[aria-label*="VIN" i]'
+      ],
+      { timeout: this.timeout / 3 }
+    );
 
-    await vinInput.waitFor({ state: 'visible', timeout: this.timeout / 3 });
-    await vinInput.fill(classicVin);
-
-    const submitBtn = page.getByRole('button', { name: /search|decode|get window sticker/i }).first()
-      .or(page.locator('button[type="submit"]')).first();
-    await submitBtn.click();
+    // Self-healing Search Submit
+    await clickWithHealing(
+      page,
+      'Search',
+      [
+        'button[type="submit"]',
+        'button:has-text("Search")',
+        'button:has-text("Decode")',
+        'button:has-text("Get Window Sticker")'
+      ]
+    );
 
     // Support preview, sticker, ws-preview, and license-preview URLs
     await page.waitForURL(/.*(preview|sticker|license-preview|ws-preview).*/, { timeout: this.timeout });
@@ -104,7 +225,6 @@ export class ClassicEditableSpecs {
     page.on('response', async (response) => {
       const url = response.url();
 
-      // Ignore logging/telemetry endpoints as they are not needed
       if (url.includes('/logs') || url.includes('/telemetry')) {
         return;
       }

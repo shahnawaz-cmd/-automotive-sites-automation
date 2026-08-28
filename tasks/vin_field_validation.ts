@@ -1,38 +1,30 @@
 import { expect } from '@playwright/test';
 import { Actor } from '../actors/Actor';
+import { locateInputWithHealing, clickWithHealing } from '../utils/selfHealingLocator';
 
 export class FieldValidation {
   async performAs(actor: Actor) {
     const page = actor.getPage();
 
-    // Helper to find the VIN input locator dynamically
-    const getVinInput = async () => {
-      const locators = [
-        page.getByRole('textbox', { name: 'Vehicle Identification Number' }),
-        page.getByRole('textbox', { name: 'Enter VIN Number' }),
-        page.getByRole('textbox', { name: 'Enter Your VIN' })
-      ];
-      
-      // Wait for input to be attached/visible to handle hydration delay
-      await page.waitForSelector('input[name="vin"], input[placeholder*="VIN" i], input[aria-label*="VIN" i]', { state: 'attached', timeout: 15000 }).catch(() => {});
+    // Self-healing VIN input locator
+    const vinInput = await locateInputWithHealing(
+      page,
+      'VIN',
+      [
+        'input[name="vin"]',
+        'input[placeholder*="VIN" i]',
+        'input[aria-label*="VIN" i]',
+        'input[type="text"]'
+      ],
+      { timeout: 15000 }
+    );
 
-      for (const loc of locators) {
-        if (await loc.isVisible()) return loc;
-      }
-      
-      // Fallback
-      const fallback = page.locator('input[name="vin"]').first();
-      if (await fallback.isVisible()) return fallback;
-      
-      throw new Error('VIN input locator not found');
-    };
-
-    const vinInput = await getVinInput();
     const searchButton = vinInput.locator('xpath=../..').getByRole('button').first();
 
     // 1. Validate 17-character limit (prevent exceeding)
     const longVin = 'A'.repeat(18);
     await vinInput.fill(longVin);
+    
     // Check if the input only accepted 17 characters
     const actualValue = await vinInput.inputValue();
     
@@ -52,7 +44,11 @@ export class FieldValidation {
       console.log(`Skipping < 5 characters validation for domain: ${currentUrl}`);
     } else {
       await vinInput.fill('ABCD');
-      await searchButton.click();
+      if (await searchButton.isVisible().catch(() => false)) {
+        await searchButton.click();
+      } else {
+        await clickWithHealing(page, 'Search', ['button[type="submit"]', 'button:has-text("Search")']);
+      }
       
       const errorLocator = page.locator('.error, .alert, [role="alert"]');
       

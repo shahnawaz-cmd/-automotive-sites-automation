@@ -10,9 +10,11 @@ export class CouponAndPrevCouponVerification {
     const page = actor.getPage();
 
     // 1. Apply coupon via URL
-    await page.goto(`/?offer=${couponCode}`);
+    // Use 'domcontentloaded' as a primary wait for faster initial page load,
+    // then 'networkidle' for full content loading, catching potential timeouts gracefully.
+    await page.goto(`/?offer=${couponCode}`, { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
-await page.waitForTimeout(2000); // Safari stabilization before cookie check
+    await page.waitForTimeout(2000); // Safari stabilization before cookie check
 
     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)
     const cookies = await page.context().cookies([page.url()]);
@@ -24,7 +26,8 @@ await page.waitForTimeout(2000); // Safari stabilization before cookie check
 
     // 3. Verify Banner with dynamic text
     // The banner text pattern: "You have received [Dynamic]% Discount!"
-    const bannerLocator = page.locator(`text=You have received ${expectedDiscount} Discount!`);
+    // Switching to getByText for more resilient semantic selection, as recommended for production stability.
+    const bannerLocator = page.getByText(`You have received ${expectedDiscount} Discount!`);
     
     // Conditional timeout: Wait up to 10s for the banner to appear
     try {
@@ -49,7 +52,8 @@ export class LowToHighCouponFlow {
 
     // 2. Apply high discount coupon (get20)
     console.log('--- Applying 2nd Coupon: get20 ---');
-    await page.goto('/?offer=get20');
+    // Added 'domcontentloaded' for faster initial page load after navigation.
+    await page.goto('/?offer=get20', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
     
     // Verify cookies: coupon should be get20, prev_coupon should be preview15
@@ -63,16 +67,19 @@ export class LowToHighCouponFlow {
     console.log('Passed: Cookie verification (coupon=get20, prev_coupon=preview15)');
 
     // 3. Verify Banner for high coupon (20%)
-    await expect(page.locator('text=You have received 20% Discount!')).toBeVisible({ timeout: 10000 });
+    // Switching to getByText for more resilient semantic selection.
+    await expect(page.getByText('You have received 20% Discount!')).toBeVisible({ timeout: 10000 });
     console.log('Passed: Banner showed 20% Discount.');
 
     // 4. Apply low coupon again (preview15) - High should remain active
     console.log('--- Applying 1st Coupon again to verify no override ---');
-    await page.goto('/?offer=preview15');
+    // Added 'domcontentloaded' for faster initial page load after navigation.
+    await page.goto('/?offer=preview15', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // Expected: Banner should still show 20% (highest coupon not overridden)
-    await expect(page.locator('text=You have received 20% Discount!')).toBeVisible({ timeout: 5000 });
+    // Switching to getByText for more resilient semantic selection.
+    await expect(page.getByText('You have received 20% Discount!')).toBeVisible({ timeout: 5000 });
     console.log('Passed: Highest coupon (20%) was NOT overridden by lower coupon.');
   }
 }
@@ -90,8 +97,11 @@ export class CouponBannerOnOtherPages {
     let validPath = null;
     
     for (const path of paths) {
-      const response = await page.goto(path);
+      // Use 'domcontentloaded' to quickly check the response status for each path.
+      const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
       if (response && response.status() === 200) {
+        // Once a valid path is found, wait for 'networkidle' to ensure all content is loaded.
+        await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
         validPath = path;
         break;
       }
@@ -102,10 +112,10 @@ export class CouponBannerOnOtherPages {
     }
 
     console.log(`Passed: Navigated to valid path: ${validPath}`);
-    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // 3. Verify banner is still visible
-    const bannerLocator = page.locator('text=You have received 15% Discount!');
+    // Switching to getByText for more resilient semantic selection.
+    const bannerLocator = page.getByText('You have received 15% Discount!');
     await expect(bannerLocator).toBeVisible({ timeout: 5000 });
     console.log('Passed: Banner persisted on the page: ' + validPath);
   }

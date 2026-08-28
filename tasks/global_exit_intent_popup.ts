@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
 import { Actor } from '../actors/Actor';
+import { clickWithHealing } from '../utils/selfHealingLocator';
 
 export class GlobalExitIntentPopup {
   async performAs(actor: Actor) {
@@ -21,27 +22,35 @@ export class GlobalExitIntentPopup {
     await page.waitForTimeout(300);
     await page.mouse.move(400, 100, { steps: 15 });
     await page.waitForTimeout(300);
-    await page.mouse.move(400, 10,  { steps: 10 });
+    await page.mouse.move(400, 10, { steps: 10 });
     await page.waitForTimeout(300);
 
     await page.evaluate(() => {
       const opts = { bubbles: true, cancelable: true, clientX: 400, clientY: -1 };
       document.dispatchEvent(new MouseEvent('mouseleave', opts));
-      document.dispatchEvent(new MouseEvent('mouseout',   opts));
-      window.dispatchEvent(new MouseEvent('mouseleave',   opts));
+      document.dispatchEvent(new MouseEvent('mouseout', opts));
+      window.dispatchEvent(new MouseEvent('mouseleave', opts));
       document.documentElement.dispatchEvent(new MouseEvent('mouseleave', opts));
     });
 
     await page.waitForTimeout(3000);
 
-    // Exact assertions & locators from P23 Test Suite.spec.js
+    // Exact assertions & locators
     const popup = page.locator('div').filter({ hasText: /Hey/i }).filter({ hasText: /leave/i }).last();
     await expect(popup).toBeVisible({ timeout: 30000 });
     await expect(page.locator('text=/15%/').first()).toBeVisible({ timeout: 15000 }).catch(() => {});
 
-    const ctaButton = page.getByRole('button', { name: 'Click here to redeem instantly' });
-    await expect(ctaButton).toBeVisible({ timeout: 10000 });
-    await ctaButton.click();
+    // Self-healing CTA click
+    await clickWithHealing(
+      page,
+      'Click here to redeem instantly',
+      [
+        'button:has-text("Click here to redeem instantly")',
+        'button:has-text("Redeem 15% off")',
+        'button:has-text("Claim 15% Off")'
+      ],
+      { timeout: 10000 }
+    );
 
     console.log('✅ Clicked CTA button (Global Exit Intent)');
     await page.waitForURL(/offer=/, { timeout: 30000 });

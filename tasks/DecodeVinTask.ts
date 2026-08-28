@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
 import { Actor } from '../actors/Actor';
+import { fastInputWithHealing, clickWithHealing, locateElementWithHealing } from '../utils/selfHealingLocator';
 
 export interface VinTaskSelectors {
   vinField1: string;
@@ -64,95 +65,97 @@ export class DecodeVinTask {
     const vin = isTC14 ? this.generateEuVin() : this.generateUSVin(isMVL);
     console.log(`[VIN Decode] Generated VIN (${isTC14 ? 'EU' : 'US'}): ${vin}`);
 
-    const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
-    const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
-    const vinField3 = this.selectors.vinField3 ? page.getByRole('textbox', { name: this.selectors.vinField3 }) : null;
+    // Self-Healing Input: Fills VIN with multi-strategy accessibility, placeholder, label & attributes
+    // Utilizes existing robust selectors. The vinField1/2/3 in selectors are likely descriptive labels,
+    // not direct Playwright selectors, so relying on generic input attributes is better here.
+    await fastInputWithHealing(
+      page,
+      'VIN', // inputNameOrPlaceholder, often corresponds to placeholder or name attribute
+      vin,
+      [
+        'input[name="vin"]',
+        'input[placeholder*="VIN" i]',
+        'input[aria-label*="VIN" i]',
+        'input[type="text"]',
+        'input[inputmode="numeric"]', // Added for potential numeric VIN fields
+        page.getByLabel(/vin|vehicle identification number/i), // More semantic approach
+        page.getByPlaceholder(/vin|vehicle identification number/i)
+      ],
+      { timeout: this.timeout }
+    );
 
-    // Wait for input to be attached/visible to handle hydration delay
-    await page.waitForSelector('input[name="vin"], input[placeholder*="VIN" i], input[aria-label*="VIN" i]', { state: 'attached', timeout: this.timeout }).catch(() => {});
+    // Self-Healing Button: Clicks search/decode button with multi-strategy
+    await clickWithHealing(
+      page,
+      this.selectors.searchButton,
+      [
+        'button[type="submit"]',
+        'button:has-text("Search")',
+        'button:has-text("Decode")',
+        'button:has-text("Get Window Sticker")',
+        `button:has-text("${this.selectors.searchButton}")`, // Use the provided selector text
+        page.getByRole('button', { name: /search vin|decode|get window sticker|search/i }) // Robust semantic selector
+      ],
+      { timeout: this.timeout / 2 } // Give a reasonable time for the button click
+    );
 
-    let vinInput = null;
-    if (await vinField1.isVisible()) {
-      vinInput = vinField1;
-    } else if (await vinField2.isVisible()) {
-      vinInput = vinField2;
-    } else if (vinField3 && await vinField3.isVisible()) {
-      vinInput = vinField3;
+    // Removed `await page.waitForTimeout(1000);` as static waits can lead to flakiness.
+    // Replaced with a more robust, condition-based wait for success elements.
+
+    // Self-Healing Success Element Detection:
+    // Consolidate all potential success messages into a single, robust locator using .or().
+    // Use `page.getByText` and `page.getByRole('heading')` for semantic stability.
+    const successConditionLocator = page.getByText(this.selectors.successText, { exact: false, visible: true })
+      .or(page.getByText(this.selectors.successText2, { exact: false, visible: true }))
+      .or(page.getByText(this.selectors.successText3, { exact: false, visible: true }))
+      // Conditionally add successText4 if it's defined in selectors
+      .or(this.selectors.successText4 ? page.getByText(this.selectors.successText4, { exact: false, visible: true }) : page.locator('__NEVER_MATCH__')) // Use a locator that will never match if text4 is not present
+      .or(page.getByRole('heading', { name: this.selectors.successHeading, exact: false, visible: true }))
+      .or(page.getByRole('heading', { name: this.selectors.successHeading2, exact: false, visible: true }))
+      .or(page.getByRole('heading', { name: /Success/i, exact: false, visible: true })) // Catch-all for generic "Success" headings
+      .or(page.getByText('Success!', { exact: false, visible: true })); // Catch-all for generic "Success!" text
+
+    // Wait for the success condition locator to become visible.
+    // Use `expect().toBeVisible()` for built-in Playwright retry and better error reporting.
+    try {
+        await expect(successConditionLocator).toBeVisible({ timeout: 30000 }); // Wait up to 30 seconds for success.
+        console.log(`[VIN Decode] Successfully detected success condition: "${await successConditionLocator.first().textContent()}"`);
+    } catch (error) {
+        console.error(`[VIN Decode] Timeout waiting for VIN decode success condition. Current URL: ${page.url()}`);
+        console.error(`[VIN Decode] Error details: ${error}`);
+        // Optionally, take a screenshot here for debugging CI failures
+        // await page.screenshot({ path: `failure-screenshot-${Date.now()}.png` });
+        throw new Error('Failed to find VIN decode success condition after searching.');
     }
 
-    if (!vinInput) {
-      // Fallback selector
-      vinInput = page.locator('input[name="vin"]').first();
-    }
-    
-    await vinInput.waitFor({ state: 'visible', timeout: this.timeout });
-    await vinInput.fill(vin);
-
-    const searchBtn = page.getByRole('button', { name: this.selectors.searchButton }).first();
-    if (await searchBtn.isVisible()) {
-      await searchBtn.click();
+    // Handle clicking the access button if `skipSuccessClick` is false.
+    if (this.skipSuccessClick) {
+      console.log('[VIN Decode] Bypassing next action as requested by task parameters (skipSuccessClick).');
     } else {
-      await vinInput.locator('xpath=../..').getByRole('button').first().click();
-    }
-    
-    await page.waitForTimeout(1000);
-// List of potential success elements to check and click
-// Increased flexibility for locators to cover domain-specific variations
-const successLocator = page.getByText('Records found for', { exact: false })
-  .or(page.locator('h1:has-text("Records found for")'))
-  .or(page.locator('text=We found detailed information for the'))
-  .or(page.locator('h2:has-text("We found")'))
-  .or(page.getByRole('heading', { name: 'Success' }))
-  .or(page.getByRole('heading', { name: 'Success! We found detailed' }))
-  .or(page.locator('h4:has-text("Success!")'))
-  .or(page.getByText('Success! We found detailed', { exact: false }))
-  .or(page.locator('text=Window sticker found for'))
-  .or(page.locator('text=We found historical records for the'))
-  .or(page.locator('text=Success!'));
-
-// Wait up to 20 seconds for the success element to render on preview page
-await successLocator.first().waitFor({ state: 'visible', timeout: 20000 }).catch(() => {
-  console.log('Timeout waiting for success locator visibility');
-});
-
-const successLocators = [
-  page.getByText('Records found for', { exact: false }),
-  page.locator('h1:has-text("Records found for")'),
-  page.locator('text=We found detailed information for the'),
-  page.locator('h2:has-text("We found")'),
-  page.getByRole('heading', { name: 'Success' }),
-  page.getByRole('heading', { name: 'Success! We found detailed' }),
-  page.locator('h4:has-text("Success!")'),
-  page.getByText('Success! We found detailed', { exact: false }),
-  page.locator('text=Window sticker found for'),
-  page.locator('text=We found historical records for the'),
-  page.locator('text=Success!')
-].filter(Boolean);
-
-let successClicked = false;
-
-// If skipSuccessClick is explicitly enabled, skip clicking the success banner
-if (this.skipSuccessClick) {
-  console.log('[VIN Decode] Bypassing success banner click as requested by task parameters.');
-  successClicked = true;
-} else {
-  for (const locator of successLocators) {
-    if (await locator.isVisible()) {
-      console.log('[VIN Decode] Clicking success element...');
-      await locator.click().catch(() => {});
-      successClicked = true;
-      break;
+      console.log(`[VIN Decode] Attempting to click the access button: "${this.selectors.accessButton}"`);
+      try {
+        // Use clickWithHealing for the access button for maximum resilience.
+        await clickWithHealing(
+          page,
+          this.selectors.accessButton,
+          [
+            page.getByRole('button', { name: this.selectors.accessButton, exact: true }),
+            page.getByRole('link', { name: this.selectors.accessButton, exact: true }), // Sometimes it's a link
+            `button:has-text("${this.selectors.accessButton}")`,
+            `a:has-text("${this.selectors.accessButton}")`,
+            // Add more generic selectors for access/continue buttons that might appear after VIN decode
+            page.getByRole('button', { name: /access|continue|view records|get report/i }),
+            page.getByRole('link', { name: /access|continue|view records|get report/i }),
+          ],
+          { timeout: 15000 } // Give it a reasonable timeout (e.g., 15 seconds) for the button to appear and be clickable
+        );
+        console.log('[VIN Decode] Access button clicked successfully.');
+      } catch (error) {
+        console.error(`[VIN Decode] Failed to click access button after success condition. Current URL: ${page.url()}`);
+        console.error(`[VIN Decode] Error details: ${error}`);
+        // await page.screenshot({ path: `failure-access-button-${Date.now()}.png` });
+        throw new Error('Failed to click the "Access Records" or similar button after VIN decode success.');
+      }
     }
   }
 }
-
-if (!successClicked) {
-  console.log('Failed to click success condition. Current URL:', page.url());
-  throw new Error('Success condition not found');
-}
-
-console.log('Success condition met.');
-// Page closure is now handled by the caller, not here.
-}
-}
-

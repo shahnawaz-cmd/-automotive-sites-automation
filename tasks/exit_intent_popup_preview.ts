@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { Actor } from '../actors/Actor';
+import { clickWithHealing } from '../utils/selfHealingLocator';
 
 export class StreamingExitIntentPopup {
   async performAs(actor: Actor) {
@@ -21,34 +22,34 @@ export class StreamingExitIntentPopup {
     await page.waitForTimeout(300);
     await page.mouse.move(400, 100, { steps: 15 });
     await page.waitForTimeout(300);
-    await page.mouse.move(400, 10,  { steps: 10 });
+    await page.mouse.move(400, 10, { steps: 10 });
     await page.waitForTimeout(300);
 
     // Dispatch mouse events on the document and window
     await page.evaluate(() => {
       const opts = { bubbles: true, cancelable: true, clientX: 400, clientY: -1 };
       document.dispatchEvent(new MouseEvent('mouseleave', opts));
-      document.dispatchEvent(new MouseEvent('mouseout',   opts));
-      window.dispatchEvent(new MouseEvent('mouseleave',   opts));
+      document.dispatchEvent(new MouseEvent('mouseout', opts));
+      window.dispatchEvent(new MouseEvent('mouseleave', opts));
       document.documentElement.dispatchEvent(new MouseEvent('mouseleave', opts));
     });
 
     await page.waitForTimeout(3000);
 
-    // Check for the pop-up buttons (including 'Redeem 15% off' from PreviewPage.js as well as standard variants)
-    const redeem15Btn = page.getByRole('button', { name: 'Redeem 15% off' });
-    const claim15Btn = page.getByRole('button', { name: 'Claim 15% Off' });
-    const redeemBtn = page.getByRole('button', { name: 'Click here to redeem instantly' });
-    const take15Btn = page.getByRole('button', { name: 'Take 15% off' });
-    
-    // Combine locators for complete resilience across sites & environments
-    const popupBtn = redeem15Btn.or(claim15Btn).or(redeemBtn).or(take15Btn);
-    
+    // Self-healing popup click
     const timeout = process.env.CI ? 10000 : 5000;
-    
     try {
-      await popupBtn.first().waitFor({ state: 'visible', timeout: timeout });
-      await popupBtn.first().click();
+      await clickWithHealing(
+        page,
+        'Redeem 15% off',
+        [
+          'button:has-text("Redeem 15% off")',
+          'button:has-text("Claim 15% Off")',
+          'button:has-text("Click here to redeem instantly")',
+          'button:has-text("Take 15% off")'
+        ],
+        { timeout }
+      );
       console.log('✅ Clicked exit intent pop-up button.');
     } catch (e) {
       console.log('⚠️ Exit intent pop-up did not trigger or display.');

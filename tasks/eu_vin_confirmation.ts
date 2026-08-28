@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
 import { Actor } from '../actors/Actor';
+import { clickWithHealing } from '../utils/selfHealingLocator';
 
 export class EuVinConfirmationTask {
   async performAs(actor: Actor) {
@@ -34,7 +35,15 @@ export class EuVinConfirmationTask {
       await trimCombobox.click();
       await page.getByRole('button', { name: '1.4 GLP Turbo 120HP' }).click();
 
-      await page.getByRole('button', { name: 'Update Vehicle Details' }).click();
+      await clickWithHealing(
+        page,
+        'Update Vehicle Details',
+        [
+          'button:has-text("Update Vehicle Details")',
+          'button:has-text("Update Details")',
+          'button:has-text("Confirm")'
+        ]
+      );
       await page.waitForTimeout(2000);
       console.log('✅ EU VIN details updated');
     } catch (e) {

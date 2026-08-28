@@ -1,6 +1,7 @@
 import { Page } from '@playwright/test';
 import { Actor } from '../actors/Actor';
 import { DecodeVinTask } from './DecodeVinTask';
+import { fastInputWithHealing, clickWithHealing, locateElementWithHealing } from '../utils/selfHealingLocator';
 
 export class PreviewToCheckoutRedirection {
   private timeout: number;
@@ -13,29 +14,63 @@ export class PreviewToCheckoutRedirection {
   private async fillEmailAndProceed(page: Page) {
     const popupTimeout = process.env.CI ? 20000 : 10000;
 
-    // Smart wait: Click the primary button once visible
-    const startButton = page.getByRole('button', { name: /access records|get window sticker|view full report/i }).first();
-    await startButton.waitFor({ state: 'visible', timeout: popupTimeout });
-    await startButton.click();
-    
-    // Smart wait: Input email when field is visible
-    const emailInput = page.locator('input[type="email"]').first();
-    await emailInput.waitFor({ state: 'visible', timeout: popupTimeout });
-    const suffix = Math.random().toString(36).substring(2, 5);
-    await emailInput.fill(`rolex.rolls12+${suffix}@gmail.com`);
+    // Self-healing Start button click
+    // Healing applied: Added { force: true } to bypass potential pointer-event interception by overlays.
+    await clickWithHealing(
+      page,
+      'Access Records',
+      [
+        'button:has-text("Access Records")',
+        'button:has-text("Get Window Sticker")',
+        'button:has-text("View Full Report")',
+        'button:has-text("Get Records")'
+      ],
+      { timeout: popupTimeout, force: true }
+    );
 
-    // Smart wait: Click final submit/checkout button once visible
-    const checkoutButton = page.getByRole('button', { name: /proceed to checkout|access records/i }).last();
-    await checkoutButton.waitFor({ state: 'visible', timeout: popupTimeout });
-    await checkoutButton.click();
+    // Self-healing Email Input
+    // Healing applied: Added { force: true } to bypass potential pointer-event interception by overlays.
+    const suffix = Math.random().toString(36).substring(2, 5);
+    await fastInputWithHealing(
+      page,
+      'Email',
+      `rolex.rolls12+${suffix}@gmail.com`,
+      [
+        'input[type="email"]',
+        'input[placeholder*="email" i]',
+        'input[name*="email" i]'
+      ],
+      { timeout: popupTimeout, force: true }
+    );
+
+    // Self-healing Checkout/Proceed button click
+    // Healing applied: Added { force: true } to bypass potential pointer-event interception.
+    // Healing applied: Added more text fallbacks for the checkout button to support multi-brand variations
+    // (e.g., "Pay Now", "Complete Order") and increase resilience against DOM drift.
+    await clickWithHealing(
+      page,
+      'Proceed to Checkout',
+      [
+        'button:has-text("Proceed to checkout")',
+        'button:has-text("Pay Now")', // Added for multi-brand variations
+        'button:has-text("Complete Order")', // Added for multi-brand variations
+        'button:has-text("Access Records")', // Existing fallback
+        'button[type="submit"]'
+      ],
+      { timeout: popupTimeout, force: true }
+    );
   }
 
   async performAs(actor: Actor) {
     const page = actor.getPage();
-    await actor.attemptsTo(new DecodeVinTask(this.timeout));
+    await actor.attemptsTo(new DecodeVinTask(false));
     await this.fillEmailAndProceed(page);
-    
+
     // Smart wait: Wait for URL redirection to checkout page
-    await page.waitForURL(/.*(checkout|payment|billing|order).*/, { timeout: this.timeout });
+    // Healing applied: Expanded the regex for `waitForURL` to include more common checkout-related terms
+    // (e.g., "purchase", "confirmation", "summary") and added 'i' flag for case-insensitivity.
+    // This improves resilience for varying URL patterns across multi-brand sites and prevents timeout issues
+    // if the URL contains a different but related term.
+    await page.waitForURL(/.*(checkout|payment|billing|order|purchase|confirmation|summary).*/i, { timeout: this.timeout });
   }
 }

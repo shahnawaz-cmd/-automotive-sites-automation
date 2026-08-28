@@ -1,4 +1,5 @@
 import { Page, Locator } from '@playwright/test';
+import { locateInputWithHealing } from '../utils/selfHealingLocator';
 
 // Shared utility for VIN operations
 export const generateRandomVin = (baseVin: string, numToReplace: number = 1): string => {
@@ -31,20 +32,12 @@ export const generateEuVin = (): string => {
   return generateRandomVin(baseVin, 1);
 };
 
-// Centralized robust VIN input locator
+// Centralized robust self-healing VIN input locator
 export const getRobustVinInput = async (page: Page): Promise<Locator> => {
-  const vinSelectors = [
-    'Vehicle Identification Number',
-    'Enter VIN Number',
-    'Enter Your VIN'
-  ];
-  
-  for (const selector of vinSelectors) {
-    const field = page.getByRole('textbox', { name: selector });
-    if (await field.isVisible()) {
-      return field;
-    }
-  }
-  
-  return page.getByPlaceholder(/enter vin/i).first();
+  return await locateInputWithHealing(page, 'VIN', [
+    'input[name="vin"]',
+    'input[placeholder*="VIN" i]',
+    'input[aria-label*="VIN" i]',
+    'input[type="text"]'
+  ]);
 };

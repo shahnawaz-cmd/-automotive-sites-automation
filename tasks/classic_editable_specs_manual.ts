@@ -1,34 +1,43 @@
 import { Page } from '@playwright/test';
 import { Actor } from '../actors/Actor';
 import { generateClassicNumericVin } from './vinHelper';
-import { DecodeVinTask } from './DecodeVinTask';
+import { fastInputWithHealing, clickWithHealing, locateInputWithHealing } from '../utils/selfHealingLocator';
 
 export class ClassicEditableSpecsManual {
   private timeout = process.env.CI ? 90000 : 45000;
 
   async runManualUpdate(page: Page) {
-    const updateBtn = page.getByRole('button', { name: 'Click here to update' });
-    await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await updateBtn.click({ force: true });
+    // 1. Click 'Click here to update'
+    await clickWithHealing(page, 'Click here to update', [
+      'button:has-text("Click here to update")',
+      'button:has-text("update")'
+    ]);
 
-    const ymmBtn = page.getByRole('button', { name: 'Update Year, Make and Model' });
-    await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await ymmBtn.click({ force: true });
+    // 2. Click 'Update Year, Make and Model'
+    await clickWithHealing(page, 'Update Year, Make and Model', [
+      'button:has-text("Update Year, Make and Model")',
+      'button:has-text("Year, Make & Model")'
+    ]);
 
-    const clickHereBtn = page.getByRole('button', { name: 'Click here' });
-    await clickHereBtn.waitFor({ state: 'visible', timeout: this.timeout });
-    await clickHereBtn.click({ force: true });
+    // 3. Click 'Click here' (for manual inputs)
+    await clickWithHealing(page, 'Click here', [
+      'button:has-text("Click here")',
+      'a:has-text("Click here")'
+    ]);
 
-    await page.getByPlaceholder('Enter year').fill('1960');
-    await page.getByPlaceholder('Enter make').fill('Ford');
-    await page.getByPlaceholder('Enter model').fill('F-250');
-    await page.getByPlaceholder('Enter engine (e.g., V8,').fill('V8');
-    await page.getByPlaceholder('Enter transmission type').fill('Auto');
-    await page.getByPlaceholder('Enter number of doors').fill('5');
-    await page.getByPlaceholder('Enter drive type (e.g., RWD,').fill('AWD');
+    // 4. Self-Healing Manual Field Inputs
+    await fastInputWithHealing(page, 'Enter year', '1960', ['input[placeholder*="year" i]']);
+    await fastInputWithHealing(page, 'Enter make', 'Ford', ['input[placeholder*="make" i]']);
+    await fastInputWithHealing(page, 'Enter model', 'F-250', ['input[placeholder*="model" i]']);
+    await fastInputWithHealing(page, 'Enter engine', 'V8', ['input[placeholder*="engine" i]']);
+    await fastInputWithHealing(page, 'Enter transmission', 'Auto', ['input[placeholder*="transmission" i]']);
+    await fastInputWithHealing(page, 'Enter number of doors', '5', ['input[placeholder*="doors" i]']);
+    await fastInputWithHealing(page, 'Enter drive type', 'AWD', ['input[placeholder*="drive" i]']);
 
-    await page.getByRole('button', { name: 'Continue' }).click({ force: true });
-    await page.getByRole('button', { name: 'Submit' }).click({ force: true });
+    // 5. Submit changes
+    await clickWithHealing(page, 'Continue', ['button:has-text("Continue")']);
+    await clickWithHealing(page, 'Submit', ['button:has-text("Submit")']);
+
     await page.waitForURL(/cv=/, { timeout: this.timeout * 2 });
     console.log('✅ Manual update successful');
   }
@@ -39,19 +48,20 @@ export class ClassicEditableSpecsManual {
     await page.waitForTimeout(1000);
 
     const classicVin = generateClassicNumericVin();
-    const vinInput = page.getByRole('textbox', { name: 'Vehicle Identification Number' })
-      .or(page.getByRole('textbox', { name: 'Enter VIN Number' }))
-      .or(page.getByRole('textbox', { name: 'Enter Your VIN' }))
-      .or(page.locator('input[name="vin"]'))
-      .or(page.getByPlaceholder(/enter vin/i))
-      .first();
+    
+    // Self-healing VIN input & search
+    await fastInputWithHealing(page, 'VIN', classicVin, [
+      'input[name="vin"]',
+      'input[placeholder*="VIN" i]',
+      'input[aria-label*="VIN" i]'
+    ]);
 
-    await vinInput.waitFor({ state: 'visible', timeout: this.timeout / 3 });
-    await vinInput.fill(classicVin);
-
-    const submitBtn = page.getByRole('button', { name: /search|decode|get window sticker/i }).first()
-      .or(page.locator('button[type="submit"]')).first();
-    await submitBtn.click();
+    await clickWithHealing(page, 'Search', [
+      'button[type="submit"]',
+      'button:has-text("Search")',
+      'button:has-text("Decode")',
+      'button:has-text("Get Window Sticker")'
+    ]);
 
     await page.waitForURL(/.*(preview|sticker|license-preview|ws-preview).*/, { timeout: this.timeout });
     await this.runManualUpdate(page);

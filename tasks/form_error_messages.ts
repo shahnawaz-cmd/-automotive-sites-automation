@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
 import { Actor } from '../actors/Actor';
+import { clickWithHealing } from '../utils/selfHealingLocator';
 
 export class FormErrorMessageTask {
   constructor(
@@ -39,28 +40,17 @@ export class SearchAndVerifyErrorTask {
     private timeout: number = 60000
   ) {}
 
-  // Helper function-like method to wrap the interaction logic
-  private async triggerSearchAndObserve(actor: Actor) {
-    const page = actor.getPage();
-    const vinInput = page.locator('input[type="text"]').first();
-    await vinInput.locator('xpath=../..').getByRole('button').first().click();
-    
-    const errorTask = new FormErrorMessageTask(
-      this.errorSelector,
-      this.expectedMessage,
-      this.timeout
-    );
-    await actor.attemptsTo(errorTask);
-  }
-
   async performAs(actor: Actor) {
     const page = actor.getPage();
+    console.log(`[Error Verification] Clicking search button: ${this.searchButtonName}`);
     
-    // Log the action
-    console.log(`[Error Verification] Clicking search button relative to input`);
-    
-    // Explicitly click the search button using the provided name
-    await page.getByRole('button', { name: this.searchButtonName }).click();
+    // Self-healing click for search button
+    await clickWithHealing(page, this.searchButtonName, [
+      'button[type="submit"]',
+      'button:has-text("Search")',
+      'button:has-text("Get Window Sticker")',
+      'button:has-text("Search VIN")'
+    ]);
     
     const errorTask = new FormErrorMessageTask(
       this.errorSelector,

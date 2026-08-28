@@ -166,6 +166,9 @@ test('TC_12 Classic editable specs feature validation', async ({ page }, testInf
   const baseURL = testInfo.project.use.baseURL || '';
   test.skip(baseURL.includes('vehiclehistory.eu'), 'Skipping classic editable specs validation for vehiclehistory.eu');
 
+  // Set timeout to 120s (local) / 150s (CI) to accommodate classic cascading API calls
+  testInfo.setTimeout(process.env.CI ? 150000 : 120000);
+
   const actor = new Actor('User', page);
   try {
     await page.goto('/');

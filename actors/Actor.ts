@@ -9,13 +9,13 @@ export class Actor {
     this.page = page;
   }
 
-  // This allows the actor to execute an Action or Task (e.g., actor.attemptsTo(new Login()))
-  async attemptsTo(activity: { performAs: (actor: Actor) => Promise<void> }) {
-    await activity.performAs(this);
+  // This allows the actor to execute an Action or Task (e.g., actor.attemptsTo(new DecodeVinTask()))
+  async attemptsTo(activity: { performAs: (actor: Actor, ...args: any[]) => Promise<void> }, ...args: any[]) {
+    await activity.performAs(this, ...args);
   }
 
   // This allows the actor to run a Question (e.g., actor.asks(new PageTitle()))
-  async asks(question: { answeredBy: (actor: Actor) => Promise<any> }) {
+  async asks<T = any>(question: { answeredBy: (actor: Actor) => Promise<T> }): Promise<T> {
     return await question.answeredBy(this);
   }
 
