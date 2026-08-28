@@ -5,8 +5,8 @@
  */
 async function locateInputWithHealing(page, labelText, fallbackSelectors = [], options = {}) {
   const isSlowNetwork = options.isSlowNetwork || process.env.SLOW_NETWORK === 'true';
-  const baseTimeout = options.timeout || (isSlowNetwork ? 10000 : 4000);
-  const strategyTimeout = options.strategyTimeout || Math.max(1500, Math.floor(baseTimeout / 3));
+  const baseTimeout = options.timeout || (isSlowNetwork ? 6000 : 3000);
+  const strategyTimeout = options.strategyTimeout || (isSlowNetwork ? 1500 : 800);
 
   const rawStrategies = [
     () => page.getByRole('textbox', { name: new RegExp(labelText, 'i') }),
@@ -32,7 +32,7 @@ async function locateInputWithHealing(page, labelText, fallbackSelectors = [], o
   for (let i = 0; i < rawStrategies.length; i++) {
     try {
       const loc = rawStrategies[i]().first();
-      const isVisible = await loc.isVisible({ timeout: 1000 }).catch(() => false);
+      const isVisible = await loc.isVisible({ timeout: 600 }).catch(() => false);
       if (isVisible) {
         return loc;
       }
@@ -77,8 +77,8 @@ async function fastInputWithHealing(page, labelText, value, fallbackSelectors = 
  */
 async function locateElementWithHealing(page, labelText, fallbackSelectors = [], options = {}) {
   const isSlowNetwork = options.isSlowNetwork || process.env.SLOW_NETWORK === 'true';
-  const baseTimeout = options.timeout || (isSlowNetwork ? 10000 : 4000);
-  const strategyTimeout = options.strategyTimeout || Math.max(1500, Math.floor(baseTimeout / 3));
+  const baseTimeout = options.timeout || (isSlowNetwork ? 6000 : 3000);
+  const strategyTimeout = options.strategyTimeout || (isSlowNetwork ? 1500 : 800);
 
   const rawStrategies = [
     () => page.getByRole('tab', { name: new RegExp(labelText, 'i') }),
@@ -104,7 +104,7 @@ async function locateElementWithHealing(page, labelText, fallbackSelectors = [],
   for (let i = 0; i < rawStrategies.length; i++) {
     try {
       const loc = rawStrategies[i]().first();
-      const isVisible = await loc.isVisible({ timeout: 1000 }).catch(() => false);
+      const isVisible = await loc.isVisible({ timeout: 600 }).catch(() => false);
       if (isVisible) {
         return loc;
       }
@@ -131,7 +131,7 @@ async function clickWithHealing(page, buttonTextOrLabel, fallbackSelectors = [],
     ...fallbackSelectors.map((sel) => () => (typeof sel === 'function' ? sel(page) : page.locator(sel)))
   ];
 
-  const strategyTimeout = options.strategyTimeout || 3000;
+  const strategyTimeout = options.strategyTimeout || (process.env.SLOW_NETWORK === 'true' ? 2000 : 1000);
 
   // Pass 1: Try visible match first
   for (let i = 0; i < rawStrategies.length; i++) {

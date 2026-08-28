@@ -16,6 +16,16 @@ import { EuVinConfirmationTask } from '../tasks/eu_vin_confirmation';
 import { ClassicEditableSpecsManual } from '../tasks/classic_editable_specs_manual';
 import { DefaultPlanPriceCheckTask } from '../tasks/default_plan_price_check';
 
+test.beforeEach(async ({ page }) => {
+  // Speed up CI by aborting heavy non-essential 3rd-party analytics and tracking beacons
+  if (process.env.CI) {
+    await page.route(
+      /.*(google-analytics\.com|googletagmanager\.com|hotjar\.com|clarity\.ms|connect\.facebook\.net|snap\.licdn\.com).*/i,
+      (route) => route.abort()
+    ).catch(() => {});
+  }
+});
+
 test('TC_01 VIN decode verify', async ({ page }) => {
   const actor = new Actor('User', page);
   try {

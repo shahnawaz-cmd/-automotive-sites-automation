@@ -20,8 +20,8 @@ export async function locateInputWithHealing(
   options: HealingOptions = {}
 ): Promise<Locator> {
   const isSlowNetwork = options.isSlowNetwork || process.env.SLOW_NETWORK === 'true';
-  const baseTimeout = options.timeout || (isSlowNetwork ? 10000 : 4000);
-  const strategyTimeout = options.strategyTimeout || Math.max(1500, Math.floor(baseTimeout / 3));
+  const baseTimeout = options.timeout || (isSlowNetwork ? 6000 : 3000);
+  const strategyTimeout = options.strategyTimeout || (isSlowNetwork ? 1500 : 800);
 
   const rawStrategies = [
     () => page.getByRole('textbox', { name: new RegExp(labelText, 'i') }),
@@ -47,7 +47,7 @@ export async function locateInputWithHealing(
   for (let i = 0; i < rawStrategies.length; i++) {
     try {
       const loc = rawStrategies[i]().first();
-      const isVisible = await loc.isVisible({ timeout: 1000 }).catch(() => false);
+      const isVisible = await loc.isVisible({ timeout: 600 }).catch(() => false);
       if (isVisible) {
         return loc;
       }
@@ -104,8 +104,8 @@ export async function locateElementWithHealing(
   options: HealingOptions = {}
 ): Promise<Locator> {
   const isSlowNetwork = options.isSlowNetwork || process.env.SLOW_NETWORK === 'true';
-  const baseTimeout = options.timeout || (isSlowNetwork ? 10000 : 4000);
-  const strategyTimeout = options.strategyTimeout || Math.max(1500, Math.floor(baseTimeout / 3));
+  const baseTimeout = options.timeout || (isSlowNetwork ? 6000 : 3000);
+  const strategyTimeout = options.strategyTimeout || (isSlowNetwork ? 1500 : 800);
 
   const rawStrategies = [
     () => page.getByRole('tab', { name: new RegExp(labelText, 'i') }),
@@ -131,7 +131,7 @@ export async function locateElementWithHealing(
   for (let i = 0; i < rawStrategies.length; i++) {
     try {
       const loc = rawStrategies[i]().first();
-      const isVisible = await loc.isVisible({ timeout: 1000 }).catch(() => false);
+      const isVisible = await loc.isVisible({ timeout: 600 }).catch(() => false);
       if (isVisible) {
         return loc;
       }
@@ -163,7 +163,7 @@ export async function clickWithHealing(
     ...fallbackSelectors.map((sel) => () => (typeof sel === 'function' ? sel(page) : page.locator(sel)))
   ];
 
-  const strategyTimeout = options.strategyTimeout || 3000;
+  const strategyTimeout = options.strategyTimeout || (process.env.SLOW_NETWORK === 'true' ? 2000 : 1000);
 
   // Pass 1: Try visible match first
   for (let i = 0; i < rawStrategies.length; i++) {
@@ -199,3 +199,60 @@ export async function clickWithHealing(
 
   await rawStrategies[0]().first().click({ force: true });
 }
+
+/**
+ * Specifically dismisses third-party live chat widgets on mobile view without touching site popups.
+ */
+export async function dismissLiveChatOnly(page: Page, timeout: number = 1500): Promise<boolean> {
+  for (const frame of page.frames()) {
+    const frameUrl = frame.url().toLowerCase();
+    const frameName = frame.name().toLowerCase();
+    const isLiveChat =
+      frameUrl.includes('livechat') ||
+      frameUrl.includes('tawk.to') ||
+      frameUrl.includes('zendesk') ||
+      frameUrl.includes('intercom') ||
+      frameUrl.includes('crisp.chat') ||
+      frameUrl.includes('drift') ||
+      frameUrl.includes('hubspot') ||
+      frameName.includes('chat') ||
+      frameName.includes('launcher');
+
+    if (isLiveChat) {
+      try {
+        const btn = frame
+          .locator('button[aria-label*="close" i], button[aria-label*="minimize" i], button[title*="close" i], [class*="close" i]')
+          .locator('visible=true')
+          .first();
+        if (await btn.isVisible({ timeout }).catch(() => false)) {
+          console.log('🛡️ [Live Chat] Dismissing external live chat widget in frame...');
+          await btn.click({ force: true }).catch(() => {});
+          return true;
+        }
+      } catch (e) {}
+    }
+  }
+
+  const liveChatHostSelectors = [
+    '#chat-widget-container button[aria-label*="close" i]',
+    '#chat-widget-container button[aria-label*="minimize" i]',
+    '#hubspot-messages-iframe-container button[aria-label*="close" i]',
+    '.crisp-client [aria-label*="close" i]',
+    '.intercom-lightweight-app [aria-label*="close" i]',
+    'div[id*="tawk" i] [aria-label*="close" i]'
+  ];
+
+  for (const sel of liveChatHostSelectors) {
+    try {
+      const chatBtn = page.locator(sel).locator('visible=true').first();
+      if (await chatBtn.isVisible({ timeout }).catch(() => false)) {
+        console.log(`🛡️ [Live Chat] Closing external live chat widget ("${sel}")...`);
+        await chatBtn.click({ force: true }).catch(() => {});
+        return true;
+      }
+    } catch (e) {}
+  }
+
+  return false;
+}
+

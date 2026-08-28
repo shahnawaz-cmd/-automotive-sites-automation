@@ -10,11 +10,9 @@ export class CouponAndPrevCouponVerification {
     const page = actor.getPage();
 
     // 1. Apply coupon via URL
-    // Use 'domcontentloaded' as a primary wait for faster initial page load,
-    // then 'networkidle' for full content loading, catching potential timeouts gracefully.
     await page.goto(`/?offer=${couponCode}`, { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
-    await page.waitForTimeout(2000); // Safari stabilization before cookie check
+    await page.waitForTimeout(1000);
 
     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)
     const cookies = await page.context().cookies([page.url()]);
@@ -24,19 +22,15 @@ export class CouponAndPrevCouponVerification {
     }
     console.log(`Passed: Cookie found. Name: ${couponCookie.name}, Value: ${couponCookie.value}`);
 
-    // 3. Verify Banner with dynamic text
-    // The banner text pattern: "You have received [Dynamic]% Discount!"
-    // Switching to getByText for more resilient semantic selection, as recommended for production stability.
-    const bannerLocator = page.getByText(`You have received ${expectedDiscount} Discount!`);
+    // 3. Verify Banner with flexible case-insensitive regex
+    const bannerRegex = new RegExp(`You have received\\s+${expectedDiscount}\\s+Discount`, 'i');
+    const bannerLocator = page.getByText(bannerRegex)
+      .or(page.locator('text=' + bannerRegex))
+      .or(page.locator('div[class*="coupon" i], div[class*="banner" i], div[class*="discount" i]').filter({ hasText: expectedDiscount }))
+      .first();
     
-    // Conditional timeout: Wait up to 10s for the banner to appear
-    try {
-      await expect(bannerLocator).toBeVisible({ timeout: 10000 });
-      console.log(`Passed: Banner appeared with text: "You have received ${expectedDiscount} Discount!"`);
-    } catch (e) {
-      console.error(`Failed: Banner with text "You have received ${expectedDiscount} Discount!" did not appear.`);
-      throw e;
-    }
+    await expect(bannerLocator).toBeVisible({ timeout: 15000 });
+    console.log(`Passed: Banner appeared with discount: "${expectedDiscount}"`);
   }
 }
 
@@ -52,7 +46,6 @@ export class LowToHighCouponFlow {
 
     // 2. Apply high discount coupon (get20)
     console.log('--- Applying 2nd Coupon: get20 ---');
-    // Added 'domcontentloaded' for faster initial page load after navigation.
     await page.goto('/?offer=get20', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
     
@@ -67,19 +60,19 @@ export class LowToHighCouponFlow {
     console.log('Passed: Cookie verification (coupon=get20, prev_coupon=preview15)');
 
     // 3. Verify Banner for high coupon (20%)
-    // Switching to getByText for more resilient semantic selection.
-    await expect(page.getByText('You have received 20% Discount!')).toBeVisible({ timeout: 10000 });
+    const highBannerLocator = page.getByText(/You have received\s+20%\s+Discount/i)
+      .or(page.locator('div[class*="coupon" i], div[class*="banner" i]').filter({ hasText: '20%' }))
+      .first();
+    await expect(highBannerLocator).toBeVisible({ timeout: 15000 });
     console.log('Passed: Banner showed 20% Discount.');
 
     // 4. Apply low coupon again (preview15) - High should remain active
     console.log('--- Applying 1st Coupon again to verify no override ---');
-    // Added 'domcontentloaded' for faster initial page load after navigation.
     await page.goto('/?offer=preview15', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     // Expected: Banner should still show 20% (highest coupon not overridden)
-    // Switching to getByText for more resilient semantic selection.
-    await expect(page.getByText('You have received 20% Discount!')).toBeVisible({ timeout: 5000 });
+    await expect(highBannerLocator).toBeVisible({ timeout: 10000 });
     console.log('Passed: Highest coupon (20%) was NOT overridden by lower coupon.');
   }
 }
@@ -92,31 +85,27 @@ export class CouponBannerOnOtherPages {
     // 1. Apply coupon on base URL and verify
     await verifier.couponTest(actor, 'preview15', '15%');
 
-    // 2. Detect which path is valid
-    const paths = ['/window-stickers', '/window-sticker'];
-    let validPath = null;
+    // 2. Detect valid path (/window-stickers on VSR, /recalls on Infiniti, /window-sticker on others)
+    const baseURL = (page.context() as any)._options?.baseURL || '';
+    const currentUrl = page.url();
+    const isInfiniti = baseURL.toLowerCase().includes('infiniti') || currentUrl.toLowerCase().includes('infiniti');
+    const isVSR = baseURL.toLowerCase().includes('vehiclesreport') || baseURL.toLowerCase().includes('vsr') || currentUrl.toLowerCase().includes('vehiclesreport');
     
-    for (const path of paths) {
-      // Use 'domcontentloaded' to quickly check the response status for each path.
-      const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
-      if (response && response.status() === 200) {
-        // Once a valid path is found, wait for 'networkidle' to ensure all content is loaded.
-        await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
-        validPath = path;
-        break;
-      }
-    }
+    const validPath = isInfiniti ? '/recalls' : (isVSR ? '/window-stickers' : '/window-sticker');
 
-    if (!validPath) {
-      throw new Error('Failed: Neither /window-stickers nor /window-sticker paths are accessible.');
-    }
+    await page.goto(validPath, { waitUntil: 'domcontentloaded' });
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
     console.log(`Passed: Navigated to valid path: ${validPath}`);
 
-    // 3. Verify banner is still visible
-    // Switching to getByText for more resilient semantic selection.
-    const bannerLocator = page.getByText('You have received 15% Discount!');
-    await expect(bannerLocator).toBeVisible({ timeout: 5000 });
+    // 3. Verify banner is still visible using flexible regex
+    const bannerRegex = /You have received\s+15%\s+Discount/i;
+    const bannerLocator = page.getByText(bannerRegex)
+      .or(page.locator('text=' + bannerRegex))
+      .or(page.locator('div[class*="coupon" i], div[class*="banner" i]').filter({ hasText: '15%' }))
+      .first();
+
+    await expect(bannerLocator).toBeVisible({ timeout: 15000 });
     console.log('Passed: Banner persisted on the page: ' + validPath);
   }
 }

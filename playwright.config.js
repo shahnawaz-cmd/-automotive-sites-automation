@@ -2,11 +2,16 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  timeout: 120000,
+  timeout: process.env.CI ? 90000 : 60000,
+  expect: {
+    timeout: 10000,
+  },
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : 1,
+  workers: process.env.CI ? 1 : 1,
   fullyParallel: true,
   use: {
+    actionTimeout: 15000,
+    navigationTimeout: 30000,
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
   },

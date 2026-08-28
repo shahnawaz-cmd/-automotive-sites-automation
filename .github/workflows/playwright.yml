@@ -36,8 +36,9 @@ jobs:
           - Desktop
           - MobileChrome
         shard:
-          - 1/2
-          - 2/2
+          - 1/3
+          - 2/3
+          - 3/3
 
     steps:
     - uses: actions/checkout@v4
@@ -130,8 +131,9 @@ jobs:
           - MobileEdge
           - MobileSafari
         shard:
-          - 1/2
-          - 2/2
+          - 1/3
+          - 2/3
+          - 3/3
 
     steps:
     - uses: actions/checkout@v4
@@ -273,7 +275,7 @@ jobs:
             {base: $base, browser: $browser}
           ) | 
           group_by(.base) | 
-          map("• " + .[0].base + " (" + (map(.browser) | join(", ")) + ")") | 
+          map("• " + .[0].base + " (" + (map(.browser) | unique | join(", ")) + ")") | 
           join("\n")
         ' playwright-report/results.json || echo "N/A")
 
@@ -290,21 +292,32 @@ jobs:
           [.. | select(.specs? // empty) | .specs[]? |
             .title as $title |
             .tests[]? |
-            select(.status == "unexpected" or (.results? and (.results[] | select(.status == "failed" or .status == "timedOut")))) |
+            select(.status == "unexpected") |
             "• [" + (.projectName // "Unknown") + "] " + $title
           ] | unique | .[0:5] | join("\n")
         ' playwright-report/results.json 2>/dev/null || echo "")
         [ -n "$FAILED_DETAILS" ] && FAILED_SECTION="\n*❌ Failed Tests:*\n\`\`\`$FAILED_DETAILS\`\`\`" || FAILED_SECTION=""
 
+        # --- Enhancement 2b: Flaky tests list (passed on retry) ---
+        FLAKY_DETAILS=$(jq -r '
+          [.. | select(.specs? // empty) | .specs[]? |
+            .title as $title |
+            .tests[]? |
+            select(.status == "flaky") |
+            "• [" + (.projectName // "Unknown") + "] " + $title
+          ] | unique | .[0:5] | join("\n")
+        ' playwright-report/results.json 2>/dev/null || echo "")
+        [ -n "$FLAKY_DETAILS" ] && FLAKY_SECTION="\n*⚠️ Flaky Tests (Passed on Retry):*\n\`\`\`$FLAKY_DETAILS\`\`\`" || FLAKY_SECTION=""
+
         # --- Enhancement 3: Accurate failed sites count and names ---
         TOTAL_SITES=$(jq '[.config.projects[] | .name | split("_")[0]] | unique | length' playwright-report/results.json || echo "4")
 
         FAILING_SITES_NAMES=$(jq -r '
-          [.. | select(.projectName? and (.status? == "unexpected" or (.results? and (.results[] | select(.status == "failed" or .status == "timedOut"))))) | .projectName | split("_")[0]] | unique | join(", ")
+          [.. | select(.projectName? and .status? == "unexpected") | .projectName | split("_")[0]] | unique | join(", ")
         ' playwright-report/results.json 2>/dev/null || echo "")
 
         FAILED_SITES=$(jq -r '
-          [.. | select(.projectName? and (.status? == "unexpected" or (.results? and (.results[] | select(.status == "failed" or .status == "timedOut"))))) | .projectName | split("_")[0]] | unique | length
+          [.. | select(.projectName? and .status? == "unexpected") | .projectName | split("_")[0]] | unique | length
         ' playwright-report/results.json 2>/dev/null || echo "0")
 
         # --- Schedule type label ---
@@ -349,7 +362,7 @@ jobs:
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Active Batches:*\n$SITES_TESTED_BULLETS\n\n*Scope:* \`Global NextJS Sites - Functional E2E\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* \`Production\`\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}\n\n📥 *Links:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Workflow Run> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View HTML Report>$FAILED_SECTION" }
+                  "text": { "type": "mrkdwn", "text": "*Active Batches:*\n$SITES_TESTED_BULLETS\n\n*Scope:* \`Global NextJS Sites - Functional E2E\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* \`Production\`\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}\n\n📥 *Links:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Workflow Run> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View HTML Report>$FAILED_SECTION$FLAKY_SECTION" }
                 }
               ]
             }

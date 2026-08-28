@@ -17,6 +17,7 @@ export class DecodeVinTask {
   constructor(
     public shouldClose: boolean = true,
     public skipSuccessClick: boolean = false,
+    public useEuVin: boolean = false,
     private timeout: number = 60000,
     private selectors: VinTaskSelectors = {
       vinField1: 'Vehicle Identification Number',
@@ -65,10 +66,9 @@ export class DecodeVinTask {
   async performAs(actor: Actor) {
     const page = actor.getPage();
     const isMVL = page.url().includes('motorcyclevinlookup.com');
-    // ONLY TC_14 (which passes skipSuccessClick = true) uses EU VINs. All other cases use US VINs.
-    const isTC14 = this.skipSuccessClick;
-    const vin = isTC14 ? this.generateEuVin() : this.generateUSVin(isMVL);
-    console.log(`[VIN Decode] Generated VIN (${isTC14 ? 'EU' : 'US'}): ${vin}`);
+    // ONLY TC_14 (which passes useEuVin = true) uses EU VINs. ALL other cases for VHREU and other brands use US VINs.
+    const vin = this.useEuVin ? this.generateEuVin() : this.generateUSVin(isMVL);
+    console.log(`[VIN Decode] Generated VIN (${this.useEuVin ? 'EU' : 'US'}): ${vin}`);
 
     const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
     const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
@@ -92,7 +92,6 @@ export class DecodeVinTask {
     await page.waitForTimeout(1000);
 
     // List of potential success elements to check and click
-    // Increased flexibility for locators to cover domain-specific variations
     const successLocator = page.getByText('Records found for', { exact: false })
       .or(page.locator('h1:has-text("Records found for")'))
       .or(page.locator('text=We found detailed information for the'))
