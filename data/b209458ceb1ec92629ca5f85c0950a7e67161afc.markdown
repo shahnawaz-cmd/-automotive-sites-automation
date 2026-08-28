@@ -1,0 +1,43 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_09 Revisit sticker banner flow
+- Location: tests/global_case_verification.spec.ts:124:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic:
+      - generic:
+        - generic: WBA3A5G59DNP26842 · WVWZZZ3CZWE123456 · TMBJB9NE1F0123456 · ZFA31200001234567 · VF1RFB00854321098 · WBA3A5G59DNP26842 · WVWZZZ3CZWE123456 · TMBJB9NE1F0123456 · ZFA31200001234567 · VF1RFB00854321098 ·
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: "404"
+        - img [ref=e8]
+      - generic [ref=e10]: Wrong Turn
+      - heading "This page has left the road" [level=1] [ref=e13]
+      - paragraph [ref=e14]: The page you're looking for doesn't exist, was moved, or took a detour. Let's get you back on track.
+      - generic [ref=e15]:
+        - link "Back to Home" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img [ref=e17]
+          - text: Back to Home
+        - link "Run a VIN Check" [ref=e20] [cursor=pointer]:
+          - /url: /#hero
+          - img [ref=e21]
+          - text: Run a VIN Check
+  - alert [ref=e24]
+```
