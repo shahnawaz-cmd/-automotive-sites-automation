@@ -109,7 +109,8 @@ test('TC_07 License Plate search validation', async ({ page }) => {
   }
 });
 
-test('TC_08 Revisit banner flow', async ({ page }) => {
+test('TC_08 Revisit banner flow', async ({ page }, testInfo) => {
+  testInfo.setTimeout(120000);
   const actor = new Actor('User', page);
   try {
     await page.goto('/');
@@ -121,7 +122,8 @@ test('TC_08 Revisit banner flow', async ({ page }) => {
   }
 });
 
-test('TC_09 Revisit sticker banner flow', async ({ page }) => {
+test('TC_09 Revisit sticker banner flow', async ({ page }, testInfo) => {
+  testInfo.setTimeout(120000);
   const actor = new Actor('User', page);
   try {
     await actor.attemptsTo(new RevisitStickerBannerFlow());

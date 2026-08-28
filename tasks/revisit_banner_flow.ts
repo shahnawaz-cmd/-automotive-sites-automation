@@ -6,15 +6,17 @@ import { clickWithHealing } from '../utils/selfHealingLocator';
 export class RevisitBannerFlow {
   async performAs(actor: Actor) {
     const page = actor.getPage();
-    const timeout = process.env.CI ? 60000 : 30000;
+    const timeout = process.env.CI ? 90000 : 60000;
 
-    // 1. Perform VIN Decode with skipSuccessClick = true to navigate directly to preview without waiting for success banners
-    await actor.attemptsTo(new DecodeVinTask(false, true, false));
+    // 1. Perform VIN Decode using US VIN and wait for success condition to be met
+    await actor.attemptsTo(new DecodeVinTask(false, false, false));
 
-    // 2. Fast navigate back to base URL
-    await page.goBack({ waitUntil: 'domcontentloaded' });
+    // 2. Navigate back to base URL using browser back
+    await page.goBack();
+    await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+    await page.waitForTimeout(1000);
 
-    // 3. Fast Self-healing 'Grab it for only' revisit button click
+    // 3. Self-healing 'Grab it for only' button click
     await clickWithHealing(
       page,
       'Grab it for',
@@ -24,13 +26,13 @@ export class RevisitBannerFlow {
         'button:has-text("Get Window Sticker")',
         'button:has-text("Get Report")'
       ],
-      { timeout: 10000, force: true }
+      { timeout: timeout }
     );
 
-    // 4. Verify fast navigation to preview page with specific query parameters
-    await page.waitForURL(/.*(type=vhr.*content=revisit|content=revisit.*type=vhr).*/, { timeout: timeout, waitUntil: 'domcontentloaded' });
+    // 4. Verify navigation to preview page with specific query parameters
+    await page.waitForURL(/.*(preview|type=vhr|content=revisit).*/, { timeout: timeout, waitUntil: 'domcontentloaded' });
     
-    // Validate required query params
+    // Check URL contains type=vhr AND content=revisit
     await expect(page).toHaveURL(/.*type=vhr.*/);
     await expect(page).toHaveURL(/.*content=revisit.*/);
     

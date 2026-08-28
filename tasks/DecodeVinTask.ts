@@ -1,17 +1,14 @@
-import { expect } from '@playwright/test';
 import { Actor } from '../actors/Actor';
-import { fastInputWithHealing, clickWithHealing, locateElementWithHealing } from '../utils/selfHealingLocator';
 
 export interface VinTaskSelectors {
   vinField1: string;
   vinField2: string;
-  vinField3?: string;
+  vinField3: string;
   searchButton: string;
   accessButton: string;
   successText: string;
   successText2: string;
   successText3: string;
-  successText4?: string;
   successHeading: string;
   successHeading2: string;
 }
@@ -20,7 +17,6 @@ export class DecodeVinTask {
   constructor(
     public shouldClose: boolean = true,
     public skipSuccessClick: boolean = false,
-    public useEuVin: boolean = false,
     private timeout: number = 60000,
     private selectors: VinTaskSelectors = {
       vinField1: 'Vehicle Identification Number',
@@ -31,7 +27,6 @@ export class DecodeVinTask {
       successText: 'Records found for',
       successText2: 'We found historical records for the',
       successText3: 'Window sticker found for',
-      successText4: 'Searching records for',
       successHeading: 'Success! We found detailed',
       successHeading2: 'We found detailed information for the',
     }
@@ -44,8 +39,17 @@ export class DecodeVinTask {
     return baseVin.slice(0, -numToReplace) + randomDigits;
   }
 
+  private usVinPool: string[] = [
+    '1C4RJHBG0PC533410',
+    '3MW5R1J01M8B87063',
+    '1FMCU0F68LUB98817',
+    'WA1VABGE5KB008242',
+    '2C4RC1BG6JR152015',
+    '1FMCU9GD3JUC83708'
+  ];
+
   private generateUSVin(isMVL: boolean = false): string {
-    const baseVin = '1FMCU9GD3JUC83708';
+    const baseVin = this.usVinPool[Math.floor(Math.random() * this.usVinPool.length)];
     return this.generateRandomVin(baseVin, 2);
   }
 
@@ -61,41 +65,34 @@ export class DecodeVinTask {
   async performAs(actor: Actor) {
     const page = actor.getPage();
     const isMVL = page.url().includes('motorcyclevinlookup.com');
+    // ONLY TC_14 (which passes skipSuccessClick = true) uses EU VINs. All other cases use US VINs.
+    const isTC14 = this.skipSuccessClick;
+    const vin = isTC14 ? this.generateEuVin() : this.generateUSVin(isMVL);
+    console.log(`[VIN Decode] Generated VIN (${isTC14 ? 'EU' : 'US'}): ${vin}`);
+
+    const vinField1 = page.getByRole('textbox', { name: this.selectors.vinField1 });
+    const vinField2 = page.getByRole('textbox', { name: this.selectors.vinField2 });
+    const vinField3 = page.getByRole('textbox', { name: this.selectors.vinField3 });
+    const vinField4 = page.getByPlaceholder(this.selectors.vinField1);
+    const vinField5 = page.getByPlaceholder(this.selectors.vinField2);
+    const vinField6 = page.getByPlaceholder(this.selectors.vinField3);
+
+    const vinInput = vinField1.or(vinField2).or(vinField3).or(vinField4).or(vinField5).or(vinField6).first();
     
-    // Always use US VIN by default (including TC_01 across all sites). Only generate EU VIN when explicitly requested (e.g. TC_14).
-    const vin = this.useEuVin ? this.generateEuVin() : this.generateUSVin(isMVL);
-    console.log(`[VIN Decode] Generated VIN (${this.useEuVin ? 'EU' : 'US'}): ${vin}`);
+    await vinInput.waitFor({ state: 'visible', timeout: this.timeout });
+    await vinInput.fill(vin);
 
-    // Self-Healing Input: Fills VIN with multi-strategy accessibility, placeholder, label & attributes
-    await fastInputWithHealing(
-      page,
-      'VIN',
-      vin,
-      [
-        'input[name="vin"]',
-        'input[placeholder*="VIN" i]',
-        'input[aria-label*="VIN" i]',
-        'input[type="text"]'
-      ],
-      { timeout: this.timeout }
-    );
-
-    // Self-Healing Button: Clicks search/decode button with multi-strategy
-    await clickWithHealing(
-      page,
-      this.selectors.searchButton,
-      [
-        'button[type="submit"]',
-        'button:has-text("Search")',
-        'button:has-text("Decode")',
-        'button:has-text("Get Window Sticker")',
-        'button:has-text("Search VIN")'
-      ]
-    );
-
+    const searchBtn = page.getByRole('button', { name: this.selectors.searchButton }).first();
+    if (await searchBtn.isVisible()) {
+      await searchBtn.click();
+    } else {
+      await vinInput.locator('xpath=../..').getByRole('button').first().click();
+    }
+    
     await page.waitForTimeout(1000);
 
-    // Self-Healing Success Element Detection
+    // List of potential success elements to check and click
+    // Increased flexibility for locators to cover domain-specific variations
     const successLocator = page.getByText('Records found for', { exact: false })
       .or(page.locator('h1:has-text("Records found for")'))
       .or(page.locator('text=We found detailed information for the'))
@@ -108,8 +105,8 @@ export class DecodeVinTask {
       .or(page.locator('text=We found historical records for the'))
       .or(page.locator('text=Success!'));
 
-    // Wait up to 20 seconds for the success element to render on preview page
-    await successLocator.first().waitFor({ state: 'visible', timeout: 20000 }).catch(() => {
+    // Wait for the success element to render on preview page (gives fresh/uncached VINs time to decode)
+    await successLocator.first().waitFor({ state: 'visible', timeout: this.timeout }).catch(() => {
       console.log('Timeout waiting for success locator visibility');
     });
 
@@ -135,7 +132,7 @@ export class DecodeVinTask {
       successClicked = true;
     } else {
       for (const locator of successLocators) {
-        if (await locator.isVisible().catch(() => false)) {
+        if (await locator.isVisible()) {
           console.log('[VIN Decode] Clicking success element...');
           await locator.click().catch(() => {});
           successClicked = true;
@@ -150,5 +147,10 @@ export class DecodeVinTask {
     }
 
     console.log('Success condition met.');
+
+    if (this.shouldClose) {
+      await page.close();
+      console.log('Closed page as requested.');
+    }
   }
 }

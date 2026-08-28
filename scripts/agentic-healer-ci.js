@@ -138,7 +138,7 @@ async function runCiHealer() {
   console.log(`📋 Target task/spec files to analyze/heal: ${targetFiles.join(', ')}`);
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const candidateModels = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-1.5-pro'];
+  const candidateModels = ['gemini-1.5-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-pro', 'gemini-pro'];
 
   const repairedFiles = [];
   let usedModel = '';
