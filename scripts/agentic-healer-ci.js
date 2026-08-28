@@ -4,14 +4,16 @@ const { execSync } = require('child_process');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
 
-/**
- * Extracts detailed failure stacks, line numbers, and Playwright call logs from results.json / playwright-report/results.json
- */
 function extractFailuresFromResults() {
-  const resultPaths = ['playwright-report/results.json', 'results.json'];
-  let raw = null;
+  const possiblePaths = [
+    'playwright-report/results.json',
+    'results.json',
+    path.join(__dirname, '../playwright-report/results.json'),
+    path.join(__dirname, '../results.json')
+  ];
 
-  for (const p of resultPaths) {
+  let raw = null;
+  for (const p of possiblePaths) {
     if (fs.existsSync(p)) {
       try {
         raw = fs.readFileSync(p, 'utf8');
@@ -20,11 +22,13 @@ function extractFailuresFromResults() {
     }
   }
 
-  if (!raw) return {};
+  if (!raw) return { failuresByFile: {}, failedTestTitles: new Set(), failedProjects: new Set() };
 
   try {
     const data = JSON.parse(raw);
     const failuresByFile = {};
+    const failedTestTitles = new Set();
+    const failedProjects = new Set();
 
     const targets = [
       'tasks/DecodeVinTask.ts',
@@ -50,37 +54,44 @@ function extractFailuresFromResults() {
       if (suite.specs) {
         for (const spec of suite.specs) {
           for (const t of spec.tests || []) {
-            for (const r of t.results || []) {
-              if (r.status === 'failed' || r.status === 'timedOut') {
-                const err = r.error || {};
-                const file = err.location?.file || spec.file || '';
-                const line = err.location?.line || spec.line || '';
-                const msg = (err.message || 'Unknown error').replace(/\u001b\[[0-9;]*m/g, ''); // strip ANSI colors
-                const snippet = (err.snippet || '').replace(/\u001b\[[0-9;]*m/g, '');
+            const isFailed = t.status === 'unexpected' || (t.results && t.results.some((r) => r.status === 'failed' || r.status === 'timedOut'));
+            if (isFailed) {
+              if (spec.title) failedTestTitles.add(spec.title);
+              if (t.projectName) failedProjects.add(t.projectName);
 
-                for (const target of targets) {
-                  const normalizedTarget = target.replace(/\//g, path.sep);
-                  const targetBase = path.basename(target);
-                  if (
-                    file.includes(normalizedTarget) ||
-                    file.includes(target) ||
-                    file.includes(targetBase) ||
-                    msg.includes(target) ||
-                    msg.includes(targetBase) ||
-                    snippet.includes(targetBase)
-                  ) {
-                    if (!failuresByFile[target]) failuresByFile[target] = [];
-                    failuresByFile[target].push({
-                      title: spec.title,
-                      line,
-                      message: msg,
-                      snippet
-                    });
+              for (const r of t.results || []) {
+                if (r.status === 'failed' || r.status === 'timedOut') {
+                  const err = r.error || {};
+                  const file = err.location?.file || spec.file || '';
+                  const line = err.location?.line || spec.line || '';
+                  const msg = (err.message || 'Unknown error').replace(/\u001b\[[0-9;]*m/g, '');
+                  const snippet = (err.snippet || '').replace(/\u001b\[[0-9;]*m/g, '');
+
+                  for (const target of targets) {
+                    const normalizedTarget = target.replace(/\//g, path.sep);
+                    const targetBase = path.basename(target);
+                    if (
+                      file.includes(normalizedTarget) ||
+                      file.includes(target) ||
+                      file.includes(targetBase) ||
+                      msg.includes(target) ||
+                      msg.includes(targetBase) ||
+                      snippet.includes(targetBase)
+                    ) {
+                      if (!failuresByFile[target]) failuresByFile[target] = [];
+                      failuresByFile[target].push({
+                        title: spec.title,
+                        project: t.projectName || '',
+                        line,
+                        message: msg,
+                        snippet
+                      });
+                    }
                   }
-                }
 
-                if (!failuresByFile['_all']) failuresByFile['_all'] = [];
-                failuresByFile['_all'].push({ title: spec.title, file, line, message: msg });
+                  if (!failuresByFile['_all']) failuresByFile['_all'] = [];
+                  failuresByFile['_all'].push({ title: spec.title, project: t.projectName || '', file, line, message: msg });
+                }
               }
             }
           }
@@ -95,10 +106,10 @@ function extractFailuresFromResults() {
       for (const s of data.suites) traverseSuite(s);
     }
 
-    return failuresByFile;
+    return { failuresByFile, failedTestTitles, failedProjects };
   } catch (e) {
     console.warn('⚠️ Error parsing results.json for failures:', e.message);
-    return {};
+    return { failuresByFile: {}, failedTestTitles: new Set(), failedProjects: new Set() };
   }
 }
 
@@ -111,8 +122,8 @@ async function runCiHealer() {
     return;
   }
 
-  const failures = extractFailuresFromResults();
-  const failedFileKeys = Object.keys(failures).filter((k) => k !== '_all');
+  const { failuresByFile, failedTestTitles, failedProjects } = extractFailuresFromResults();
+  const failedFileKeys = Object.keys(failuresByFile).filter((k) => k !== '_all');
 
   const targetFiles = failedFileKeys.length > 0
     ? failedFileKeys
@@ -126,57 +137,54 @@ async function runCiHealer() {
 
   console.log(`📋 Target task/spec files to analyze/heal: ${targetFiles.join(', ')}`);
 
-  const candidateModels = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-1.5-pro'];
   const genAI = new GoogleGenerativeAI(apiKey);
+  const candidateModels = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-1.5-pro'];
+
   const repairedFiles = [];
   let usedModel = '';
 
   for (const targetFile of targetFiles) {
-    if (!fs.existsSync(targetFile)) continue;
-    const taskCode = fs.readFileSync(targetFile, 'utf-8');
-
-    const fileFailures = failures[targetFile] || [];
-    let failureContext = '';
-
-    if (fileFailures.length > 0) {
-      failureContext = fileFailures
-        .map(
-          (f) => `
-TEST CASE: ${f.title}
-FAILED AT LINE: ${f.line}
-ERROR MESSAGE & CALL LOG:
-${f.message}
-${f.snippet ? `CODE SNIPPET:\n${f.snippet}` : ''}
-      `
-        )
-        .join('\n---\n');
-    } else {
-      failureContext = 'General locator failure, timeout, or DOM drift during CI execution.';
+    if (!fs.existsSync(targetFile)) {
+      console.warn(`File ${targetFile} does not exist. Skipping.`);
+      continue;
     }
 
+    const currentCode = fs.readFileSync(targetFile, 'utf-8');
+    const specificFailures = failuresByFile[targetFile] || failuresByFile['_all'] || [];
+
+    const failureDetails = specificFailures
+      .map(
+        (f, idx) =>
+          `Failure #${idx + 1}:\n- Test Case: ${f.title} (${f.project || 'Unknown Project'})\n- Line: ${f.line}\n- Error: ${f.message}\n- Code Snippet:\n${f.snippet || 'N/A'}`
+      )
+      .join('\n\n');
+
     const prompt = `
-      You are an expert Playwright automation healing agent specializing in production stability and Screenplay architecture.
-      The Playwright file "${targetFile}" for Global NextJS Multi-Brand Sites (VSR, MotorcycleVINLookup, VehicleHistoryEU, VINNumberCA) failed during CI execution.
+      You are an expert Senior QA Automation Engineer and AI Self-Healing agent specialized in Playwright, TypeScript, and Screenplay pattern architecture for responsive Next.js web applications.
 
-      ACTUAL PLAYWRIGHT CI ERROR, CALL LOG & STACK:
-      ${failureContext}
+      Target File: "${targetFile}"
+      
+      Observed Test Failure(s):
+      ${failureDetails || 'Test timeout / Element locator mismatch on dynamic or responsive layout.'}
 
-      CURRENT FILE SOURCE CODE:
+      Current Source Code:
       \`\`\`typescript
-      ${taskCode}
+      ${currentCode}
       \`\`\`
 
-      Healing Guidelines across Error Categories:
-      1. SELECTOR & DOM DRIFT:
-         - If element changed or was not found, switch to resilient semantic selectors (getByRole, getByPlaceholder, getByLabel, getByText, or regex/text).
-         - If strict mode violation (multiple matches), append .locator('visible=true').first() or .first().
-         - You may import and use helpers from '../utils/selfHealingLocator' or './utils/selfHealingLocator' (locateInputWithHealing, fastInputWithHealing, locateElementWithHealing, clickWithHealing).
-      2. RESPONSIVE / MOBILE SAFARI / CHROMIUM ISSUES:
-         - If element is reported "not visible" due to mobile/desktop duplicate DOM nodes, always use .locator('visible=true').first().
-         - For text inputs, handle dynamic input/change events.
-      3. TIMEOUT & SLOW ASYNC REDIRECTS / API CALLS:
-         - If URL redirection timed out, replace static waits with condition-based waitForURL with flexible regex e.g. /.*(preview|sticker|license-preview|ws-preview|checkout|payment).*/i.
-         - For API responses, use page.waitForResponse() with generous timeouts for slow network.
+      Task:
+      Inspect the failure error and rewrite/repair the code to make it resilient, rock-solid, and self-healing.
+      
+      Self-Healing Guidelines:
+      1. LOCATOR DRIFT & MULTI-STRATEGY FALLBACKS:
+         - Use import { fastInputWithHealing, clickWithHealing, locateInputWithHealing, locateElementWithHealing } from '../utils/selfHealingLocator';
+         - Prefer role-based and accessible locators (getByRole, getByLabel, getByPlaceholder, getByText).
+         - Include multiple CSS and text fallbacks for buttons, inputs, and tabs.
+      2. RESPONSIVE DOM & STRICT-MODE CONFLICTS:
+         - Next.js sites often render dual desktop/mobile DOM trees. Append .first() or .locator('visible=true') to avoid strict-mode ambiguity.
+      3. ASYNC TIMING & SMART WAITS:
+         - Replace static waitForTimeout with waitForURL, waitForResponse, or locator.waitFor({ state: 'visible' }).
+         - Ensure appropriate conditional timeouts for CI (60s to 90s for slow backend/APIs).
       4. MODALS, POPUPS & OVERLAYS:
          - If pointer events were intercepted by an overlay, use { force: true } or dismiss the overlay before interaction.
       5. DROPDOWN / COMBOS:
@@ -231,11 +239,33 @@ ${f.snippet ? `CODE SNIPPET:\n${f.snippet}` : ''}
     );
   }
 
-  console.log('🚀 Re-running Playwright test suite to verify AI fixes...');
+  // --- TARGETED RE-VERIFICATION (Only run the failed cases on the failed project) ---
+  const activeProject = process.env.PLAYWRIGHT_PROJECT || (failedProjects.size === 1 ? Array.from(failedProjects)[0] : '');
+  const tcIdentifiers = Array.from(failedTestTitles)
+    .map((title) => {
+      const match = title.match(/TC_\d+/i);
+      return match ? match[0] : '';
+    })
+    .filter(Boolean);
+
+  const uniqueTcs = Array.from(new Set(tcIdentifiers));
+  let verifyCmd = 'npx playwright test';
+
+  if (uniqueTcs.length > 0) {
+    verifyCmd += ` -g "${uniqueTcs.join('|')}"`;
+  }
+  if (activeProject) {
+    verifyCmd += ` --project=${activeProject}`;
+  }
+
+  console.log(`🎯 Targeted Verification: Running only failed test cases...`);
+  console.log(`💻 Command: ${verifyCmd}`);
+
   try {
-    execSync('npx playwright test', { stdio: 'inherit', timeout: 300000 });
+    execSync(verifyCmd, { stdio: 'inherit', timeout: 180000 });
+    console.log('🎉 [Targeted Verification] Healed tests PASSED successfully!');
   } catch (e) {
-    console.warn('⚠️ Verification test run completed.');
+    console.warn('⚠️ Targeted verification run completed.');
   }
 }
 

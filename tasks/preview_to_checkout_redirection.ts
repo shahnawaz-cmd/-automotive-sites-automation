@@ -7,54 +7,83 @@ export class PreviewToCheckoutRedirection {
   private timeout: number;
 
   constructor() {
-    // Condition-based timeout (longer on CI to prevent flakiness)
     this.timeout = process.env.CI ? 90000 : 45000;
   }
 
   private async fillEmailAndProceed(page: Page) {
-    const popupTimeout = process.env.CI ? 20000 : 10000;
+    const popupTimeout = process.env.CI ? 25000 : 15000;
 
-    // Self-healing Start button click
-    // Healing applied: Added { force: true } to bypass potential pointer-event interception by overlays.
-    await clickWithHealing(
-      page,
-      'Access Records',
-      [
+    // Check if email input is already visible in DOM
+    const emailField = page.locator('input[type="email"], input[placeholder*="email" i], input[name*="email" i]').first();
+    const isEmailAlreadyVisible = await emailField.isVisible({ timeout: 2000 }).catch(() => false);
+
+    if (!isEmailAlreadyVisible) {
+      console.log('[Preview Redirection] Locating and clicking Access Records CTA...');
+      // Multi-strategy access button locators
+      const accessButtonSelectors = [
         'button:has-text("Access Records")',
         'button:has-text("Get Window Sticker")',
         'button:has-text("View Full Report")',
-        'button:has-text("Get Records")'
-      ],
-      { timeout: popupTimeout, force: true }
-    );
+        'button:has-text("Get Records")',
+        'button:has-text("View Report")',
+        'button:has-text("Get My Report")',
+        'button:has-text("Unlock Report")',
+        'button:has-text("Instant Access")',
+        'a:has-text("Access Records")',
+        'a:has-text("Get Window Sticker")',
+        'button[type="submit"]'
+      ];
+
+      try {
+        await clickWithHealing(
+          page,
+          'Access Records',
+          accessButtonSelectors,
+          { timeout: popupTimeout, force: true }
+        );
+      } catch (e) {
+        console.log(`[Preview Redirection] Direct click failed, trying first visible button matching report CTA: ${e.message}`);
+        const fallbackBtn = page.locator('button, a').filter({ hasText: /(Access Records|Window Sticker|Full Report|Get Records|View Report)/i }).first();
+        if (await fallbackBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+          await fallbackBtn.scrollIntoViewIfNeeded().catch(() => {});
+          await fallbackBtn.click({ force: true }).catch(() => {});
+        }
+      }
+    }
 
     // Self-healing Email Input
-    // Healing applied: Added { force: true } to bypass potential pointer-event interception by overlays.
     const suffix = Math.random().toString(36).substring(2, 5);
+    const emailAddress = `rolex.rolls12+${suffix}@gmail.com`;
+    console.log(`[Preview Redirection] Filling email: ${emailAddress}`);
+
     await fastInputWithHealing(
       page,
       'Email',
-      `rolex.rolls12+${suffix}@gmail.com`,
+      emailAddress,
       [
         'input[type="email"]',
         'input[placeholder*="email" i]',
-        'input[name*="email" i]'
+        'input[name*="email" i]',
+        'input[aria-label*="email" i]'
       ],
       { timeout: popupTimeout, force: true }
     );
 
+    await page.waitForTimeout(500);
+
     // Self-healing Checkout/Proceed button click
-    // Healing applied: Added { force: true } to bypass potential pointer-event interception.
-    // Healing applied: Added more text fallbacks for the checkout button to support multi-brand variations
-    // (e.g., "Pay Now", "Complete Order") and increase resilience against DOM drift.
+    console.log('[Preview Redirection] Clicking Proceed to Checkout CTA...');
     await clickWithHealing(
       page,
       'Proceed to Checkout',
       [
         'button:has-text("Proceed to checkout")',
-        'button:has-text("Pay Now")', // Added for multi-brand variations
-        'button:has-text("Complete Order")', // Added for multi-brand variations
-        'button:has-text("Access Records")', // Existing fallback
+        'button:has-text("Proceed to Checkout")',
+        'button:has-text("Pay Now")',
+        'button:has-text("Complete Order")',
+        'button:has-text("Access Records")',
+        'button:has-text("Get Report")',
+        'button:has-text("Continue")',
         'button[type="submit"]'
       ],
       { timeout: popupTimeout, force: true }
@@ -63,14 +92,19 @@ export class PreviewToCheckoutRedirection {
 
   async performAs(actor: Actor) {
     const page = actor.getPage();
-    await actor.attemptsTo(new DecodeVinTask(false));
+    
+    // Land on preview page with shouldClose = false, skipSuccessClick = true, useEuVin = false (always US VIN)
+    await actor.attemptsTo(new DecodeVinTask(false, true, false));
+    await page.waitForTimeout(1000);
+
     await this.fillEmailAndProceed(page);
 
-    // Smart wait: Wait for URL redirection to checkout page
-    // Healing applied: Expanded the regex for `waitForURL` to include more common checkout-related terms
-    // (e.g., "purchase", "confirmation", "summary") and added 'i' flag for case-insensitivity.
-    // This improves resilience for varying URL patterns across multi-brand sites and prevents timeout issues
-    // if the URL contains a different but related term.
-    await page.waitForURL(/.*(checkout|payment|billing|order|purchase|confirmation|summary).*/i, { timeout: this.timeout });
+    // Wait for URL redirection to checkout page until full page load
+    await page.waitForURL(
+      /.*(checkout|payment|billing|order|purchase|confirmation|summary|subscribe).*/i,
+      { timeout: this.timeout, waitUntil: 'load' }
+    );
+    await page.waitForLoadState('load', { timeout: 15000 }).catch(() => {});
+    console.log(`✅ Successfully redirected to checkout URL: ${page.url()}`);
   }
 }

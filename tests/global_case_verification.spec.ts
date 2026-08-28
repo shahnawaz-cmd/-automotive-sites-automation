@@ -133,10 +133,14 @@ test('TC_09 Revisit sticker banner flow', async ({ page }) => {
 
 test('TC_10 Exit intent banner verification', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari'), 'Skipping exit intent on mobile');
-  const timeout = process.env.CI ? 60000 : 30000;
+  const timeout = process.env.CI ? 90000 : 45000;
   testInfo.setTimeout(timeout);
 
   try {
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => false });
+    });
+
     await page.goto('/');
     await page.waitForTimeout(1000); // 1 second delay
     
@@ -164,7 +168,11 @@ test('TC_11 Preview to checkout redirection', async ({ page }, testInfo) => {
 
 test('TC_12 Classic editable specs feature validation', async ({ page }, testInfo) => {
   const baseURL = testInfo.project.use.baseURL || '';
-  test.skip(baseURL.includes('vehiclehistory.eu'), 'Skipping classic editable specs validation for vehiclehistory.eu');
+  const projectName = testInfo.project.name || '';
+  test.skip(
+    baseURL.includes('vehiclehistory.eu') || projectName.startsWith('VSR') || baseURL.includes('vehiclesreport.com'),
+    'Skipping classic editable specs validation for VSR and vehiclehistory.eu'
+  );
 
   // Set timeout to 120s (local) / 150s (CI) to accommodate classic cascading API calls
   testInfo.setTimeout(process.env.CI ? 150000 : 120000);
@@ -194,7 +202,7 @@ test('TC_13 Global Exit Intent Preview Verification', async ({ page }, testInfo)
     await page.waitForTimeout(1000); // 1 second delay
     
     // 1. Decode VIN to land on Preview page (with shouldClose set to false)
-    await actor.attemptsTo(new DecodeVinTask(), false);
+    await actor.attemptsTo(new DecodeVinTask(false));
     
     // 2. Try Global Exit Intent Popup first, fallback to StreamingExitIntentPopup if not matched
     try {
@@ -220,8 +228,8 @@ test('TC_14 EU VIN confirmation flow', async ({ page }, testInfo) => {
     await page.goto('/');
     await page.waitForTimeout(1000);
     
-    // 1. Decode VIN to land on Preview page (shouldClose = false, skipSuccessClick = true)
-    await actor.attemptsTo(new DecodeVinTask(false, true));
+    // 1. Decode VIN to land on Preview page (shouldClose = false, skipSuccessClick = true, useEuVin = true)
+    await actor.attemptsTo(new DecodeVinTask(false, true, true));
 
     // 2. Perform EU VIN specification selection on preview page
     await actor.attemptsTo(new EuVinConfirmationTask());

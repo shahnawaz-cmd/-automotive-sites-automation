@@ -8,6 +8,8 @@ permissions:
   id-token: write
 
 on:
+  push:
+    branches: [ main, master ]
   workflow_dispatch:
   pull_request:
     branches: [ main, master ]
@@ -78,7 +80,13 @@ jobs:
     - name: Run AI Agentic Self-Healer (On Test Failure)
       if: steps.playwright-run.outcome == 'failure'
       timeout-minutes: 5
-      run: npm run heal:prod
+      run: |
+        if [ "${{ matrix.browser }}" = "Desktop" ]; then
+          PLAYWRIGHT_PROJECT="${{ matrix.project }}"
+        else
+          PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
+        fi
+        PLAYWRIGHT_PROJECT=$PLAYWRIGHT_PROJECT npm run heal:prod
       env:
         CI: true
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -159,7 +167,8 @@ jobs:
     - name: Run AI Agentic Self-Healer (On Test Failure)
       if: steps.playwright-run-extended.outcome == 'failure'
       timeout-minutes: 5
-      run: npm run heal:prod
+      run: |
+        PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}" npm run heal:prod
       env:
         CI: true
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
