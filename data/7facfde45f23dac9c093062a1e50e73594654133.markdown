@@ -1,0 +1,299 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_11 Preview to checkout redirection
+- Location: tests/global_case_verification.spec.ts:151:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications Alt+T"
+    - generic [ref=e8]:
+      - main [ref=e10]:
+        - generic [ref=e14]:
+          - img [ref=e15]
+          - heading "Success! We found detailed information for VIN# 1FMCU9GD3JUC83763" [level=4] [ref=e17]:
+            - generic [ref=e18]: Success!
+            - text: We found detailed information for VIN# 1FMCU9GD3JUC83763
+        - generic [ref=e19]:
+          - generic [ref=e21]:
+            - img "2018 Ford Escape" [ref=e22]
+            - heading "2018 Ford Escape" [level=1] [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: Trim
+              - generic [ref=e27]: SE
+            - generic [ref=e28]:
+              - generic [ref=e29]: Engine Capacity
+              - generic [ref=e30]: 1.5 L
+            - generic [ref=e31]:
+              - generic [ref=e32]: Engine
+              - generic [ref=e33]: 1.5L GTDI Sigma w/Premium Fuel
+            - generic [ref=e34]:
+              - generic [ref=e35]: Fuel Type
+              - generic [ref=e36]: Gasoline
+            - generic [ref=e37]:
+              - generic [ref=e38]: Transmission
+              - generic [ref=e39]: Automatic
+            - generic [ref=e40]:
+              - generic [ref=e41]: Drive Type
+              - generic [ref=e42]: 4WD/4-Wheel Drive/4x4
+            - generic [ref=e43]:
+              - generic [ref=e44]: Doors
+              - generic [ref=e45]: "4"
+            - generic [ref=e46]:
+              - generic [ref=e47]: MSRP
+              - generic [ref=e48]: $25,700
+            - generic [ref=e49]:
+              - generic [ref=e50]: Body Type
+              - generic [ref=e51]: SUV [suv]
+            - generic [ref=e52]:
+              - generic [ref=e53]: Manufacturer
+              - generic [ref=e54]: Ford Motor Company
+            - generic [ref=e55]:
+              - generic [ref=e56]: Standard Seating
+              - generic [ref=e57]: "5"
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - img [ref=e61]
+                - generic [ref=e63]:
+                  - generic [ref=e64]: Sales History
+                  - generic [ref=e65]: Reveal Records
+              - generic [ref=e66]:
+                - img [ref=e67]
+                - generic [ref=e69]:
+                  - generic [ref=e70]: Auction Records
+                  - generic [ref=e71]: Reveal Records
+              - generic [ref=e72]:
+                - img [ref=e73]
+                - generic [ref=e75]:
+                  - generic [ref=e76]: Odometer Checks
+                  - generic [ref=e77]: Reveal Records
+              - generic [ref=e78]:
+                - img [ref=e79]
+                - generic [ref=e81]:
+                  - generic [ref=e82]: Damage Records
+                  - generic [ref=e83]: Reveal Records
+              - generic [ref=e84]:
+                - img [ref=e85]
+                - generic [ref=e87]:
+                  - generic [ref=e88]: Title Check
+                  - generic [ref=e89]: Reveal Records
+              - generic [ref=e90]:
+                - img [ref=e91]
+                - generic [ref=e93]:
+                  - generic [ref=e94]: Theft Records
+                  - generic [ref=e95]: Reveal Records
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - generic [ref=e99]:
+                  - generic [ref=e100]: Lien/Loan Records
+                  - generic [ref=e101]: Reveal Records
+              - generic [ref=e102]:
+                - img [ref=e103]
+                - generic [ref=e105]:
+                  - generic [ref=e106]: MSRP
+                  - generic [ref=e107]: Reveal Records
+              - button "Reveal Records" [ref=e109]
+            - generic [ref=e110]:
+              - text: Market value
+              - paragraph [ref=e111]: This is the average price of the vehicle for a private or a dealership sale based on it's condition.
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]:
+                  - generic [ref=e114]:
+                    - generic [ref=e115]: Outstanding
+                    - img [ref=e117]
+                  - generic [ref=e121]:
+                    - generic [ref=e122]:
+                      - generic [ref=e123]: "Private Party:"
+                      - text: $10,031
+                    - generic [ref=e124]:
+                      - generic [ref=e125]: "Dealer Retail:"
+                      - text: $12,339
+                - generic [ref=e126] [cursor=pointer]:
+                  - generic [ref=e127]:
+                    - generic [ref=e128]: Clean
+                    - img [ref=e130]
+                  - generic [ref=e133]:
+                    - generic [ref=e134]:
+                      - generic [ref=e135]: "Private Party:"
+                      - text: $9,567
+                    - generic [ref=e136]:
+                      - generic [ref=e137]: "Dealer Retail:"
+                      - text: $11,747
+                - generic [ref=e138] [cursor=pointer]:
+                  - generic [ref=e139]:
+                    - generic [ref=e140]: Average
+                    - img [ref=e142]
+                  - generic [ref=e145]:
+                    - generic [ref=e146]:
+                      - generic [ref=e147]: "Private Party:"
+                      - text: $8,792
+                    - generic [ref=e148]:
+                      - generic [ref=e149]: "Dealer Retail:"
+                      - text: $10,760
+                - generic [ref=e150] [cursor=pointer]:
+                  - generic [ref=e151]:
+                    - generic [ref=e152]: Rough
+                    - img [ref=e154]
+                  - generic [ref=e157]:
+                    - generic [ref=e158]:
+                      - generic [ref=e159]: "Private Party:"
+                      - text: $7,785
+                    - generic [ref=e160]:
+                      - generic [ref=e161]: "Dealer Retail:"
+                      - text: $9,478
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - img [ref=e165]
+                - paragraph [ref=e168]: Happy customers across the globe
+              - generic [ref=e169]:
+                - img [ref=e170]
+                - paragraph [ref=e173]: Instant access
+              - generic [ref=e174]:
+                - img [ref=e175]
+                - paragraph [ref=e178]: Secure checkout
+              - generic [ref=e179]:
+                - img [ref=e180]
+                - paragraph [ref=e184]: Downloadable PDF
+            - blockquote [ref=e186]:
+              - text: "\"They did a fabulous job with GREAT customer service. Once I entered the VIN number and after only a few minutes my report was in my inbox. The next day I had a follow-up call to ensure I had received everything I ordered and was happy with their service. A very customer-oriented businesses. I only wish there were more companies like this.\""
+              - generic [ref=e187]: — Brian Striemer
+            - generic [ref=e189]:
+              - img "Trustpilot 4.8 stars" [ref=e190]
+              - generic [ref=e191]: 4.8/5
+              - link "Trustpilot" [ref=e192] [cursor=pointer]:
+                - /url: https://www.trustpilot.com/review/detailedvehiclehistory.com
+            - generic [ref=e193]:
+              - generic [ref=e194]: "We check for:"
+              - generic [ref=e195]:
+                - generic [ref=e196]:
+                  - img [ref=e197]
+                  - generic [ref=e199]: Ownership History
+                - generic [ref=e200]:
+                  - img [ref=e201]
+                  - generic [ref=e203]: Junk & Salvage
+                - generic [ref=e204]:
+                  - img [ref=e205]
+                  - generic [ref=e207]: Vehicle Specifications
+                - generic [ref=e208]:
+                  - img [ref=e209]
+                  - generic [ref=e211]: Odometer Readings
+                - generic [ref=e212]:
+                  - img [ref=e213]
+                  - generic [ref=e215]: Total Loss History
+                - generic [ref=e216]:
+                  - img [ref=e217]
+                  - generic [ref=e219]: Accident History
+                - generic [ref=e220]:
+                  - img [ref=e221]
+                  - generic [ref=e223]: Structural Damage
+                - generic [ref=e224]:
+                  - img [ref=e225]
+                  - generic [ref=e227]: Recalls & Defects
+                - generic [ref=e228]:
+                  - img [ref=e229]
+                  - generic [ref=e231]: Title Information
+                - generic [ref=e232]:
+                  - img [ref=e233]
+                  - generic [ref=e235]: 60 + Problem Checks
+                - generic [ref=e236]:
+                  - img [ref=e237]
+                  - generic [ref=e239]: Taxi, Lease, Police Use
+                - generic [ref=e240]:
+                  - img [ref=e241]
+                  - generic [ref=e243]: Loan Verifications
+            - link "View Sample Report" [ref=e244] [cursor=pointer]:
+              - /url: https://app.motorcyclevinlookup.com/report/vin/2T1BURHE0FC320645
+            - generic [ref=e245]:
+              - img "SSL Security" [ref=e246]
+              - paragraph [ref=e247]: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+            - separator [ref=e248]
+            - paragraph [ref=e250]: © 2026 Motorcycle VIN Lookup, All Rights Reserved
+      - generic [ref=e252]:
+        - heading "Unlock the history - Choose your package." [level=4] [ref=e253]
+        - generic [ref=e254]:
+          - radio "5 Reports 5 Reports $12.00 /Report You pay $59.99 $125 Save 52%" [ref=e256] [cursor=pointer]:
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - radio "5 Reports" [ref=e261]
+                - heading "5 Reports" [level=4] [ref=e262]
+              - generic [ref=e263]:
+                - generic [ref=e264]: $12.00
+                - subscript [ref=e265]: /Report
+              - generic [ref=e266]: You pay $59.99
+              - generic [ref=e267]:
+                - generic [ref=e268]: $125
+                - generic [ref=e269]: Save 52%
+          - radio "2 Reports 2 Reports $15.00 /Report You pay $29.99 $50 Save 40%" [ref=e271] [cursor=pointer]:
+            - generic [ref=e273]:
+              - generic [ref=e274]:
+                - radio "2 Reports" [ref=e276]
+                - heading "2 Reports" [level=4] [ref=e277]
+              - generic [ref=e278]:
+                - generic [ref=e279]: $15.00
+                - subscript [ref=e280]: /Report
+              - generic [ref=e281]: You pay $29.99
+              - generic [ref=e282]:
+                - generic [ref=e283]: $50
+                - generic [ref=e284]: Save 40%
+          - radio "1 Report 1 Report $25 /Report You pay $25 45% Cheaper Than Carfax" [checked] [ref=e286] [cursor=pointer]:
+            - generic [ref=e288]:
+              - generic [ref=e289]:
+                - radio "1 Report" [checked] [ref=e291]
+                - heading "1 Report" [level=4] [ref=e292]
+              - generic [ref=e293]:
+                - generic [ref=e294]: $25
+                - subscript [ref=e295]: /Report
+              - generic [ref=e296]: You pay $25
+              - generic [ref=e298]: 45% Cheaper Than Carfax
+          - radio "Best Value Unlimited VIN Checks Unlimited VIN Checks $29.99 /subscription Why choose this plan? Plan information" [ref=e301] [cursor=pointer]:
+            - generic [ref=e303]: Best Value
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - radio "Unlimited VIN Checks" [ref=e306]
+                - heading "Unlimited VIN Checks" [level=4] [ref=e307]
+              - generic [ref=e308]:
+                - generic [ref=e309]: $29.99
+                - subscript [ref=e310]: /subscription
+            - generic [ref=e314]:
+              - generic [ref=e315]: Why choose this plan?
+              - button "Plan information" [ref=e317]: "?"
+        - checkbox "Save 50% 9.99 Add a window sticker to your purchase $9.99$9.99 View Sample Window Sticker" [checked] [ref=e318] [cursor=pointer]:
+          - generic [ref=e319]:
+            - generic [ref=e320]: Save 50%
+            - checkbox "9.99" [checked] [ref=e321]
+            - generic [ref=e322]:
+              - text: Add a window sticker to your purchase
+              - generic [ref=e323]: $9.99$9.99
+          - link "View Sample Window Sticker" [ref=e325]:
+            - /url: https://app.motorcyclevinlookup.com/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
+        - button "Access Records" [ref=e326]
+        - paragraph [ref=e328]:
+          - text: By selecting "Access Records" you are confirming that you have read and agree to Motorcycle VIN Lookup
+          - link "Terms of Use" [ref=e329] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com//terms-and-conditions
+          - text: and
+          - link "Privacy Policy" [ref=e330] [cursor=pointer]:
+            - /url: https://app.motorcyclevinlookup.com//privacy
+          - text: .
+        - img "Trustpilot" [ref=e332]
+```
