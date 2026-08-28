@@ -1,0 +1,326 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_11 Preview to checkout redirection
+- Location: tests/global_case_verification.spec.ts:157:5
+
+# Error details
+
+```
+Test timeout of 120000ms exceeded.
+```
+
+```
+Error: page.waitForTimeout: Target page, context or browser has been closed
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - alert [ref=e2]: Search any VIN Number by looking up a VIN Check
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - img [ref=e6]
+      - generic [ref=e9]: Almost there — confirm your vehicle to continue
+    - main [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - img [ref=e16]
+            - generic [ref=e19]:
+              - heading "Confirm your vehicle" [level=1] [ref=e20]
+              - paragraph [ref=e21]: We couldn't fully identify VF3YC2MFB12G20873. Select the details to pull the full report.
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - generic [ref=e25]: Year *
+              - generic [ref=e26]:
+                - textbox "Select year" [ref=e27]
+                - img [ref=e28] [cursor=pointer]
+            - generic [ref=e30]:
+              - generic [ref=e31]: Make *
+              - generic [ref=e32]:
+                - textbox "Select make" [disabled] [ref=e33]
+                - img [ref=e34] [cursor=pointer]
+            - generic [ref=e36]:
+              - generic [ref=e37]: Model *
+              - generic [ref=e38]:
+                - textbox "Select model" [disabled] [ref=e39]
+                - img [ref=e40] [cursor=pointer]
+            - generic [ref=e42]:
+              - generic [ref=e43]: Trim *
+              - generic [ref=e44]:
+                - textbox "Select trim" [disabled] [ref=e45]
+                - img [ref=e46] [cursor=pointer]
+          - button "Get Records" [disabled] [ref=e48]
+        - generic [ref=e49]:
+          - heading "Reveal records for this vehicle" [level=2] [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e53] [cursor=pointer]:
+                - img [ref=e55]
+                - generic [ref=e58]: Accident & Damage
+                - img [ref=e60]
+              - generic [ref=e63] [cursor=pointer]:
+                - img [ref=e65]
+                - generic [ref=e69]: Title & Brand Check
+                - img [ref=e71]
+              - generic [ref=e74] [cursor=pointer]:
+                - img [ref=e76]
+                - generic [ref=e80]: Odometer & Mileage
+                - img [ref=e82]
+              - generic [ref=e85] [cursor=pointer]:
+                - img [ref=e87]
+                - generic [ref=e90]: Theft Records
+                - img [ref=e92]
+              - generic [ref=e95] [cursor=pointer]:
+                - img [ref=e97]
+                - generic [ref=e104]: Auction History
+                - img [ref=e106]
+              - generic [ref=e109] [cursor=pointer]:
+                - img [ref=e111]
+                - generic [ref=e114]: Lien & Loan
+                - img [ref=e116]
+              - generic [ref=e119] [cursor=pointer]:
+                - img [ref=e121]
+                - generic [ref=e126]: Ownership & Sales
+                - img [ref=e128]
+              - generic [ref=e131] [cursor=pointer]:
+                - img [ref=e133]
+                - generic [ref=e137]: Market Value
+                - img [ref=e139]
+            - generic [ref=e142] [cursor=pointer]: Reveal Records
+        - complementary [ref=e144]:
+          - heading "Unlock the history — choose your package" [level=2] [ref=e146]
+          - generic [ref=e147]:
+            - button "1 Report $19.99/report $19.99" [pressed] [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]:
+                - img [ref=e151]
+                - generic [ref=e153]:
+                  - generic [ref=e154]: 1 Report
+                  - generic [ref=e155]: $19.99/report
+                - generic [ref=e157]: $19.99
+            - button "5 Reports $12.00/report $59.99 $99.95 Save 40%" [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]:
+                - generic [ref=e161]:
+                  - generic [ref=e162]: 5 Reports
+                  - generic [ref=e163]: $12.00/report
+                - generic [ref=e164]:
+                  - generic [ref=e165]: $59.99
+                  - generic [ref=e166]: $99.95
+                  - generic [ref=e167]: Save 40%
+            - button "10 Reports $8.00/report $79.99 $199.90 Save 60%" [ref=e168] [cursor=pointer]:
+              - generic [ref=e169]:
+                - generic [ref=e171]:
+                  - generic [ref=e172]: 10 Reports
+                  - generic [ref=e173]: $8.00/report
+                - generic [ref=e174]:
+                  - generic [ref=e175]: $79.99
+                  - generic [ref=e176]: $199.90
+                  - generic [ref=e177]: Save 60%
+            - button "Unlimited VIN Check Unlimited access Best Value $29.99/subscription Why choose this? Unlimited VIN Check plan information" [ref=e179] [cursor=pointer]:
+              - generic [ref=e180]:
+                - generic [ref=e182]:
+                  - generic [ref=e183]: Unlimited VIN Check
+                  - generic [ref=e184]: Unlimited access
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Best Value
+                  - generic [ref=e187]: $29.99/subscription
+              - generic [ref=e189]:
+                - generic [ref=e190]: Why choose this?
+                - button "Unlimited VIN Check plan information" [ref=e191]: "?"
+          - generic [ref=e192] [cursor=pointer]:
+            - checkbox "Save 50%! Add Window Sticker to your purchase $9.99 $19.98" [checked] [ref=e193]
+            - generic [ref=e194]: Save 50%! Add Window Sticker to your purchase $9.99 $19.98
+          - button "Access Records" [ref=e195]:
+            - text: Access Records
+            - img [ref=e196]
+          - paragraph [ref=e198]: Instant access · Secure checkout · Downloadable PDF
+          - generic [ref=e199]:
+            - link "View Sample Report" [ref=e200] [cursor=pointer]:
+              - /url: https://vehiclesreport.com/report/vin/2T1BURHE0FC320645
+            - link "View Sample Window Sticker" [ref=e201] [cursor=pointer]:
+              - /url: https://vehiclesreport.com/sticker/vin/1GNALFEK1DZ134081-76267626-4848-F07A-DC46-290273643B8F
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - img [ref=e204]
+            - text: Instant access
+          - generic [ref=e207]:
+            - img [ref=e208]
+            - text: Secure checkout
+          - generic [ref=e211]:
+            - img [ref=e212]
+            - text: Downloadable PDF
+          - generic [ref=e216]:
+            - img [ref=e217]
+            - text: Money-back guarantee
+    - contentinfo [ref=e220]:
+      - generic [ref=e221]:
+        - heading "We check for" [level=2] [ref=e222]
+        - list [ref=e223]:
+          - listitem [ref=e224]:
+            - img [ref=e225]
+            - text: Ownership History
+          - listitem [ref=e227]:
+            - img [ref=e228]
+            - text: Odometer Readings
+          - listitem [ref=e230]:
+            - img [ref=e231]
+            - text: Title Information
+          - listitem [ref=e233]:
+            - img [ref=e234]
+            - text: Accident History
+          - listitem [ref=e236]:
+            - img [ref=e237]
+            - text: Junk & Salvage
+          - listitem [ref=e239]:
+            - img [ref=e240]
+            - text: Total Loss History
+          - listitem [ref=e242]:
+            - img [ref=e243]
+            - text: Theft & Recovery
+          - listitem [ref=e245]:
+            - img [ref=e246]
+            - text: Auction Records
+          - listitem [ref=e248]:
+            - img [ref=e249]
+            - text: Recalls & Defects
+          - listitem [ref=e251]:
+            - img [ref=e252]
+            - text: Lien & Loan
+          - listitem [ref=e254]:
+            - img [ref=e255]
+            - text: Market Value
+          - listitem [ref=e257]:
+            - img [ref=e258]
+            - text: Vehicle Specifications
+        - paragraph [ref=e260]: Your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+      - paragraph [ref=e262]:
+        - text: © 2026 Vehicles Report. All Rights Reserved. ·
+        - link "Terms" [ref=e263] [cursor=pointer]:
+          - /url: https://app.vehiclesreport.com/terms-of-service
+        - text: ·
+        - link "Privacy" [ref=e264] [cursor=pointer]:
+          - /url: https://app.vehiclesreport.com/privacy
+```
+
+# Test source
+
+```ts
+  1   | import { Page } from '@playwright/test';
+  2   | import { Actor } from '../actors/Actor';
+  3   | import { DecodeVinTask } from './DecodeVinTask';
+  4   | import { fastInputWithHealing, clickWithHealing, locateElementWithHealing } from '../utils/selfHealingLocator';
+  5   | 
+  6   | export class PreviewToCheckoutRedirection {
+  7   |   private timeout: number;
+  8   | 
+  9   |   constructor() {
+  10  |     this.timeout = process.env.CI ? 90000 : 45000;
+  11  |   }
+  12  | 
+  13  |   private async fillEmailAndProceed(page: Page) {
+  14  |     const popupTimeout = process.env.CI ? 25000 : 15000;
+  15  | 
+  16  |     // Check if email input is already visible in DOM
+  17  |     const emailField = page.locator('input[type="email"], input[placeholder*="email" i], input[name*="email" i]').first();
+  18  |     const isEmailAlreadyVisible = await emailField.isVisible({ timeout: 2000 }).catch(() => false);
+  19  | 
+  20  |     if (!isEmailAlreadyVisible) {
+  21  |       console.log('[Preview Redirection] Locating and clicking Access Records CTA...');
+  22  |       // Multi-strategy access button locators
+  23  |       const accessButtonSelectors = [
+  24  |         'button:has-text("Access Records")',
+  25  |         'button:has-text("Get Window Sticker")',
+  26  |         'button:has-text("View Full Report")',
+  27  |         'button:has-text("Get Records")',
+  28  |         'button:has-text("View Report")',
+  29  |         'button:has-text("Get My Report")',
+  30  |         'button:has-text("Unlock Report")',
+  31  |         'button:has-text("Instant Access")',
+  32  |         'a:has-text("Access Records")',
+  33  |         'a:has-text("Get Window Sticker")',
+  34  |         'button[type="submit"]'
+  35  |       ];
+  36  | 
+  37  |       try {
+  38  |         await clickWithHealing(
+  39  |           page,
+  40  |           'Access Records',
+  41  |           accessButtonSelectors,
+  42  |           { timeout: popupTimeout, force: true }
+  43  |         );
+  44  |       } catch (e) {
+  45  |         console.log(`[Preview Redirection] Direct click failed, trying first visible button matching report CTA: ${e.message}`);
+  46  |         const fallbackBtn = page.locator('button, a').filter({ hasText: /(Access Records|Window Sticker|Full Report|Get Records|View Report)/i }).first();
+  47  |         if (await fallbackBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+  48  |           await fallbackBtn.scrollIntoViewIfNeeded().catch(() => {});
+  49  |           await fallbackBtn.click({ force: true }).catch(() => {});
+  50  |         }
+  51  |       }
+  52  |     }
+  53  | 
+  54  |     // Self-healing Email Input
+  55  |     const suffix = Math.random().toString(36).substring(2, 5);
+  56  |     const emailAddress = `rolex.rolls12+${suffix}@gmail.com`;
+  57  |     console.log(`[Preview Redirection] Filling email: ${emailAddress}`);
+  58  | 
+  59  |     await fastInputWithHealing(
+  60  |       page,
+  61  |       'Email',
+  62  |       emailAddress,
+  63  |       [
+  64  |         'input[type="email"]',
+  65  |         'input[placeholder*="email" i]',
+  66  |         'input[name*="email" i]',
+  67  |         'input[aria-label*="email" i]'
+  68  |       ],
+  69  |       { timeout: popupTimeout, force: true }
+  70  |     );
+  71  | 
+  72  |     await page.waitForTimeout(500);
+  73  | 
+  74  |     // Self-healing Checkout/Proceed button click
+  75  |     console.log('[Preview Redirection] Clicking Proceed to Checkout CTA...');
+  76  |     await clickWithHealing(
+  77  |       page,
+  78  |       'Proceed to Checkout',
+  79  |       [
+  80  |         'button:has-text("Proceed to checkout")',
+  81  |         'button:has-text("Proceed to Checkout")',
+  82  |         'button:has-text("Pay Now")',
+  83  |         'button:has-text("Complete Order")',
+  84  |         'button:has-text("Access Records")',
+  85  |         'button:has-text("Get Report")',
+  86  |         'button:has-text("Continue")',
+  87  |         'button[type="submit"]'
+  88  |       ],
+  89  |       { timeout: popupTimeout, force: true }
+  90  |     );
+  91  |   }
+  92  | 
+  93  |   async performAs(actor: Actor) {
+  94  |     const page = actor.getPage();
+  95  |     
+  96  |     // Land on preview page with shouldClose = false, skipSuccessClick = true, useEuVin = false (always US VIN)
+  97  |     await actor.attemptsTo(new DecodeVinTask(false, true, false));
+> 98  |     await page.waitForTimeout(1000);
+      |                ^ Error: page.waitForTimeout: Target page, context or browser has been closed
+  99  | 
+  100 |     await this.fillEmailAndProceed(page);
+  101 | 
+  102 |     // Wait for URL redirection to checkout page until full page load
+  103 |     await page.waitForURL(
+  104 |       /.*(checkout|payment|billing|order|purchase|confirmation|summary|subscribe).*/i,
+  105 |       { timeout: this.timeout, waitUntil: 'load' }
+  106 |     );
+  107 |     await page.waitForLoadState('load', { timeout: 15000 }).catch(() => {});
+  108 |     console.log(`✅ Successfully redirected to checkout URL: ${page.url()}`);
+  109 |   }
+  110 | }
+```
