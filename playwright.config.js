@@ -4,7 +4,7 @@ module.exports = defineConfig({
   testDir: './tests',
   timeout: 90000,
   retries: process.env.CI ? 2 : 0,
-  workers: 2,
+  workers: process.env.CI ? 2 : 1,
   fullyParallel: true,
   use: {
     video: 'retain-on-failure',

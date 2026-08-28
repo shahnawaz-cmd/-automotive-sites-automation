@@ -35,6 +35,9 @@ jobs:
         browser:
           - Desktop
           - MobileChrome
+        shard:
+          - 1/2
+          - 2/2
 
     steps:
     - uses: actions/checkout@v4
@@ -72,7 +75,7 @@ jobs:
         else
           PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
         fi
-        npx playwright test --project=$PLAYWRIGHT_PROJECT --reporter=blob
+        npx playwright test --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }} --reporter=blob
       env:
         CI: true
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -104,7 +107,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}
+        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}-shard-${{ strategy.job-index }}
         path: blob-report/
         retention-days: 1
 
@@ -126,6 +129,9 @@ jobs:
         browser:
           - MobileEdge
           - MobileSafari
+        shard:
+          - 1/2
+          - 2/2
 
     steps:
     - uses: actions/checkout@v4
@@ -159,7 +165,7 @@ jobs:
       continue-on-error: true
       run: |
         PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
-        npx playwright test --project=$PLAYWRIGHT_PROJECT --reporter=blob
+        npx playwright test --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }} --reporter=blob
       env:
         CI: true
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -186,7 +192,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}
+        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}-shard-${{ strategy.job-index }}
         path: blob-report/
         retention-days: 1
 

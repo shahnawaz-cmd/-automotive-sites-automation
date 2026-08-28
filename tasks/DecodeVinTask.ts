@@ -61,12 +61,10 @@ export class DecodeVinTask {
   async performAs(actor: Actor) {
     const page = actor.getPage();
     const isMVL = page.url().includes('motorcyclevinlookup.com');
-    const isEuSite = page.url().includes('vehiclehistory.eu');
     
-    // Always use US VIN unless explicitly requested (useEuVin = true) or on vehiclehistory.eu
-    const shouldGenerateEu = this.useEuVin || isEuSite;
-    const vin = shouldGenerateEu ? this.generateEuVin() : this.generateUSVin(isMVL);
-    console.log(`[VIN Decode] Generated VIN (${shouldGenerateEu ? 'EU' : 'US'}): ${vin}`);
+    // Always use US VIN by default (including TC_01 across all sites). Only generate EU VIN when explicitly requested (e.g. TC_14).
+    const vin = this.useEuVin ? this.generateEuVin() : this.generateUSVin(isMVL);
+    console.log(`[VIN Decode] Generated VIN (${this.useEuVin ? 'EU' : 'US'}): ${vin}`);
 
     // Self-Healing Input: Fills VIN with multi-strategy accessibility, placeholder, label & attributes
     await fastInputWithHealing(
