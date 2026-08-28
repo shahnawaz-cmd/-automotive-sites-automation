@@ -1,0 +1,215 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_12 Classic editable specs feature validation
+- Location: tests/global_case_verification.spec.ts:169:5
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 60000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Update Year, Make and Model' }) to be visible
+
+```
+
+# Test source
+
+```ts
+  1   | import { Page } from '@playwright/test';
+  2   | import { Actor } from '../actors/Actor';
+  3   | import { generateClassicNumericVin } from './vinHelper';
+  4   | import { fastInputWithHealing, clickWithHealing, locateInputWithHealing } from '../utils/selfHealingLocator';
+  5   | 
+  6   | export class ClassicEditableFeatureYMM {
+  7   |   private timeout = process.env.CI ? 60000 : 90000;
+  8   | 
+  9   |   async run(page: Page) {
+  10  |     // Use self-healing click for the initial "Click here to update" button
+  11  |     await clickWithHealing(page, 'Click here to update', ['button:has-text("Click here to update")']);
+  12  | 
+  13  |     // Wait for the "Year, Make & Model" button to be visible after the update modal/popup appears
+  14  |     const ymmButton = page.getByRole('button', { name: 'Year, Make & Model' });
+  15  |     await ymmButton.waitFor({ state: 'visible', timeout: this.timeout });
+  16  |     // Use self-healing click for "Year, Make & Model" button
+  17  |     await clickWithHealing(page, 'Year, Make & Model', ['button:has-text("Year, Make & Model")']);
+  18  | 
+  19  |     // Replace the static 30s delay with a targeted wait for the first interactive element,
+  20  |     // indicating the form is stable and ready for input.
+  21  |     const yearBox = page.getByRole('textbox', { name: 'Select year' });
+  22  |     await yearBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure year input is visible and enabled
+  23  | 
+  24  |     // 1. Select Year
+  25  |     await yearBox.click({ force: true }); // Use force: true to ensure click on potentially covered elements
+  26  |     await page.waitForTimeout(300); // Small pause for dropdown options to render
+  27  | 
+  28  |     const yearOption = page.getByRole('button', { name: '1923' }).first()
+  29  |       .or(page.getByRole('option', { name: '1923' }).first())
+  30  |       .or(page.locator('[role="option"], ul li').filter({ hasText: /\d{4}/ }).first().locator('visible=true')); // Robust fallback for generic list items, ensuring it's visible
+  31  |     await yearOption.waitFor({ state: 'visible', timeout: 15000 }); // Increased timeout for option visibility
+  32  |     await yearOption.click({ force: true }); // Use force: true for clicking dropdown option
+  33  | 
+  34  |     // 2. Select Make
+  35  |     const makeBox = page.getByRole('textbox', { name: 'Select make' });
+  36  |     await makeBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure make box is ready after year selection
+  37  |     await makeBox.click({ force: true });
+  38  |     await page.waitForTimeout(300);
+  39  | 
+  40  |     const ambassadorMake = page.getByRole('button', { name: 'Ambassador' }).first()
+  41  |       .or(page.getByRole('option', { name: 'Ambassador' }).first())
+  42  |       .or(page.locator('[role="option"], ul li').filter({ hasText: /.+/ }).first().locator('visible=true'));
+  43  |     await ambassadorMake.waitFor({ state: 'visible', timeout: 15000 });
+  44  |     await ambassadorMake.click({ force: true });
+  45  | 
+  46  |     // 3. Select Model
+  47  |     const modelBox = page.getByRole('textbox', { name: 'Select model' });
+  48  |     await modelBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure model box is ready after make selection
+  49  |     await modelBox.click({ force: true });
+  50  |     await page.waitForTimeout(300);
+  51  | 
+  52  |     const rModel = page.getByRole('button', { name: 'R', exact: true }).first()
+  53  |       .or(page.getByRole('option', { name: 'R', exact: true }).first())
+  54  |       .or(page.locator('[role="option"], ul li').filter({ hasText: /.+/ }).first().locator('visible=true'));
+  55  |     await rModel.waitFor({ state: 'visible', timeout: 15000 });
+  56  |     await rModel.click({ force: true });
+  57  | 
+  58  |     // 4. Select Trim
+  59  |     const trimBox = page.getByRole('textbox', { name: 'Select trim' });
+  60  |     await trimBox.waitFor({ state: 'visible', timeout: this.timeout }); // Ensure trim box is ready after model selection
+  61  |     await trimBox.click({ force: true });
+  62  |     await page.waitForTimeout(300);
+  63  | 
+  64  |     const touringTrim = page.getByRole('button', { name: 'Touring' }).first()
+  65  |       .or(page.getByRole('option', { name: 'Touring' }).first())
+  66  |       .or(page.locator('[role="option"], ul li').filter({ hasText: /.+/ }).first().locator('visible=true'));
+  67  |     await touringTrim.waitFor({ state: 'visible', timeout: 15000 });
+  68  |     await touringTrim.click({ force: true });
+  69  | 
+  70  |     // 5. Submit changes
+  71  |     const continueButton = page.getByRole('button', { name: 'Continue' });
+  72  |     await continueButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+  73  |     await continueButton.click({ force: true });
+  74  | 
+  75  |     const confirmButton = page.getByRole('button', { name: 'Confirm & Get Records' });
+  76  |     await confirmButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+  77  |     await confirmButton.click({ force: true });
+  78  |   }
+  79  | }
+  80  | 
+  81  | export class Case5VerifyClassicEditableFeature {
+  82  |   private timeout = process.env.CI ? 60000 : 90000;
+  83  | 
+  84  |   async runDropdownUpdate(page: Page) {
+  85  |     const updateBtn = page.getByRole('button', { name: 'Click here to update' });
+  86  |     await updateBtn.waitFor({ state: 'visible', timeout: this.timeout });
+  87  |     await updateBtn.click({ force: true });
+  88  | 
+  89  |     const ymmBtn = page.getByRole('button', { name: 'Update Year, Make and Model' });
+> 90  |     await ymmBtn.waitFor({ state: 'visible', timeout: this.timeout });
+      |                  ^ TimeoutError: locator.waitFor: Timeout 60000ms exceeded.
+  91  |     await ymmBtn.click({ force: true });
+  92  | 
+  93  |     // 1. Select Year
+  94  |     const yearLabel = page.getByLabel('Year');
+  95  |     await yearLabel.waitFor({ state: 'visible', timeout: this.timeout });
+  96  |     await yearLabel.click({ force: true });
+  97  |     await page.waitForTimeout(300);
+  98  | 
+  99  |     const yearOption = page.getByRole('option', { name: '1961' })
+  100 |       .or(page.getByText('1961', { exact: true }))
+  101 |       .or(page.locator('[role="option"], ul li').filter({ hasText: /\d{4}/ }).first().locator('visible=true')); // Ensure option is visible
+  102 |     await yearOption.first().waitFor({ state: 'visible', timeout: 10000 }); // Wait for the specific option to be visible
+  103 |     await yearOption.first().click({ force: true });
+  104 | 
+  105 |     // 2. Select Make (Wait for get_classic_make API response)
+  106 |     await page.waitForResponse(
+  107 |       (res) => res.url().includes('get_classic_make') && res.status() === 200,
+  108 |       { timeout: 15000 }
+  109 |     ).catch(() => null);
+  110 |     await page.waitForTimeout(500);
+  111 | 
+  112 |     const makeLabel = page.getByLabel('Make');
+  113 |     await makeLabel.waitFor({ state: 'visible', timeout: this.timeout });
+  114 |     await makeLabel.click({ force: true });
+  115 |     await page.waitForTimeout(300);
+  116 | 
+  117 |     const ajsMake = page.getByRole('option', { name: 'AJS' }).or(page.getByText('AJS', { exact: true }));
+  118 |     const firstMake = page.locator('[role="option"], [role="listbox"] li, .dropdown-menu li, ul li').filter({ hasText: /.+/ }).first().locator('visible=true'); // Ensure option is visible
+  119 | 
+  120 |     if (await ajsMake.first().isVisible({ timeout: 2000 }).catch(() => false)) {
+  121 |       await ajsMake.first().click({ force: true });
+  122 |     } else {
+  123 |       await firstMake.click({ force: true });
+  124 |     }
+  125 | 
+  126 |     // 3. Select Model (Wait for get_classic_model API response)
+  127 |     await page.waitForResponse(
+  128 |       (res) => res.url().includes('get_classic_model') && res.status() === 200,
+  129 |       { timeout: 15000 }
+  130 |     ).catch(() => null);
+  131 |     await page.waitForTimeout(500);
+  132 | 
+  133 |     const modelLabel = page.getByLabel('Model');
+  134 |     await modelLabel.waitFor({ state: 'visible', timeout: this.timeout });
+  135 |     await modelLabel.click({ force: true });
+  136 |     await page.waitForTimeout(300);
+  137 | 
+  138 |     const modelOption = page.getByRole('option', { name: 'Model 16 350ms' })
+  139 |       .or(page.getByText('Model 16 350ms', { exact: true }))
+  140 |       .or(page.locator('[role="option"], [role="listbox"] li, .dropdown-menu li, ul li').filter({ hasText: /.+/ }).first().locator('visible=true')); // Ensure option is visible
+  141 | 
+  142 |     await modelOption.first().waitFor({ state: 'visible', timeout: 10000 });
+  143 |     await modelOption.first().click({ force: true });
+  144 | 
+  145 |     // 4. Select Trim (Wait for get_classic_series API response)
+  146 |     await page.waitForResponse(
+  147 |       (res) => res.url().includes('get_classic_series') && res.status() === 200,
+  148 |       { timeout: 10000 }
+  149 |     ).catch(() => null);
+  150 |     await page.waitForTimeout(500);
+  151 | 
+  152 |     const trimLabel = page.getByLabel('Trim');
+  153 |     if (await trimLabel.isVisible()) {
+  154 |       await trimLabel.click({ force: true });
+  155 |       await page.waitForTimeout(300);
+  156 | 
+  157 |       const baseTrim = page.getByText('Base', { exact: true })
+  158 |         .or(page.getByRole('option', { name: /base/i }))
+  159 |         .or(page.locator('[role="option"], [role="listbox"] li, .dropdown-menu li, ul li').filter({ hasText: /.+/ }).first().locator('visible=true')); // Ensure option is visible
+  160 | 
+  161 |       if (await baseTrim.first().isVisible({ timeout: 3000 }).catch(() => false)) {
+  162 |         await baseTrim.first().click({ force: true });
+  163 |       }
+  164 |     }
+  165 | 
+  166 |     // 5. Submit changes
+  167 |     const continueButton = page.getByRole('button', { name: 'Continue' });
+  168 |     await continueButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+  169 |     await continueButton.click({ force: true });
+  170 | 
+  171 |     const confirmSelectionButton = page.getByRole('button', { name: 'Confirm Selection' });
+  172 |     await confirmSelectionButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+  173 |     await confirmSelectionButton.click({ force: true });
+  174 | 
+  175 |     const submitButton = page.getByRole('button', { name: 'Submit' });
+  176 |     await submitButton.waitFor({ state: 'visible', timeout: 10000 }); // Wait for button to be visible
+  177 |     await submitButton.click({ force: true });
+  178 | 
+  179 |     await page.waitForURL(/cv=/, { timeout: this.timeout * 2 });
+  180 |   }
+  181 | }
+  182 | 
+  183 | export class ClassicEditableSpecs {
+  184 |   private timeout = process.env.CI ? 90000 : 45000;
+  185 | 
+  186 |   async performAs(actor: Actor) {
+  187 |     const page = actor.getPage();
+  188 |     await page.goto('/');
+  189 |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  190 | 
+```

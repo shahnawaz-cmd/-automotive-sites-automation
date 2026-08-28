@@ -1,0 +1,543 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_09 Revisit sticker banner flow
+- Location: tests/global_case_verification.spec.ts:124:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: page.waitForURL: Test timeout of 90000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+============================================================
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - checkbox "Toggle menu" [ref=e3]
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Vehicle History Europe logo" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Vehicle History Europe logo" [ref=e7]
+        - navigation [ref=e8]:
+          - link "Vehicle History" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "VIN Check" [ref=e10] [cursor=pointer]:
+            - /url: /vin-check
+          - link "Window Sticker" [ref=e11] [cursor=pointer]:
+            - /url: /window-sticker
+          - link "Pricing" [ref=e12] [cursor=pointer]:
+            - /url: /pricing
+          - link "Sample Reports" [ref=e13] [cursor=pointer]:
+            - /url: /sample-report
+        - generic [ref=e14]:
+          - group [ref=e15]:
+            - generic "🇬🇧 en" [ref=e16] [cursor=pointer]:
+              - generic [ref=e17]: 🇬🇧
+              - generic [ref=e18]: en
+              - img [ref=e19]
+          - generic [ref=e21]:
+            - link "Login" [ref=e22] [cursor=pointer]:
+              - /url: /login
+            - link "Sign Up" [ref=e23] [cursor=pointer]:
+              - /url: /signup
+    - main [ref=e24]:
+      - navigation "Breadcrumb" [ref=e26]:
+        - list [ref=e27]:
+          - listitem [ref=e28]:
+            - link "Home" [ref=e29] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e30]:
+            - img [ref=e31]
+            - generic "Window Sticker" [ref=e33]
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: Original Factory Specifications
+          - heading "Look Up a Vehicle's Original Window Sticker Online" [level=1] [ref=e49]
+          - paragraph [ref=e50]: Buying in Europe? Don't guess the trim or options. Run a window sticker by VIN and get the factory spec in one place. This includes the equipment lists, packages, key specs, and even the vehicle MSRP. Enter your VIN and check the car before you purchase or sale.
+        - generic [ref=e59]:
+          - generic [ref=e60]: Vehicle Identification Number (VIN)
+          - textbox "Vehicle Identification Number (VIN) Vehicle Identification Number (VIN)" [ref=e62]:
+            - /placeholder: Enter VIN
+          - button "Search VIN" [ref=e63]
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - img [ref=e68]
+            - generic [ref=e71]: Factory Specs
+          - generic [ref=e72]:
+            - img [ref=e74]
+            - generic [ref=e75]: Equipment Lists
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - generic [ref=e81]: Original MSRP
+          - generic [ref=e82]:
+            - img [ref=e84]
+            - generic [ref=e86]: Instant Results
+      - generic [ref=e94]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: The Monroney Label, Explained
+          - heading "What Is a Window Sticker by VIN?" [level=2] [ref=e100]
+          - generic [ref=e101]:
+            - paragraph [ref=e102]: A window sticker by VIN is a document that shows what a specific vehicle was configured with when it left the factory, using the VIN as the key. In the U.S., it's commonly known as the Monroney label by VIN, tied to federal disclosure rules under the Automobile Information Disclosure Act.
+            - paragraph [ref=e103]: In Europe, dealers more commonly display the official fuel consumption and CO₂ label for new passenger cars, which is different from a full equipment breakdown.
+            - paragraph [ref=e104]: Our window sticker by VIN lookup tool focuses on available factory data like trim, standard equipment, optional packages, MSRP, and the emission block with Euro standard fuel consumption and CO₂. And yes, classic vehicles aren't left out; we can also decode many classic VIN formats (5 to 14 characters) when records exist.
+        - img "Window Sticker Sample — Ford Focus" [ref=e107]
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e116]: The Full Factory Breakdown
+          - heading "Details You Can Find on a Factory Window Sticker" [level=2] [ref=e119]: Details You Can Find on a Factory Window Sticker
+          - paragraph [ref=e121]: Our original window sticker by VIN is where you get the deeper factory breakdown. It's made to help you confirm the exact build, compare two similar cars, and negotiate using real equipment and pricing context (when available).
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - img [ref=e128]
+                - heading "Vehicle Description" [level=3] [ref=e132]
+              - paragraph [ref=e134]: This part tells you exactly what the car is, in plain factory terms, including the model year, make, model/derivative, engine line, gearbox, and the VIN. This section helps you verify the vehicle you're looking at, especially when listings use vague trim names or mixed photos.
+              - list [ref=e136]:
+                - listitem [ref=e137]:
+                  - img [ref=e139]
+                  - generic [ref=e142]:
+                    - heading "Vehicle year, make, and model" [level=4] [ref=e143]
+                    - paragraph [ref=e145]: Shows the official year, manufacturer, and model name so you can confirm you're looking at the right vehicle and not a similar version with a different spec.
+                - listitem [ref=e146]:
+                  - img [ref=e148]
+                  - generic [ref=e151]:
+                    - heading "Trim level and body style" [level=4] [ref=e152]
+                    - paragraph [ref=e154]: Lists the specific trim/derivative and body style where available. This helps you understand the equipment level and why two "same model" cars can be priced differently.
+                - listitem [ref=e155]:
+                  - img [ref=e157]
+                  - generic [ref=e160]:
+                    - heading "Vehicle Identification Number (VIN)" [level=4] [ref=e161]
+                    - paragraph [ref=e163]: Displays the VIN used for the lookup. This ties our original window sticker by VIN to that exact vehicle, so you can cross-check it against the VIN on the car or documents.
+            - generic [ref=e164]:
+              - generic [ref=e165]:
+                - img [ref=e168]
+                - heading "Standard Equipment" [level=3] [ref=e169]
+              - paragraph [ref=e171]: This is where the sticker becomes buyer-friendly. Knowing this, you can instantly see what the car was supposed to include from the factory, without relying on memory or brochure hunting. It's also perfect for spotting missing items on a used car.
+              - list [ref=e173]:
+                - listitem [ref=e174]:
+                  - img [ref=e176]
+                  - generic [ref=e179]:
+                    - heading "Core comfort and convenience features" [level=4] [ref=e180]
+                    - paragraph [ref=e182]: Shows the day-to-day features that typically come standard on that trim level, making it easier to understand what "normal spec" looks like.
+                - listitem [ref=e183]:
+                  - img [ref=e185]
+                  - generic [ref=e188]:
+                    - heading "Safety basics" [level=4] [ref=e189]
+                    - paragraph [ref=e191]: Includes basic safety and driver support items when present in the record, so you can confirm what safety equipment should be on the car.
+            - generic [ref=e192]:
+              - generic [ref=e193]:
+                - img [ref=e196]
+                - heading "Optional Equipment" [level=3] [ref=e198]
+              - paragraph [ref=e200]: The window sticker lists the recorded factory-fitted upgrades and packages that were not standard, like tech features, comfort upgrades, or trim enhancements, tied to its VIN. This is the part that separates "nice spec" from "basic spec" without guesswork.
+              - list [ref=e202]:
+                - listitem [ref=e203]:
+                  - img [ref=e205]
+                  - generic [ref=e208]:
+                    - heading "Factory option packages" [level=4] [ref=e209]
+                    - paragraph [ref=e211]: Packages bundle upgrades together (tech packs, comfort packs, appearance packs). When available, this section helps you see what bundle was fitted and how it changes the car's value.
+                - listitem [ref=e212]:
+                  - img [ref=e214]
+                  - generic [ref=e217]:
+                    - heading "Individual add-on options" [level=4] [ref=e218]
+                    - paragraph [ref=e220]: Shows the available single options added to the vehicle, like upgraded seats, lighting, wheels, or driver assistance items.
+                - listitem [ref=e221]:
+                  - img [ref=e223]
+                  - generic [ref=e226]:
+                    - heading "Trim-level additions" [level=4] [ref=e227]
+                    - paragraph [ref=e229]: Some trims come with factory upgrades not found on the base model. This part clarifies which extras are trim-tied and which were ordered separately.
+            - generic [ref=e230]:
+              - generic [ref=e231]:
+                - img [ref=e234]
+                - heading "Pricing Information" [level=3] [ref=e237]
+              - paragraph [ref=e239]: When available in the record, the original MSRP helps you understand what the vehicle was worth new. This is particularly helpful when evaluating used cars or comparing similar models with different option packages.
+              - list [ref=e241]:
+                - listitem [ref=e242]:
+                  - img [ref=e244]
+                  - generic [ref=e247]:
+                    - heading "Base MSRP" [level=4] [ref=e248]
+                    - paragraph [ref=e250]: The starting price of the vehicle before any options or packages were added.
+                - listitem [ref=e251]:
+                  - img [ref=e253]
+                  - generic [ref=e256]:
+                    - heading "Options pricing" [level=4] [ref=e257]
+                    - paragraph [ref=e259]: Individual prices for factory-installed options and packages when available in the record.
+                - listitem [ref=e260]:
+                  - img [ref=e262]
+                  - generic [ref=e265]:
+                    - heading "Total MSRP" [level=4] [ref=e266]
+                    - paragraph [ref=e268]: The final manufacturer's suggested retail price including all options and destination charges.
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - img [ref=e273]
+                - heading "Technical Specifications" [level=3] [ref=e276]
+              - paragraph [ref=e278]: Core vehicle specs like engine type, displacement, transmission, drivetrain, fuel type, and emission standards. This section is critical for confirming the exact powertrain configuration.
+              - list [ref=e280]:
+                - listitem [ref=e281]:
+                  - img [ref=e283]
+                  - generic [ref=e286]:
+                    - heading "Engine and performance" [level=4] [ref=e287]
+                    - paragraph [ref=e289]: Engine size, type, horsepower, and torque figures when available in the factory record.
+                - listitem [ref=e290]:
+                  - img [ref=e292]
+                  - generic [ref=e295]:
+                    - heading "Fuel economy and emissions" [level=4] [ref=e296]
+                    - paragraph [ref=e298]: Official fuel consumption figures (city/highway/combined) and CO₂ emissions per Euro standards.
+            - generic [ref=e299]:
+              - generic [ref=e300]:
+                - img [ref=e303]
+                - heading "Safety Ratings" [level=3] [ref=e306]
+              - paragraph [ref=e308]: When present in records, safety ratings from Euro NCAP or other testing organizations provide independent assessment of crash protection and safety features.
+              - list [ref=e310]:
+                - listitem [ref=e311]:
+                  - img [ref=e313]
+                  - generic [ref=e316]:
+                    - heading "Crash test results" [level=4] [ref=e317]
+                    - paragraph [ref=e319]: Overall safety rating and specific scores for adult occupant, child occupant, pedestrian, and safety assist categories.
+          - link "View Window Sticker Sample" [ref=e321] [cursor=pointer]:
+            - /url: https://vehiclehistory.eu/sticker/vin/WF0PXXGCHPKP11608-B4D7B4D7-0F0F-BC0D-5C6B-10DB7A44C054
+      - generic [ref=e327]:
+        - generic [ref=e328]:
+          - generic [ref=e329]: Built for Buyers & Sellers
+          - heading "Who Benefits Most From Checking a Window Sticker?" [level=2] [ref=e332]
+          - paragraph [ref=e334]: In Europe, trims and equipment can change by country, model year, and even engine rules. A window sticker by VIN helps you confirm the factory spec before you trust a listing. It's not hype. It's a cleaner way to compare cars and avoid expensive misunderstandings.
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e338]:
+              - img [ref=e341]
+              - heading "Used Car Buyers" [level=3] [ref=e344]
+            - paragraph [ref=e346]: Buying used in Europe can feel like decoding a puzzle. A car window sticker lookup shows what the vehicle originally came with, so you can compare the ad to the factory record and ask smarter questions before you travel, pay a deposit, or sign anything.
+            - list [ref=e348]:
+              - listitem [ref=e349]:
+                - img [ref=e351]
+                - generic [ref=e354]:
+                  - heading "Identify hidden damages before purchase" [level=4] [ref=e355]
+                  - paragraph [ref=e357]: A window sticker helps you spot red flags by showing what should be there. Missing equipment, swapped trims, or "wrong spec" claims can hint at past repairs or a rough history.
+              - listitem [ref=e358]:
+                - img [ref=e360]
+                - generic [ref=e363]:
+                  - heading "Support smarter negotiation" [level=4] [ref=e364]
+                  - paragraph [ref=e366]: Factory options and original specs give you a factual base for negotiation, instead of arguing over opinions or sales talk.
+              - listitem [ref=e367]:
+                - img [ref=e369]
+                - generic [ref=e372]:
+                  - heading "Compare two similar cars fairly" [level=4] [ref=e373]
+                  - paragraph [ref=e375]: Two cars can look identical, but the sticker shows what separates them by looking at the packages, equipment, and specs information.
+          - generic [ref=e376]:
+            - generic [ref=e377]:
+              - img [ref=e380]
+              - heading "Sellers & Dealers" [level=3] [ref=e383]
+            - paragraph [ref=e385]: If you sell cars in Europe, buyers may ask the same questions again and again about the trim, packages, and specs. A window sticker lookup gives you a clean, shareable answer, so your listing feels more trustworthy and less like a negotiation trap.
+            - list [ref=e387]:
+              - listitem [ref=e388]:
+                - img [ref=e390]
+                - generic [ref=e393]:
+                  - heading "Verify a vehicle's value" [level=4] [ref=e394]
+                  - paragraph [ref=e396]: Showing factory options and the original spec helps justify your price. It's easier to defend value when the equipment list backs it up.
+              - listitem [ref=e397]:
+                - img [ref=e399]
+                - generic [ref=e402]:
+                  - heading "Stand out in crowded marketplaces" [level=4] [ref=e403]
+                  - paragraph [ref=e405]: In many European markets, detailed listings win. A sticker gives you instant detail without sounding salesy.
+              - listitem [ref=e406]:
+                - img [ref=e408]
+                - generic [ref=e411]:
+                  - heading "Speed up the sales process" [level=4] [ref=e412]
+                  - paragraph [ref=e414]: Clear info reduces delays, fewer misunderstandings, and fewer "let me confirm and get back to you" moments.
+          - generic [ref=e415]:
+            - generic [ref=e416]:
+              - img [ref=e419]
+              - heading "Automotive Enthusiasts & Collectors" [level=3] [ref=e421]
+            - paragraph [ref=e423]: Collectors in Europe care about authenticity. An original window sticker by VIN can help confirm how the car was built when new, what options it had, and whether it's truly a rare spec. For restorations, resale, or just peace of mind, factory details matter more than stories.
+            - list [ref=e425]:
+              - listitem [ref=e426]:
+                - img [ref=e428]
+                - generic [ref=e431]:
+                  - heading "Confirm originality for concours or shows" [level=4] [ref=e432]
+                  - paragraph [ref=e434]: A factory equipment record helps prove the car is presented in its correct original configuration, not just "close enough."
+              - listitem [ref=e435]:
+                - img [ref=e437]
+                - generic [ref=e440]:
+                  - heading "Verify rare factory options" [level=4] [ref=e441]
+                  - paragraph [ref=e443]: Collectors pay for rarity. The sticker can confirm special packages or equipment tied to that VIN.
+              - listitem [ref=e444]:
+                - img [ref=e446]
+                - generic [ref=e449]:
+                  - heading "Reduce uncertainty on classic purchases" [level=4] [ref=e450]
+                  - paragraph [ref=e452]: For older cars that still have retrievable records, a sticker report can reduce the "unknown spec" concern.
+      - generic [ref=e460]:
+        - generic [ref=e461]:
+          - generic [ref=e462]: Three Steps, One Sticker
+          - heading "How to Get a Window Sticker by VIN" [level=2] [ref=e465]: How to Get a Window Sticker by VIN
+          - paragraph [ref=e467]: The Window sticker itself contains valuable information about the vehicle's original specifications, features, and more. By using the VIN, you can access a detailed sticker in three simple steps.
+        - generic [ref=e468]:
+          - generic [ref=e470]:
+            - generic [ref=e471]:
+              - img [ref=e474]
+              - heading "Find the VIN" [level=3] [ref=e477]
+              - paragraph [ref=e478]: Look for the VIN on the vehicle. Then, examine the official documentation or insurance paperwork.
+            - generic [ref=e479]:
+              - img [ref=e482]
+              - heading "Fill out the form" [level=3] [ref=e484]
+              - paragraph [ref=e485]: Type or copy the VIN into the form. Make sure you entered the correct VIN. Submit it to begin the process.
+            - generic [ref=e486]:
+              - img [ref=e489]
+              - heading "Review the sticker details" [level=3] [ref=e492]
+              - paragraph [ref=e493]: In seconds, you will see the free preview with the basic details. Proceed to payment and receive your detailed window sticker, complete with all the information you need.
+          - generic [ref=e494]:
+            - link "Get Window Sticker Now" [ref=e495] [cursor=pointer]:
+              - /url: "#top"
+            - link "View Window Sticker Sample" [ref=e496] [cursor=pointer]:
+              - /url: https://vehiclehistory.eu/sticker/vin/WF0PXXGCHPKP11608-B4D7B4D7-0F0F-BC0D-5C6B-10DB7A44C054
+      - generic [ref=e502]:
+        - generic [ref=e503]:
+          - generic [ref=e504]: Find Your 17-Digit Code
+          - heading "Where is the VIN Located?" [level=2] [ref=e507]
+          - paragraph [ref=e509]: "The VIN is designed to be located in several easy-to-access spots on the vehicle. Here are some places you should check first:"
+        - generic [ref=e511]:
+          - generic [ref=e512]:
+            - img [ref=e515]
+            - heading "Dashboard" [level=3] [ref=e519]
+            - paragraph [ref=e521]: Look at the lower corner of the windscreen on the driver's side. Many cars have a VIN plate visible from the outside.
+          - generic [ref=e522]:
+            - img [ref=e525]
+            - heading "Driver's Door Area" [level=3] [ref=e530]
+            - paragraph [ref=e532]: Open the driver's door and check the door frame area. Often, there's a manufacturer's label with the VIN.
+          - generic [ref=e533]:
+            - img [ref=e536]
+            - heading "Vehicle Documents" [level=3] [ref=e539]
+            - paragraph [ref=e541]: VINs are usually printed on registration documents, title paperwork, and many insurance cards or policy documents.
+          - generic [ref=e542]:
+            - img [ref=e545]
+            - heading "Under the bonnet" [level=3] [ref=e547]
+            - paragraph [ref=e549]: Some vehicles have stamped VIN locations in the engine bay, depending on make and model.
+      - generic [ref=e558]:
+        - heading "Get a Window Sticker for Your Vehicle Now!" [level=2] [ref=e559]
+        - paragraph [ref=e561]: Check your vehicle's original factory details in just a few steps. Enter your VIN to see if a window sticker is available.
+        - generic [ref=e565]:
+          - generic [ref=e566]: Vehicle Identification Number (VIN)
+          - textbox "Enter VIN" [ref=e568]
+          - button "Search VIN" [ref=e569]
+      - generic [ref=e576]:
+        - generic [ref=e577]:
+          - generic [ref=e578]: All Major Brands Covered
+          - heading "Window Sticker Availability by Brand" [level=2] [ref=e581]: Window Sticker Availability by Brand
+          - paragraph [ref=e583]: "Whether it's Volkswagen, BMW, Mercedes-Benz, or any other brand, our window sticker by VIN lookup tool can work for it. See some of the popular brands below:"
+        - generic [ref=e585]:
+          - link "BMW" [ref=e586] [cursor=pointer]:
+            - /url: /window-sticker/bmw
+          - link "Chevrolet" [ref=e587] [cursor=pointer]:
+            - /url: /window-sticker/chevrolet
+          - link "Chrysler" [ref=e588] [cursor=pointer]:
+            - /url: /window-sticker/chrysler
+          - link "Dodge" [ref=e589] [cursor=pointer]:
+            - /url: /window-sticker/dodge
+          - link "Ford" [ref=e590] [cursor=pointer]:
+            - /url: /window-sticker/ford
+          - link "Hyundai" [ref=e591] [cursor=pointer]:
+            - /url: /window-sticker/hyundai
+          - link "Jeep" [ref=e592] [cursor=pointer]:
+            - /url: /window-sticker/jeep
+          - link "Porsche" [ref=e593] [cursor=pointer]:
+            - /url: /window-sticker/porsche
+          - link "Subaru" [ref=e594] [cursor=pointer]:
+            - /url: /window-sticker/subaru
+          - link "Toyota" [ref=e595] [cursor=pointer]:
+            - /url: /window-sticker/toyota
+          - generic [ref=e596]: Alfa Romeo
+          - generic [ref=e597]: Audi
+          - generic [ref=e598]: Citroën
+          - generic [ref=e599]: Fiat
+          - generic [ref=e600]: Honda
+          - generic [ref=e601]: Infiniti
+          - generic [ref=e602]: Jaguar
+          - generic [ref=e603]: KIA
+          - generic [ref=e604]: Land Rover
+          - generic [ref=e605]: Mazda
+          - generic [ref=e606]: Mercedes-Benz
+          - generic [ref=e607]: Mini
+          - generic [ref=e608]: Nissan
+          - generic [ref=e609]: Opel
+          - generic [ref=e610]: Peugeot
+          - generic [ref=e611]: Renault
+          - generic [ref=e612]: SEAT
+          - generic [ref=e613]: Škoda
+          - generic [ref=e614]: Volkswagen
+          - generic [ref=e615]: Volvo
+      - generic [ref=e621]:
+        - generic [ref=e622]:
+          - generic [ref=e623]: Your Questions, Answered
+          - heading "Common Questions About Window Sticker Lookups" [level=2] [ref=e626]
+        - generic [ref=e628]:
+          - group [ref=e629]:
+            - generic "What exactly is a factory window sticker?" [ref=e630] [cursor=pointer]:
+              - heading "What exactly is a factory window sticker?" [level=3] [ref=e631]
+          - group [ref=e635]:
+            - generic "Can I find a window sticker for a used vehicle?" [ref=e636] [cursor=pointer]:
+              - heading "Can I find a window sticker for a used vehicle?" [level=3] [ref=e637]
+          - group [ref=e641]:
+            - generic "How accurate is window sticker information?" [ref=e642] [cursor=pointer]:
+              - heading "How accurate is window sticker information?" [level=3] [ref=e643]
+          - group [ref=e647]:
+            - generic "Why doesn't every VIN return a window sticker?" [ref=e648] [cursor=pointer]:
+              - heading "Why doesn't every VIN return a window sticker?" [level=3] [ref=e649]
+          - group [ref=e653]:
+            - generic "Is a window sticker the same as a build sheet?" [ref=e654] [cursor=pointer]:
+              - heading "Is a window sticker the same as a build sheet?" [level=3] [ref=e655]
+          - group [ref=e659]:
+            - generic "Does this work for all manufacturers?" [ref=e660] [cursor=pointer]:
+              - heading "Does this work for all manufacturers?" [level=3] [ref=e661]
+          - group [ref=e665]:
+            - generic "Is it possible to get a window sticker at no cost?" [ref=e666] [cursor=pointer]:
+              - heading "Is it possible to get a window sticker at no cost?" [level=3] [ref=e667]
+    - contentinfo [ref=e671]:
+      - generic [ref=e672]:
+        - generic [ref=e673]:
+          - generic [ref=e674]:
+            - link "Vehicle History Europe logo (white)" [ref=e675] [cursor=pointer]:
+              - /url: /
+              - img "Vehicle History Europe logo (white)" [ref=e676]
+            - generic [ref=e677]:
+              - paragraph [ref=e678]: +(866)-300-0554
+              - paragraph [ref=e679]: support@vehiclehistory.eu
+          - generic [ref=e680]:
+            - heading "Company" [level=4] [ref=e681]
+            - list [ref=e682]:
+              - listitem [ref=e683]:
+                - link "About Us" [ref=e684] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=e685]:
+                - link "Contact Us" [ref=e686] [cursor=pointer]:
+                  - /url: /contact-us
+              - listitem [ref=e687]:
+                - link "Blog" [ref=e688] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e689]:
+                - link "Login/Sign Up" [ref=e690] [cursor=pointer]:
+                  - /url: /login
+          - generic [ref=e691]:
+            - heading "Sample Reports" [level=4] [ref=e692]
+            - list [ref=e693]:
+              - listitem [ref=e694]:
+                - link "2015 Toyota Corolla" [ref=e695] [cursor=pointer]:
+                  - /url: https://vehiclehistory.eu/report/vin/NMTER16RX0R073590
+              - listitem [ref=e696]:
+                - link "2005 Renault Clio" [ref=e697] [cursor=pointer]:
+                  - /url: https://vehiclehistory.eu/report/vin/VF15RE20A55268448
+              - listitem [ref=e698]:
+                - link "2017 Vauxhall Astra" [ref=e699] [cursor=pointer]:
+                  - /url: https://vehiclehistory.eu/report/vin/W0LBF6EC0HG162855
+          - generic [ref=e700]:
+            - heading "Tools" [level=4] [ref=e701]
+            - list [ref=e702]:
+              - listitem [ref=e703]:
+                - link "VIN Decoder" [ref=e704] [cursor=pointer]:
+                  - /url: /vin-decoder
+              - listitem [ref=e705]:
+                - link "VIN Check" [ref=e706] [cursor=pointer]:
+                  - /url: /vin-check
+              - listitem [ref=e707]:
+                - link "Window Sticker" [ref=e708] [cursor=pointer]:
+                  - /url: /window-sticker
+              - listitem [ref=e709]:
+                - link "Classic Car VIN Lookup" [ref=e710] [cursor=pointer]:
+                  - /url: https://classicdecoder.com/
+          - generic [ref=e711]:
+            - heading "Quick Link" [level=4] [ref=e712]
+            - list [ref=e713]:
+              - listitem [ref=e714]:
+                - link "Privacy Policy" [ref=e715] [cursor=pointer]:
+                  - /url: /privacy-policy
+              - listitem [ref=e716]:
+                - link "Terms and conditions" [ref=e717] [cursor=pointer]:
+                  - /url: /terms-of-service
+              - listitem [ref=e718]:
+                - link "Request a Refund" [ref=e719] [cursor=pointer]:
+                  - /url: /request-a-refund
+              - listitem [ref=e720]:
+                - link "FAQs" [ref=e721] [cursor=pointer]:
+                  - /url: /frequently-asked-questions
+        - paragraph [ref=e723]: © 2026 Vehicle History Europe. All rights reserved.
+  - alert [ref=e724]
+```
+
+# Test source
+
+```ts
+  1  | import { expect } from '@playwright/test';
+  2  | import { Actor } from '../actors/Actor';
+  3  | import { DecodeVinTask } from './DecodeVinTask';
+  4  | import { clickWithHealing } from '../utils/selfHealingLocator';
+  5  | 
+  6  | export class RevisitStickerBannerFlow {
+  7  |   async performAs(actor: Actor) {
+  8  |     const page = actor.getPage();
+  9  |     const timeout = process.env.CI ? 90000 : 60000;
+  10 | 
+  11 |     // 1. Navigate to valid sticker path
+  12 |     const isInfiniti = page.url().includes('infinitiwindowsticker.com');
+  13 |     const paths = isInfiniti ? ['/recalls'] : ['/window-sticker', '/window-stickers'];
+  14 |     let validPath = null;
+  15 |     
+  16 |     for (const path of paths) {
+  17 |       const response = await page.goto(path);
+  18 |       if (response && response.status() === 200) {
+  19 |         validPath = path;
+  20 |         break;
+  21 |       }
+  22 |     }
+  23 | 
+  24 |     if (!validPath) {
+  25 |       throw new Error('Failed: Neither /window-sticker nor /window-stickers paths are accessible.');
+  26 |     }
+  27 |     console.log(`Passed: Navigated to valid sticker path: ${validPath}`);
+  28 |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  29 | 
+  30 |     // 2. Perform VIN Decode
+  31 |     await actor.attemptsTo(new DecodeVinTask(), false);
+  32 | 
+  33 |     // 3. Return to valid sticker path
+  34 |     await page.goto(validPath);
+  35 |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  36 |     await page.waitForTimeout(1000);
+  37 | 
+  38 |     // 4. Click dynamic 'Grab it for only' button with self-healing
+  39 |     await clickWithHealing(
+  40 |       page,
+  41 |       'Grab it for',
+  42 |       [
+  43 |         'button:has-text("Grab it for")',
+  44 |         'button:has-text("Grab it")',
+  45 |         'button:has-text("Get Window Sticker")'
+  46 |       ],
+  47 |       { timeout: timeout }
+  48 |     );
+  49 | 
+  50 |     // 5. Verify navigation to sticker preview page
+> 51 |     await page.waitForURL(/.*preview.*/, { timeout: timeout });
+     |                ^ Error: page.waitForURL: Test timeout of 90000ms exceeded.
+  52 |     
+  53 |     // Check URL contains type=sticker AND content=revisit
+  54 |     await expect(page).toHaveURL(/.*type=sticker.*/);
+  55 |     await expect(page).toHaveURL(/.*content=revisit.*/);
+  56 |     
+  57 |     console.log('Passed: Revisit sticker banner flow verified.');
+  58 |   }
+  59 | }
+  60 | 
+```
