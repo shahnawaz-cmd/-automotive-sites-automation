@@ -1,0 +1,401 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_15 Classic editable specs manual update feature validation
+- Location: tests/global_case_verification.spec.ts:254:5
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic:
+  - alert: Search any VIN Number by looking up a VIN Check
+  - generic:
+    - list
+    - region "Notifications Alt+T"
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - main:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                          - heading [level=4]:
+                            - generic: Success!
+                            - text: We found detailed information for VIN# 242370B111333
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                        - heading [level=1]: 1961 Alfa Romeo Giulietta Berlina TI
+                    - generic:
+                      - generic:
+                        - img
+                        - generic: Incorrect information?
+                      - button [expanded]: Click here to update
+                    - generic:
+                      - generic:
+                        - generic: Axle Type
+                        - generic: Live Axle
+                      - generic:
+                        - generic: Body Maker
+                        - generic: Alfa Romeo
+                      - generic:
+                        - generic: Cylinders
+                        - generic: Straight-4
+                      - generic:
+                        - generic: Displacement
+                        - generic: 78.721 cu. in.
+                      - generic:
+                        - generic: Front Tread
+                        - generic: 52.8 inches
+                      - generic:
+                        - generic: Fuel
+                        - generic: 10.52 gal.
+                      - generic:
+                        - generic: Height
+                        - generic: 56.3 inches
+                      - generic:
+                        - generic: Length
+                        - generic: 157.5 inches
+                      - generic:
+                        - generic: MSRP
+                        - generic: $5,550
+                      - generic:
+                        - generic: Model Number
+                        - generic: "101.03"
+                      - generic:
+                        - generic: No. Of Gears
+                        - generic: "4"
+                      - generic:
+                        - generic: Oil
+                        - generic: 4.23 quarts
+                      - generic:
+                        - generic: Passengers
+                        - generic: "5"
+                      - generic:
+                        - generic: Rear Tread
+                        - generic: 52.8 inches
+                      - generic:
+                        - generic: Torque
+                        - generic: 68 lb-ft @ 4,000 rpm
+                      - generic:
+                        - generic: Type
+                        - generic: naturally aspirated petrol
+                      - generic:
+                        - generic: Weight
+                        - generic: 2013 lbs
+                      - generic:
+                        - generic: Wheelbase
+                        - generic: 94.1 inches
+                      - generic:
+                        - generic: Width
+                        - generic: 61.5 inches
+                      - generic:
+                        - generic: Doors
+                        - generic: "4"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - paragraph: Previously listed for sale online. Get the full vehicle report to unlock records.
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Sales History
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Auction Records
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Odometer Checks
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Damage Records
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Title Check
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Theft Records
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: Lien/Loan Records
+                            - generic: Reveal Records
+                        - generic:
+                          - img
+                          - generic:
+                            - generic: MSRP
+                            - generic: Reveal Records
+                        - generic:
+                          - button: Reveal Records
+                      - generic:
+                        - text: Market value
+                        - paragraph: This is the average price of the vehicle for a private or a dealership sale based on it's condition.
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: Outstanding
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "Dealer Retail:"
+                                  - text: $616,000
+                          - generic:
+                            - generic:
+                              - generic: Clean
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic: "Dealer Retail:"
+                                - text: $515,000
+                          - generic:
+                            - generic:
+                              - generic: Average
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic: "Dealer Retail:"
+                                - text: $410,000*
+                          - generic:
+                            - generic:
+                              - generic: Rough
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic: "Dealer Retail:"
+                                - text: $331,000
+              - generic:
+                - generic:
+                  - heading [level=4]: Unlock the history - Choose your package.
+                  - generic:
+                    - generic:
+                      - radio:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - radio
+                              - heading [level=4]: 5 Reports
+                              - generic: Most Popular
+                            - generic:
+                              - generic: CA$8.01
+                              - subscript: /Report
+                            - generic: You pay CA$40.04
+                            - generic:
+                              - generic: CA$100.10
+                              - generic: Save 60%
+                    - generic:
+                      - radio:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - radio
+                              - heading [level=4]: 2 Reports
+                            - generic:
+                              - generic: CA$15.02
+                              - subscript: /Report
+                            - generic: You pay CA$30.03
+                            - generic:
+                              - generic: CA$40.04
+                              - generic: Save 25%
+                    - generic:
+                      - radio [checked]:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - radio [checked]
+                              - heading [level=4]: 1 Report
+                            - generic:
+                              - generic: CA$20.02
+                              - subscript: /Report
+                            - generic: You pay CA$20.02
+                            - generic:
+                              - generic: 69% Cheaper Than Carfax
+                    - generic:
+                      - generic:
+                        - radio:
+                          - generic:
+                            - generic: Best Value
+                          - generic:
+                            - generic:
+                              - radio
+                              - heading [level=4]: Unlimited VIN Check
+                            - generic:
+                              - generic: CA$41.70
+                              - subscript: /subscription
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Why choose this plan?
+                                  - generic:
+                                    - button: "?"
+                  - checkbox [checked]:
+                    - generic:
+                      - generic: Save 50%
+                      - checkbox [checked]
+                      - generic:
+                        - text: Add a window sticker to your purchase
+                        - generic: CA$9.97CA$9.97
+                    - generic:
+                      - link:
+                        - /url: https://vinnumber.ca/window-sticker/1GNALFEK1DZ134081-02DB02DB-C4C4-8182-9E41-734A3B4E0422
+                        - text: View Sample Window Sticker
+                  - generic:
+                    - button:
+                      - img
+                      - text: Access Records
+                      - img
+                  - generic:
+                    - paragraph:
+                      - text: By selecting "Access Records" you are confirming that you have read and agree to VIN Number
+                      - link:
+                        - /url: https://app.vinnumber.ca//terms-and-conditions
+                        - text: Terms of Use
+                      - text: and
+                      - link:
+                        - /url: https://app.vinnumber.ca//privacy
+                        - text: Privacy Policy
+                      - text: .
+                  - generic:
+                    - img
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                          - paragraph: Happy customers across the globe
+                        - generic:
+                          - img
+                          - paragraph: Instant access
+                        - generic:
+                          - img
+                          - paragraph: Secure checkout
+                        - generic:
+                          - img
+                          - paragraph: Downloadable PDF
+                      - generic:
+                        - blockquote:
+                          - text: "\"They did a fabulous job with GREAT customer service. Once I entered the VIN number and after only a few minutes my report was in my inbox. The next day I had a follow-up call to ensure I had received everything I ordered and was happy with their service. A very customer-oriented businesses. I only wish there were more companies like this.\""
+                          - contentinfo: — Brian Striemer
+                      - generic:
+                        - generic:
+                          - img
+                          - generic: 4.8/5
+                          - link:
+                            - /url: https://www.trustpilot.com/review/detailedvehiclehistory.com
+                            - text: Trustpilot
+                      - generic:
+                        - generic: "We check for:"
+                        - generic:
+                          - generic:
+                            - img
+                            - generic: Ownership History
+                          - generic:
+                            - img
+                            - generic: Junk & Salvage
+                          - generic:
+                            - img
+                            - generic: Vehicle Specifications
+                          - generic:
+                            - img
+                            - generic: Odometer Readings
+                          - generic:
+                            - img
+                            - generic: Total Loss History
+                          - generic:
+                            - img
+                            - generic: Accident History
+                          - generic:
+                            - img
+                            - generic: Structural Damage
+                          - generic:
+                            - img
+                            - generic: Recalls & Defects
+                          - generic:
+                            - img
+                            - generic: Title Information
+                          - generic:
+                            - img
+                            - generic: 60 + Problem Checks
+                          - generic:
+                            - img
+                            - generic: Taxi, Lease, Police Use
+                          - generic:
+                            - img
+                            - generic: Loan Verifications
+                      - link:
+                        - /url: https://vinnumber.ca/report/vin/2T1BURHE0FC320645
+                        - text: View Sample Report
+                      - generic:
+                        - img
+                        - paragraph: This website utilizes some of the most advanced techniques to protect your information and personal data including technical, administrative and even physical safeguards against unauthorized access misuse improper disclosure. All of your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+                      - separator
+                      - generic:
+                        - paragraph: © 2026 VIN Number, All Rights Reserved
+  - iframe [ref=e1]:
+    - main [ref=f2e2]:
+      - generic [ref=f2e3]:
+        - generic [ref=f2e5]:
+          - generic [ref=f2e6] [cursor=pointer]:
+            - img [ref=f2e9]
+            - generic [ref=f2e13]: Richard Langridge
+          - button "Hide greeting" [ref=f2e14] [cursor=pointer]:
+            - img [ref=f2e15]
+        - generic [ref=f2e18]:
+          - generic [ref=f2e19]:
+            - heading "👋 New here? Reply \"YES\" for a small treat. Share VIN to pull vehicle records" [level=2] [ref=f2e23]
+            - group [ref=f2e24]:
+              - button "YES" [ref=f2e25]
+          - generic [ref=f2e26]:
+            - textbox "Type in your message here" [ref=f2e27]
+            - button "Send a message" [disabled] [ref=f2e28]:
+              - img [ref=f2e29]
+  - dialog "Update Vehicle Information" [ref=e3]:
+    - heading "Update Vehicle Information" [level=2] [ref=e5]
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: What would you like to update?
+      - button "Update Year, Make and Model" [active] [ref=e8]
+      - button "Update Specifications" [ref=e9]
+      - button "Cancel" [ref=e11]
+    - button "Close" [ref=e12]:
+      - img [ref=e13]
+      - generic [ref=e16]: Close
+```
