@@ -1,0 +1,4 @@
+Passed: Cookie found. Name: coupon, Value: preview15
+Passed: Banner appeared with discount: "15%"
+Passed: Navigated to valid path: /window-stickers
+Passed: Banner persisted on the page: /window-stickers

@@ -1,0 +1,59 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+[ClassicManualSpecsDataGenerator] Generated unique manual specifications:
+ {
+  "year": "1968",
+  "make": "Oldsmobile 6ZLY",
+  "model": "Corvette 6ZLY",
+  "engine": "Hemi 426 6ZLY",
+  "transmission": "3-Speed Auto",
+  "door": "2",
+  "drive": "AWD"
+}
+[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 90s)...
+
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/update-classic-decode (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "data": {
+    "vin": "CCY145A104163",
+    "year": "1968",
+    "make": "Oldsmobile 6ZLY",
+    "model": "Corvette 6ZLY",
+    "details": {
+      "vin": "CCY145A104163",
+      "year": "1968",
+      "make": "Oldsmobile 6ZLY",
+      "model": "Corvette 6ZLY",
+      "transmission": "3-Speed Auto",
+      "fuel": "Gasoline",
+      "engine": "Hemi 426 6ZLY",
+      "drive": "AWD",
+      "doors": "2",
+      "source": "Classic",
+      "model_id": null,
+      "series": "Corvette 6ZLY"
+    },
+    "model_id": null,
+    "series": "Corvette 6ZLY",
+    "mapping": null,
+    "marketValue": {
+      "market_data": [
+        {
+          "market_value": null
+        }
+      ]
+    },
+    "isEditable": true
+  },
+  "marketValue": {
+    "market_data": [
+      {
+        "market_value": null
+      }
+    ]
+  }
+}
+✅ Manual update successful
+TC_15: page.close() executed.
