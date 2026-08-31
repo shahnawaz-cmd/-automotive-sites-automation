@@ -1,8 +1,8 @@
-﻿const { defineConfig } = require('@playwright/test');
+const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
   reporter: [
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['json', { outputFile: 'results.json' }]
+    ['json', { outputFile: 'playwright-report/results.json' }]
   ],
 });

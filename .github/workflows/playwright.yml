@@ -76,7 +76,7 @@ jobs:
         else
           PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
         fi
-        npx playwright test --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }} --reporter=blob
+        npx playwright test --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }}
       env:
         CI: true
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -310,11 +310,16 @@ jobs:
       run: |
         sudo apt-get install -y jq
 
+        # --- Locate accurate JSON report ---
+        JSON_PATH="playwright-report/results.json"
+        [ ! -f "$JSON_PATH" ] && JSON_PATH="results.json"
+        echo "Using results from: $JSON_PATH"
+
         # --- Extract accurate counts from Playwright stats ---
-        PASSED_TESTS=$(jq '.stats.expected // 0' playwright-report/results.json || echo "0")
-        FAILED_TESTS=$(jq '.stats.unexpected // 0' playwright-report/results.json || echo "0")
-        FLAKY_TESTS=$(jq '.stats.flaky // 0' playwright-report/results.json || echo "0")
-        SKIPPED_TESTS=$(jq '.stats.skipped // 0' playwright-report/results.json || echo "0")
+        PASSED_TESTS=$(jq '.stats.expected // 0' "$JSON_PATH" || echo "0")
+        FAILED_TESTS=$(jq '.stats.unexpected // 0' "$JSON_PATH" || echo "0")
+        FLAKY_TESTS=$(jq '.stats.flaky // 0' "$JSON_PATH" || echo "0")
+        SKIPPED_TESTS=$(jq '.stats.skipped // 0' "$JSON_PATH" || echo "0")
         TOTAL_TESTS=$(( PASSED_TESTS + FAILED_TESTS + FLAKY_TESTS + SKIPPED_TESTS ))
 
         # --- Group Active Batches by Site and list browser suffixes in parentheses ---
@@ -329,7 +334,7 @@ jobs:
           group_by(.base) | 
           map("• " + .[0].base + " (" + (map(.browser) | unique | join(", ")) + ")") | 
           join("\n")
-        ' playwright-report/results.json || echo "N/A")
+        ' "$JSON_PATH" || echo "N/A")
 
         # --- Exclude skipped cases from pass rate percentage ---
         ACTIVE_TESTS=$(( TOTAL_TESTS - SKIPPED_TESTS ))
@@ -347,7 +352,7 @@ jobs:
             select(.status == "unexpected") |
             "• [" + (.projectName // "Unknown") + "] " + $title
           ] | unique | .[0:5] | join("\n")
-        ' playwright-report/results.json 2>/dev/null || echo "")
+        ' "$JSON_PATH" 2>/dev/null || echo "")
         [ -n "$FAILED_DETAILS" ] && FAILED_SECTION="\n*❌ Failed Tests:*\n\`\`\`$FAILED_DETAILS\`\`\`" || FAILED_SECTION=""
 
         # --- Enhancement 2b: Flaky tests list (passed on retry) ---
@@ -358,19 +363,19 @@ jobs:
             select(.status == "flaky") |
             "• [" + (.projectName // "Unknown") + "] " + $title
           ] | unique | .[0:5] | join("\n")
-        ' playwright-report/results.json 2>/dev/null || echo "")
+        ' "$JSON_PATH" 2>/dev/null || echo "")
         [ -n "$FLAKY_DETAILS" ] && FLAKY_SECTION="\n*⚠️ Flaky Tests (Passed on Retry):*\n\`\`\`$FLAKY_DETAILS\`\`\`" || FLAKY_SECTION=""
 
         # --- Enhancement 3: Accurate failed sites count and names ---
-        TOTAL_SITES=$(jq '[.config.projects[] | .name | split("_")[0]] | unique | length' playwright-report/results.json || echo "4")
+        TOTAL_SITES=$(jq '[.config.projects[] | .name | split("_")[0]] | unique | length' "$JSON_PATH" || echo "4")
 
         FAILING_SITES_NAMES=$(jq -r '
           [.. | select(.projectName? and .status? == "unexpected") | .projectName | split("_")[0]] | unique | join(", ")
-        ' playwright-report/results.json 2>/dev/null || echo "")
+        ' "$JSON_PATH" 2>/dev/null || echo "")
 
         FAILED_SITES=$(jq -r '
           [.. | select(.projectName? and .status? == "unexpected") | .projectName | split("_")[0]] | unique | length
-        ' playwright-report/results.json 2>/dev/null || echo "0")
+        ' "$JSON_PATH" 2>/dev/null || echo "0")
 
         # --- Schedule type label ---
         if [ "${{ github.event.schedule }}" = "0 0 * * 6" ]; then
@@ -430,9 +435,11 @@ jobs:
         SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
       run: |
         sudo apt-get install -y jq
-        FAILED_TESTS=$(jq '.stats.unexpected // 0' playwright-report/results.json || echo "0")
+        JSON_PATH="playwright-report/results.json"
+        [ ! -f "$JSON_PATH" ] && JSON_PATH="results.json"
+        FAILED_TESTS=$(jq '.stats.unexpected // 0' "$JSON_PATH" || echo "0")
         if [ "$FAILED_TESTS" -gt 0 ] && [ -n "$SLACK_FAILURE_WEBHOOK_URL" ]; then
-          TOTAL_TESTS=$(jq '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped' playwright-report/results.json || echo "0")
+          TOTAL_TESTS=$(jq '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped' "$JSON_PATH" || echo "0")
           ALERT_PAYLOAD='{"text": "🚨 *PROD ALERT:* Playwright E2E tests detected '"$FAILED_TESTS"' failure(s) out of '"$TOTAL_TESTS"' total tests. <@U09UE83AWGP>\n<https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View Allure Failure Report>"}'
           curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
         fi
