@@ -16,8 +16,19 @@ module.exports = defineConfig({
     trace: 'retain-on-failure',
   },
   reporter: [
-    ['html', { open: 'never' }],
-    ['json', { outputFile: 'results.json' }]
+    ['list'],
+    ['html', { open: 'never', outputFolder: 'playwright-report' }],
+    ['json', { outputFile: 'results.json' }],
+    ['allure-playwright', {
+      outputFolder: 'allure-results',
+      detail: true,
+      suiteTitle: true,
+      environmentInfo: {
+        Environment: 'Production',
+        Platform: process.platform,
+      },
+    }],
+    ...(process.env.CI ? [['blob']] : [])
   ],
   projects: [
     // --- Desktop Chromium ---
