@@ -25,9 +25,16 @@ export const generateUSVin = (): string => {
   return generateRandomVin(baseVin, 2);
 };
 
-// Classic VIN generator (randomizes last 2 characters to numeric only)
-export const generateClassicNumericVin = (baseVin: string = '242370B111346'): string => {
-  return generateRandomVin(baseVin, 2);
+// Pool of Classic VINs
+export const CLASSIC_VIN_POOL = [
+  'CCY145A104163',
+  '3N67K5M290995'
+];
+
+// Classic VIN generator (randomizes last 2 characters to numeric only from classic pool)
+export const generateClassicNumericVin = (baseVin?: string): string => {
+  const selectedBase = baseVin || CLASSIC_VIN_POOL[Math.floor(Math.random() * CLASSIC_VIN_POOL.length)];
+  return generateRandomVin(selectedBase, 2);
 };
 
 // EU-specific VIN generator (randomizes last 1 character across base VINs)

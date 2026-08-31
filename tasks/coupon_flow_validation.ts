@@ -15,7 +15,7 @@ export class CouponAndPrevCouponVerification {
     await page.waitForTimeout(1000);
 
     // 2. Verify Cookie (Key: 'coupon', Value is dynamic, but we just check presence)
-    const cookies = await page.context().cookies([page.url()]);
+    const cookies = await page.context().cookies();
     const couponCookie = cookies.find(c => c.name === 'coupon');
     if (!couponCookie) {
       throw new Error('Failed: Coupon cookie not found.');

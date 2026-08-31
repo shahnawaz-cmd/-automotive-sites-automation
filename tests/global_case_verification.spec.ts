@@ -15,6 +15,7 @@ import { GlobalExitIntentPopup } from '../tasks/global_exit_intent_popup';
 import { EuVinConfirmationTask } from '../tasks/eu_vin_confirmation';
 import { ClassicEditableSpecsManual } from '../tasks/classic_editable_specs_manual';
 import { DefaultPlanPriceCheckTask } from '../tasks/default_plan_price_check';
+import { ClassicEditableSpecsUpdateOnly } from '../tasks/classic_editable_specs_update_only';
 
 test.beforeEach(async ({ page }) => {
   // Speed up CI by aborting heavy non-essential 3rd-party analytics and tracking beacons
@@ -166,6 +167,10 @@ test('TC_10 Exit intent banner verification', async ({ page }, testInfo) => {
 
 test('TC_11 Preview to checkout redirection', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari'), 'Skipping preview checkout on mobile');
+  
+  // Set timeout to 90s (local) / 120s (CI) to accommodate preview decoding and checkout redirection under multi-worker load
+  testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
   const actor = new Actor('User', page);
   try {
     await page.goto('/');
@@ -178,7 +183,7 @@ test('TC_11 Preview to checkout redirection', async ({ page }, testInfo) => {
 });
 
 
-test('TC_12 Classic editable specs feature validation', async ({ page }, testInfo) => {
+test('TC_12 Classic editable specs feature validation', async ({ page, context }, testInfo) => {
   const baseURL = testInfo.project.use.baseURL || '';
   const projectName = testInfo.project.name || '';
   test.skip(
@@ -191,6 +196,7 @@ test('TC_12 Classic editable specs feature validation', async ({ page }, testInf
 
   const actor = new Actor('User', page);
   try {
+    await context.clearCookies();
     await page.goto('/');
     await page.waitForTimeout(1000); // 1 second delay
     await actor.attemptsTo(new ClassicEditableSpecs());
@@ -251,16 +257,19 @@ test('TC_14 EU VIN confirmation flow', async ({ page }, testInfo) => {
   }
 });
 
-test('TC_15 Classic editable specs manual update feature validation', async ({ page }, testInfo) => {
+test('TC_15 Classic editable specs manual update feature validation', async ({ page, context }, testInfo) => {
   const baseURL = testInfo.project.use.baseURL || '';
   const isMobile = testInfo.project.name.includes('_MobileChrome') || testInfo.project.name.includes('_MobileEdge') || testInfo.project.name.includes('_MobileSafari');
   
-  test.skip(!isMobile, 'Skipping classic editable specs manual validation on desktop; runs only on mobile browsers');
   test.skip(testInfo.project.name.startsWith('VSR'), 'Skipping classic editable specs manual validation on VSR');
   test.skip(baseURL.includes('vehiclehistory.eu'), 'Skipping classic editable specs manual validation for vehiclehistory.eu');
 
+  // Set timeout to 120s (local) / 150s (CI) to accommodate classic cascading API and multi-field inputs
+  testInfo.setTimeout(process.env.CI ? 150000 : 120000);
+
   const actor = new Actor('User', page);
   try {
+    await context.clearCookies();
     await actor.attemptsTo(new ClassicEditableSpecsManual());
   } finally {
     await page.close();
@@ -280,5 +289,24 @@ test('TC_16 Default plan price check verification', async ({ page }, testInfo) =
   } finally {
     await page.close();
     console.log('TC_16: page.close() executed.');
+  }
+});
+
+test('TC_17 Classic editable specs update only from preview validation', async ({ page, context }, testInfo) => {
+  const baseURL = testInfo.project.use.baseURL || '';
+  
+  test.skip(testInfo.project.name.startsWith('VSR'), 'Skipping classic editable specs update only validation on VSR');
+  test.skip(baseURL.includes('vehiclehistory.eu'), 'Skipping classic editable specs update only validation for vehiclehistory.eu');
+
+  // Set timeout to 120s (local) / 150s (CI) to accommodate preview decoding and update-only flow
+  testInfo.setTimeout(process.env.CI ? 150000 : 120000);
+
+  const actor = new Actor('User', page);
+  try {
+    await context.clearCookies();
+    await actor.attemptsTo(new ClassicEditableSpecsUpdateOnly());
+  } finally {
+    await page.close();
+    console.log('TC_17: page.close() executed.');
   }
 });

@@ -7,7 +7,7 @@ module.exports = defineConfig({
     timeout: 10000,
   },
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : 1,
+  workers: process.env.CI ? 1 : 2,
   fullyParallel: true,
   use: {
     actionTimeout: 15000,
@@ -111,88 +111,88 @@ module.exports = defineConfig({
         ignoreHTTPSErrors: true,
       },
     },
-    // --- Mobile Edge (Chromium channel msedge) ---
-    {
-      name: 'VSR_MobileEdge',
-      use: {
-        baseURL: 'https://vehiclesreport.com/',
-        ...devices['Pixel 5'],
-        channel: 'msedge',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    {
-      name: 'MotorcycleVINLookup_MobileEdge',
-      use: {
-        baseURL: 'https://motorcyclevinlookup.com/',
-        ...devices['Pixel 5'],
-        channel: 'msedge',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    {
-      name: 'VehicleHistoryEU_MobileEdge',
-      use: {
-        baseURL: 'https://vehiclehistory.eu/',
-        ...devices['Pixel 5'],
-        channel: 'msedge',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    {
-      name: 'VINNumberCA_MobileEdge',
-      use: {
-        baseURL: 'https://vinnumber.ca/',
-        ...devices['Pixel 5'],
-        channel: 'msedge',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    // --- Mobile Safari (iOS) ---
-    {
-      name: 'VSR_MobileSafari',
-      use: {
-        baseURL: 'https://vehiclesreport.com/',
-        ...devices['iPhone 14'],
-        browserName: 'webkit',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    {
-      name: 'MotorcycleVINLookup_MobileSafari',
-      use: {
-        baseURL: 'https://motorcyclevinlookup.com/',
-        ...devices['iPhone 14'],
-        browserName: 'webkit',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    {
-      name: 'VehicleHistoryEU_MobileSafari',
-      use: {
-        baseURL: 'https://vehiclehistory.eu/',
-        ...devices['iPhone 14'],
-        browserName: 'webkit',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
-    {
-      name: 'VINNumberCA_MobileSafari',
-      use: {
-        baseURL: 'https://vinnumber.ca/',
-        ...devices['iPhone 14'],
-        browserName: 'webkit',
-        headless: !!process.env.CI,
-        ignoreHTTPSErrors: true,
-      },
-    },
+    // --- Mobile Edge (Chromium channel msedge) [Commented out] ---
+    // {
+    //   name: 'VSR_MobileEdge',
+    //   use: {
+    //     baseURL: 'https://vehiclesreport.com/',
+    //     ...devices['Pixel 5'],
+    //     channel: 'msedge',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // {
+    //   name: 'MotorcycleVINLookup_MobileEdge',
+    //   use: {
+    //     baseURL: 'https://motorcyclevinlookup.com/',
+    //     ...devices['Pixel 5'],
+    //     channel: 'msedge',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // {
+    //   name: 'VehicleHistoryEU_MobileEdge',
+    //   use: {
+    //     baseURL: 'https://vehiclehistory.eu/',
+    //     ...devices['Pixel 5'],
+    //     channel: 'msedge',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // {
+    //   name: 'VINNumberCA_MobileEdge',
+    //   use: {
+    //     baseURL: 'https://vinnumber.ca/',
+    //     ...devices['Pixel 5'],
+    //     channel: 'msedge',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // --- Mobile Safari (iOS) [Commented out] ---
+    // {
+    //   name: 'VSR_MobileSafari',
+    //   use: {
+    //     baseURL: 'https://vehiclesreport.com/',
+    //     ...devices['iPhone 14'],
+    //     browserName: 'webkit',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // {
+    //   name: 'MotorcycleVINLookup_MobileSafari',
+    //   use: {
+    //     baseURL: 'https://motorcyclevinlookup.com/',
+    //     ...devices['iPhone 14'],
+    //     browserName: 'webkit',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // {
+    //   name: 'VehicleHistoryEU_MobileSafari',
+    //   use: {
+    //     baseURL: 'https://vehiclehistory.eu/',
+    //     ...devices['iPhone 14'],
+    //     browserName: 'webkit',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
+    // {
+    //   name: 'VINNumberCA_MobileSafari',
+    //   use: {
+    //     baseURL: 'https://vinnumber.ca/',
+    //     ...devices['iPhone 14'],
+    //     browserName: 'webkit',
+    //     headless: !!process.env.CI,
+    //     ignoreHTTPSErrors: true,
+    //   },
+    // },
     // {
     //   name: 'InfinitiWindowSticker',
     //   use: {

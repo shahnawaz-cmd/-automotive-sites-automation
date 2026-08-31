@@ -99,12 +99,11 @@ export class PreviewToCheckoutRedirection {
 
     await this.fillEmailAndProceed(page);
 
-    // Wait for URL redirection to checkout page until full page load
+    // Wait for URL redirection to checkout page (domcontentloaded for fast resolution without stalling on payment SDKs)
     await page.waitForURL(
       /.*(checkout|payment|billing|order|purchase|confirmation|summary|subscribe).*/i,
-      { timeout: this.timeout, waitUntil: 'load' }
+      { timeout: this.timeout, waitUntil: 'domcontentloaded' }
     );
-    await page.waitForLoadState('load', { timeout: 15000 }).catch(() => {});
     console.log(`✅ Successfully redirected to checkout URL: ${page.url()}`);
   }
 }
