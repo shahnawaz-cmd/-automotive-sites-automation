@@ -1,8 +1,0 @@
-[VIN Decode] Generated VIN (US): WA1VABGE5KB008226
-[VIN Decode] Clicking success element...
-Success condition met.
-[TC_13] Running Global Exit Intent Flow...
-✅ Clicked CTA button (Global Exit Intent)
-✅ Redirected to offer URL: https://motorcyclevinlookup.com/vin-check/preview?vin=WA1VABGE5KB008226&type=vhr&wpPage=homepage&offer=Preview15
-[TC_13] Global Exit Intent Flow Succeeded.
-TC_13: page.close() executed.

@@ -1,4 +1,0 @@
-[VIN Decode] Generated VIN (US): 1C4RJHBG0PC533431
-[VIN Decode] Clicking success element...
-Success condition met.
-Closed page as requested.

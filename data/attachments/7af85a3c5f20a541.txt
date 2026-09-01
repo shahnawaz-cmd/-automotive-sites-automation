@@ -1,5 +1,0 @@
-[ClassicSpecsRandomDataFiller] Found 20 specification fields to populate.
-[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 20s)...
-⚠️ [CaptureUpdateClassicDecode] update-classic-decode response wait ended: page.waitForResponse: Timeout 20000ms exceeded while waiting for event "response"
-✅ Vehicle specifications successfully updated.
-TC_17: page.close() executed.

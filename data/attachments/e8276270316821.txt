@@ -1,0 +1,18 @@
+[VIN Decode] Generated VIN (US): 1C4RJHBG0PC533406
+[VIN Decode] Clicking success element...
+Success condition met.
+✅ Verified site_settings planData: {
+  id: '946',
+  name: 'Basic',
+  code: 'MVL1',
+  price: '25',
+  nos: '1',
+  gumroad: 'MVL1',
+  total: '25',
+  type: 'report',
+  currency_sign: '$',
+  currency_code: 'USD',
+  c_id: '16'
+}
+✅ Price $25.00 successfully rendered on frontend UI.
+TC_16: page.close() executed.
