@@ -1,5 +1,0 @@
-[VIN Decode] Generated VIN (US): 1C4RJHBG0PC533440
-[VIN Decode] Clicking success element...
-Success condition met.
-Passed: Revisit banner flow verified.
-TC_08: page.close() executed.

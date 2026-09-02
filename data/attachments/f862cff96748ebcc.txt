@@ -1,0 +1,18 @@
+[VIN Decode] Generated VIN (US): 2C4RC1BG6JR152077
+[VIN Decode] Clicking success element...
+Success condition met.
+✅ Verified site_settings planData: {
+  id: '768',
+  name: 'Basic',
+  code: 'VHREU1',
+  price: '9.98',
+  nos: '1',
+  gumroad: 'VHREU1',
+  total: '9.979999542236328',
+  type: 'report',
+  currency_sign: 'EUR',
+  currency_code: 'EUR',
+  c_id: '17'
+}
+✅ Price EUR9.98 successfully rendered on frontend UI.
+TC_16: page.close() executed.

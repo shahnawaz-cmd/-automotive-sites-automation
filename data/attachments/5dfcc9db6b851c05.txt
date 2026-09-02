@@ -1,0 +1,59 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+[ClassicManualSpecsDataGenerator] Generated unique manual specifications:
+ {
+  "year": "1975",
+  "make": "Pontiac T6YG",
+  "model": "Mustang T6YG",
+  "engine": "Inline-6 T6YG",
+  "transmission": "5-Speed Manual",
+  "door": "4",
+  "drive": "RWD"
+}
+[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 90s)...
+
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/update-classic-decode (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "data": {
+    "vin": "3N67K5M290910",
+    "year": "1975",
+    "make": "Pontiac T6YG",
+    "model": "Mustang T6YG",
+    "details": {
+      "vin": "3N67K5M290910",
+      "year": "1975",
+      "make": "Pontiac T6YG",
+      "model": "Mustang T6YG",
+      "transmission": "5-Speed Manual",
+      "fuel": "Gasoline",
+      "engine": "Inline-6 T6YG",
+      "drive": "RWD",
+      "doors": "4",
+      "source": "Classic",
+      "model_id": null,
+      "series": "Mustang T6YG"
+    },
+    "model_id": null,
+    "series": "Mustang T6YG",
+    "mapping": null,
+    "marketValue": {
+      "market_data": [
+        {
+          "market_value": null
+        }
+      ]
+    },
+    "isEditable": true
+  },
+  "marketValue": {
+    "market_data": [
+      {
+        "market_value": null
+      }
+    ]
+  }
+}
+✅ Manual update successful
+TC_15: page.close() executed.
