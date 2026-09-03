@@ -1,0 +1,82 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: global_case_verification.spec.ts >> TC_09 Revisit sticker banner flow
+- Location: tests/global_case_verification.spec.ts:136:5
+
+# Error details
+
+```
+TimeoutError: page.waitForURL: Timeout 90000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+============================================================
+```
+
+# Test source
+
+```ts
+  1  | import { expect } from '@playwright/test';
+  2  | import { Actor } from '../actors/Actor';
+  3  | import { DecodeVinTask } from './DecodeVinTask';
+  4  | import { clickWithHealing } from '../utils/selfHealingLocator';
+  5  | 
+  6  | export class RevisitStickerBannerFlow {
+  7  |   async performAs(actor: Actor) {
+  8  |     const page = actor.getPage();
+  9  |     const timeout = process.env.CI ? 90000 : 60000;
+  10 | 
+  11 |     // 1. Determine valid sticker path (/window-stickers on VSR, /recalls on Infiniti, /window-sticker on others)
+  12 |     const baseURL = (page.context() as any)._options?.baseURL || '';
+  13 |     const currentUrl = page.url();
+  14 |     const isInfiniti = baseURL.toLowerCase().includes('infiniti') || currentUrl.toLowerCase().includes('infiniti');
+  15 |     const isVSR = baseURL.toLowerCase().includes('vehiclesreport') || baseURL.toLowerCase().includes('vsr') || currentUrl.toLowerCase().includes('vehiclesreport');
+  16 |     
+  17 |     const stickerPath = isInfiniti ? '/recalls' : (isVSR ? '/window-stickers' : '/window-sticker');
+  18 | 
+  19 |     console.log(`[Revisit Sticker] Navigating to valid sticker path: ${stickerPath}`);
+  20 |     await page.goto(stickerPath, { waitUntil: 'domcontentloaded' }).catch(async () => {
+  21 |       await page.waitForTimeout(1000);
+  22 |       await page.goto(stickerPath, { waitUntil: 'domcontentloaded' });
+  23 |     });
+  24 |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  25 | 
+  26 |     // 2. Perform VIN Decode using US VIN and wait for success condition to be met
+  27 |     await actor.attemptsTo(new DecodeVinTask(false, false, false));
+  28 | 
+  29 |     // 3. Return to sticker path using browser back
+  30 |     await page.goBack();
+  31 |     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
+  32 |     await page.waitForTimeout(1000);
+  33 | 
+  34 |     // 4. Click dynamic 'Grab it for only' button with self-healing
+  35 |     await clickWithHealing(
+  36 |       page,
+  37 |       'Grab it for',
+  38 |       [
+  39 |         'button:has-text("Grab it for")',
+  40 |         'button:has-text("Grab it")',
+  41 |         'button:has-text("Get Window Sticker")',
+  42 |         'button:has-text("Get Sticker")'
+  43 |       ],
+  44 |       { timeout: timeout }
+  45 |     );
+  46 | 
+  47 |     // 5. Verify navigation to sticker preview page with specific query parameters
+> 48 |     await page.waitForURL(/.*(preview|type=sticker|content=revisit).*/, { timeout: timeout, waitUntil: 'domcontentloaded' });
+     |                ^ TimeoutError: page.waitForURL: Timeout 90000ms exceeded.
+  49 |     
+  50 |     // Check URL contains type=sticker AND content=revisit
+  51 |     await expect(page).toHaveURL(/.*type=sticker.*/);
+  52 |     await expect(page).toHaveURL(/.*content=revisit.*/);
+  53 |     
+  54 |     console.log('Passed: Revisit sticker banner flow verified.');
+  55 |   }
+  56 | }
+  57 | 
+```

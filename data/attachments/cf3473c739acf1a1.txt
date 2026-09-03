@@ -1,0 +1,16 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+[ClassicManualSpecsDataGenerator] Generated unique manual specifications:
+ {
+  "year": "1955",
+  "make": "Dodge 7OFX",
+  "model": "Camaro 7OFX",
+  "engine": "Hemi 426 7OFX",
+  "transmission": "3-Speed Auto",
+  "door": "5",
+  "drive": "4WD"
+}
+[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 90s)...
+⚠️ [CaptureUpdateClassicDecode] update-classic-decode response wait ended: page.waitForResponse: Timeout 90000ms exceeded while waiting for event "response"
+✅ Manual update successful
+TC_15: page.close() executed.

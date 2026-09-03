@@ -1,0 +1,2 @@
+--- Applying 1st Coupon: preview15 ---
+Passed: Cookie found. Name: coupon, Value: preview15

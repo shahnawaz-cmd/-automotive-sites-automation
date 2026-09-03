@@ -1,0 +1,1 @@
+TC_17: page.close() executed.
