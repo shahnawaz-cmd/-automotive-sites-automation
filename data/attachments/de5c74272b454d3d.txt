@@ -1,4 +1,0 @@
-[VIN Decode] Generated VIN (US): WA1VABGE5KB008281
-[VIN Decode] Clicking success element...
-Success condition met.
-Closed page as requested.

@@ -1,5 +1,0 @@
-[Revisit Sticker] Navigating to valid sticker path: /window-sticker
-[VIN Decode] Generated VIN (US): 1FMCU0F68LUB98885
-Timeout waiting for success locator visibility
-Failed to click success condition. Current URL: https://motorcyclevinlookup.com/vin-check/ws-preview?vin=1FMCU0F68LUB98885&type=sticker&wpPage=window-sticker
-TC_09: page.close() executed.

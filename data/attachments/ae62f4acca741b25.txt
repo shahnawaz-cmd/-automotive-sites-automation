@@ -1,4 +1,0 @@
-[VIN Decode] Generated VIN (US): 3MW5R1J01M8B87094
-[VIN Decode] Clicking success element...
-Success condition met.
-Closed page as requested.

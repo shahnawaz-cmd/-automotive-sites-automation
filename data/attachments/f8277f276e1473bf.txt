@@ -1,5 +1,0 @@
-[Revisit Sticker] Navigating to valid sticker path: /window-sticker
-[VIN Decode] Generated VIN (US): 2C4RC1BG6JR152083
-[VIN Decode] Clicking success element...
-Success condition met.
-TC_09: page.close() executed.

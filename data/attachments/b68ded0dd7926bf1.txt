@@ -1,5 +1,0 @@
-[Revisit Sticker] Navigating to valid sticker path: /window-sticker
-[VIN Decode] Generated VIN (US): WA1VABGE5KB008292
-Timeout waiting for success locator visibility
-Failed to click success condition. Current URL: https://vinnumber.ca/vin-check/ws-preview?vin=WA1VABGE5KB008292&type=sticker&wpPage=window-sticker
-TC_09: page.close() executed.

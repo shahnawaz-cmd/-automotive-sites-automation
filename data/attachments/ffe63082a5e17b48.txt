@@ -1,7 +1,0 @@
-[VIN Decode] Generated VIN (US): 1FMCU0F68LUB98801
-Timeout waiting for success locator visibility
-[VIN Decode] Bypassing success banner click as requested by task parameters.
-Success condition met.
-[Preview Redirection] Locating and clicking Access Records CTA...
-[Preview Redirection] Filling email: rolex.rolls12+et2@gmail.com
-TC_11: page.close() executed.

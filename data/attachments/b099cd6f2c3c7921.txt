@@ -1,5 +1,0 @@
-[Revisit Sticker] Navigating to valid sticker path: /window-stickers
-[VIN Decode] Generated VIN (US): 2C4RC1BG6JR152053
-Timeout waiting for success locator visibility
-Failed to click success condition. Current URL: https://vehiclesreport.com/vin-check/ws-preview?vin=2C4RC1BG6JR152053&type=sticker&wpPage=window-stickers
-TC_09: page.close() executed.

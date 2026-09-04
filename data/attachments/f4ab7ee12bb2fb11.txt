@@ -1,0 +1,431 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+🌐 [API Response] URL: https://vinnumber.ca/api/config (Status: 200)
+📦 [JSON Data]:
+"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL3Zpbm51bWJlci5jYS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly92aW5udW1iZXIuY2EvIn0="
+🌐 [API Response] URL: https://vinnumber.ca/api/config (Status: 200)
+📦 [JSON Data]:
+"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL3Zpbm51bWJlci5jYS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly92aW5udW1iZXIuY2EvIn0="
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/plans?user_type=user (Status: 200)
+📦 [JSON Data]:
+{
+  "subscription_plan": [
+    {
+      "id": "933",
+      "name": " Report Subscription ",
+      "code": "VNYRS",
+      "price": 55.31,
+      "nos": "10",
+      "type": "report_subscription",
+      "gumroad": "DVHYRS",
+      "discount": "0",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "recurring": "monthly",
+      "c_id": "2"
+    }
+  ],
+  "uvc_subscription_plan": [
+    {
+      "id": "945",
+      "name": "Unlimited VIN Check",
+      "code": "VNUVC",
+      "price": 41.48,
+      "nos": "-1",
+      "type": "unlimited_vin_check_premium",
+      "gumroad": "",
+      "discount": "50",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "recurring": "monthly",
+      "c_id": "2"
+    }
+  ],
+  "credit_plans": [
+    {
+      "name": "Basic",
+      "code": "VN1",
+      "price": 19.92,
+      "nos": "1",
+      "type": "report",
+      "gumroad": "VN1",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "14.4"
+    },
+    {
+      "name": "Silver",
+      "code": "VN2",
+      "price": 29.87,
+      "nos": "2",
+      "type": "report",
+      "gumroad": "DVH2",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "21.6"
+    },
+    {
+      "name": "Gold",
+      "code": "VN5",
+      "price": 39.83,
+      "nos": "5",
+      "type": "report",
+      "gumroad": "DVH5",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "28.8"
+    },
+    {
+      "name": "Platinum",
+      "code": "VN10",
+      "price": 69.15,
+      "nos": "10",
+      "type": "report",
+      "gumroad": "DVH10",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "50"
+    }
+  ]
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/sticker-plans?user_type=user (Status: 200)
+📦 [JSON Data]:
+{
+  "subscription_plan": [
+    {
+      "id": "931",
+      "name": "Most Popular",
+      "code": "VNSTUN",
+      "price": 41.48,
+      "nos": "20",
+      "type": "sticker_subscription",
+      "gumroad": "DVHSTUN",
+      "discount": "0",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "recurring": "monthly",
+      "c_id": "2"
+    }
+  ],
+  "credit_plans": [
+    {
+      "id": "927",
+      "name": "Full Price",
+      "code": "VNST1",
+      "price": 19.92,
+      "nos": "1",
+      "type": "sticker",
+      "gumroad": "DVHST1",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "14.4"
+    },
+    {
+      "id": "928",
+      "name": "Sticker Silver",
+      "code": "VNST2",
+      "price": 29.87,
+      "nos": "2",
+      "type": "sticker",
+      "gumroad": "DVHST2",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "21.6"
+    },
+    {
+      "id": "929",
+      "name": "Best Deal",
+      "code": "VNST5",
+      "price": 39.83,
+      "nos": "5",
+      "type": "sticker",
+      "gumroad": "DVHST5",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "28.8"
+    },
+    {
+      "id": "930",
+      "name": "Sticker Platinum",
+      "code": "VNST10",
+      "price": 69.15,
+      "nos": "10",
+      "type": "sticker",
+      "gumroad": "DVHST10",
+      "currency_sign": "C$",
+      "currency_code": "CAD",
+      "conversion_rate": "1.383",
+      "c_id": "2",
+      "usd_price": "50"
+    }
+  ]
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_make?year=1975 (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "make": [
+    "Jawa",
+    "Ferrari",
+    "Fiat",
+    "Ford",
+    "GAZ",
+    "GMC",
+    "Harley Davidson",
+    "Hercules",
+    "Hillman",
+    "Honda",
+    "IZH",
+    "Innocenti",
+    "International",
+    "Izh",
+    "Jaguar",
+    "FSO",
+    "Jawa CZ",
+    "Jeep",
+    "Jensen",
+    "Jensen-Healey",
+    "KTM",
+    "Kawasaki",
+    "Lada",
+    "Lamborghini",
+    "Lancia",
+    "Land Rover",
+    "Laverda",
+    "Lincoln",
+    "Lotus",
+    "Bultaco",
+    "Alfa Romeo",
+    "Alpine",
+    "Aston Martin",
+    "Audi",
+    "Austin",
+    "Autobianchi",
+    "BMW",
+    "Batavus",
+    "Benelli",
+    "Bentley",
+    "Bricklin",
+    "Bristol",
+    "Buick",
+    "MG",
+    "CAN AM",
+    "Cadillac",
+    "Checker",
+    "Chevrolet",
+    "Chrysler",
+    "Citroen",
+    "DAF",
+    "Dacia",
+    "Daimler",
+    "De Tomaso",
+    "Dnepr",
+    "Dodge",
+    "Ducati",
+    "UAZ",
+    "Rolls Royce",
+    "Rolls-Royce",
+    "Rover",
+    "Saab",
+    "Sanglas",
+    "Seat",
+    "Skoda",
+    "Suzuki",
+    "TVR",
+    "Talbot",
+    "Tatra",
+    "Toyota",
+    "Trabant",
+    "Triumph",
+    "Renault",
+    "Ural",
+    "VW-Porsche",
+    "Vauxhall",
+    "Vespa",
+    "Volkswagen",
+    "Volvo",
+    "Voskhod",
+    "Wartburg",
+    "Wolseley",
+    "Yamaha",
+    "ZAZ",
+    "ZIL",
+    "Zastava",
+    "Moto Morini",
+    "MUZ",
+    "MV Agusta",
+    "Maserati",
+    "Matra Simca",
+    "Mazda",
+    "Mercedes-Benz",
+    "Mercury",
+    "Mini",
+    "Mitsubishi",
+    "Morgan",
+    "Morris",
+    "Moskvich",
+    "Moto Guzzi",
+    "Zundapp",
+    "Mã¼nch",
+    "Nissan",
+    "Oldsmobile",
+    "Opel",
+    "Panther",
+    "Peugeot",
+    "Plymouth",
+    "Pontiac",
+    "Porsche",
+    "Premier",
+    "Puch",
+    "Ranger",
+    "Reliant"
+  ]
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_model?year=1975&make=oldsmobile (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "model": []
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_year (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "years": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907,
+    1908,
+    1909,
+    1910,
+    1911,
+    1912,
+    1913,
+    1914,
+    1915,
+    1916,
+    1917,
+    1918,
+    1919,
+    1920,
+    1921,
+    1922,
+    1923,
+    1924,
+    1925,
+    1926,
+    1927,
+    1928,
+    1929,
+    1930,
+    1931,
+    1932,
+    1933,
+    1934,
+    1935,
+    1936,
+    1937,
+    1938,
+    1939,
+    1940,
+    1941,
+    1942,
+    1943,
+    1944,
+    1945,
+    1946,
+    1947,
+    1948,
+    1949,
+    1950,
+    1951,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1959,
+    1960,
+    1961,
+    1962,
+    1963,
+    1964,
+    1965,
+    1966,
+    1967,
+    1968,
+    1969,
+    1970,
+    1971,
+    1972,
+    1973,
+    1974,
+    1975,
+    1976,
+    1977,
+    1978,
+    1979,
+    1980
+  ]
+}
+🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)
+📦 [JSON Data]:
+{
+  "access_token": "us-south1:ZXasji_RSN-8yEMg2jyYlA",
+  "entity_id": "75ee7db2-2fc2-41f6-8f13-54616a796fad",
+  "expires_in": 14400,
+  "organization_id": "062c9f1b-3fc3-41b6-ba49-28d7749227b0",
+  "token_type": "Bearer"
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_make?year=1902 (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "make": [
+    "Marsh",
+    "Indian",
+    "DE Dion Bouton",
+    "Ariel"
+  ]
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_model?year=1902&make=Ariel (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "model": [
+    "2 HP"
+  ]
+}
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/get_classic_series?year=1902&make=Ariel&model=2%20HP (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "trim": [
+    "Base"
+  ]
+}
+✅ Dropdown update successful
+TC_12: page.close() executed.

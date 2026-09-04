@@ -1,5 +1,0 @@
-[VIN Decode] Generated VIN (US): 2C4RC1BG6JR152090
-[VIN Decode] Clicking success element...
-Success condition met.
-ℹ️ site_settings planData not found in localStorage (Plan price not found on UI). Test Passed.
-TC_16: page.close() executed.
