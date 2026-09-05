@@ -1,0 +1,8 @@
+[VIN Decode] Generated VIN (US): 1C4RJHBG0PC533432
+[VIN Decode] Clicking success element...
+Success condition met.
+[TC_13] Running Global Exit Intent Flow...
+✅ Clicked CTA button (Global Exit Intent)
+✅ Redirected to offer URL: https://motorcyclevinlookup.com/vin-check/preview?vin=1C4RJHBG0PC533432&type=vhr&wpPage=homepage&offer=Preview15
+[TC_13] Global Exit Intent Flow Succeeded.
+TC_13: page.close() executed.
