@@ -1,0 +1,204 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api/config (Status: 200)
+📦 [JSON Data]:
+"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyIsInNhbXBsZVN0aWNrZXIiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyJ9"
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api/config (Status: 200)
+📦 [JSON Data]:
+"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyIsInNhbXBsZVN0aWNrZXIiOiJodHRwczovL21vdG9yY3ljbGV2aW5sb29rdXAuY29tLyJ9"
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/plans?user_type=user (Status: 200)
+📦 [JSON Data]:
+{
+  "subscription_plan": "",
+  "uvc_subscription_plan": [
+    {
+      "id": "952",
+      "name": "Unlimited VIN Checks",
+      "code": "MVLUVC",
+      "price": "29.99",
+      "nos": "-1",
+      "type": "unlimited_vin_check_premium",
+      "gumroad": "MVLUVC",
+      "discount": "50",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "recurring": "monthly"
+    }
+  ],
+  "credit_plans": [
+    {
+      "name": "Basic",
+      "code": "MVL1",
+      "price": "25",
+      "nos": "1",
+      "type": "report",
+      "gumroad": "MVL1",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "25"
+    },
+    {
+      "name": "Silver",
+      "code": "MVL2",
+      "price": "29.99",
+      "nos": "2",
+      "type": "report",
+      "gumroad": "MVL2",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "29.99"
+    },
+    {
+      "name": "Gold",
+      "code": "MVL5",
+      "price": "59.99",
+      "nos": "5",
+      "type": "report",
+      "gumroad": "MVL5",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "59.99"
+    },
+    {
+      "name": "Platinum",
+      "code": "MVL10",
+      "price": "119.99",
+      "nos": "10",
+      "type": "report",
+      "gumroad": "MVL10",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "119.99"
+    },
+    {
+      "name": "Diamond",
+      "code": "MVL25",
+      "price": "169.99",
+      "nos": "25",
+      "type": "report",
+      "gumroad": "MVL25",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "169.99"
+    },
+    {
+      "name": "Executive",
+      "code": "MVL50",
+      "price": "249.99",
+      "nos": "50",
+      "type": "report",
+      "gumroad": "MVL50",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "249.99"
+    }
+  ]
+}
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/sticker-plans?user_type=user (Status: 200)
+📦 [JSON Data]:
+{
+  "subscription_plan": [
+    {
+      "id": "959",
+      "name": "Unlimited Stickers",
+      "code": "MVLSTU",
+      "price": "29.99",
+      "nos": "20",
+      "type": "sticker_subscription",
+      "gumroad": "MVLSTU",
+      "discount": "0",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "recurring": "monthly"
+    }
+  ],
+  "credit_plans": [
+    {
+      "id": "953",
+      "name": "Basic",
+      "code": "MVLST1",
+      "price": "25",
+      "nos": "1",
+      "type": "sticker",
+      "gumroad": "MVLST1",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "25"
+    },
+    {
+      "id": "954",
+      "name": "Silver",
+      "code": "MVLST2",
+      "price": "29.99",
+      "nos": "2",
+      "type": "sticker",
+      "gumroad": "MVLST2",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "29.99"
+    },
+    {
+      "id": "955",
+      "name": "Gold",
+      "code": "MVLST5",
+      "price": "59.99",
+      "nos": "5",
+      "type": "sticker",
+      "gumroad": "",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "59.99"
+    },
+    {
+      "id": "956",
+      "name": "Platinum",
+      "code": "MVLST10",
+      "price": "79.99",
+      "nos": "10",
+      "type": "sticker",
+      "gumroad": "MVLST10",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "79.99"
+    },
+    {
+      "id": "957",
+      "name": "Diamond",
+      "code": "MVLST25",
+      "price": "174.99",
+      "nos": "25",
+      "type": "sticker",
+      "gumroad": "",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "174.99"
+    },
+    {
+      "id": "958",
+      "name": "Executive",
+      "code": "MVLST50",
+      "price": "299.99",
+      "nos": "50",
+      "type": "sticker",
+      "gumroad": "MVLST50",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "299.99"
+    }
+  ]
+}
+TC_12: page.close() executed.

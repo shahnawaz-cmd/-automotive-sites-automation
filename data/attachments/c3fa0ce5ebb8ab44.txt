@@ -1,0 +1,59 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+[ClassicManualSpecsDataGenerator] Generated unique manual specifications:
+ {
+  "year": "1965",
+  "make": "Dodge U6PO",
+  "model": "Mustang U6PO",
+  "engine": "Inline-6 U6PO",
+  "transmission": "Manual",
+  "door": "2",
+  "drive": "RWD"
+}
+[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 90s)...
+
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/update-classic-decode (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "data": {
+    "vin": "3N67K5M290983",
+    "year": "1965",
+    "make": "Dodge U6PO",
+    "model": "Mustang U6PO",
+    "details": {
+      "vin": "3N67K5M290983",
+      "year": "1965",
+      "make": "Dodge U6PO",
+      "model": "Mustang U6PO",
+      "transmission": "Manual",
+      "fuel": "Gasoline",
+      "engine": "Inline-6 U6PO",
+      "drive": "RWD",
+      "doors": "2",
+      "source": "Classic",
+      "model_id": null,
+      "series": "Mustang U6PO"
+    },
+    "model_id": null,
+    "series": "Mustang U6PO",
+    "mapping": null,
+    "marketValue": {
+      "market_data": [
+        {
+          "market_value": null
+        }
+      ]
+    },
+    "isEditable": true
+  },
+  "marketValue": {
+    "market_data": [
+      {
+        "market_value": null
+      }
+    ]
+  }
+}
+✅ Manual update successful
+TC_15: page.close() executed.
