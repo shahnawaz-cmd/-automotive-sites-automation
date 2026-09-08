@@ -84,6 +84,19 @@ module.exports = defineConfig({
         },
       },
     },
+    {
+      name: 'InstantVinReports',
+      use: {
+        baseURL: 'https://instantvinreports.com/',
+        headless: !!process.env.CI,
+        browserName: 'chromium',
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
+      },
+    },
 
     // --- Mobile Chrome ---
     {
@@ -117,6 +130,15 @@ module.exports = defineConfig({
       name: 'VINNumberCA_MobileChrome',
       use: {
         baseURL: 'https://vinnumber.ca/',
+        ...devices['Pixel 5'],
+        headless: !!process.env.CI,
+        ignoreHTTPSErrors: true,
+      },
+    },
+    {
+      name: 'InstantVinReports_MobileChrome',
+      use: {
+        baseURL: 'https://instantvinreports.com/',
         ...devices['Pixel 5'],
         headless: !!process.env.CI,
         ignoreHTTPSErrors: true,

@@ -32,6 +32,7 @@ jobs:
           - MotorcycleVINLookup
           - VehicleHistoryEU
           - VINNumberCA
+          - InstantVinReports
         browser:
           - Desktop
           - MobileChrome

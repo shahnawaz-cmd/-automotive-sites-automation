@@ -111,7 +111,7 @@ async function manageGitHubIssues() {
     const issueTitle = `🔴 [Automated] Global NextJS Sites Production Monitoring Test Failure`;
     const issueBody = `### 🚨 Production Monitoring Failure Detected
 
-**Scope:** Global NextJS Sites (\`VSR, MotorcycleVINLookup, VehicleHistoryEU, VINNumberCA\`)
+**Scope:** Global NextJS Sites (\`VSR, MotorcycleVINLookup, VehicleHistoryEU, VINNumberCA, InstantVinReports\`)
 **Workflow Run:** [View Workflow Run](${runUrl})
 **Triggered By:** \`${process.env.GITHUB_ACTOR || 'N/A'}\` via \`${process.env.GITHUB_EVENT || 'N/A'}\`
 

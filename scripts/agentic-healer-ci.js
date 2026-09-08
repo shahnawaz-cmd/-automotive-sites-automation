@@ -188,7 +188,7 @@ async function runCiHealer() {
       4. MODALS, POPUPS & OVERLAYS:
          - If pointer events were intercepted by an overlay, use { force: true } or dismiss the overlay before interaction.
       5. DROPDOWN / COMBOS:
-         - Support multi-brand variations (VSR vs MotorcycleVINLookup vs VehicleHistoryEU vs VINNumberCA) gracefully with fallbacks.
+         - Support multi-brand variations (VSR vs MotorcycleVINLookup vs VehicleHistoryEU vs VINNumberCA vs InstantVinReports) gracefully with fallbacks.
 
       Constraints:
       - Preserve all existing class names, constructor arguments, performAs(actor) method, TypeScript types, and exports.
