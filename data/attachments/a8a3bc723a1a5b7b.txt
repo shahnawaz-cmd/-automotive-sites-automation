@@ -1,3 +1,0 @@
-[VIN Decode] Generated VIN (US): 1FMCU0F68LUB98827
-Timeout waiting for success locator visibility
-Failed to click success condition. Current URL: https://vehiclesreport.com/?vin=1FMCU0F68LUB98827

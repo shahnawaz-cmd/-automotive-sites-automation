@@ -1,8 +1,0 @@
-[VIN Decode] Generated VIN (US): 1FMCU9GD3JUC83776
-[VIN Decode] Clicking success element...
-Success condition met.
-[TC_13] Running Global Exit Intent Flow...
-✅ Clicked CTA button (Global Exit Intent)
-✅ Redirected to offer URL: https://vinnumber.ca/vin-check/preview?vin=1FMCU9GD3JUC83776&type=vhr&wpPage=homepage&offer=Preview15
-[TC_13] Global Exit Intent Flow Succeeded.
-TC_13: page.close() executed.

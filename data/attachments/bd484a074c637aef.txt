@@ -1,0 +1,8 @@
+--- Applying 1st Coupon: preview15 ---
+Passed: Cookie found. Name: coupon, Value: preview15
+Passed: Banner appeared with discount: "15%"
+--- Applying 2nd Coupon: get20 ---
+Passed: Cookie verification (coupon=get20, prev_coupon=preview15)
+Passed: Banner showed 20% Discount.
+--- Applying 1st Coupon again to verify no override ---
+Passed: Highest coupon (20%) was NOT overridden by lower coupon.

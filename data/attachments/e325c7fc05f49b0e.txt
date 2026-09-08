@@ -1,0 +1,2 @@
+Passed: Cookie found. Name: coupon, Value: preview15
+Passed: Banner appeared with discount: "15%"
