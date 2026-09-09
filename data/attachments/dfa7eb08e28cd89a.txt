@@ -1,0 +1,394 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+🌐 [API Response] URL: https://instantvinreports.com/api/config (Status: 200)
+📦 [JSON Data]:
+"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL2luc3RhbnR2aW5yZXBvcnRzLmNvbS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly9pbnN0YW50dmlucmVwb3J0cy5jb20vIn0="
+🌐 [API Response] URL: https://instantvinreports.com/api/config (Status: 200)
+📦 [JSON Data]:
+"eyJzYW1wbGVSZXBvcnQiOiJodHRwczovL2luc3RhbnR2aW5yZXBvcnRzLmNvbS8iLCJzYW1wbGVTdGlja2VyIjoiaHR0cHM6Ly9pbnN0YW50dmlucmVwb3J0cy5jb20vIn0="
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/sticker-plans?user_type=user (Status: 200)
+📦 [JSON Data]:
+{
+  "subscription_plan": [
+    {
+      "id": "557",
+      "name": "Unlimited Stickers",
+      "code": "IVRSTUN",
+      "price": "29.99",
+      "nos": "20",
+      "type": "sticker_subscription",
+      "gumroad": "IVRSTUN",
+      "discount": "0",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "recurring": "monthly"
+    }
+  ],
+  "credit_plans": [
+    {
+      "id": "553",
+      "name": "Basic",
+      "code": "IVRST1",
+      "price": "25",
+      "nos": "1",
+      "type": "sticker",
+      "gumroad": "IVRST1",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "25"
+    },
+    {
+      "id": "555",
+      "name": "Gold",
+      "code": "IVRST5",
+      "price": "60",
+      "nos": "5",
+      "type": "sticker",
+      "gumroad": "IVRST5",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "60"
+    },
+    {
+      "id": "556",
+      "name": "Platinum",
+      "code": "IVRST10",
+      "price": "100",
+      "nos": "10",
+      "type": "sticker",
+      "gumroad": "IVRST10",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "100"
+    },
+    {
+      "id": "2508",
+      "name": "Executive",
+      "code": "IVRST25",
+      "price": "150",
+      "nos": "25",
+      "type": "sticker",
+      "gumroad": "",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "150"
+    }
+  ]
+}
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/plans?user_type=user (Status: 200)
+📦 [JSON Data]:
+{
+  "subscription_plan": "",
+  "uvc_subscription_plan": [
+    {
+      "id": "915",
+      "name": "Unlimited VIN Check",
+      "code": "IVRUVC",
+      "price": "29.99",
+      "nos": "-1",
+      "type": "unlimited_vin_check_premium",
+      "gumroad": "",
+      "discount": "50",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "recurring": "monthly"
+    }
+  ],
+  "credit_plans": [
+    {
+      "name": "Basic",
+      "code": "IVR1",
+      "price": "25",
+      "nos": "1",
+      "type": "report",
+      "gumroad": "IVR1",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "25"
+    },
+    {
+      "name": "Gold",
+      "code": "IVR5",
+      "price": "60",
+      "nos": "5",
+      "type": "report",
+      "gumroad": "IVR5",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "60"
+    },
+    {
+      "name": "Platinum",
+      "code": "IVR10",
+      "price": "100",
+      "nos": "10",
+      "type": "report",
+      "gumroad": "IVR10",
+      "currency_sign": "$",
+      "currency_code": "USD",
+      "c_id": "16",
+      "usd_price": "100"
+    }
+  ]
+}
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/get_classic_make?year=1972 (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "make": [
+    "Harley Davidson",
+    "Dodge",
+    "Dornier",
+    "Ducati",
+    "FNM",
+    "FSO",
+    "Fairthorpe",
+    "Ferrari",
+    "Fiat",
+    "Ford",
+    "Francis Lombardi",
+    "GAZ",
+    "GKN",
+    "GMC",
+    "Gilbern",
+    "Gilera",
+    "Dnepr",
+    "Hercules",
+    "Hillman",
+    "Hodaka",
+    "Holden",
+    "Honda",
+    "ISO",
+    "International",
+    "Izh",
+    "Jaguar",
+    "Jawa",
+    "Jawa CZ",
+    "Jeep",
+    "Jensen",
+    "Jensen-Healey",
+    "Kawasaki",
+    "Buick",
+    "AC",
+    "AMC",
+    "Aermacchi",
+    "Alfa Romeo",
+    "Alpine",
+    "Aston Martin",
+    "Audi",
+    "Austin",
+    "Autobianchi",
+    "Avanti",
+    "BMW",
+    "BSA",
+    "Benelli",
+    "Bentley",
+    "Bristol",
+    "Lada",
+    "Bultaco",
+    "CG",
+    "Cadillac",
+    "Checker",
+    "Chevrolet",
+    "Chrysler",
+    "Citroen",
+    "Costin",
+    "DAF",
+    "DE Tomaso",
+    "Dacia",
+    "Daimler",
+    "Datsun",
+    "De Tomaso",
+    "Tatra",
+    "Premier",
+    "Puch",
+    "Reliant",
+    "Renault",
+    "Rolls-Royce",
+    "Rover",
+    "Saab",
+    "Seat",
+    "Simca",
+    "Skoda",
+    "Subaru",
+    "Suzuki",
+    "Syrena",
+    "TVR",
+    "Talbot",
+    "Porsche",
+    "Toyota",
+    "Trabant",
+    "Trident",
+    "Triumph",
+    "UAZ",
+    "VW-Porsche",
+    "Vauxhall",
+    "Vespa",
+    "Volkswagen",
+    "Volvo",
+    "Wartburg",
+    "Yamaha",
+    "ZAZ",
+    "ZIL",
+    "Zastava",
+    "Mitsubishi",
+    "Lamborghini",
+    "Lancia",
+    "Land Rover",
+    "Laverda",
+    "Ligier",
+    "Lincoln",
+    "Lotus",
+    "MG",
+    "MUZ",
+    "MV Agusta",
+    "Maserati",
+    "Matra",
+    "Mazda",
+    "Mercedes-Benz",
+    "Mercury",
+    "Zundapp",
+    "Monteverdi",
+    "Morgan",
+    "Morris",
+    "Moskvich",
+    "Moto Guzzi",
+    "Mã¼nch",
+    "Nissan",
+    "Norton",
+    "Oldsmobile",
+    "Opel",
+    "Panther",
+    "Peugeot",
+    "Plymouth",
+    "Pontiac"
+  ]
+}
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/get_classic_model?year=1972&make=chevrolet%20d6g6 (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "model": []
+}
+🌐 [API Response] URL: https://accounts.livechatinc.com/v2/customer/token (Status: 200)
+📦 [JSON Data]:
+{
+  "access_token": "us-south1:OfN-bQIRQNuLktXsTpUtAg",
+  "entity_id": "f271fa35-46fa-44f8-9b8a-a996adcbee95",
+  "expires_in": 14400,
+  "organization_id": "062c9f1b-3fc3-41b6-ba49-28d7749227b0",
+  "token_type": "Bearer"
+}
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/get_classic_year (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "years": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907,
+    1908,
+    1909,
+    1910,
+    1911,
+    1912,
+    1913,
+    1914,
+    1915,
+    1916,
+    1917,
+    1918,
+    1919,
+    1920,
+    1921,
+    1922,
+    1923,
+    1924,
+    1925,
+    1926,
+    1927,
+    1928,
+    1929,
+    1930,
+    1931,
+    1932,
+    1933,
+    1934,
+    1935,
+    1936,
+    1937,
+    1938,
+    1939,
+    1940,
+    1941,
+    1942,
+    1943,
+    1944,
+    1945,
+    1946,
+    1947,
+    1948,
+    1949,
+    1950,
+    1951,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1959,
+    1960,
+    1961,
+    1962,
+    1963,
+    1964,
+    1965,
+    1966,
+    1967,
+    1968,
+    1969,
+    1970,
+    1971,
+    1972,
+    1973,
+    1974,
+    1975,
+    1976,
+    1977,
+    1978,
+    1979,
+    1980
+  ]
+}
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/get_classic_model?year=1972&make=Aermacchi (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "model": [
+    "350 TV"
+  ]
+}
+🌐 [API Response] URL: https://instantvinreports.com/api-cwa/get_classic_series?year=1972&make=Aermacchi&model=350%20TV (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "trim": [
+    "Base"
+  ]
+}
+✅ Dropdown update successful
+TC_12: page.close() executed.

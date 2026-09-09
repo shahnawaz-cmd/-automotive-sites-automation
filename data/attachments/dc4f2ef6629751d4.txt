@@ -1,0 +1,59 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+[ClassicManualSpecsDataGenerator] Generated unique manual specifications:
+ {
+  "year": "1955",
+  "make": "Buick JV9C",
+  "model": "Charger JV9C",
+  "engine": "Inline-6 JV9C",
+  "transmission": "4-Speed Manual",
+  "door": "5",
+  "drive": "4WD"
+}
+[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 90s)...
+
+🌐 [API Response] URL: https://vinnumber.ca/api-cwa/update-classic-decode (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "data": {
+    "vin": "CCY145A104141",
+    "year": "1955",
+    "make": "Buick JV9C",
+    "model": "Charger JV9C",
+    "details": {
+      "vin": "CCY145A104141",
+      "year": "1955",
+      "make": "Buick JV9C",
+      "model": "Charger JV9C",
+      "transmission": "4-Speed Manual",
+      "fuel": "Gasoline",
+      "engine": "Inline-6 JV9C",
+      "drive": "4WD",
+      "doors": "5",
+      "source": "Classic",
+      "model_id": null,
+      "series": "Charger JV9C"
+    },
+    "model_id": null,
+    "series": "Charger JV9C",
+    "mapping": null,
+    "marketValue": {
+      "market_data": [
+        {
+          "market_value": null
+        }
+      ]
+    },
+    "isEditable": true
+  },
+  "marketValue": {
+    "market_data": [
+      {
+        "market_value": null
+      }
+    ]
+  }
+}
+✅ Manual update successful
+TC_15: page.close() executed.
