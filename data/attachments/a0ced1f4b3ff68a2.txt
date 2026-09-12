@@ -1,0 +1,18 @@
+[VIN Decode] Generated VIN (US): 2C4RC1BG6JR152072
+[VIN Decode] Clicking success element...
+Success condition met.
+✅ Verified site_settings planData: {
+  id: '496',
+  name: 'Basic',
+  code: 'IVR1',
+  price: '25',
+  nos: '1',
+  gumroad: 'IVR1',
+  total: '25',
+  type: 'report',
+  currency_sign: '$',
+  currency_code: 'USD',
+  c_id: '16'
+}
+✅ Price $25.00 successfully rendered on frontend UI.
+TC_16: page.close() executed.
