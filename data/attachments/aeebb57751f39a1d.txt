@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Chrysler, Model=New Yorker, Trim=Brougham Hardtop Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2579471
+{
+  "year": "1977",
+  "make": "Chrysler",
+  "model": "New Yorker",
+  "trim": "Brougham Hardtop Coupe",
+  "isUnmappedFlow": false
+}
+

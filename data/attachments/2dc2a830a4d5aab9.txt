@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1967, Make=Bristol, Model=410, Trim=Saloon
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72100234
+{
+  "year": "1967",
+  "make": "Bristol",
+  "model": "410",
+  "trim": "Saloon",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Maico, Model=Letta 247, Trim=Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TF961683
+{
+  "year": "1964",
+  "make": "Maico",
+  "model": "Letta 247",
+  "trim": "Base",
+  "isUnmappedFlow": true
+}
+

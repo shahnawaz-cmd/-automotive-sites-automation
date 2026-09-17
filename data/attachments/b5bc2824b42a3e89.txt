@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Fitch, Model=Phoenix, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2235645
+{
+  "year": "1966",
+  "make": "Fitch",
+  "model": "Phoenix",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+
