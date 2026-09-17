@@ -1,0 +1,4 @@
+✅ Dynamically selected plan at index 0: "1 Report", Price: $20.15
+✅ Upsell selected. Price: $10.07
+✅ Package "1 Report" & total price $30.22 verified in Order summary.
+✅ Add-on verified in Order summary.

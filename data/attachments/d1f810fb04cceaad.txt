@@ -1,0 +1,14 @@
+⚡ [ClassicEditibleSpecsManualInput] Detected unmapped prompt, clicking Fix it...
+
+📋 [TC_14] Manual Classic Specs Input:
+VIN: 237W1L415709
+{
+  "year": "1972",
+  "make": "Ford",
+  "model": "F-100 Custom",
+  "engine": "5.9L 360 V8",
+  "transmission": "Manual",
+  "doors": "2",
+  "driveType": "RWD"
+}
+

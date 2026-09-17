@@ -1,0 +1,8 @@
+
+📋 [TC_24] Coupon Banner & Cookie Verification:
+ {
+  "activeCoupon": "get20",
+  "prevCoupon": "preview15",
+  "persistedOn": "/window-sticker",
+  "bannerText": "You have received 20% Discount!"
+}

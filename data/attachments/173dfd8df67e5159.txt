@@ -1,2 +1,0 @@
-✅ Clicked exit intent pop-up button.
-TC_10: page.close() executed.

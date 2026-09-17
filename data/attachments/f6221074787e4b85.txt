@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Maserati, Model=Indy, Trim=Coupe 260 Hp
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L419942
+{
+  "year": "1972",
+  "make": "Maserati",
+  "model": "Indy",
+  "trim": "Coupe 260 Hp",
+  "isUnmappedFlow": true
+}
+

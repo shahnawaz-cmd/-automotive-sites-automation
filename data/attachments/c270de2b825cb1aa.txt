@@ -1,0 +1,2 @@
+✅ Clicked exit intent pop-up button.
+✅ [TC_25] Home page exit intent banner validation executed.

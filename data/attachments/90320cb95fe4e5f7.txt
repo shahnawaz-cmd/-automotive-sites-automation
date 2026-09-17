@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1974, Make=Buick, Model=Estate Wagon, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37M2P215218
+{
+  "year": "1974",
+  "make": "Buick",
+  "model": "Estate Wagon",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
