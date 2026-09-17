@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   # ─────────────────────────────────────────────────────────
-  # CORE: Desktop Chromium + Mobile Chrome (10 Parallel Jobs)
+  # CORE: Desktop Chromium + Mobile Chrome (20 Parallel Jobs: 2 Shards)
   # ─────────────────────────────────────────────────────────
   test-core:
     timeout-minutes: 60
@@ -40,6 +40,9 @@ jobs:
         browser:
           - Desktop
           - MobileChrome
+        shard:
+          - 1/2
+          - 2/2
 
     steps:
     - uses: actions/checkout@v4
@@ -75,7 +78,7 @@ jobs:
         else
           PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
         fi
-        node scripts/run-flow.js --project=$PLAYWRIGHT_PROJECT
+        node scripts/run-flow.js --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }}
       env:
         CI: true
 
@@ -83,7 +86,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}
+        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}-shard-${{ strategy.job-index }}
         path: blob-report/
         retention-days: 1
 
@@ -91,7 +94,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: allure-results-${{ matrix.project }}-${{ matrix.browser }}
+        name: allure-results-${{ matrix.project }}-${{ matrix.browser }}-shard-${{ strategy.job-index }}
         path: allure-results/
         retention-days: 1
 
