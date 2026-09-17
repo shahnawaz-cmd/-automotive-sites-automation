@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1971, Make=Alfa Romeo, Model=Spider, Trim=(115) 109 Hp
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TF968037
+{
+  "year": "1971",
+  "make": "Alfa Romeo",
+  "model": "Spider",
+  "trim": "(115) 109 Hp",
+  "isUnmappedFlow": true
+}
+

@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1963, Make=Suzuki, Model=GP Rt63, Trim=Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 223T0Z872035
+{
+  "year": "1963",
+  "make": "Suzuki",
+  "model": "GP Rt63",
+  "trim": "Base",
+  "isUnmappedFlow": true
+}
+

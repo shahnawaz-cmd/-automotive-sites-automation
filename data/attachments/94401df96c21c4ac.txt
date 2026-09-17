@@ -1,0 +1,13 @@
+
+📋 [TC_14] Manual Classic Specs Input:
+VIN: 2572782
+{
+  "year": "1957",
+  "make": "Chevrolet",
+  "model": "Bel Air",
+  "engine": "4.6L 283 Turbo-Fire V8",
+  "transmission": "Automatic",
+  "doors": "2",
+  "driveType": "RWD"
+}
+

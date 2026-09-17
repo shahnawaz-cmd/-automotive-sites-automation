@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Lincoln, Model=Continental, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2231874
+{
+  "year": "1978",
+  "make": "Lincoln",
+  "model": "Continental",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+

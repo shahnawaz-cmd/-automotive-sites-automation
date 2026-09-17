@@ -1,0 +1,13 @@
+
+📋 [TC_14] Manual Classic Specs Input:
+VIN: XP29E72556604
+{
+  "year": "1970",
+  "make": "Oldsmobile",
+  "model": "442",
+  "engine": "7.5L 455 Rocket V8",
+  "transmission": "Manual 4-Speed",
+  "doors": "2",
+  "driveType": "RWD"
+}
+
