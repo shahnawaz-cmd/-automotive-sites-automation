@@ -17,8 +17,15 @@ import { ClassicEditableSpecsManual } from '../tasks/classic_editable_specs_manu
 import { DefaultPlanPriceCheckTask } from '../tasks/default_plan_price_check';
 import { ClassicEditableSpecsUpdateOnly } from '../tasks/classic_editable_specs_update_only';
 
-test.beforeEach(async ({ page }) => {
-  // Speed up CI by aborting heavy non-essential 3rd-party analytics and tracking beacons
+test.beforeEach(async ({ context, page }) => {
+  await context.clearCookies();
+  await context.clearPermissions();
+  const client = await context.newCDPSession(page).catch(() => null);
+  if (client) {
+    await client.send('Network.clearBrowserCache').catch(() => {});
+    await client.send('Network.setCacheDisabled', { cacheDisabled: true }).catch(() => {});
+  }
+
   if (process.env.CI) {
     await page.route(
       /.*(google-analytics\.com|googletagmanager\.com|hotjar\.com|clarity\.ms|connect\.facebook\.net|snap\.licdn\.com).*/i,

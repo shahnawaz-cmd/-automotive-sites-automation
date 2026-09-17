@@ -13,3 +13,4 @@ gh-deploy/
 .env
 .ai-healed.json
 results.json
+temp-blobs/

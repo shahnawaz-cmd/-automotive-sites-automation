@@ -77,7 +77,7 @@ jobs:
         else
           PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
         fi
-        npx playwright test --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }}
+        node scripts/run-flow.js --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }}
       env:
         CI: true
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -101,7 +101,7 @@ jobs:
       run: |
         git config user.name "AI-Healer[bot]"
         git config user.email "ai-healer@users.noreply.github.com"
-        git add tasks/ utils/
+        git add tasks/ utils/ "streaming Task/"
         git commit -m "chore(ai-healer): auto-repair locators via Gemini AI" || echo "No changes to commit"
         git push || echo "Push skipped or branch protected"
 
@@ -399,6 +399,11 @@ jobs:
           COLOR="#ff0000"
         fi
 
+        # --- Detected Checkout Flows (streaming & non_streaming) ---
+        DETECTED_FLOW=$(node scripts/get-flow-summary.js flows "$JSON_PATH" || echo "N/A")
+        FLOW_DETAILS=$(node scripts/get-flow-summary.js details "$JSON_PATH" || echo "")
+        [ -n "$FLOW_DETAILS" ] && FLOW_SECTION="\n\n*Detected Flow:* $DETECTED_FLOW\n$FLOW_DETAILS" || FLOW_SECTION="\n\n*Detected Flow:* $DETECTED_FLOW"
+
         RUN_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
         PAYLOAD=$(cat <<EOF
         {
@@ -420,7 +425,7 @@ jobs:
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*Active Batches:*\n$SITES_TESTED_BULLETS\n\n*Scope:* \`Global NextJS Sites - Functional E2E\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* \`Production\`\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}\n\n📥 *Links:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Workflow Run> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View Allure Report> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/playwright/|View Playwright HTML Report>$FAILED_SECTION$FLAKY_SECTION" }
+                  "text": { "type": "mrkdwn", "text": "*Active Batches:*\n$SITES_TESTED_BULLETS$FLOW_SECTION\n\n*Scope:* \`Global NextJS Sites - Functional E2E\`\n*Schedule:* \`$SCHEDULE_LABEL\`\n*Environment:* \`Production\`\n*Branch:* \`${{ github.ref_name }}\`\n*Commit:* \`${{ github.sha }}\`\n*Run time:* $RUN_TIME\n*Trigger:* ${{ github.event_name }}\n\n📥 *Links:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Workflow Run> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View Allure Report> | <https://shahnawaz-cmd.github.io/-automotive-sites-automation/playwright/|View Playwright HTML Report>$FAILED_SECTION$FLAKY_SECTION" }
                 }
               ]
             }
