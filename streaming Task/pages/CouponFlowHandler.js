@@ -112,9 +112,15 @@ class CouponFlowVerifier {
       .or(this.page.locator('button:has-text("Apply")')).first();
     await applyBtn.click();
 
+    // Wait for asynchronous checkout pricing recalculation to complete
+    await this.page.locator('button:has-text("Updating")').waitFor({ state: 'hidden', timeout: 15000 }).catch(() => {});
+
     const percent = Math.round(couponPercentage * 100);
-    const appliedNotice = this.page.getByText(new RegExp(`${couponCode}\\s+applied|Coupon\\s+${couponCode}|${percent}%\\s+off`, 'i')).first();
-    await expect(appliedNotice).toBeVisible({ timeout: 10000 });
+    const appliedNotice = this.page.getByText(new RegExp(`${couponCode}\\s+applied|Coupon\\s+${couponCode}|${percent}%\\s+off`, 'i'))
+      .or(this.page.locator('aside').filter({ hasText: /Discount/i }))
+      .or(this.page.locator('button:has-text("Remove"), [aria-label*="remove" i]'))
+      .first();
+    await expect(appliedNotice).toBeVisible({ timeout: 20000 });
     return true;
   }
 

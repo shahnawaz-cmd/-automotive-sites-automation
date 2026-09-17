@@ -17,9 +17,13 @@ on:
     - cron: '0 0 * * *'   # Daily: core browsers only
     # - cron: '0 0 * * 6'     # Weekly Saturday: core + extended browsers (Mobile Edge & Safari)
 
+concurrency:
+  group: playwright-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # ─────────────────────────────────────────────────────────
-  # CORE: Desktop Chromium + Mobile Chrome (runs on ALL triggers)
+  # CORE: Desktop Chromium + Mobile Chrome (10 Parallel Jobs)
   # ─────────────────────────────────────────────────────────
   test-core:
     timeout-minutes: 60
@@ -36,10 +40,6 @@ jobs:
         browser:
           - Desktop
           - MobileChrome
-        shard:
-          - 1/3
-          - 2/3
-          - 3/3
 
     steps:
     - uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
         node-version: lts/*
         cache: 'npm'
     - name: Install dependencies
-      run: npm ci
+      run: npm ci --prefer-offline --no-audit
     - name: Get Playwright Version
       id: playwright-version
       run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
@@ -57,59 +57,33 @@ jobs:
       uses: actions/cache@v4
       with:
         path: ~/.cache/ms-playwright
-        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
+        key: playwright-browsers-chromium-${{ env.PLAYWRIGHT_VERSION }}
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install --with-deps chromium
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Mask Sensitive Secrets in CI Logs
       run: |
-        echo "::add-mask::${{ secrets.GEMINI_API_KEY }}"
         echo "::add-mask::${{ secrets.SLACK_WEBHOOK_URL }}"
         echo "::add-mask::${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}"
 
     - name: Run Playwright tests
       id: playwright-run
-      continue-on-error: true
       run: |
         if [ "${{ matrix.browser }}" = "Desktop" ]; then
           PLAYWRIGHT_PROJECT="${{ matrix.project }}"
         else
           PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
         fi
-        node scripts/run-flow.js --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }}
+        node scripts/run-flow.js --project=$PLAYWRIGHT_PROJECT
       env:
         CI: true
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
-    - name: Run AI Agentic Self-Healer (On Test Failure)
-      if: steps.playwright-run.outcome == 'failure'
-      timeout-minutes: 5
-      run: |
-        if [ "${{ matrix.browser }}" = "Desktop" ]; then
-          PLAYWRIGHT_PROJECT="${{ matrix.project }}"
-        else
-          PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
-        fi
-        PLAYWRIGHT_PROJECT=$PLAYWRIGHT_PROJECT npm run heal:prod
-      env:
-        CI: true
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
-    - name: Auto-Commit & Push AI Healed Locators Back to Repo
-      if: steps.playwright-run.outcome == 'failure'
-      run: |
-        git config user.name "AI-Healer[bot]"
-        git config user.email "ai-healer@users.noreply.github.com"
-        git add tasks/ utils/ "streaming Task/"
-        git commit -m "chore(ai-healer): auto-repair locators via Gemini AI" || echo "No changes to commit"
-        git push || echo "Push skipped or branch protected"
 
     - name: Upload Blob Report
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}-shard-${{ strategy.job-index }}
+        name: all-blob-reports-${{ matrix.project }}-${{ matrix.browser }}
         path: blob-report/
         retention-days: 1
 
@@ -117,7 +91,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: allure-results-${{ matrix.project }}-${{ matrix.browser }}-shard-${{ strategy.job-index }}
+        name: allure-results-${{ matrix.project }}-${{ matrix.browser }}
         path: allure-results/
         retention-days: 1
 
@@ -173,31 +147,11 @@ jobs:
   #
   #   - name: Run Playwright tests
   #     id: playwright-run-extended
-  #     continue-on-error: true
   #     run: |
   #       PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}"
-  #       npx playwright test --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }} --reporter=blob
+  #       node scripts/run-flow.js --project=$PLAYWRIGHT_PROJECT --shard=${{ matrix.shard }}
   #     env:
   #       CI: true
-  #       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-  #
-  #   - name: Run AI Agentic Self-Healer (On Test Failure)
-  #     if: steps.playwright-run-extended.outcome == 'failure'
-  #     timeout-minutes: 5
-  #     run: |
-  #       PLAYWRIGHT_PROJECT="${{ matrix.project }}_${{ matrix.browser }}" npm run heal:prod
-  #     env:
-  #       CI: true
-  #       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-  #
-  #   - name: Auto-Commit & Push AI Healed Locators Back to Repo
-  #     if: steps.playwright-run-extended.outcome == 'failure'
-  #     run: |
-  #       git config user.name "AI-Healer[bot]"
-  #       git config user.email "ai-healer@users.noreply.github.com"
-  #       git add tasks/ utils/
-  #       git commit -m "chore(ai-healer): auto-repair locators via Gemini AI" || echo "No changes to commit"
-  #       git push || echo "Push skipped or branch protected"
   #
   #   - name: Upload Blob Report
   #     uses: actions/upload-artifact@v4
@@ -294,6 +248,7 @@ jobs:
 
     - name: Automated GitHub Issue Manager (Create/Close Issues)
       if: always()
+      continue-on-error: true
       run: node scripts/manage-issues.js
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -306,6 +261,7 @@ jobs:
 
     - name: Send Consolidated Slack Notification
       if: always()
+      continue-on-error: true
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
@@ -421,7 +377,7 @@ jobs:
                 },
                 {
                   "type": "section",
-                  "text": { "type": "mrkdwn", "text": "*📊 Results:* ${PASS_RATE}% pass rate ($PASSED_TESTS/$ACTIVE_TESTS active)\n*Total Tests:* $TOTAL_TESTS\n*Passed:* $PASSED_TESTS\n*Failed:* $FAILED_TESTS\n*Flaky:* $FLAKY_TESTS\n*Skipped:* $SKIPPED_TESTS" }
+                  "text": { "type": "mrkdwn", "text": "*📊 Results:* ${PASS_RATE}% pass rate ($PASSED_TESTS/$ACTIVE_TESTS)\n*Total Tests:* $ACTIVE_TESTS\n*Passed:* $PASSED_TESTS\n*Failed:* $FAILED_TESTS\n*Flaky:* $FLAKY_TESTS" }
                 },
                 {
                   "type": "section",
@@ -437,6 +393,7 @@ jobs:
 
     - name: Notify failures in alert channel
       if: always()
+      continue-on-error: true
       env:
         SLACK_FAILURE_WEBHOOK_URL: ${{ secrets.SLACK_FAILURE_WEBHOOK_URL }}
       run: |
@@ -445,7 +402,7 @@ jobs:
         [ ! -f "$JSON_PATH" ] && JSON_PATH="results.json"
         FAILED_TESTS=$(jq '.stats.unexpected // 0' "$JSON_PATH" || echo "0")
         if [ "$FAILED_TESTS" -gt 0 ] && [ -n "$SLACK_FAILURE_WEBHOOK_URL" ]; then
-          TOTAL_TESTS=$(jq '.stats.expected + .stats.unexpected + .stats.flaky + .stats.skipped' "$JSON_PATH" || echo "0")
+          TOTAL_TESTS=$(jq '.stats.expected + .stats.unexpected + .stats.flaky' "$JSON_PATH" || echo "0")
           ALERT_PAYLOAD='{"text": "🚨 *PROD ALERT:* Playwright E2E tests detected '"$FAILED_TESTS"' failure(s) out of '"$TOTAL_TESTS"' total tests. <@U09UE83AWGP>\n<https://shahnawaz-cmd.github.io/-automotive-sites-automation/|View Allure Failure Report>"}'
           curl -X POST -H 'Content-Type: application/json' --data "$ALERT_PAYLOAD" "$SLACK_FAILURE_WEBHOOK_URL"
         fi

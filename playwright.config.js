@@ -7,7 +7,7 @@ module.exports = defineConfig({
     timeout: 10000,
   },
   retries: process.env.CI ? 2 : 1,
-  workers: 1,
+  workers: process.env.CI ? 2 : 1,
   fullyParallel: true,
   use: {
     actionTimeout: 15000,
