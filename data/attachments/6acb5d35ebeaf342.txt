@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Moretti, Model=2200 Golden Arrow, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TA820669
+{
+  "year": "1960",
+  "make": "Moretti",
+  "model": "2200 Golden Arrow",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+

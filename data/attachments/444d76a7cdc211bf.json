@@ -1,0 +1,20 @@
+{
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "Unlimited VIN Check",
+    "totalPlanPrice": "29.99",
+    "upsellPrice": null
+  },
+  "couponSummary": {
+    "status": "skipped_promo_input_hidden"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "5 Reports",
+      "totalPlanPrice": "59.99",
+      "upsellPrice": "9.99"
+    }
+  }
+}
