@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=MV Agusta, Model=350 GT, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41V9C615039
+{
+  "year": "1972",
+  "make": "MV Agusta",
+  "model": "350 GT",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

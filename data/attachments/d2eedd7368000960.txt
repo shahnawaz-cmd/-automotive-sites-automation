@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Triumph, Model=3TA, Trim=Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L417437
+{
+  "year": "1962",
+  "make": "Triumph",
+  "model": "3TA",
+  "trim": "Base",
+  "isUnmappedFlow": true
+}
+

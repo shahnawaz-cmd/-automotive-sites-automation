@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Kawasaki, Model=Z 750, Trim=Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526919945
+{
+  "year": "1980",
+  "make": "Kawasaki",
+  "model": "Z 750",
+  "trim": "Base",
+  "isUnmappedFlow": true
+}
+

@@ -1,0 +1,13 @@
+
+📋 [TC_14] Manual Classic Specs Input:
+VIN: 242378Z124253
+{
+  "year": "1966",
+  "make": "Pontiac",
+  "model": "GTO",
+  "engine": "6.6L 400 V8",
+  "transmission": "Manual",
+  "doors": "2",
+  "driveType": "RWD"
+}
+
