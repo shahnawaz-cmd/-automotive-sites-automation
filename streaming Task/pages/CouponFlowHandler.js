@@ -130,53 +130,71 @@ class CouponFlowVerifier {
     });
     await expect(orderSummary).toBeVisible({ timeout: TIMEOUT });
 
-    const summaryText = await orderSummary.innerText();
-    const reportPrice = this.getLabeledAmount(summaryText, /(?:PACKAGE|Report|VIN Check|Check|Unlimited)[\s\S]*?\$([\d.,]+)/i, 'Report/Package');
-    const discountAmount = this.getLabeledAmount(summaryText, /Discount[\s\S]*?-?\s*\$([\d.,]+)/i, 'Discount');
-    const addOnAmount = this.getOptionalAddOnAmount(summaryText);
-    const totalAmount = this.getDiscountedTotal(summaryText);
-    const expectedDiscount = reportPrice * couponPercentage;
-    const expectedTotal = reportPrice - discountAmount + addOnAmount;
+    // Use expect.poll to allow asynchronous Next.js recalculation to settle across all sites
+    let lastDetails = null;
+    await expect.poll(async () => {
+      const summaryText = await orderSummary.innerText();
+      const reportPrice = this.getLabeledAmount(summaryText, /(?:PACKAGE|Report|VIN Check|Check|Unlimited)/i, 'Report/Package');
+      const discountAmount = this.getLabeledAmount(summaryText, /Discount/i, 'Discount');
+      const addOnAmount = this.getOptionalAddOnAmount(summaryText);
+      const totalAmount = this.getDiscountedTotal(summaryText);
+      const expectedDiscount = reportPrice * couponPercentage;
+      const expectedTotal = reportPrice - discountAmount + addOnAmount;
 
-    expect(
-      Math.abs(discountAmount - expectedDiscount),
-      `Coupon discount mismatch. Expected ${expectedDiscount.toFixed(2)}, found ${discountAmount.toFixed(2)}`
-    ).toBeLessThan(0.05);
-    expect(
-      Math.abs(totalAmount - expectedTotal),
-      `Checkout total mismatch. Expected ${expectedTotal.toFixed(2)}, found ${totalAmount.toFixed(2)}`
-    ).toBeLessThan(0.05);
+      lastDetails = {
+        reportPrice,
+        discountAmount,
+        addOnAmount,
+        totalAmount,
+        expectedDiscount,
+        expectedTotal,
+        orderSummary: summaryText,
+      };
 
-    return {
-      reportPrice,
-      discountAmount,
-      addOnAmount,
-      totalAmount,
-      expectedDiscount,
-      expectedTotal,
-      orderSummary: summaryText,
-    };
+      const discountDiff = Math.abs(discountAmount - expectedDiscount);
+      const totalDiff = Math.abs(totalAmount - expectedTotal);
+      return discountDiff < 0.05 && totalDiff < 0.05;
+    }, {
+      message: 'Checkout total or coupon discount calculation did not match in order summary',
+      timeout: 15000,
+      intervals: [500, 1000],
+    }).toBe(true);
+
+    return lastDetails;
   }
 
   getOptionalAddOnAmount(summaryText) {
-    const match = summaryText.match(/(?:Add-on|Upsell|Window Sticker)[\s\S]*?\$([\d.,]+)(?=\s*(?:Coupon|Total))/i);
-    return match ? this.parseAmount(match[1]) : 0;
+    const parts = summaryText.split(/(?:Add-on|Upsell|Window Sticker)/i);
+    if (parts.length < 2) return 0;
+    const section = parts.slice(1).join('');
+    const match = section.match(/\b\d+\.\d{2}\b/);
+    return match ? this.parseAmount(match[0]) : 0;
   }
 
-  getLabeledAmount(summaryText, pattern, label) {
-    const match = summaryText.match(pattern);
-    if (!match) {
-      throw new Error(`${label} price was not found in the order summary: "${summaryText}".`);
+  getLabeledAmount(summaryText, labelRegex, labelName) {
+    const parts = summaryText.split(labelRegex);
+    if (parts.length < 2) {
+      throw new Error(`${labelName} section was not found in the order summary: "${summaryText}".`);
     }
-    return this.parseAmount(match[1]);
+    const section = parts.slice(1).join('');
+    const match = section.match(/\b\d+\.\d{2}\b/);
+    if (!match) {
+      throw new Error(`${labelName} price was not found in the order summary: "${summaryText}".`);
+    }
+    return this.parseAmount(match[0]);
   }
 
   getDiscountedTotal(summaryText) {
-    const totalText = summaryText.match(/Total[\s\S]*?((?:\$?[\d.,]+(?:\s+\$?[\d.,]+)*))/i)?.[1];
-    const amounts = totalText?.match(/[\d.]+/g);
-    if (!amounts || amounts.length < 1) {
+    const parts = summaryText.split(/\bTotal\b/i);
+    if (parts.length < 2) {
+      throw new Error(`Total section was not found in the order summary: "${summaryText}".`);
+    }
+    const totalSection = parts.at(-1);
+    const amounts = totalSection.match(/\b\d+\.\d{2}\b/g);
+    if (!amounts || amounts.length === 0) {
       throw new Error(`Discounted total was not found in the order summary: "${summaryText}".`);
     }
+    // The final payable total is always the last amount listed under Total (skips strikethrough original price)
     return this.parseAmount(amounts.at(-1));
   }
 

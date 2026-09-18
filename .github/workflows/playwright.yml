@@ -23,26 +23,33 @@ concurrency:
 
 jobs:
   # ─────────────────────────────────────────────────────────
-  # CORE: Desktop Chromium + Mobile Chrome (20 Parallel Jobs: 2 Shards)
+  # MATRIX SETUP: Dynamic Sharding & Selective PR Smoke Execution
+  # ─────────────────────────────────────────────────────────
+  setup-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - id: set-matrix
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "⚡ Pull Request detected: Fast Smoke Suite (2 Jobs: VSR & IVR Desktop)"
+            echo 'matrix={"project":["VSR","InstantVinReports"],"browser":["Desktop"],"shard":["1/1"]}' >> $GITHUB_OUTPUT
+          else
+            echo "🚀 Full Run: Comprehensive Matrix (20 Jobs: 5 Sites x 2 Browsers x 2 Shards)"
+            echo 'matrix={"project":["VSR","MotorcycleVINLookup","VehicleHistoryEU","VINNumberCA","InstantVinReports"],"browser":["Desktop","MobileChrome"],"shard":["1/2","2/2"]}' >> $GITHUB_OUTPUT
+          fi
+
+  # ─────────────────────────────────────────────────────────
+  # CORE: Desktop Chromium + Mobile Chrome
   # ─────────────────────────────────────────────────────────
   test-core:
+    needs: setup-matrix
     timeout-minutes: 60
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        project:
-          - VSR
-          - MotorcycleVINLookup
-          - VehicleHistoryEU
-          - VINNumberCA
-          - InstantVinReports
-        browser:
-          - Desktop
-          - MobileChrome
-        shard:
-          - 1/2
-          - 2/2
+      matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
 
     steps:
     - uses: actions/checkout@v4
@@ -178,19 +185,7 @@ jobs:
         node-version: lts/*
         cache: 'npm'
     - name: Install dependencies
-      run: npm ci
-    - name: Get Playwright Version
-      id: playwright-version
-      run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').packages['node_modules/@playwright/test'].version)")" >> $GITHUB_ENV
-    - name: Cache Playwright Browsers
-      id: playwright-cache
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/ms-playwright
-        key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      run: npm ci --prefer-offline --no-audit
 
     - name: Setup Java Runtime for Allure
       uses: actions/setup-java@v4
