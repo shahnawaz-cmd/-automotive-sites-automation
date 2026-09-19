@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Triumph, Model=T 140 V Bonneville, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41V0C888390
+{
+  "year": "1978",
+  "make": "Triumph",
+  "model": "T 140 V Bonneville",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

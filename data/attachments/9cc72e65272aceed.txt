@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Mercedes-Benz, Model=280 SL, Trim=Automatic Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37M2P211483
+{
+  "year": "1978",
+  "make": "Mercedes-Benz",
+  "model": "280 SL",
+  "trim": "Automatic Convertible",
+  "isUnmappedFlow": false
+}
+
