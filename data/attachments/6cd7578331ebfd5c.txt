@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1963, Make=Maico, Model=Letta 247, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37M2P212816
+{
+  "year": "1963",
+  "make": "Maico",
+  "model": "Letta 247",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

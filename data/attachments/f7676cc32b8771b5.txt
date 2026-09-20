@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1965, Make=Harley Davidson, Model=Bobcat, Trim=Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57K5A701893
+{
+  "year": "1965",
+  "make": "Harley Davidson",
+  "model": "Bobcat",
+  "trim": "Base",
+  "isUnmappedFlow": true
+}
+
