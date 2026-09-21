@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1965, Make=Peugeot, Model=404, Trim=Berline 68 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57H5Z715955
+{
+  "year": "1965",
+  "make": "Peugeot",
+  "model": "404",
+  "trim": "Berline 68 Hp",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Plymouth, Model=Belvedere, Trim=6-Cylinder 2-Door Hardtop
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29E72556149
+{
+  "year": "1961",
+  "make": "Plymouth",
+  "model": "Belvedere",
+  "trim": "6-Cylinder 2-Door Hardtop",
+  "isUnmappedFlow": false
+}
+

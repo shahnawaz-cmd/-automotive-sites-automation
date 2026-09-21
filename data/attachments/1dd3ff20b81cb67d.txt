@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Kreidler, Model=Florett RS, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548870294
+{
+  "year": "1968",
+  "make": "Kreidler",
+  "model": "Florett RS",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

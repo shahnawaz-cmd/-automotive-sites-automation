@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1979, Make=Honda, Model=CB 125 T, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 223T0Z875284
+{
+  "year": "1979",
+  "make": "Honda",
+  "model": "CB 125 T",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

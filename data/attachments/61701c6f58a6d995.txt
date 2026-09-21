@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Opel, Model=Caravan, Trim=2 Door Station Wagon
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TF962730
+{
+  "year": "1961",
+  "make": "Opel",
+  "model": "Caravan",
+  "trim": "2 Door Station Wagon",
+  "isUnmappedFlow": true
+}
+

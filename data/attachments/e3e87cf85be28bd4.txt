@@ -1,0 +1,13 @@
+
+📋 [TC_14] Manual Classic Specs Input:
+VIN: XP29G72755628
+{
+  "year": "1970",
+  "make": "Plymouth",
+  "model": "Barracuda",
+  "engine": "5.6L 340 V8",
+  "transmission": "Automatic",
+  "doors": "2",
+  "driveType": "RWD"
+}
+
