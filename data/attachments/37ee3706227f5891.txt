@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Daihatsu, Model=Charade, Trim=I (G10) 2 Doors
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242K2L281948
+{
+  "year": "1980",
+  "make": "Daihatsu",
+  "model": "Charade",
+  "trim": "I (G10) 2 Doors",
+  "isUnmappedFlow": false
+}
+

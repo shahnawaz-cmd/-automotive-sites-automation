@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1974, Make=MG, Model=Midget, Trim=Convertible
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237M2Z398908
+{
+  "year": "1974",
+  "make": "MG",
+  "model": "Midget",
+  "trim": "Convertible",
+  "isUnmappedFlow": true
+}
+
