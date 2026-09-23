@@ -1,0 +1,31 @@
+✅ Dynamically selected plan at index 3: "Unlimited VIN Check", Price: $29.99
+ℹ️ UVC plan selected: Upsell hidden.
+✅ Order summary verified with valid checkout total: $29.99
+ℹ️ Promo code input not visible or not present on this viewport, skipping promo code application.
+ℹ️ [TC_08] Email cache cookie verified: cart_vin
+✅ Dynamically selected plan at index 2: "10 Reports", Price: $79.99
+✅ Upsell selected. Price: $9.99
+✅ [TC_08] Email popup did NOT appear (cached directly to checkout)
+✅ Order summary verified with valid checkout total: $89.98
+
+📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:
+ {
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "Unlimited VIN Check",
+    "totalPlanPrice": "29.99",
+    "upsellPrice": null
+  },
+  "couponSummary": {
+    "status": "skipped_promo_input_hidden"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "10 Reports",
+      "totalPlanPrice": "79.99",
+      "upsellPrice": "9.99"
+    }
+  }
+}

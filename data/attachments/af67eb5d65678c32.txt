@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Honda, Model=S800, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L417671
+{
+  "year": "1966",
+  "make": "Honda",
+  "model": "S800",
+  "trim": "Coupe",
+  "isUnmappedFlow": true
+}
+
