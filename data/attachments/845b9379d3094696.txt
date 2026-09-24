@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1973, Make=Volkswagen, Model=412, Trim=4 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242W9N698353
+{
+  "year": "1973",
+  "make": "Volkswagen",
+  "model": "412",
+  "trim": "4 Door Sedan",
+  "isUnmappedFlow": false
+}
+
