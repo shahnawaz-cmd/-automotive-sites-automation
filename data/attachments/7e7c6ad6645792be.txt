@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Moto Guzzi, Model=Stornello, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2232250
+{
+  "year": "1966",
+  "make": "Moto Guzzi",
+  "model": "Stornello",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

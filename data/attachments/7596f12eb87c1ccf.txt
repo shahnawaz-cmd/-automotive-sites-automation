@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1974, Make=Aermacchi, Model=Z 90, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 609K042209
+{
+  "year": "1974",
+  "make": "Aermacchi",
+  "model": "Z 90",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

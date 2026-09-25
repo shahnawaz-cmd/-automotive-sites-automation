@@ -1,0 +1,26 @@
+{
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "2 Reports",
+    "totalPlanPrice": "30.47",
+    "upsellPrice": "10.16"
+  },
+  "couponSummary": {
+    "reportPrice": 30.47,
+    "discountAmount": 6.09,
+    "addOnAmount": 10.16,
+    "totalAmount": 34.54,
+    "expectedDiscount": 6.094,
+    "expectedTotal": 34.54,
+    "orderSummary": "Order summary\nPACKAGE\n2 Reports\nC$30.47\nDiscount\n-C$6.09\nADD-ON\nWindow Sticker\nC$10.16\nCoupon\nGET20\napplied — 20% off\nApply\nTotal\nC$40.63\nC$34.54\nSecure checkout\nInstant access"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "Unlimited VIN Check",
+      "totalPlanPrice": "42.30",
+      "upsellPrice": null
+    }
+  }
+}

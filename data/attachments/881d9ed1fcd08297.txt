@@ -1,0 +1,13 @@
+
+📋 [TC_14] Manual Classic Specs Input:
+VIN: 223T0Z876842
+{
+  "year": "1968",
+  "make": "Dodge",
+  "model": "Charger R/T",
+  "engine": "7.2L 440 Magnum V8",
+  "transmission": "Manual 4-Speed",
+  "doors": "2",
+  "driveType": "RWD"
+}
+
