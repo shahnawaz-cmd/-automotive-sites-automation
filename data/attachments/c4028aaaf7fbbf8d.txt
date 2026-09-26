@@ -1,4 +1,0 @@
-[HomePage] Navigating to window sticker path: /window-sticker (isVSR=false)
-ℹ️ [sitesettingDefaultPlansVerifies] Next.js App Router streaming flow (site_settings not in localStorage). Verifying plan on UI DOM...
-✅ Verified default plan directly on UI DOM: "1 Sticker", Price: $20.31
-✅ [upsellTextVerify] Matched upsell checkbox component directly on UI DOM for sticker.

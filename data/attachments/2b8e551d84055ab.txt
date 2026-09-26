@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Jaguar, Model=XJ6L, Trim=4 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41J0R546049
+{
+  "year": "1978",
+  "make": "Jaguar",
+  "model": "XJ6L",
+  "trim": "4 Door Sedan",
+  "isUnmappedFlow": false
+}
+

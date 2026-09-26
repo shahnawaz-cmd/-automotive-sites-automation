@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Lincoln, Model=Continental, Trim=4 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH23V1G288362
+{
+  "year": "1962",
+  "make": "Lincoln",
+  "model": "Continental",
+  "trim": "4 Door Sedan",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Ligier, Model=JS2, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L417053
+{
+  "year": "1972",
+  "make": "Ligier",
+  "model": "JS2",
+  "trim": "Coupe",
+  "isUnmappedFlow": true
+}
+

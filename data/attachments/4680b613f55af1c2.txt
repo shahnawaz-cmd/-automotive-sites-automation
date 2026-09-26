@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1976, Make=Puch, Model=Pinzgauer, Trim=Off-road vehicle
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41V0C887910
+{
+  "year": "1976",
+  "make": "Puch",
+  "model": "Pinzgauer",
+  "trim": "Off-road vehicle",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Plymouth, Model=Cuda, Trim=2 Door Hardtop
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242378Z123218
+{
+  "year": "1972",
+  "make": "Plymouth",
+  "model": "Cuda",
+  "trim": "2 Door Hardtop",
+  "isUnmappedFlow": false
+}
+

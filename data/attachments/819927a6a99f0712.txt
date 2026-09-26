@@ -1,0 +1,36 @@
+✅ Dynamically selected plan at index 1: "2 Reports", Price: $30.56
+✅ Upsell selected. Price: $10.19
+✅ Order summary verified with valid checkout total: $40.75
+ℹ️ [TC_08] Email cache cookie verified: cart_vin
+✅ Dynamically selected plan at index 3: "Unlimited VIN Check", Price: $42.43
+ℹ️ UVC plan selected: Upsell hidden.
+✅ [TC_08] Email popup did NOT appear (cached directly to checkout)
+✅ Order summary verified with valid checkout total: $42.43
+
+📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:
+ {
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "2 Reports",
+    "totalPlanPrice": "30.56",
+    "upsellPrice": "10.19"
+  },
+  "couponSummary": {
+    "reportPrice": 30.56,
+    "discountAmount": 6.11,
+    "addOnAmount": 10.19,
+    "totalAmount": 34.64,
+    "expectedDiscount": 6.112,
+    "expectedTotal": 34.64,
+    "orderSummary": "Order summary\nPACKAGE\n2 Reports\nC$30.56\nDiscount\n-C$6.11\nADD-ON\nWindow Sticker\nC$10.19\nCoupon\nGET20\napplied — 20% off\nApply\nTotal\nC$40.75\nC$34.64\nSecure checkout\nInstant access"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "Unlimited VIN Check",
+      "totalPlanPrice": "42.43",
+      "upsellPrice": null
+    }
+  }
+}
