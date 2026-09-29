@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1971, Make=Oldsmobile, Model=Ninety-Eight, Trim=Luxury Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242378Z123162
+{
+  "year": "1971",
+  "make": "Oldsmobile",
+  "model": "Ninety-Eight",
+  "trim": "Luxury Coupe",
+  "isUnmappedFlow": false
+}
+
