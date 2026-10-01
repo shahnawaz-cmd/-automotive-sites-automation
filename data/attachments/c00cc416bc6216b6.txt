@@ -1,0 +1,3 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+Passed: Field restricts input to 17 characters.
+Skipping < 5 characters validation for domain: https://vehiclehistory.eu/
