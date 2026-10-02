@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1970, Make=Ginetta, Model=G21, Trim=3 Litre Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41V0C885074
+{
+  "year": "1970",
+  "make": "Ginetta",
+  "model": "G21",
+  "trim": "3 Litre Coupe",
+  "isUnmappedFlow": false
+}
+

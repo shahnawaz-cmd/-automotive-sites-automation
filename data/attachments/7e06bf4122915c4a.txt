@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Facel Vega, Model=Facellia, Trim=2 Door Convertible (F2 Eng)
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L410574
+{
+  "year": "1964",
+  "make": "Facel Vega",
+  "model": "Facellia",
+  "trim": "2 Door Convertible (F2 Eng)",
+  "isUnmappedFlow": true
+}
+

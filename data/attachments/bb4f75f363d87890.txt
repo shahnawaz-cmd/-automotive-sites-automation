@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1976, Make=Zastava, Model=101, Trim=(1100) 5 Doors 50 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B845646
+{
+  "year": "1976",
+  "make": "Zastava",
+  "model": "101",
+  "trim": "(1100) 5 Doors 50 Hp",
+  "isUnmappedFlow": false
+}
+
