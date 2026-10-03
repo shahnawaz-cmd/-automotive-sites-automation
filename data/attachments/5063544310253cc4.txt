@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1965, Make=Checker, Model=Marathon, Trim=V8 Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B843957
+{
+  "year": "1965",
+  "make": "Checker",
+  "model": "Marathon",
+  "trim": "V8 Base",
+  "isUnmappedFlow": true
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Aston Martin, Model=V8 Vantage, Trim=V8 Volante 340 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57H5Z715857
+{
+  "year": "1978",
+  "make": "Aston Martin",
+  "model": "V8 Vantage",
+  "trim": "V8 Volante 340 Hp",
+  "isUnmappedFlow": false
+}
+

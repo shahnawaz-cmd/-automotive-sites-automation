@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Avanti, Model=II, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41V0C885912
+{
+  "year": "1972",
+  "make": "Avanti",
+  "model": "II",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+
