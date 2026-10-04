@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Enfield, Model=350 Bullet, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2239680
+{
+  "year": "1980",
+  "make": "Enfield",
+  "model": "350 Bullet",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

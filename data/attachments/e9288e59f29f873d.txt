@@ -1,0 +1,36 @@
+✅ Dynamically selected plan at index 2: "5 Reports", Price: $41.04
+✅ Upsell selected. Price: $10.26
+✅ Order summary verified with valid checkout total: $51.3
+ℹ️ [TC_08] Email cache cookie verified: cart_vin
+✅ Dynamically selected plan at index 1: "2 Reports", Price: $30.78
+✅ Upsell selected. Price: $10.26
+✅ [TC_08] Email popup did NOT appear (cached directly to checkout)
+✅ Order summary verified with valid checkout total: $41.04
+
+📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:
+ {
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "5 Reports",
+    "totalPlanPrice": "41.04",
+    "upsellPrice": "10.26"
+  },
+  "couponSummary": {
+    "reportPrice": 41.04,
+    "discountAmount": 8.21,
+    "addOnAmount": 10.26,
+    "totalAmount": 43.09,
+    "expectedDiscount": 8.208,
+    "expectedTotal": 43.089999999999996,
+    "orderSummary": "Order summary\nPACKAGE\n5 Reports\nC$41.04\nDiscount\n-C$8.21\nADD-ON\nWindow Sticker\nC$10.26\nCoupon\nGET20\napplied — 20% off\nApply\nTotal\nC$51.30\nC$43.09\nSecure checkout\nInstant access"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "2 Reports",
+      "totalPlanPrice": "30.78",
+      "upsellPrice": "10.26"
+    }
+  }
+}
