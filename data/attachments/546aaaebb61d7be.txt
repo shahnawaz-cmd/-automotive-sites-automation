@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Velocette, Model=Venom, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37M2P213170
+{
+  "year": "1964",
+  "make": "Velocette",
+  "model": "Venom",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
