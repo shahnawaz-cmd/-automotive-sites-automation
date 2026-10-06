@@ -1,0 +1,48 @@
+// tasks/pricing/PricingTabSwitchTask.ts
+import { Page, expect, test } from '@playwright/test';
+
+export class PricingTabSwitchTask {
+  async performAs(page: Page) {
+    let dealerPlans: any[] = [];
+
+    await test.step('Step 1: Fetch Dealer Plans from Backend', async () => {
+      const response = await page.request.get('/api/pricing?sticker=0&dealer=1');
+      if (response.status() === 200) {
+        const data = await response.json();
+        dealerPlans = data.reportDealer?.credit_plans || [];
+      }
+    });
+
+    await test.step('Step 2: Switch to Business Tab and Verify Business Plans Render', async () => {
+      console.log('🔄 [Pricing] Clicking Business tab...');
+      const businessBtn = page.getByRole('button', { name: /Business/i }).first();
+      await expect(businessBtn).toBeVisible({ timeout: 10000 });
+      await businessBtn.click();
+      await page.waitForTimeout(500);
+
+      // Verify at least one business/dealer plan renders
+      if (dealerPlans.length > 0) {
+        const firstPlan = dealerPlans[0];
+        const reportsLabel = `${firstPlan.nos} Reports`;
+        console.log(`   • Checking Business plan: ${reportsLabel} at $${firstPlan.price}`);
+        const cardLocator = page.locator('*').filter({ hasText: new RegExp(reportsLabel) }).first();
+        await expect(cardLocator).toBeVisible({ timeout: 10000 });
+      }
+
+      const ctaButtons = page.getByRole('button', { name: /Get Report/i });
+      expect(await ctaButtons.count()).toBeGreaterThan(0);
+      console.log('✅ [Business Plan] Business plan cards displayed successfully.');
+    });
+
+    await test.step('Step 3: Switch Back to Personal Tab and Verify Plan Restoration', async () => {
+      console.log('🔄 [Pricing] Clicking Personal tab...');
+      const personalBtn = page.getByRole('button', { name: 'Personal' }).first();
+      await personalBtn.click();
+      await page.waitForTimeout(500);
+
+      const ctaButtons = page.getByRole('button', { name: /Get Report/i });
+      expect(await ctaButtons.count()).toBeGreaterThan(0);
+      console.log('✅ [Personal Plan] Personal plan cards successfully restored.');
+    });
+  }
+}

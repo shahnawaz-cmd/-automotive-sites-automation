@@ -1,0 +1,109 @@
+// tests/pricing_page.spec.ts
+import { test } from '@playwright/test';
+import { PricingApiParityTask } from '../tasks/pricing/PricingApiParityTask';
+import { PricingTabSwitchTask } from '../tasks/pricing/PricingTabSwitchTask';
+import { PricingFaqAndNavigationTask } from '../tasks/pricing/PricingFaqAndNavigationTask';
+import { PricingResponsiveUiTask } from '../tasks/pricing/PricingResponsiveUiTask';
+import { PricingRegionalCurrencyTask } from '../tasks/pricing/PricingRegionalCurrencyTask';
+import { PricingCouponDiscountTask } from '../tasks/pricing/PricingCouponDiscountTask';
+
+test.describe('Pricing Page Suite', () => {
+  // Use clean isolated session state
+  test.use({ storageState: { cookies: [], origins: [] } });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_01: Pricing Card Render & API Parity (Desktop Only)
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_01 — Verify Personal pricing cards render and match /api/pricing backend parity', async ({ page }, testInfo) => {
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(isMobile, 'TC_PRICING_01 is configured for Desktop only');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    // Navigate to current project's /pricing route
+    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const task = new PricingApiParityTask();
+    await task.performAs(page);
+
+    await page.close();
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_02: Business Tab Toggle Verification (Desktop Only)
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_02 — Verify Personal vs Business tab switching and dynamic plan rendering', async ({ page }, testInfo) => {
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(isMobile, 'TC_PRICING_02 is configured for Desktop only');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const task = new PricingTabSwitchTask();
+    await task.performAs(page);
+
+    await page.close();
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_03: FAQ Accordions & External Navigation (Desktop Only)
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_03 — Verify FAQ accordion expand/collapse and external link integrity', async ({ page }, testInfo) => {
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(isMobile, 'TC_PRICING_03 is configured for Desktop only');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const task = new PricingFaqAndNavigationTask();
+    await task.performAs(page);
+
+    await page.close();
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_04: Mobile Responsive UI & Viewport Layout (Mobile Only)
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_04 — Verify mobile layout stacking, toggle accessibility, and capture screenshot', async ({ page }, testInfo) => {
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(!isMobile, 'TC_PRICING_04 is configured for Mobile only');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const task = new PricingResponsiveUiTask();
+    await task.performAs(page, testInfo);
+
+    await page.close();
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_05: Multi-Currency Regional Pricing Validation (Desktop Only)
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_05 — Verify random regional IP & country cookie injection updates pricing to relevant currency code', async ({ page }, testInfo) => {
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(isMobile, 'TC_PRICING_05 is configured for Desktop only');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const task = new PricingRegionalCurrencyTask();
+    await task.performAs(page, testInfo);
+
+    await page.close();
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_06: Coupon Banner & Percentage Price Reflection (Desktop Only)
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_06 — Verify coupon banner appearance and percentage price reflection on /pricing', async ({ page }, testInfo) => {
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(isMobile, 'TC_PRICING_06 is configured for Desktop only');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    const task = new PricingCouponDiscountTask('preview15', 15);
+    await task.performAs(page, testInfo);
+
+    await page.close();
+  });
+});
