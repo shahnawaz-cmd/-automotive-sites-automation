@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Skoda, Model=110, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10502649517
+{
+  "year": "1980",
+  "make": "Skoda",
+  "model": "110",
+  "trim": "Coupe",
+  "isUnmappedFlow": true
+}
+

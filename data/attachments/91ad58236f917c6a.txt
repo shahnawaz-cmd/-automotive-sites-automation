@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Rambler, Model=Custom, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 4311294
+{
+  "year": "1960",
+  "make": "Rambler",
+  "model": "Custom",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

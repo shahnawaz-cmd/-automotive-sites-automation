@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=GAZ, Model=14, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 4318736
+{
+  "year": "1980",
+  "make": "GAZ",
+  "model": "14",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

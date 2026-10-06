@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Talbot, Model=Simca, Trim=1000 39 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41V0C888746
+{
+  "year": "1962",
+  "make": "Talbot",
+  "model": "Simca",
+  "trim": "1000 39 Hp",
+  "isUnmappedFlow": false
+}
+
