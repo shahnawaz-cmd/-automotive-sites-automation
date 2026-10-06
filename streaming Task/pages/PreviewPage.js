@@ -85,9 +85,9 @@ const REAL_CLASSIC_BODY_SPECS = [
 class PreviewPage {
   constructor(page) {
     this.page = page;
-    // Use flexible locator to match Access Record, Get Full Report, or primary action CTA
-    this.accessRecordButton = page.locator('button:has-text("Access Record"), button:has-text("Get Full Report"), button:has-text("Get Report")')
-      .or(page.getByRole('button', { name: /access record|get full report|get report/i }))
+    // Use flexible locator to match Access Record, Reveal Records, Get Full Report, or primary action CTA
+    this.accessRecordButton = page.locator('button:has-text("Access Record"), button:has-text("Reveal Records"), button:has-text("Get Full Report"), button:has-text("Get Report")')
+      .or(page.getByRole('button', { name: /access record|reveal records|get full report|get report/i }))
       .first();
   }
 
@@ -184,6 +184,8 @@ class PreviewPage {
       .or(this.page.locator('text=We found historical records for the'))
       .or(this.page.getByText('Records found for', { exact: false }))
       .or(this.page.locator('.vehicle-specs, .specs-container, [data-testid="specs"]'))
+      .or(this.page.locator('button:has-text("Access Records"), button:has-text("Reveal Records")'))
+      .or(this.page.locator("text=What's your goal"))
       .or(this.accessRecordButton);
 
     await successLocator.first().waitFor({ state: 'visible', timeout: timeout }).catch(() => {});
@@ -517,7 +519,7 @@ class PreviewToCheckoutPriceValidator {
     const planLocator = planButtons.nth(randomIndex);
     
     // Ensure the plan card is scrolled into view and visible (crucial for mobile carousels/lists)
-    await planLocator.scrollIntoViewIfNeeded();
+    await planLocator.scrollIntoViewIfNeeded().catch(() => {});
     await planLocator.waitFor({ state: 'visible', timeout: TIMEOUT });
     
     // Dynamically extract the title and sale price from the card DOM (no hardcoding)
@@ -534,7 +536,7 @@ class PreviewToCheckoutPriceValidator {
     const candidates = allPriceMatches.filter(price => !strikethroughAmount || price !== strikethroughAmount);
     const totalPlanPrice = candidates.length > 1 ? candidates[1] : (candidates[0] || '19.99');
     
-    await planLocator.scrollIntoViewIfNeeded();
+    await planLocator.scrollIntoViewIfNeeded().catch(() => {});
     await planLocator.click({ force: true });
     await this.page.waitForTimeout(800);
     

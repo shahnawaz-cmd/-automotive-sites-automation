@@ -29,12 +29,11 @@ test.beforeEach(async ({ context, page }) => {
     await client.send('Network.setCacheDisabled', { cacheDisabled: true }).catch(() => {});
   }
 
-  if (process.env.CI) {
-    await page.route(
-      /.*(google-analytics\.com|googletagmanager\.com|hotjar\.com|clarity\.ms|connect\.facebook\.net|snap\.licdn\.com).*/i,
-      (route) => route.abort()
-    ).catch(() => {});
-  }
+  // Block third-party trackers to prevent network hangs on streaming sites (especially VNCA)
+  await page.route(
+    /.*(google-analytics\.com|googletagmanager\.com|hotjar\.com|clarity\.ms|connect\.facebook\.net|snap\.licdn\.com).*/i,
+    (route) => route.abort()
+  ).catch(() => {});
 });
 
 test.afterEach(async ({ page }) => {

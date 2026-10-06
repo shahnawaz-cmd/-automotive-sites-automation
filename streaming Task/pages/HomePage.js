@@ -17,16 +17,12 @@ class HomePage {
   }
 
   async navigate() {
-    await this.page.goto('/');
-    await this.page.waitForLoadState('load');
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.goto('/', { waitUntil: 'domcontentloaded' });
     await this.page.waitForTimeout(800);
   }
 
   async navigateWithOffer(offerCode) {
-    await this.page.goto(`/?offer=${offerCode}`);
-    await this.page.waitForLoadState('load');
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.goto(`/?offer=${offerCode}`, { waitUntil: 'domcontentloaded' });
     await this.page.waitForTimeout(800);
   }
 
@@ -36,14 +32,12 @@ class HomePage {
     const isVSR = contextBaseURL.toLowerCase().includes('vehiclesreport') || currentUrl.toLowerCase().includes('vehiclesreport');
     const path = isVSR ? '/window-stickers' : '/window-sticker';
     console.log(`[HomePage] Navigating to window sticker path: ${path} (isVSR=${isVSR})`);
-    await this.page.goto(path);
-    await this.page.waitForLoadState('load');
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.goto(path, { waitUntil: 'domcontentloaded' });
     await this.page.waitForTimeout(800);
   }
 
   async decodeVin(vin, numToReplace = 1) {
-    await this.page.waitForLoadState('load');
+    await this.page.waitForLoadState('domcontentloaded').catch(() => {});
 
     const isSafari = this.page.context().browser()?.browserType().name() === 'webkit';
 
@@ -65,7 +59,6 @@ class HomePage {
           if (btn) btn.click();
         }
       });
-      await this.page.waitForURL(/.*\/vin-check\/(preview|checkout).*/, { timeout: TIMEOUT }).catch(() => {});
     } else {
       const btn = this.page.locator('button[type="submit"], button:has-text("Search VIN"), button:has-text("Search Window Sticker"), button:has-text("Get Window Sticker")').first();
       await btn.waitFor({ state: 'visible', timeout: TIMEOUT }).catch(() => {});
@@ -73,6 +66,9 @@ class HomePage {
         await vinInput.press('Enter');
       });
     }
+
+    // Wait for preview/checkout navigation to resolve with domcontentloaded
+    await this.page.waitForURL(/.*(\/preview|\/vin-check|\/report|\/checkout).*/, { waitUntil: 'domcontentloaded', timeout: TIMEOUT }).catch(() => {});
 
     return randomVin;
   }

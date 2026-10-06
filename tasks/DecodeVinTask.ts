@@ -89,6 +89,7 @@ export class DecodeVinTask {
       await vinInput.locator('xpath=../..').getByRole('button').first().click();
     }
     
+    await page.waitForURL(/.*(\/preview|\/vin-check|\/report|\/checkout).*/, { waitUntil: 'domcontentloaded', timeout: this.timeout }).catch(() => {});
     await page.waitForTimeout(1000);
 
     // List of potential success elements to check and click
@@ -102,7 +103,9 @@ export class DecodeVinTask {
       .or(page.getByText('Success! We found detailed', { exact: false }))
       .or(page.locator('text=Window sticker found for'))
       .or(page.locator('text=We found historical records for the'))
-      .or(page.locator('text=Success!'));
+      .or(page.locator('text=Success!'))
+      .or(page.locator('button:has-text("Access Records"), button:has-text("Reveal Records")'))
+      .or(page.locator("text=What's your goal"));
 
     // Wait for the success element to render on preview page (gives fresh/uncached VINs time to decode)
     await successLocator.first().waitFor({ state: 'visible', timeout: this.timeout }).catch(() => {
@@ -120,7 +123,10 @@ export class DecodeVinTask {
       page.getByText('Success! We found detailed', { exact: false }),
       page.locator('text=Window sticker found for'),
       page.locator('text=We found historical records for the'),
-      page.locator('text=Success!')
+      page.locator('text=Success!'),
+      page.locator('button:has-text("Access Records")').first(),
+      page.locator('button:has-text("Reveal Records")').first(),
+      page.locator("text=What's your goal").first()
     ].filter(Boolean);
 
     let successClicked = false;
