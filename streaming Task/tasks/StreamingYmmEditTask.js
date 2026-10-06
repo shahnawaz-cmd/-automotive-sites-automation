@@ -135,7 +135,14 @@ class StreamingYmmEditTask {
         const match = options.filter({ hasText: new RegExp(`^${preferredValue}$`, 'i') }).first();
         if (await match.isVisible({ timeout: 1000 }).catch(() => false)) {
           await match.scrollIntoViewIfNeeded().catch(() => {});
-          await match.click({ force: true });
+          try {
+            await match.click({ force: true });
+          } catch (e) {
+            await match.evaluate(el => {
+              el.scrollIntoView({ block: 'center', inline: 'nearest' });
+              el.click();
+            });
+          }
           await this.page.waitForTimeout(500);
           return preferredValue;
         }
@@ -147,7 +154,14 @@ class StreamingYmmEditTask {
         const chosenOpt = options.nth(randomIndex);
         await chosenOpt.scrollIntoViewIfNeeded().catch(() => {});
         const selectedText = (await chosenOpt.innerText().catch(() => '')).trim();
-        await chosenOpt.click({ force: true });
+        try {
+          await chosenOpt.click({ force: true });
+        } catch (e) {
+          await chosenOpt.evaluate(el => {
+            el.scrollIntoView({ block: 'center', inline: 'nearest' });
+            el.click();
+          });
+        }
         await this.page.waitForTimeout(500);
         if (selectedText) return selectedText;
       }

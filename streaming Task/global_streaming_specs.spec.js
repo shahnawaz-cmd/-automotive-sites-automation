@@ -10,6 +10,10 @@ const { StreamingRevisitBannerTask, SafariRevisitBannerHelper } = require('./tas
 const { ClassicVinGenerator } = require('./tasks/ClassicVinGenerator');
 const { StreamingYmmEditTask } = require('./tasks/StreamingYmmEditTask');
 const { ClassicEditableSpecsUpdateTask } = require('./tasks/ClassicEditableSpecsUpdateTask');
+const { VinErrorTask } = require('./tasks/VinErrorTask');
+const { PlateErrorTask } = require('./tasks/PlateErrorTask');
+const { UrlSpaceHandlingTask } = require('./tasks/UrlSpaceHandlingTask');
+const { applyReferralAndVerifyCookies } = require('./tasks/ReferralTestTask');
 const { ExitIntentHelper } = require('../tasks/exit_intent_banner');
 
 const TIMEOUT = process.env.CI ? 90000 : 60000;
@@ -166,8 +170,8 @@ test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ 
   const couponCode = 'get20';
   const couponPercentage = 0.20;
 
-  // 1. Navigate & Decode VIN -> Preview
-  await home.navigate();
+  // 1. Initial Referral & Cookie Validation (Navigates to site with referral params & verifies cookies)
+  await applyReferralAndVerifyCookies(page);
   await home.decodeVin(vin, 3);
   await preview.verifySpecsVisible();
 
@@ -322,7 +326,7 @@ test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo
     await context.clearPermissions();
     await home.navigate();
     await home.decodeVin(classicVin);
-    await page.waitForURL(/.*\/preview.*/);
+    await page.waitForURL(/.*\/preview.*/, { waitUntil: 'domcontentloaded', timeout: 60000 });
     await preview.verifySpecsVisible('Records found for', 60000);
     const ymmTask = new StreamingYmmEditTask(page);
     const selectedYMM = await ymmTask.execute();
@@ -356,7 +360,7 @@ test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }, testInfo
     await context.clearPermissions();
     await home.navigate();
     await home.decodeVin(classicVin);
-    await page.waitForURL(/.*\/preview.*/);
+    await page.waitForURL(/.*\/preview.*/, { waitUntil: 'domcontentloaded', timeout: 60000 });
     await preview.verifySpecsVisible('Records found for', 60000);
     const specs = await preview.ClassicEditibleSpecsManualInput();
     
@@ -391,7 +395,7 @@ test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }, testInfo) 
     await context.clearPermissions();
     await home.navigate();
     await home.decodeVin(classicVin);
-    await page.waitForURL(/.*\/preview.*/);
+    await page.waitForURL(/.*\/preview.*/, { waitUntil: 'domcontentloaded', timeout: 60000 });
     await preview.verifySpecsVisible('Records found for', 60000);
     const task = new ClassicEditableSpecsUpdateTask(page);
     const specs = await task.execute(preview, 60000, testInfo);
@@ -531,4 +535,31 @@ test('TC_25_Home_Page_Exit_Intent_Banner_Validation', async ({ page, isMobile },
   await page.close();
   console.log('✅ [TC_25] Home page exit intent banner validation executed.');
 });
+
+test('TC_26_VIN_Error_Validation', async ({ page }, testInfo) => {
+  const errorTask = new VinErrorTask(page);
+  await test.step('Validate Alphabet VIN Error Flow', async () => {
+    await errorTask.execute(testInfo);
+  });
+  await page.close();
+});
+
+test('TC_27_Plate_Error_Validation', async ({ page }, testInfo) => {
+  const plateTask = new PlateErrorTask(page);
+  await test.step('Validate License Plate Error Flow', async () => {
+    await plateTask.execute(testInfo);
+  });
+  await page.close();
+});
+
+test('TC_28_URL_Space_Handling_Validation', async ({ page }, testInfo) => {
+  const urlSpaceTask = new UrlSpaceHandlingTask(page);
+  await test.step('Validate URL Space Handling and Error Flow', async () => {
+    await urlSpaceTask.execute(testInfo);
+  });
+  await page.close();
+});
+
+
+
 

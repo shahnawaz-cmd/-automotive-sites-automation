@@ -2,6 +2,7 @@ import { Page } from '@playwright/test';
 import { Actor } from '../actors/Actor';
 import { DecodeVinTask } from './DecodeVinTask';
 import { fastInputWithHealing, clickWithHealing, locateElementWithHealing } from '../utils/selfHealingLocator';
+import { applyReferralAndVerifyCookies } from './referral_test';
 
 export class PreviewToCheckoutRedirection {
   private timeout: number;
@@ -93,6 +94,9 @@ export class PreviewToCheckoutRedirection {
   async performAs(actor: Actor) {
     const page = actor.getPage();
     
+    // Initial Referral & Cookie validation
+    await applyReferralAndVerifyCookies(page);
+
     // Land on preview page with shouldClose = false, skipSuccessClick = true, useEuVin = false (always US VIN)
     await actor.attemptsTo(new DecodeVinTask(false, true, false));
     await page.waitForTimeout(1000);
