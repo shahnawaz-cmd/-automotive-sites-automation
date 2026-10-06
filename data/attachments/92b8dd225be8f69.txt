@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Moto Guzzi, Model=V7 Polizia Stradale, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526408363
+{
+  "year": "1968",
+  "make": "Moto Guzzi",
+  "model": "V7 Polizia Stradale",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

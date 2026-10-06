@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=UAZ, Model=469, Trim=Off-road vehicle
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: M176109298
+{
+  "year": "1972",
+  "make": "UAZ",
+  "model": "469",
+  "trim": "Off-road vehicle",
+  "isUnmappedFlow": false
+}
+
