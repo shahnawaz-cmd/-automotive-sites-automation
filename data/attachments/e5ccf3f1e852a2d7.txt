@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Rickman, Model=Metisse Scrambler, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N487453
+{
+  "year": "1962",
+  "make": "Rickman",
+  "model": "Metisse Scrambler",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Moto Guzzi, Model=Regolarita 250, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B849215
+{
+  "year": "1961",
+  "make": "Moto Guzzi",
+  "model": "Regolarita 250",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

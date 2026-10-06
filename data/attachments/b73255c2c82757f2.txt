@@ -1,0 +1,7 @@
+📡 [Pricing] Fetching /api/pricing?sticker=0&dealer=1 relative to current project domain...
+✅ [API Validated] Found 3 Personal plan(s): [ '1 Reports = $25', '5 Reports = $60', '10 Reports = $100' ]
+🔍 [Pricing] Validating Personal pricing cards render on page...
+   • Verified UI card: 1 Report at $25
+   • Verified UI card: 5 Report at $60
+   • Verified UI card: 10 Report at $100
+✅ [UI Validated] All 3 Personal cards match backend API values.
