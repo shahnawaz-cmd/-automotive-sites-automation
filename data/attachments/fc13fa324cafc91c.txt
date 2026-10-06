@@ -1,1 +1,0 @@
-⚠️ [PlateErrorTask] License Plate Error test is only supported on IVR and VSR. Skipping on VNCA, MVL, VHREU.
