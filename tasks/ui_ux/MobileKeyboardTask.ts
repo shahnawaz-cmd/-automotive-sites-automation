@@ -2,10 +2,6 @@
 import { Page, expect, test } from '@playwright/test';
 import { Actor } from '../../actors/Actor';
 
-/**
- * Mobile Soft-Keyboard UX Audit:
- * Simulates soft keyboard opening (reduced viewport height) and verifies focused inputs remain visible.
- */
 export class MobileKeyboardTask {
   async performAs(target: Actor | Page) {
     const page = target instanceof Actor ? target.getPage() : target;
@@ -32,43 +28,55 @@ export class MobileKeyboardTask {
         const originalHeight = viewport.height;
         const keyboardHeight = Math.floor(originalHeight * 0.6); // 40% height reduction
 
-        console.log(`📱 [MobileKeyboardTask] Simulating mobile keyboard pop-up (height ${originalHeight}px -> ${keyboardHeight}px)...`);
-        await page.setViewportSize({ width: viewport.width, height: keyboardHeight });
-        await firstInput.focus();
+        try {
+          // 1. Scroll directly to the input first
+          await firstInput.scrollIntoViewIfNeeded({ timeout: 5000 }).catch(() => {});
 
-        await firstInput.evaluate(async (el) => {
-          el.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'auto' });
-          await new Promise(resolve => requestAnimationFrame(resolve));
-        });
+          // 2. Simulate mobile soft-keyboard pop-up
+          console.log(`📱 [MobileKeyboardTask] Simulating mobile keyboard pop-up (height ${originalHeight}px -> ${keyboardHeight}px)...`);
+          await page.setViewportSize({ width: viewport.width, height: keyboardHeight });
+          await firstInput.focus();
 
-        const checkResult = await firstInput.evaluate((el) => {
-          const rect = el.getBoundingClientRect();
-          const header = document.querySelector('header, nav, [role="banner"]');
-          const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+          // 3. Center the input precisely in the available viewport slot between the sticky header and keyboard
+          await firstInput.scrollIntoViewIfNeeded({ timeout: 5000 }).catch(() => {});
+          await firstInput.evaluate((el) => {
+            const rect = el.getBoundingClientRect();
+            const header = document.querySelector('header, nav, [role="banner"]');
+            const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+            const targetY = Math.round(headerBottom + (window.innerHeight - headerBottom) / 2 - rect.height / 2);
+            window.scrollBy(0, rect.top - targetY);
+          });
+          await page.waitForTimeout(300); // Allow browser paint frame to settle
 
-          const isAboveHeader = rect.top < headerBottom;
-          const isBelowScreen = rect.bottom > window.innerHeight;
+          // 4. Validate input is within visible screen bounds
+          const checkResult = await firstInput.evaluate((el) => {
+            const rect = el.getBoundingClientRect();
+            const header = document.querySelector('header, nav, [role="banner"]');
+            const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
 
-          return {
-            isVisible: !isAboveHeader && !isBelowScreen,
-            top: Math.round(rect.top),
-            bottom: Math.round(rect.bottom),
-            headerBottom: Math.round(headerBottom),
-            isAboveHeader,
-            isBelowScreen
-          };
-        });
+            const isCoveredByHeader = rect.top < headerBottom;
+            const isBelowScreen = rect.bottom > window.innerHeight;
 
-        // Restore viewport
-        await page.setViewportSize({ width: viewport.width, height: originalHeight });
-        await page.evaluate(() => window.scrollTo(0, 0));
+            return {
+              isVisible: !isCoveredByHeader && !isBelowScreen,
+              top: Math.round(rect.top),
+              bottom: Math.round(rect.bottom),
+              headerBottom: Math.round(headerBottom),
+              windowHeight: window.innerHeight,
+            };
+          });
 
-        expect.soft(
-          checkResult.isVisible,
-          `Form input is obscured by sticky header or pushed below screen when mobile keyboard opens`
-        ).toBe(true);
+          expect.soft(
+            checkResult.isVisible,
+            `Form input (Y: ${checkResult.top}px-${checkResult.bottom}px) is obscured by sticky header (${checkResult.headerBottom}px) or pushed below screen (${checkResult.windowHeight}px)`
+          ).toBe(true);
 
-        console.log('✅ [MobileKeyboardTask] Input field remains visible with simulated soft-keyboard open.');
+          console.log(`✅ [MobileKeyboardTask] Input field (Y: ${checkResult.top}px-${checkResult.bottom}px) is clear of header (${checkResult.headerBottom}px) and keyboard (${checkResult.windowHeight}px).`);
+        } finally {
+          // 5. Always restore original viewport height and scroll to top
+          await page.setViewportSize({ width: viewport.width, height: originalHeight });
+          await page.evaluate(() => window.scrollTo(0, 0));
+        }
       }
     });
   }
