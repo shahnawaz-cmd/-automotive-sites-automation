@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Volvo, Model=PV544, Trim=2 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548139807
+{
+  "year": "1960",
+  "make": "Volvo",
+  "model": "PV544",
+  "trim": "2 Door Sedan",
+  "isUnmappedFlow": false
+}
+

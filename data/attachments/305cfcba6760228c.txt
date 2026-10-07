@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1971, Make=Kawasaki, Model=A1 Samurai, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242378Z120083
+{
+  "year": "1971",
+  "make": "Kawasaki",
+  "model": "A1 Samurai",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
