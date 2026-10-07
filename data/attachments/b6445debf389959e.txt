@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Austin Healey, Model=3000 MK III, Trim=Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B348640
+{
+  "year": "1964",
+  "make": "Austin Healey",
+  "model": "3000 MK III",
+  "trim": "Convertible",
+  "isUnmappedFlow": false
+}
+

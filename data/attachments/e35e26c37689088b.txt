@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Vauxhall, Model=Magnum, Trim=Estate 110 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57H5Z447872
+{
+  "year": "1978",
+  "make": "Vauxhall",
+  "model": "Magnum",
+  "trim": "Estate 110 Hp",
+  "isUnmappedFlow": false
+}
+

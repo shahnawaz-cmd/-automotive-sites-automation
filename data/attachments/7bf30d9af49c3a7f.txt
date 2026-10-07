@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Ford, Model=500, Trim=Fairlane
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2233280
+{
+  "year": "1962",
+  "make": "Ford",
+  "model": "500",
+  "trim": "Fairlane",
+  "isUnmappedFlow": false
+}
+

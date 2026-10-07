@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1974, Make=Mitsubishi, Model=Colt Galant, Trim=2000 SL Hardtop Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 3N67K5M342933
+{
+  "year": "1974",
+  "make": "Mitsubishi",
+  "model": "Colt Galant",
+  "trim": "2000 SL Hardtop Coupe",
+  "isUnmappedFlow": false
+}
+
