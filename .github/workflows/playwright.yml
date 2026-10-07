@@ -172,7 +172,7 @@ jobs:
   #       retention-days: 1
   #
   # ─────────────────────────────────────────────────────────
-  # STANDALONE: Independent Suites (Session IP Stickiness & Pricing Page)
+  # STANDALONE: Independent Suites (Session IP Stickiness, Pricing Page & UI/UX Audit)
   # Completely independent: no detect-flow, no flow branching, no shard coupling
   # ─────────────────────────────────────────────────────────
   test-standalone:
@@ -199,9 +199,9 @@ jobs:
       run: npx playwright install --with-deps chromium
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
-    - name: Run Independent Test Suites (Session IP & Pricing)
+    - name: Run Independent Test Suites (Session IP, Pricing & UI/UX Audit)
       run: |
-        npx playwright test tests/session_ip_stickiness.spec.ts tests/pricing_page.spec.ts --project=VSR --project=InstantVinReports --project=VSR_MobileChrome
+        npx playwright test tests/session_ip_stickiness.spec.ts tests/pricing_page.spec.ts tests/ui_ux_verification.spec.ts --project=VSR --project=InstantVinReports --project=VSR_MobileChrome
       env:
         CI: true
 

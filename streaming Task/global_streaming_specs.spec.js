@@ -578,7 +578,7 @@ test('TC_29_Error_Page_To_Home_Collection_Validation', async ({ page }, testInfo
 });
 
 test('TC_30_Exit_Popup_Behaviour_On_Sample_Links_Validation', async ({ page, context }, testInfo) => {
-  const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+  const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.toLowerCase().includes('mobile'));
   test.skip(isMobile, 'Skipping exit popup behavior validation on mobile browsers');
 
   const timeout = process.env.CI ? 120000 : 90000;

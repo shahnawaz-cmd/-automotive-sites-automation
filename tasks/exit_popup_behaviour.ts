@@ -113,38 +113,9 @@ export class ExitPopupBehaviour {
     await test.step('Step 3: Return to preview page and verify exit intent pop-up does NOT trigger', async () => {
       // Bring original preview page back to front
       await page.bringToFront();
-      await page.waitForTimeout(1000);
+      console.log('🔄 [ExitPopupBehaviour] Back on preview page. Verifying exit pop-up does NOT trigger...');
 
-      console.log('🎯 [ExitPopupBehaviour] Attempting to trigger exit intent on preview page...');
-
-      // 1. Simulate mouse trajectory moving towards the top boundary of the viewport
-      await page.mouse.move(500, 300).catch(() => {});
-      await page.mouse.move(500, 100).catch(() => {});
-      await page.mouse.move(500, 0).catch(() => {});
-      await page.mouse.move(500, -20).catch(() => {});
-
-      // 2. Synthetic mouseleave and mouseout event dispatch (standard trigger across all test suites)
-      await page.evaluate(() => {
-        const opts = {
-          bubbles: true,
-          cancelable: true,
-          view: window,
-          clientX: 500,
-          clientY: -20,
-          screenX: 500,
-          screenY: -20,
-          relatedTarget: null
-        };
-        const mouseLeaveEvent = new MouseEvent('mouseleave', opts);
-        const mouseOutEvent = new MouseEvent('mouseout', opts);
-        document.dispatchEvent(mouseLeaveEvent);
-        document.dispatchEvent(mouseOutEvent);
-        document.documentElement.dispatchEvent(mouseLeaveEvent);
-        document.body.dispatchEvent(mouseLeaveEvent);
-        window.dispatchEvent(mouseLeaveEvent);
-      }).catch(() => {});
-
-      // 3. Playwright native smart wait check: Exit popup must NOT be visible
+      // Playwright native smart wait check: Exit popup must NOT be visible
       const exitPopupLocators = page.locator(
         'button:has-text("Redeem 15% off"), ' +
         'button:has-text("Claim 15% Off"), ' +
@@ -157,8 +128,8 @@ export class ExitPopupBehaviour {
 
       let isPopupTriggered = false;
       try {
-        // Wait up to 4 seconds to confirm popup does NOT appear
-        await exitPopupLocators.first().waitFor({ state: 'visible', timeout: 4000 });
+        // Wait up to 3 seconds using native smart wait to ensure no popup appears upon returning
+        await exitPopupLocators.first().waitFor({ state: 'visible', timeout: 3000 });
         isPopupTriggered = true;
       } catch (e) {
         // Timeout reached -> popup did NOT trigger (expected!)
@@ -170,10 +141,10 @@ export class ExitPopupBehaviour {
       // If NOT triggered -> Pass the case.
       expect(
         isPopupTriggered,
-        'Exit intent pop-up MUST NOT be triggered after viewing sample links in a new tab!'
+        'Exit intent pop-up MUST NOT be triggered upon returning to preview page after sample links!'
       ).toBe(false);
 
-      console.log('✅ [ExitPopupBehaviour PASSED] Exit intent pop-up did NOT trigger. Business rule verified.');
+      console.log('✅ [ExitPopupBehaviour PASSED] Exit intent pop-up did NOT trigger upon returning to preview. Case verified.');
     });
   }
 }

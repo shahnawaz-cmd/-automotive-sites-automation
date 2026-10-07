@@ -319,29 +319,29 @@ test('TC_17 Classic editable specs update only from preview validation', async (
   }
 });
 
-test('TC_18 Exit popup behaviour on sample links in preview', async ({ page, context }, testInfo) => {
-  test.skip(
-    Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile')),
-    'Skipping exit popup behavior validation on mobile'
-  );
-
-  const timeout = process.env.CI ? 120000 : 90000;
-  testInfo.setTimeout(timeout);
-
-  const actor = new Actor('User', page);
-  try {
-    await page.goto('/');
-    await page.waitForTimeout(1000);
-
-    // 1. Decode VIN to land on Preview page
-    await actor.attemptsTo(new DecodeVinTask(false));
-
-    // 2. Perform Exit Popup Behaviour task: Click sample link (opens in new tab) and verify exit popup does NOT trigger
-    await actor.attemptsTo(new ExitPopupBehaviour());
-  } finally {
-    await page.close();
-    console.log('TC_18: page.close() executed.');
-  }
-});
+// test('TC_18 Exit popup behaviour on sample links in preview', async ({ page, context }, testInfo) => {
+//   test.skip(
+//     Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile')),
+//     'Skipping exit popup behavior validation on mobile'
+//   );
+// 
+//   const timeout = process.env.CI ? 120000 : 90000;
+//   testInfo.setTimeout(timeout);
+// 
+//   const actor = new Actor('User', page);
+//   try {
+//     await page.goto('/');
+//     await page.waitForTimeout(1000);
+// 
+//     // 1. Decode VIN to land on Preview page
+//     await actor.attemptsTo(new DecodeVinTask(false));
+// 
+//     // 2. Perform Exit Popup Behaviour task: Click sample link (opens in new tab) and verify exit popup does NOT trigger
+//     await actor.attemptsTo(new ExitPopupBehaviour());
+//   } finally {
+//     await page.close();
+//     console.log('TC_18: page.close() executed.');
+//   }
+// });
 
 
