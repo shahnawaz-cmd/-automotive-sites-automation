@@ -1,0 +1,10 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: New Zealand (Country: NZ, IP: 180.149.231.71)
+🎯 [GEO INJECTOR] Target Currency Code: "NZD"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
+📡 [API Response] Currency Code: "NZD" | Sign: "NZD" | Price: 44.57
+🖥️ [UI Render] Regional Currency "NZD" / "NZD" visible on page: ✅ YES
+✅ [SUCCESS] Pricing successfully localized to New Zealand (NZD)!
+📸 [STDOUT SCREENSHOT] Regional pricing screenshot captured: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-nz-nzd-1791393303541.png

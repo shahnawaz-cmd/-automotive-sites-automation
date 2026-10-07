@@ -1,0 +1,20 @@
+🌐 [Pricing to Checkout] Checking current URL...
+🔄 [Pricing to Checkout] Navigating to /pricing...
+📄 [Pricing to Checkout] Ensuring Vehicle History Report tab is active...
+🎯 [Pricing to Checkout] Locating Plan CTA button with self-healing strategies...
+✅ [Self-Healing Click] Located button "Get Report" using strategy #1
+✉️ [Pricing to Checkout] Filling self-healing email field with: rolex.rolls12+i0mqup4@gmail.com
+✅ [Self-Healing Input] Located visible field "Email" using strategy #5
+🚀 [Pricing to Checkout] Clicking Proceed to Checkout CTA...
+✅ [Self-Healing Click] Located button "Proceed to Checkout" using strategy #1
+⏳ [Pricing to Checkout] Waiting for checkout redirection & document load...
+🔗 [Checkout URL Captured]: https://vehiclesreport.com/checkout?data=eyJjb2RlIjoiVlNSMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiJDUkVESVQiLCJlbWFpbCI6InJvbGV4LnJvbGxzMTIraTBtcXVwNEBnbWFpbC5jb20iLCJub3MiOjEsIml0ZW1MYWJlbCI6IkJhc2ljIiwicHJpY2UiOjE5Ljk5LCJjdXJyZW5jeVNpZ24iOiIkIiwiY3VycmVuY3kiOiJVU0QiLCJ1c2VyVHlwZSI6InVzZXIifQ==
+
+================================================================================
+✅ [PRICING TO CHECKOUT NAVIGATION PASSED]
+📧 User Email:    rolex.rolls12+i0mqup4@gmail.com
+🎯 Plan Type:     report
+🔗 Checkout URL:  https://vehiclesreport.com/checkout?data=eyJjb2RlIjoiVlNSMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiJDUkVESVQiLCJlbWFpbCI6InJvbGV4LnJvbGxzMTIraTBtcXVwNEBnbWFpbC5jb20iLCJub3MiOjEsIml0ZW1MYWJlbCI6IkJhc2ljIiwicHJpY2UiOjE5Ljk5LCJjdXJyZW5jeVNpZ24iOiIkIiwiY3VycmVuY3kiOiJVU0QiLCJ1c2VyVHlwZSI6InVzZXIifQ==
+📸 Screenshot:    /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-to-checkout-report-1791393277758.png
+================================================================================
+

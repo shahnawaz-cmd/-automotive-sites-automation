@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1975, Make=ZIL, Model=114, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72753484
+{
+  "year": "1975",
+  "make": "ZIL",
+  "model": "114",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Renault, Model=30, Trim=(127)
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N482559
+{
+  "year": "1977",
+  "make": "Renault",
+  "model": "30",
+  "trim": "(127)",
+  "isUnmappedFlow": false
+}
+

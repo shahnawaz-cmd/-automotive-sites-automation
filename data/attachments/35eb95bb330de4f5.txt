@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Audi, Model=80, Trim=Variant
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 223T0Z874050
+{
+  "year": "1966",
+  "make": "Audi",
+  "model": "80",
+  "trim": "Variant",
+  "isUnmappedFlow": true
+}
+
