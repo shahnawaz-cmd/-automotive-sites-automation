@@ -6,6 +6,7 @@ import { PricingFaqAndNavigationTask } from '../tasks/pricing/PricingFaqAndNavig
 import { PricingResponsiveUiTask } from '../tasks/pricing/PricingResponsiveUiTask';
 import { PricingRegionalCurrencyTask } from '../tasks/pricing/PricingRegionalCurrencyTask';
 import { PricingCouponDiscountTask } from '../tasks/pricing/PricingCouponDiscountTask';
+import { PricingToCheckoutNavigationTask } from '../tasks/pricing/PricingToCheckoutNavigationTask';
 
 test.describe('Pricing Page Suite', () => {
   // Use clean isolated session state
@@ -103,6 +104,36 @@ test.describe('Pricing Page Suite', () => {
 
     const task = new PricingCouponDiscountTask('preview15', 15);
     await task.performAs(page, testInfo);
+
+    await page.close();
+  });
+
+  // ─────────────────────────────────────────────────────────────
+  // TC_07: Pricing to Checkout Navigation
+  // ─────────────────────────────────────────────────────────────
+  test('TC_PRICING_07 — Verify plan selection and navigation to checkout', async ({ page }, testInfo) => {
+    const isVsr = testInfo.project.name === 'VSR';
+    const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+    test.skip(!isVsr || isMobile, 'TC_PRICING_07 is configured for VSR Desktop only; skipping on other sites and mobile browsers');
+
+    testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+
+    // Apply anti-bot stealth before navigation
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+      (window as any).chrome = {
+        runtime: {},
+        loadTimes: function() {},
+        csi: function() {},
+        app: {}
+      };
+      Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+      Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+    });
+
+    // 1. Perform Pricing to Checkout Navigation (handles resilient /pricing navigation with retry)
+    const navTask = new PricingToCheckoutNavigationTask('any');
+    await navTask.performAs(page, testInfo);
 
     await page.close();
   });

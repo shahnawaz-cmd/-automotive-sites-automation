@@ -13,6 +13,7 @@ const { ClassicEditableSpecsUpdateTask } = require('./tasks/ClassicEditableSpecs
 const { VinErrorTask } = require('./tasks/VinErrorTask');
 const { PlateErrorTask } = require('./tasks/PlateErrorTask');
 const { UrlSpaceHandlingTask } = require('./tasks/UrlSpaceHandlingTask');
+const { ErrorPageToHomeCollectionTask } = require('./tasks/ErrorPageToHomeCollectionTask');
 const { applyReferralAndVerifyCookies } = require('./tasks/ReferralTestTask');
 const { ExitIntentHelper } = require('../tasks/exit_intent_banner');
 
@@ -555,6 +556,22 @@ test('TC_28_URL_Space_Handling_Validation', async ({ page }, testInfo) => {
   const urlSpaceTask = new UrlSpaceHandlingTask(page);
   await test.step('Validate URL Space Handling and Error Flow', async () => {
     await urlSpaceTask.execute(testInfo);
+  });
+  await page.close();
+});
+
+test('TC_29_Error_Page_To_Home_Collection_Validation', async ({ page }, testInfo) => {
+  // Only run for VSR Desktop; skip on all other sites and mobile browsers
+  const isVsr = testInfo.project.name === 'VSR';
+  const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+  test.skip(!isVsr || isMobile, 'TC_29 is configured for VSR Desktop only; skipping on other sites and mobile browsers');
+
+  const timeout = process.env.CI ? 120000 : 90000;
+  testInfo.setTimeout(timeout);
+
+  const task = new ErrorPageToHomeCollectionTask(page);
+  await test.step('Validate Error Page to Home Collection (Notify Me) Flow', async () => {
+    await task.execute(testInfo, timeout);
   });
   await page.close();
 });

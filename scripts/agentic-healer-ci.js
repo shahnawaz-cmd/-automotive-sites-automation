@@ -47,6 +47,12 @@ function extractFailuresFromResults() {
       'tasks/revisit_sticker_banner_flow.ts',
       'tasks/vin_field_validation.ts',
       'tasks/vinHelper.ts',
+      'tasks/pricing/PricingToCheckoutNavigationTask.ts',
+      'tasks/SessionIpStickinessTask.ts',
+      'streaming Task/tasks/ErrorPageToHomeCollectionTask.js',
+      'streaming Task/global_streaming_specs.spec.js',
+      'tests/pricing_page.spec.ts',
+      'tests/session_ip_stickiness.spec.ts',
       'tests/global_case_verification.spec.ts'
     ];
 
