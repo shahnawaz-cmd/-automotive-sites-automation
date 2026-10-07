@@ -1,0 +1,10 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: Panama (Country: PA, IP: 190.97.167.149)
+🎯 [GEO INJECTOR] Target Currency Code: "PAB"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
+📡 [API Response] Currency Code: "PAB" | Sign: "PAB" | Price: 25
+🖥️ [UI Render] Regional Currency "PAB" / "PAB" visible on page: ✅ YES
+✅ [SUCCESS] Pricing successfully localized to Panama (PAB)!
+📸 [STDOUT SCREENSHOT] Regional pricing screenshot captured: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-pa-pab-1791387156883.png

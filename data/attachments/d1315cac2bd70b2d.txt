@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1967, Make=MV Agusta, Model=600 Turismo Four, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 223T0Z879207
+{
+  "year": "1967",
+  "make": "MV Agusta",
+  "model": "600 Turismo Four",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
