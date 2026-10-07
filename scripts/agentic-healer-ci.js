@@ -49,6 +49,7 @@ function extractFailuresFromResults() {
       'tasks/vinHelper.ts',
       'tasks/pricing/PricingToCheckoutNavigationTask.ts',
       'tasks/SessionIpStickinessTask.ts',
+      'tasks/exit_popup_behaviour.ts',
       'streaming Task/tasks/ErrorPageToHomeCollectionTask.js',
       'streaming Task/global_streaming_specs.spec.js',
       'tests/pricing_page.spec.ts',

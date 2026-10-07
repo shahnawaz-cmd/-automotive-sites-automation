@@ -16,6 +16,7 @@ import { EuVinConfirmationTask } from '../tasks/eu_vin_confirmation';
 import { ClassicEditableSpecsManual } from '../tasks/classic_editable_specs_manual';
 import { DefaultPlanPriceCheckTask } from '../tasks/default_plan_price_check';
 import { ClassicEditableSpecsUpdateOnly } from '../tasks/classic_editable_specs_update_only';
+import { ExitPopupBehaviour } from '../tasks/exit_popup_behaviour';
 
 test.beforeEach(async ({ context, page }) => {
   await context.clearCookies();
@@ -315,6 +316,31 @@ test('TC_17 Classic editable specs update only from preview validation', async (
   } finally {
     await page.close();
     console.log('TC_17: page.close() executed.');
+  }
+});
+
+test('TC_18 Exit popup behaviour on sample links in preview', async ({ page, context }, testInfo) => {
+  test.skip(
+    Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile')),
+    'Skipping exit popup behavior validation on mobile'
+  );
+
+  const timeout = process.env.CI ? 120000 : 90000;
+  testInfo.setTimeout(timeout);
+
+  const actor = new Actor('User', page);
+  try {
+    await page.goto('/');
+    await page.waitForTimeout(1000);
+
+    // 1. Decode VIN to land on Preview page
+    await actor.attemptsTo(new DecodeVinTask(false));
+
+    // 2. Perform Exit Popup Behaviour task: Click sample link (opens in new tab) and verify exit popup does NOT trigger
+    await actor.attemptsTo(new ExitPopupBehaviour());
+  } finally {
+    await page.close();
+    console.log('TC_18: page.close() executed.');
   }
 });
 

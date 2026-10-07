@@ -16,6 +16,7 @@ const { UrlSpaceHandlingTask } = require('./tasks/UrlSpaceHandlingTask');
 const { ErrorPageToHomeCollectionTask } = require('./tasks/ErrorPageToHomeCollectionTask');
 const { applyReferralAndVerifyCookies } = require('./tasks/ReferralTestTask');
 const { ExitIntentHelper } = require('../tasks/exit_intent_banner');
+const { ExitPopupBehaviour } = require('../tasks/exit_popup_behaviour');
 
 const TIMEOUT = process.env.CI ? 90000 : 60000;
 
@@ -573,6 +574,25 @@ test('TC_29_Error_Page_To_Home_Collection_Validation', async ({ page }, testInfo
   await test.step('Validate Error Page to Home Collection (Notify Me) Flow', async () => {
     await task.execute(testInfo, timeout);
   });
+  await page.close();
+});
+
+test('TC_30_Exit_Popup_Behaviour_On_Sample_Links_Validation', async ({ page, context }, testInfo) => {
+  const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
+  test.skip(isMobile, 'Skipping exit popup behavior validation on mobile browsers');
+
+  const timeout = process.env.CI ? 120000 : 90000;
+  testInfo.setTimeout(timeout);
+
+  const home = new HomePage(page);
+  const preview = new PreviewPage(page);
+  await home.navigate();
+  await home.decodeVin('4JGED6EB0JA121898', 3);
+  await preview.verifySpecsVisible();
+
+  const exitPopupTask = new ExitPopupBehaviour();
+  await exitPopupTask.performAs(page, context);
+
   await page.close();
 });
 
