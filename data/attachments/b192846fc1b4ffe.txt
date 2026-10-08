@@ -1,0 +1,4 @@
+--- Applying 1st Coupon: preview15 ---
+Passed: Cookie found. Name: coupon, Value: preview15
+Passed: Banner appeared with discount: "15%"
+--- Applying 2nd Coupon: get20 ---

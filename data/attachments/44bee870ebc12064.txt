@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1963, Make=Volvo, Model=122S, Trim=4 Door Station Wagon
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 3N67K5M340539
+{
+  "year": "1963",
+  "make": "Volvo",
+  "model": "122S",
+  "trim": "4 Door Station Wagon",
+  "isUnmappedFlow": false
+}
+

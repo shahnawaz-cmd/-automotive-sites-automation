@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Lancia, Model=Flavia, Trim=Berlina 1.8 Litre 4 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548872511
+{
+  "year": "1964",
+  "make": "Lancia",
+  "model": "Flavia",
+  "trim": "Berlina 1.8 Litre 4 Door Sedan",
+  "isUnmappedFlow": false
+}
+
