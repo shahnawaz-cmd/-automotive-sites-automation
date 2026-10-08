@@ -75,9 +75,12 @@ export class PricingRegionalCurrencyTask {
       await context.addCookies(cookies);
     });
 
-    await test.step('Step 2: Reload Pricing Page with Regional Context', async () => {
-      console.log('🔄 [Pricing] Reloading /pricing to activate regional session context...');
-      await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const isDVH = page.url().includes('detailedvehiclehistory.com') || (testInfo?.project.use?.baseURL as string)?.includes('detailedvehiclehistory.com') || testInfo?.project.name?.includes('DetailedVehicleHistory');
+    const pricingRoute = isDVH ? '/vin-check-rates' : '/pricing';
+
+    await test.step(`Step 2: Reload Pricing Page (${pricingRoute}) with Regional Context`, async () => {
+      console.log(`🔄 [Pricing] Reloading ${pricingRoute} to activate regional session context...`);
+      await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
       await page.waitForTimeout(1500);
     });
 

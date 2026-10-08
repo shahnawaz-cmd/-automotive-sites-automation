@@ -37,13 +37,16 @@ export class PricingToCheckoutNavigationTask {
     let checkoutUrl = '';
     const generatedEmail = generateEmail(this.baseEmail);
 
-    await test.step('Step 1: Ensure /pricing Page is Loaded', async () => {
+    const isDVH = page.url().includes('detailedvehiclehistory.com');
+    const pricingPath = isDVH ? '/vin-check-rates' : '/pricing';
+
+    await test.step(`Step 1: Ensure ${pricingPath} Page is Loaded`, async () => {
       console.log('🌐 [Pricing to Checkout] Checking current URL...');
-      if (!page.url().includes('/pricing')) {
-        console.log('🔄 [Pricing to Checkout] Navigating to /pricing...');
+      if (!page.url().includes(pricingPath)) {
+        console.log(`🔄 [Pricing to Checkout] Navigating to ${pricingPath}...`);
         for (let attempt = 1; attempt <= 3; attempt++) {
           try {
-            await page.goto('/pricing', { waitUntil: 'domcontentloaded', timeout: 30000 });
+            await page.goto(pricingPath, { waitUntil: 'domcontentloaded', timeout: 30000 });
             break;
           } catch (e: any) {
             console.warn(`⚠️ [Pricing to Checkout] Navigation attempt ${attempt} failed (${e.message}). Retrying...`);

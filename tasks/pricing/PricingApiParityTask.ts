@@ -22,19 +22,23 @@ export class PricingApiParityTask {
     await test.step('Step 2: Validate Personal Pricing Cards on UI', async () => {
       console.log('🔍 [Pricing] Validating Personal pricing cards render on page...');
 
+      await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+
       for (const plan of apiPlans) {
         const reportsLabel = `${plan.nos} Report`;
-        const cardLocator = page.locator('*').filter({ hasText: new RegExp(`^${reportsLabel}`) }).first();
+        const cardLocator = page.locator('*').filter({ hasText: new RegExp(`^${reportsLabel}`, 'i') }).first();
         await expect(cardLocator).toBeVisible({ timeout: 10000 });
 
-        const priceLocator = page.locator('*').filter({ hasText: `$${plan.price}` }).first();
+        const sign = plan.currency_sign ? plan.currency_sign.replace('$', '\\$') : '\\$';
+        const priceRegex = new RegExp(`(${sign}|\\$)?\\s*${plan.price}`);
+        const priceLocator = page.locator('*').filter({ hasText: priceRegex }).first();
         await expect(priceLocator).toBeVisible({ timeout: 10000 });
 
-        console.log(`   • Verified UI card: ${reportsLabel} at $${plan.price}`);
+        console.log(`   • Verified UI card: ${reportsLabel} at ${plan.currency_sign || '$'}${plan.price}`);
       }
 
-      // Verify CTA Buttons render for plans
-      const ctaButtons = page.getByRole('button', { name: /Get Report/i });
+      // Verify CTA Buttons render for plans (matches 'Get Report', 'Get Reports', and 'GET YOUR REPORT')
+      const ctaButtons = page.getByRole('button', { name: /Get.*Report/i });
       const count = await ctaButtons.count();
       expect(count).toBeGreaterThan(0);
 

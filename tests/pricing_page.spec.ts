@@ -8,6 +8,16 @@ import { PricingRegionalCurrencyTask } from '../tasks/pricing/PricingRegionalCur
 import { PricingCouponDiscountTask } from '../tasks/pricing/PricingCouponDiscountTask';
 import { PricingToCheckoutNavigationTask } from '../tasks/pricing/PricingToCheckoutNavigationTask';
 
+// Helper function to resolve pricing route based on project domain
+function getPricingRoute(testInfo: any): string {
+  const baseURL = testInfo.project.use?.baseURL || '';
+  const projectName = testInfo.project.name || '';
+  if (baseURL.includes('detailedvehiclehistory.com') || projectName.includes('DetailedVehicleHistory')) {
+    return '/vin-check-rates';
+  }
+  return '/pricing';
+}
+
 test.describe('Pricing Page Suite', () => {
   // Use clean isolated session state
   test.use({ storageState: { cookies: [], origins: [] } });
@@ -21,8 +31,9 @@ test.describe('Pricing Page Suite', () => {
 
     testInfo.setTimeout(process.env.CI ? 120000 : 90000);
 
-    // Navigate to current project's /pricing route
-    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    // Navigate to current project's pricing route
+    const pricingRoute = getPricingRoute(testInfo);
+    await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
     const task = new PricingApiParityTask();
     await task.performAs(page);
 
@@ -38,7 +49,8 @@ test.describe('Pricing Page Suite', () => {
 
     testInfo.setTimeout(process.env.CI ? 120000 : 90000);
 
-    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const pricingRoute = getPricingRoute(testInfo);
+    await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
     const task = new PricingTabSwitchTask();
     await task.performAs(page);
 
@@ -54,7 +66,8 @@ test.describe('Pricing Page Suite', () => {
 
     testInfo.setTimeout(process.env.CI ? 120000 : 90000);
 
-    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const pricingRoute = getPricingRoute(testInfo);
+    await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
     const task = new PricingFaqAndNavigationTask();
     await task.performAs(page);
 
@@ -70,7 +83,8 @@ test.describe('Pricing Page Suite', () => {
 
     testInfo.setTimeout(process.env.CI ? 120000 : 90000);
 
-    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const pricingRoute = getPricingRoute(testInfo);
+    await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
     const task = new PricingResponsiveUiTask();
     await task.performAs(page, testInfo);
 
@@ -84,9 +98,14 @@ test.describe('Pricing Page Suite', () => {
     const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
     test.skip(isMobile, 'TC_PRICING_05 is configured for Desktop only');
 
+    // Skip for sites locked to a single regional local currency (VehicleHistoryEU is EUR-only, VINNumberCA is CAD-only)
+    const isLockedCurrencySite = ['VehicleHistoryEU', 'VINNumberCA'].some(site => testInfo.project.name.includes(site));
+    test.skip(isLockedCurrencySite, `TC_PRICING_05 multi-currency is disabled on ${testInfo.project.name} (locked regional currency)`);
+
     testInfo.setTimeout(process.env.CI ? 120000 : 90000);
 
-    await page.goto('/pricing', { waitUntil: 'domcontentloaded' });
+    const pricingRoute = getPricingRoute(testInfo);
+    await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
     const task = new PricingRegionalCurrencyTask();
     await task.performAs(page, testInfo);
 

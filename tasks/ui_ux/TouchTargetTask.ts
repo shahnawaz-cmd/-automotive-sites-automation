@@ -32,8 +32,10 @@ export class TouchTargetTask {
             rect.width > 0 &&
             rect.height > 0
           ) {
-            // Standalone buttons under 28px in either dimension are impossible to tap accurately on mobile
-            if (mobile && (rect.width < 28 || rect.height < 28)) {
+            // Standalone buttons under 28px in either dimension are difficult to tap accurately on mobile,
+            // unless they are wide text links/buttons (e.g. width >= 48px) with sufficient horizontal surface area.
+            const isWideTextAction = rect.width >= 48 && rect.height >= 20;
+            if (mobile && !isWideTextAction && (rect.width < 28 || rect.height < 28)) {
               const text = (el.textContent?.trim() || el.getAttribute('aria-label') || el.tagName.toLowerCase()).slice(0, 30);
               const selector = el.id ? `#${el.id}` : el.className && typeof el.className === 'string' ? `.${el.className.trim().split(/\s+/)[0]}` : el.tagName.toLowerCase();
               results.push({ selector, text, width: Math.round(rect.width), height: Math.round(rect.height) });

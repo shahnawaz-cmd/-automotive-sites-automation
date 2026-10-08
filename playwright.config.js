@@ -97,6 +97,19 @@ module.exports = defineConfig({
         },
       },
     },
+    {
+      name: 'DetailedVehicleHistory',
+      use: {
+        baseURL: 'https://detailedvehiclehistory.com/',
+        headless: !!process.env.CI,
+        browserName: 'chromium',
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
+      },
+    },
 
     // --- Mobile Chrome ---
     {
@@ -139,6 +152,15 @@ module.exports = defineConfig({
       name: 'InstantVinReports_MobileChrome',
       use: {
         baseURL: 'https://instantvinreports.com/',
+        ...devices['Pixel 5'],
+        headless: !!process.env.CI,
+        ignoreHTTPSErrors: true,
+      },
+    },
+    {
+      name: 'DetailedVehicleHistory_MobileChrome',
+      use: {
+        baseURL: 'https://detailedvehiclehistory.com/',
         ...devices['Pixel 5'],
         headless: !!process.env.CI,
         ignoreHTTPSErrors: true,

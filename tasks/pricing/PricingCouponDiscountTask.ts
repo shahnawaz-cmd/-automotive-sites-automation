@@ -35,9 +35,12 @@ export class PricingCouponDiscountTask {
       console.log(`🎯 [Calculated] Expected price after ${discountStr} discount: $${expectedDiscountedPrice}`);
     });
 
-    await test.step(`Step 2: Navigate to /pricing with Coupon Offer (?offer=${this.couponCode})`, async () => {
-      console.log(`🔄 [Pricing Coupon] Navigating to /pricing?offer=${this.couponCode}...`);
-      await page.goto(`/pricing?offer=${this.couponCode}`, { waitUntil: 'domcontentloaded' });
+    const isDVH = page.url().includes('detailedvehiclehistory.com') || (testInfo?.project.use?.baseURL as string)?.includes('detailedvehiclehistory.com') || testInfo?.project.name?.includes('DetailedVehicleHistory');
+    const pricingRoute = isDVH ? '/vin-check-rates' : '/pricing';
+
+    await test.step(`Step 2: Navigate to ${pricingRoute} with Coupon Offer (?offer=${this.couponCode})`, async () => {
+      console.log(`🔄 [Pricing Coupon] Navigating to ${pricingRoute}?offer=${this.couponCode}...`);
+      await page.goto(`${pricingRoute}?offer=${this.couponCode}`, { waitUntil: 'domcontentloaded' });
       await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
       await page.waitForTimeout(1000);
     });
@@ -62,12 +65,18 @@ export class PricingCouponDiscountTask {
       await expect(saveBadge).toBeVisible({ timeout: 10000 });
 
       // 2. Check for discounted price on UI
-      // Allow for either strict 2 decimal places ($16.99) or integer formatting ($51 or $85)
-      const formattedPriceRegex = new RegExp(`\\$${expectedDiscountedPrice}|\\$${Math.round(parseFloat(expectedDiscountedPrice))}`);
+      // Allow for either strict 2 decimal places ($16.99 / EUR8.48) or integer formatting ($51 or $85)
+      const sign = (await page.evaluate(() => {
+        const text = document.body.innerText;
+        if (text.includes('EUR') || text.includes('€')) return '(EUR|€)';
+        if (text.includes('C$') || text.includes('CAD')) return '(C\\$|CAD)';
+        return '\\$';
+      }));
+      const formattedPriceRegex = new RegExp(`(${sign}|\\$)?\\s*(${expectedDiscountedPrice}|${Math.round(parseFloat(expectedDiscountedPrice))})`);
       const priceElement = page.locator('*').filter({ hasText: formattedPriceRegex }).first();
       await expect(priceElement).toBeVisible({ timeout: 10000 });
 
-      console.log(`✅ [Price Reflection Passed] 1 Report card reflects discount: $${expectedDiscountedPrice} (Save ${discountStr})`);
+      console.log(`✅ [Price Reflection Passed] 1 Report card reflects discount: ${expectedDiscountedPrice} (Save ${discountStr})`);
     });
 
     await test.step('Step 5: Capture Coupon Banner & Discounted Pricing Screenshot', async () => {

@@ -18,6 +18,12 @@ export class BrokenAssetTask {
         const images = Array.from(document.querySelectorAll('img'));
 
         for (const img of images) {
+          // Ignore analytics / tracking beacon pixels
+          const isTrackingPixel = /bat\.bing|google-analytics|doubleclick|facebook\.com\/tr|analytics|pixel|beacon/i.test(img.src) ||
+            img.id?.includes('batBeacon') ||
+            (img.width <= 1 && img.height <= 1 && (img.style.display === 'none' || img.style.visibility === 'hidden'));
+          if (isTrackingPixel) continue;
+
           if (img.complete && img.naturalWidth === 0 && img.src && !img.src.startsWith('data:')) {
             const selector = img.id ? `#${img.id}` : `img[src*="${img.src.slice(-25)}"]`;
             results.push({ src: img.src.slice(0, 50), selector });
