@@ -7,7 +7,8 @@ const ALL_DOMAINS = [
   { name: 'MotorcycleVINLookup', url: 'https://motorcyclevinlookup.com/' },
   { name: 'VehicleHistoryEU', url: 'https://vehiclehistory.eu/' },
   { name: 'VINNumberCA', url: 'https://vinnumber.ca/' },
-  { name: 'InstantVinReports', url: 'https://instantvinreports.com/' }
+  { name: 'InstantVinReports', url: 'https://instantvinreports.com/' },
+  { name: 'DetailedVehicleHistory', url: 'https://detailedvehiclehistory.com/' }
 ];
 
 async function detectSingleDomain(browser, name, url) {

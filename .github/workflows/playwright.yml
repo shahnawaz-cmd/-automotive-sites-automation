@@ -36,8 +36,8 @@ jobs:
             echo "⚡ Pull Request detected: Fast Smoke Suite (2 Jobs: VSR & IVR Desktop)"
             echo 'matrix={"project":["VSR","InstantVinReports"],"browser":["Desktop"],"shard":["1/1"]}' >> $GITHUB_OUTPUT
           else
-            echo "🚀 Full Run: Comprehensive Matrix (20 Jobs: 5 Sites x 2 Browsers x 2 Shards)"
-            echo 'matrix={"project":["VSR","MotorcycleVINLookup","VehicleHistoryEU","VINNumberCA","InstantVinReports"],"browser":["Desktop","MobileChrome"],"shard":["1/2","2/2"]}' >> $GITHUB_OUTPUT
+            echo "🚀 Full Run: Comprehensive Matrix (24 Jobs: 6 Sites x 2 Browsers x 2 Shards)"
+            echo 'matrix={"project":["VSR","MotorcycleVINLookup","VehicleHistoryEU","VINNumberCA","InstantVinReports","DetailedVehicleHistory"],"browser":["Desktop","MobileChrome"],"shard":["1/2","2/2"]}' >> $GITHUB_OUTPUT
           fi
 
   # ─────────────────────────────────────────────────────────
