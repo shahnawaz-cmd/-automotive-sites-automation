@@ -1,0 +1,58 @@
+🔍 [UrlSpaceHandlingTask] Flow Check: "streaming"
+🚀 [UrlSpaceHandlingTask] Decoding base VIN: "4JGED6EB0JA121898"...
+✅ [UrlSpaceHandlingTask] Submitted VIN: "4JGED6EB0JA121886"
+⏳ [UrlSpaceHandlingTask] Waiting for Preview page navigation...
+📍 [UrlSpaceHandlingTask] Landed on Preview Page: https://instantvinreports.com/vin-check/preview?vin=4JGED6EB0JA121886&type=vhr&wpPage=homepage
+🔄 [UrlSpaceHandlingTask] Removed 1 character from VIN and inserted space: "4JGED6EB0JA12188 "
+🌐 [UrlSpaceHandlingTask] Navigating to spaced URL: https://instantvinreports.com/vin-check/preview?vin=4JGED6EB0JA12188%20&type=vhr&wpPage=homepage
+🎉 [UrlSpaceHandlingTask] Confirmed expected VIN error message on spaced URL: "Sorry — no record found for VIN# 4JGED6EB0JA12188
+We couldn't find a vehicle for that VIN
+
+4JGED6EB0JA12188 didn't match our records. Check the VIN and try again, or use the plate lookup below.
+
+VIN
+License plate
+Search
+or
+
+Sure you typed it right? Leave your email and we'll let you know if records show up for it.
+
+Notify me
+I'm checking this vehicle as a
+Buyer
+Seller
+Owner
+Just Checking
+Reveal records for this vehicle
+Accident & Damage
+Title & Brand Check
+Odometer & Mileage
+Theft Records
+Auction History
+Lien & Loan
+Ownership & Sales
+Market Value
+Reveal Records
+Instant access
+Secure checkout
+Downloadable PDF
+Money-back guarantee
+We check for
+Ownership History
+Odometer Readings
+Title Information
+Accident History
+Junk & Salvage
+Total Loss History
+Theft & Recovery
+Auction Records
+Recalls & Defects
+Lien & Loan
+Market Value
+Vehicle Specifications
+
+Your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+
+© 2026 Instant Vin Reports. All Rights Reserved. · Terms · Privacy"
+📸 [UrlSpaceHandlingTask] Screenshot captured.
+📎 [UrlSpaceHandlingTask] Attached screenshot to Playwright report.

@@ -1,8 +1,0 @@
-
-──────────────────────────────────────────────────────────────────────
-💉 [GEO INJECTOR] Selected Region: Saudi Arabia (Country: SA, IP: 146.70.167.70)
-🎯 [GEO INJECTOR] Target Currency Code: "SAR"
-──────────────────────────────────────────────────────────────────────
-🔄 [Pricing] Reloading /pricing to activate regional session context...
-📡 [API Response] Currency Code: "SAR" | Sign: "SAR" | Price: 93.75
-🖥️ [UI Render] Regional Currency "SAR" / "SAR" visible on page: ❌ NO

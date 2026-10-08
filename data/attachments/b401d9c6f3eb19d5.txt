@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1979, Make=Ford, Model=F-Series, Trim=F-Series F-150 VII SuperCab 136 Hp 351.01 cu. in. Automatic
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L410877
+{
+  "year": "1979",
+  "make": "Ford",
+  "model": "F-Series",
+  "trim": "F-Series F-150 VII SuperCab 136 Hp 351.01 cu. in. Automatic",
+  "isUnmappedFlow": true
+}
+

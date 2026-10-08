@@ -1,0 +1,8 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: Panama (Country: PA, IP: 190.97.167.149)
+🎯 [GEO INJECTOR] Target Currency Code: "PAB"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
+📡 [API Response] Currency Code: "PAB" | Sign: "PAB" | Price: 25
+🖥️ [UI Render] Regional Currency "PAB" / "PAB" visible on page: ❌ NO

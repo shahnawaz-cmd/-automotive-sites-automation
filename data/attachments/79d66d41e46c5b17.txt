@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1967, Make=Zweirad Union, Model=159ts, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72107124
+{
+  "year": "1967",
+  "make": "Zweirad Union",
+  "model": "159ts",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

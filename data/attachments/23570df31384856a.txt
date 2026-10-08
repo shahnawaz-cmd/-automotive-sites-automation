@@ -1,0 +1,3 @@
+📱 [Mobile UI] Checking viewport & pricing toggle layout...
+✅ [Mobile UI] Toggle and Plan CTA elements are properly rendered in mobile viewport.
+📸 [Mobile UI] Full-page mobile screenshot saved to: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-mobile-layout-1791474015513.png
