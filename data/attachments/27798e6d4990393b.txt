@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1979, Make=Moto Guzzi, Model=V 1000 G 5, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2233712
+{
+  "year": "1979",
+  "make": "Moto Guzzi",
+  "model": "V 1000 G 5",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

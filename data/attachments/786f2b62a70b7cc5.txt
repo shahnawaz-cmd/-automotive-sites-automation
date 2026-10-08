@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Vector, Model=W2, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2574890
+{
+  "year": "1978",
+  "make": "Vector",
+  "model": "W2",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+

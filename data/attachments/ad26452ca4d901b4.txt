@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1969, Make=Sunbeam, Model=Arrow, Trim=4 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 507TK160750
+{
+  "year": "1969",
+  "make": "Sunbeam",
+  "model": "Arrow",
+  "trim": "4 Door Sedan",
+  "isUnmappedFlow": false
+}
+

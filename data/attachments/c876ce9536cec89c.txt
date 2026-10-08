@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Skoda, Model=Felicia, Trim=Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B341452
+{
+  "year": "1961",
+  "make": "Skoda",
+  "model": "Felicia",
+  "trim": "Convertible",
+  "isUnmappedFlow": false
+}
+

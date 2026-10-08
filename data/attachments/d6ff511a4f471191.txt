@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1975, Make=Bentley, Model=T1, Trim=4 Door Sedan (Saloon)
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 609K047523
+{
+  "year": "1975",
+  "make": "Bentley",
+  "model": "T1",
+  "trim": "4 Door Sedan (Saloon)",
+  "isUnmappedFlow": false
+}
+
