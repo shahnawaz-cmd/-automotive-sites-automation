@@ -134,6 +134,9 @@ export class HorizontalOverflowTask {
           }).catch(() => {});
         }
 
+        // Restore scroll position to top for clean state in subsequent tasks
+        await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
+
         expect.soft(
           bleedData.hasPageHorizontalScroll,
           `Page layout has unwanted horizontal scrollbar extending by ${bleedData.overflowPx || (bleedData.scrollWidth - bleedData.docWidth)}px on ${projectName}`
