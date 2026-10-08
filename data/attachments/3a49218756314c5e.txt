@@ -1,0 +1,10 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: Chile (Country: CL, IP: 45.250.252.51)
+🎯 [GEO INJECTOR] Target Currency Code: "CLP"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /vin-check-rates to activate regional session context...
+📡 [API Response] Currency Code: "CLP" | Sign: "CLP" | Price: 19543
+🖥️ [UI Render] Regional Currency "CLP" / "CLP" visible on page: ✅ YES
+✅ [SUCCESS] Pricing successfully localized to Chile (CLP)!
+📸 [STDOUT SCREENSHOT] Regional pricing screenshot captured: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-cl-clp-1791473317997.png

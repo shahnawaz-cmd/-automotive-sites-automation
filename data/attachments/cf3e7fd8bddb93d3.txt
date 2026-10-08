@@ -1,0 +1,15 @@
+📡 [Pricing] Fetching /api/pricing?sticker=0&dealer=1 relative to current project domain...
+✅ [API Validated] Found 5 Personal plan(s): [
+  '1 Reports = $19.99',
+  '2 Reports = $29.99',
+  '5 Reports = $59.99',
+  '10 Reports = $79.99',
+  '25 Reports = $174.99'
+]
+🔍 [Pricing] Validating Personal pricing cards render on page...
+   • Verified UI card: 1 Report at $19.99
+   • Verified UI card: 2 Report at $29.99
+   • Verified UI card: 5 Report at $59.99
+   • Verified UI card: 10 Report at $79.99
+   • Verified UI card: 25 Report at $174.99
+✅ [UI Validated] All 5 Personal cards match backend API values.

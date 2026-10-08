@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1969, Make=Volkswagen, Model=Karmann Ghia, Trim=(Type 14) 50 Hp 78.42 cu. in. Manual
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2237556
+{
+  "year": "1969",
+  "make": "Volkswagen",
+  "model": "Karmann Ghia",
+  "trim": "(Type 14) 50 Hp 78.42 cu. in. Manual",
+  "isUnmappedFlow": false
+}
+

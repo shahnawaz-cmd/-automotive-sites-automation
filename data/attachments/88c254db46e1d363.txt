@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Trabant, Model=P 601, Trim=Universal
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237M2Z393995
+{
+  "year": "1972",
+  "make": "Trabant",
+  "model": "P 601",
+  "trim": "Universal",
+  "isUnmappedFlow": true
+}
+

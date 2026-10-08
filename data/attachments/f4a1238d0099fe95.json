@@ -1,0 +1,22 @@
+[
+  {
+    "name": "checkout_flow",
+    "value": "streaming",
+    "domain": "instantvinreports.com",
+    "path": "/",
+    "expires": 1791559689.999979,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cwa_ip",
+    "value": "45.250.252.51",
+    "domain": "instantvinreports.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  }
+]

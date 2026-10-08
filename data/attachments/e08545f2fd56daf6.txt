@@ -1,6 +1,0 @@
-⚡ [EUVinModifier] Clicked "No, fix it" prompt.
-  └─ Selected year: 2012
-  └─ Selected make: Alfa Romeo
-  └─ Selected model: Giulietta II
-  └─ Selected trim: 1.4 GLP Turbo 120HP
-✅ [EUVinModifier] Submitted EU VIN modification & verified navigation to preview page.

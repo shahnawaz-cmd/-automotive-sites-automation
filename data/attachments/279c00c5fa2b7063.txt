@@ -1,0 +1,10 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: Costa Rica (Country: CR, IP: 138.59.135.94)
+🎯 [GEO INJECTOR] Target Currency Code: "CRC"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
+📡 [API Response] Currency Code: "CRC" | Sign: "CRC" | Price: 9109.24
+🖥️ [UI Render] Regional Currency "CRC" / "CRC" visible on page: ✅ YES
+✅ [SUCCESS] Pricing successfully localized to Costa Rica (CRC)!
+📸 [STDOUT SCREENSHOT] Regional pricing screenshot captured: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-cr-crc-1791473227502.png
