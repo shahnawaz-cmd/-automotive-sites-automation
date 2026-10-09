@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Morgan, Model=Plus 4 Roadster, Trim=2-seater roadster
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29E72551414
+{
+  "year": "1962",
+  "make": "Morgan",
+  "model": "Plus 4 Roadster",
+  "trim": "2-seater roadster",
+  "isUnmappedFlow": false
+}
+

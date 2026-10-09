@@ -1,7 +1,0 @@
-[VIN Decode] Generated VIN (US): 1C4RJHBG0PC533469
-[VIN Decode] Clicking success element...
-Success condition met.
-[TC_13] Running Global Exit Intent Flow...
-✅ Clicked CTA button (Global Exit Intent)
-[TC_13] Global Exit Intent Flow Succeeded.
-TC_13: page.close() executed.

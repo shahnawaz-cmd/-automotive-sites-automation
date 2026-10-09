@@ -1,0 +1,78 @@
+🔍 [ErrorPageToHomeCollectionTask] Flow Check: "streaming"
+
+📋 [ErrorPageToHomeCollectionTask] Generated Wrong 17-char Alphabet VIN: "JAWWHHRNTWHZTHHMG"
+✅ [ErrorPageToHomeCollectionTask] Wrong VIN submitted.
+⏳ [ErrorPageToHomeCollectionTask] Waiting for Preview page...
+📍 [ErrorPageToHomeCollectionTask] Landed on: https://vehiclesreport.com/vin-check/preview?vin=JAWWHHRNTWHZTHHMG&type=vhr&wpPage=homepage
+🎉 [ErrorPageToHomeCollectionTask] Confirmed error condition: "Sorry — no record found for VIN# JAWWHHRNTWHZTHHMG
+We couldn't find a vehicle for that VIN
+
+JAWWHHRNTWHZTHHMG didn't match our records. Check the VIN and try again, or use the plate lookup below.
+
+VIN
+License plate
+Search
+or
+
+Sure you typed it right? Leave your email and we'll let you know if records show up for it.
+
+Notify me
+I'm checking this vehicle as a
+Buyer
+Seller
+Owner
+Just Checking
+Reveal records for this vehicle
+Accident & Damage
+Title & Brand Check
+Odometer & Mileage
+Theft Records
+Auction History
+Lien & Loan
+Ownership & Sales
+Market Value
+Reveal Records
+Instant access
+Secure checkout
+Downloadable PDF
+Money-back guarantee
+We check for
+Ownership History
+Odometer Readings
+Title Information
+Accident History
+Junk & Salvage
+Total Loss History
+Theft & Recovery
+Auction Records
+Recalls & Defects
+Lien & Loan
+Market Value
+Vehicle Specifications
+
+Your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+
+© 2026 Vehicles Report. All Rights Reserved. · Terms · Privacy"
+✉️ [ErrorPageToHomeCollectionTask] Generated email: rolex.rolls12+spu9hbv@gmail.com
+✅ [Self-Healing Email Input] Located using strategy #1
+✅ [ErrorPageToHomeCollectionTask] Email entered.
+✅ [Self-Healing Notify Button] Located using strategy #1
+🚀 [ErrorPageToHomeCollectionTask] Clicking "Notify me" button...
+📡 [Captured API Payload]: [{"vin":"vinerrJAWWHHRNTWHZTHHMG","email":"rolex.rolls12+spu9hbv@gmail.com"}]
+✅ [ErrorPageToHomeCollectionTask] API Response status: 200
+⏳ [ErrorPageToHomeCollectionTask] Validating success message...
+🎉 [ErrorPageToHomeCollectionTask] Success message confirmed: "Thanks — we'll be in touch the moment we have something."
+
+================================================================================
+✅ [ERROR PAGE TO HOME COLLECTION PASSED]
+📋 Wrong VIN:          JAWWHHRNTWHZTHHMG
+📧 User Email:         rolex.rolls12+spu9hbv@gmail.com
+📡 Captured API URL:   https://vehiclesreport.com/vin-check/preview?vin=JAWWHHRNTWHZTHHMG&type=vhr&wpPage=homepage
+📦 Captured Payload:   [{"vin":"vinerrJAWWHHRNTWHZTHHMG","email":"rolex.rolls12+spu9hbv@gmail.com"}]
+📥 Captured Response:  0:{"a":"$@1","f":"","b":"qcIZ713SwjguONQqDrC3n","q":"?vin=JAWWHHRNTWHZTHHMG&type=vhr&wpPage=homepage","i":false}
+1:{"ok":true}
+
+📸 Success Screenshot: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/error-page-home-collection-1791515867716.png
+================================================================================
+
+📎 [ErrorPageToHomeCollectionTask] Attached screenshot and payload to report.
