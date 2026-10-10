@@ -1,3 +1,0 @@
-🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
-ℹ️ [StreamingYmmEditTask] Dropdown "Select trim" is disabled, skipping.
-📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=UAZ, Model=N/A, Trim=N/A

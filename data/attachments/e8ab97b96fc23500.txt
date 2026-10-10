@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Morgan, Model=4, Trim=Series IV Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2234251
+{
+  "year": "1960",
+  "make": "Morgan",
+  "model": "4",
+  "trim": "Series IV Convertible",
+  "isUnmappedFlow": false
+}
+

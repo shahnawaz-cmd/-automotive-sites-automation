@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Morris, Model=Marina, Trim=Coupe I 57 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 4318361
+{
+  "year": "1972",
+  "make": "Morris",
+  "model": "Marina",
+  "trim": "Coupe I 57 Hp",
+  "isUnmappedFlow": false
+}
+

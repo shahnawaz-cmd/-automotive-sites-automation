@@ -1,0 +1,10 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: South Korea (Country: KR, IP: 79.110.55.34)
+🎯 [GEO INJECTOR] Target Currency Code: "KRW"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
+📡 [API Response] Currency Code: "KRW" | Sign: "KRW" | Price: 26831
+🖥️ [UI Render] Regional Currency "KRW" / "KRW" visible on page: ✅ YES
+✅ [SUCCESS] Pricing successfully localized to South Korea (KRW)!
+📸 [STDOUT SCREENSHOT] Regional pricing screenshot captured: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/pricing-kr-krw-1791600972460.png
