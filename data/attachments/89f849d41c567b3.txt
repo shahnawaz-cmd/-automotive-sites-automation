@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1979, Make=Morris, Model=Marina, Trim=I
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237W1L419021
+{
+  "year": "1979",
+  "make": "Morris",
+  "model": "Marina",
+  "trim": "I",
+  "isUnmappedFlow": true
+}
+

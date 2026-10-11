@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Sunbeam Talbot, Model=Rapier, Trim=H120 Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10502646504
+{
+  "year": "1968",
+  "make": "Sunbeam Talbot",
+  "model": "Rapier",
+  "trim": "H120 Coupe",
+  "isUnmappedFlow": false
+}
+

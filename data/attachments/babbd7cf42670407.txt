@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1970, Make=Hercules, Model=K 105 X, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526591111
+{
+  "year": "1970",
+  "make": "Hercules",
+  "model": "K 105 X",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
