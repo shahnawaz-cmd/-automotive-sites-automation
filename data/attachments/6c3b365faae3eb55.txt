@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Porsche, Model=911, Trim=Targa (G) 200 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57H5Z449678
+{
+  "year": "1978",
+  "make": "Porsche",
+  "model": "911",
+  "trim": "Targa (G) 200 Hp",
+  "isUnmappedFlow": false
+}
+

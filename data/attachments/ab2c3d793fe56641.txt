@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Dnepr, Model=K 750m, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH23V1G288696
+{
+  "year": "1977",
+  "make": "Dnepr",
+  "model": "K 750m",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

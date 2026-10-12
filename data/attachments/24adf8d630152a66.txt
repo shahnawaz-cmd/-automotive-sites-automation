@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1965, Make=Husqvarna, Model=Racer, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B845870
+{
+  "year": "1965",
+  "make": "Husqvarna",
+  "model": "Racer",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
