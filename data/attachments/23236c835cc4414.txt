@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Fantic, Model=TX 150 Caballero, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72104350
+{
+  "year": "1980",
+  "make": "Fantic",
+  "model": "TX 150 Caballero",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

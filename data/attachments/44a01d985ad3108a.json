@@ -1,0 +1,44 @@
+[
+  {
+    "name": "checkout_flow",
+    "value": "streaming",
+    "domain": "detailedvehiclehistory.com",
+    "path": "/",
+    "expires": 1791950882.609275,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cf_clearance",
+    "value": "NbEn8I2FTmaZxG2cQrh1D3i7KHtNE7uR.HkGCwQm72I-1791864478-1.2.1.1-SbItQRyi1NCQRk0VWbU14k65k4THVXjE3Yu5utGQemy1_Q5xkngq2o_tuFjSVXMXoeXNjeIzcRcBeDIYGvUGcytpJJNuFH1b60zH2sQ2rQkZFINctHm04q2cKnfsU9bqg5bDpbtXPZnobSh3XMSaHmFSBYjJLsl1Q1Suyja7so.2eh.jTXPGULO3nnvygEtNoiMzAzeT_CTKtnBkwjcXhqDRusx1SFkF7wdtgT6nLNVExDBA9M6ghUfJd07aWeF0eZoZtg5F3pUDo2lVrRj5aFfhp_BxZsSn4n1RavfmPptAqTOBC..Goye_f0ItqkkkdxwLiXnFtF3Gbu7fl_R2NRRf4k6nvW7Bu0UuLnwmiL2jSpteTqNoQ9Na8HpcrFpcmDgztL314uRbzJMfHbJm7g",
+    "domain": ".detailedvehiclehistory.com",
+    "path": "/",
+    "expires": 1823400478.385329,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://detailedvehiclehistory.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "cwa_country",
+    "value": "US",
+    "domain": "detailedvehiclehistory.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cwa_ip",
+    "value": "172.99.190.215",
+    "domain": "detailedvehiclehistory.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  }
+]

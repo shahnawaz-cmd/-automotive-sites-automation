@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1970, Make=Oldsmobile, Model=Delta 88 Custom, Trim=Town Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37M2P215851
+{
+  "year": "1970",
+  "make": "Oldsmobile",
+  "model": "Delta 88 Custom",
+  "trim": "Town Sedan",
+  "isUnmappedFlow": false
+}
+

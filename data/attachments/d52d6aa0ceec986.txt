@@ -1,0 +1,4 @@
+[StreamingRevisitBannerTask] Grab it button issue: locator.waitFor: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('button:has-text("Grab it now")').or(locator('button:has-text("Grab it for")')).or(getByRole('button', { name: /Grab it/i })).or(locator('.revisit-banner button, [class*="revisit"] button')).first() to be visible
+

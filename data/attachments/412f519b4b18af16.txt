@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1972, Make=Mazda, Model=Luce, Trim=AP GS II Hardtop Coupe 2+2
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526592169
+{
+  "year": "1972",
+  "make": "Mazda",
+  "model": "Luce",
+  "trim": "AP GS II Hardtop Coupe 2+2",
+  "isUnmappedFlow": false
+}
+
