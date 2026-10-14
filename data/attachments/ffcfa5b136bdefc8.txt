@@ -1,0 +1,40 @@
+🚀 [ReferralTest] Navigating to URL with referral parameters: /?ref=TESTREF&utm_source=google&utm_campaign=x
+📋 [ReferralTest] Total cookies found: 6
+✅ [ReferralTest] Verified "ref" cookie saved: "ref=TESTREF"
+✅ [ReferralTest] Verified UTM/traffic_source cookie saved: "traffic_source=google--x"
+✅ Dynamically selected plan at index 0: "1 Report", Price: $25.00
+✅ Upsell selected. Price: $7.20
+✅ Order summary verified with valid checkout total: $32.2
+ℹ️ [TC_08] Email cache cookie verified: cart_vin
+✅ Dynamically selected plan at index 0: "1 Report", Price: $25.00
+✅ Upsell selected. Price: $7.20
+✅ [TC_08] Email popup did NOT appear (cached directly to checkout)
+✅ Order summary verified with valid checkout total: $32.2
+
+📋 [TC_08] Full Checkout, Coupon & Email Cache Summary:
+ {
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "1 Report",
+    "totalPlanPrice": "25.00",
+    "upsellPrice": "7.20"
+  },
+  "couponSummary": {
+    "reportPrice": 25,
+    "discountAmount": 5,
+    "addOnAmount": 7.2,
+    "totalAmount": 27.2,
+    "expectedDiscount": 5,
+    "expectedTotal": 27.2,
+    "orderSummary": "Order summary\nPACKAGE\n1 Report\nC$25.00\nDiscount\n-C$5.00\nADD-ON\nWindow Sticker\nC$7.20\nCoupon\nGET20\napplied — 20% off\nApply\nTotal\nC$32.20\nC$27.20\nSecure checkout\nInstant access"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "1 Report",
+      "totalPlanPrice": "25.00",
+      "upsellPrice": "7.20"
+    }
+  }
+}
