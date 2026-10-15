@@ -1,8 +1,0 @@
-⚠️ [selectPlan] Could not locate visible plan card for: "1 Report". Trying fallback selector.
-ℹ️ [selectPlan] Plan card "1 Report" not rendered on frontend UI. Skipping.
-⚠️ [selectPlan] Could not locate visible plan card for: "2 Reports". Trying fallback selector.
-ℹ️ [selectPlan] Plan card "2 Reports" not rendered on frontend UI. Skipping.
-⚠️ [selectPlan] Could not locate visible plan card for: "5 Reports". Trying fallback selector.
-ℹ️ [selectPlan] Plan card "5 Reports" not rendered on frontend UI. Skipping.
-⚠️ [selectPlan] Could not locate visible plan card for: "Unlimited VIN Check". Trying fallback selector.
-ℹ️ [selectPlan] Plan card "Unlimited VIN Check" not rendered on frontend UI. Skipping.

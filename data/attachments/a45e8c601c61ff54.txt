@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1974, Make=Jawa CZ, Model=125, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B343521
+{
+  "year": "1974",
+  "make": "Jawa CZ",
+  "model": "125",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

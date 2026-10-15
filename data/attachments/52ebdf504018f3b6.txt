@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Lada, Model=2103, Trim=3
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 4310659
+{
+  "year": "1977",
+  "make": "Lada",
+  "model": "2103",
+  "trim": "3",
+  "isUnmappedFlow": false
+}
+
