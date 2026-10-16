@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Toyota, Model=Publica, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41J0R544407
+{
+  "year": "1961",
+  "make": "Toyota",
+  "model": "Publica",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

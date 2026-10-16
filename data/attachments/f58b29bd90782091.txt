@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1976, Make=Audi, Model=80, Trim=(B1, Typ ) 2-4 Doors 75 Hp 96.91 cu. in. Manual
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: M176100095
+{
+  "year": "1976",
+  "make": "Audi",
+  "model": "80",
+  "trim": "(B1, Typ ) 2-4 Doors 75 Hp 96.91 cu. in. Manual",
+  "isUnmappedFlow": false
+}
+

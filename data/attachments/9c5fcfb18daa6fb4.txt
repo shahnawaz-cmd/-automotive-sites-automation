@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1970, Make=Checker, Model=Marathon, Trim=6 Series Station Wagon
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72106821
+{
+  "year": "1970",
+  "make": "Checker",
+  "model": "Marathon",
+  "trim": "6 Series Station Wagon",
+  "isUnmappedFlow": false
+}
+
