@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Saab, Model=99, Trim=Sedan 87 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548133563
+{
+  "year": "1968",
+  "make": "Saab",
+  "model": "99",
+  "trim": "Sedan 87 Hp",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1973, Make=Cheney, Model=500, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2570152
+{
+  "year": "1973",
+  "make": "Cheney",
+  "model": "500",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

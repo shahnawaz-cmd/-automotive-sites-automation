@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1969, Make=Dodge, Model=D100, Trim=1/2 Ton Sweptline
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 609K048503
+{
+  "year": "1969",
+  "make": "Dodge",
+  "model": "D100",
+  "trim": "1/2 Ton Sweptline",
+  "isUnmappedFlow": false
+}
+

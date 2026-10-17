@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Land Rover, Model=Series II, Trim=A 69 Hp
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41J0R544662
+{
+  "year": "1977",
+  "make": "Land Rover",
+  "model": "Series II",
+  "trim": "A 69 Hp",
+  "isUnmappedFlow": false
+}
+
