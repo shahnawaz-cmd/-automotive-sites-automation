@@ -1,0 +1,62 @@
+
+══════════════════════════════════════════════════════════════════════
+🍪 [COOKIE HELPER - ALL COOKIES CAPTURED] Total: 4
+══════════════════════════════════════════════════════════════════════
+   [1] checkout_flow = "streaming"
+       Domain: detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: false | SameSite: Lax
+   [2] cf_clearance = "JOWHYaT_nggNodnWX3R27j8Vc3IQGzLT_tUFRSJ5BIA-1792287870-1.2.1.1-6n7CqKVdwRyDhdyoq7cYNF1GIQSsyHH4HKcwVbi8qlIQJ4upMVJjsEZ2UR06igGZ6eJRvzHvyZGXUSz650jc9gBFBOuqehh0CJkVi4SDUIgJwPxuv.hJspMaf9r9rS3iN9Vw8lykcKmYVH97OHrOC_vHHG2.cXEtQNqmzaDEaslrPatqsbcgEKQReOGp.MBPY0Nb13bGLv3Mp0oeXcSDR.OMGsSA9n9QB9jt8RgkFDRPhwbxjoHei7tYO4EU59hmncNFKqoA2KQ9UrSbkBtSfTFmp_.EmNFJK4A4JyQKirHoVHmGdYHxAHp65KF7kXBcFlIPhiEy8isvV7YgEHhYYJWcYQLtZeSYBcLcyj7hDAI"
+       Domain: .detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: true | SameSite: None
+   [3] cwa_ip = "20.168.100.96"
+       Domain: detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: true | SameSite: Lax
+   [4] cwa_country = "US"
+       Domain: detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: false | SameSite: Lax
+══════════════════════════════════════════════════════════════════════
+
+
+──────────────────────────────────────────────────────────────────────
+💉 [CWA IP INJECTOR] Injected 'cwa_ip': "192.206.151.131" (Host: detailedvehiclehistory.com, Root: .detailedvehiclehistory.com)
+──────────────────────────────────────────────────────────────────────
+
+
+══════════════════════════════════════════════════════════════════════
+🔄 [SESSION STICKINESS] Testing 2 consecutive page reload(s) in same browser
+══════════════════════════════════════════════════════════════════════
+   ⏳ Performing Reload #1...
+   • [Reload #1] Current 'cwa_ip': "192.206.151.131" | Expected: "192.206.151.131" ➡️ ✅ LOCKED
+   ⏳ Performing Reload #2...
+   • [Reload #2] Current 'cwa_ip': "192.206.151.131" | Expected: "192.206.151.131" ➡️ ✅ LOCKED
+✅ [SESSION STICKINESS] Successfully passed all 2 page reload checks!
+══════════════════════════════════════════════════════════════════════
+
+
+══════════════════════════════════════════════════════════════════════
+📑 [SESSION STICKINESS] Opening Tab 2 in the same browser window
+══════════════════════════════════════════════════════════════════════
+   • [Tab 2 URL]    https://detailedvehiclehistory.com/
+   • [Tab 2 cwa_ip] "192.206.151.131" | Expected: "192.206.151.131" ➡️ ✅ SYNCED
+✅ [SESSION STICKINESS] Tab 2 successfully inherited locked session IP!
+══════════════════════════════════════════════════════════════════════
+
+
+══════════════════════════════════════════════════════════════════════
+🍪 [COOKIE HELPER - ALL COOKIES CAPTURED] Total: 4
+══════════════════════════════════════════════════════════════════════
+   [1] checkout_flow = "streaming"
+       Domain: detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: false | SameSite: Lax
+   [2] cf_clearance = "JOWHYaT_nggNodnWX3R27j8Vc3IQGzLT_tUFRSJ5BIA-1792287870-1.2.1.1-6n7CqKVdwRyDhdyoq7cYNF1GIQSsyHH4HKcwVbi8qlIQJ4upMVJjsEZ2UR06igGZ6eJRvzHvyZGXUSz650jc9gBFBOuqehh0CJkVi4SDUIgJwPxuv.hJspMaf9r9rS3iN9Vw8lykcKmYVH97OHrOC_vHHG2.cXEtQNqmzaDEaslrPatqsbcgEKQReOGp.MBPY0Nb13bGLv3Mp0oeXcSDR.OMGsSA9n9QB9jt8RgkFDRPhwbxjoHei7tYO4EU59hmncNFKqoA2KQ9UrSbkBtSfTFmp_.EmNFJK4A4JyQKirHoVHmGdYHxAHp65KF7kXBcFlIPhiEy8isvV7YgEHhYYJWcYQLtZeSYBcLcyj7hDAI"
+       Domain: .detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: true | SameSite: None
+   [3] cwa_country = "US"
+       Domain: detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: false | SameSite: Lax
+   [4] cwa_ip = "192.206.151.131"
+       Domain: detailedvehiclehistory.com | Path: / | Secure: true | HttpOnly: true | SameSite: Lax
+══════════════════════════════════════════════════════════════════════
+
+
+══════════════════════════════════════════════════════════════════════
+🚗 [SESSION STICKINESS] Proceeding to VIN Decode flow with sticky session...
+══════════════════════════════════════════════════════════════════════
+[VIN Decode] Generated VIN (US): WA1VABGE5KB008296
+[VIN Decode] Clicking success element...
+Success condition met.
+📸 [SESSION STICKINESS] Preview screenshot captured and saved to: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/preview-sticky-session-1792287879204.png
+🚪 [SESSION STICKINESS] Page closed successfully.
