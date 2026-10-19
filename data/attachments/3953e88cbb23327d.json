@@ -1,0 +1,26 @@
+{
+  "vin": "4JGED6EB0JA121898",
+  "initialPlan": {
+    "planName": "2 Reports",
+    "totalPlanPrice": "29.99",
+    "upsellPrice": "9.99"
+  },
+  "couponSummary": {
+    "reportPrice": 29.99,
+    "discountAmount": 6,
+    "addOnAmount": 9.99,
+    "totalAmount": 33.98,
+    "expectedDiscount": 5.998,
+    "expectedTotal": 33.98,
+    "orderSummary": "Order summary\nPACKAGE\n2 Reports\n$29.99\nDiscount\n-$6.00\nADD-ON\nWindow Sticker\n$9.99\nCoupon\nGET20\napplied — 20% off\nApply\nTotal\n$39.98\n$33.98\nSecure checkout\nInstant access"
+  },
+  "cachedEmailFlow": {
+    "cookieSaved": true,
+    "popupSkipped": true,
+    "newPlanSelected": {
+      "planName": "2 Reports",
+      "totalPlanPrice": "29.99",
+      "upsellPrice": "9.99"
+    }
+  }
+}

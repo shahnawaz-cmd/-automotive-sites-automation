@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Kerston, Model=Classic, Trim=2 Door Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N482377
+{
+  "year": "1964",
+  "make": "Kerston",
+  "model": "Classic",
+  "trim": "2 Door Convertible",
+  "isUnmappedFlow": false
+}
+
