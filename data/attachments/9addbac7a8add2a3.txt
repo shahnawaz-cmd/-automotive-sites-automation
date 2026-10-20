@@ -1,5 +1,0 @@
-[VIN Decode] Generated VIN (EU): VF3YC2MFB12G20875
-[VIN Decode] Bypassing success banner click as requested by task parameters.
-Success condition met.
-ℹ️ "No" button prompt not found; VIN decoded directly on Preview page (VIN is US / direct preview). Test Passed.
-TC_14: page.close() executed.

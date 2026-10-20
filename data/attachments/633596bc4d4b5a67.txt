@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Saab, Model=95, Trim=Station Wagon (Estate) 38 HP
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72106194
+{
+  "year": "1966",
+  "make": "Saab",
+  "model": "95",
+  "trim": "Station Wagon (Estate) 38 HP",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,40 @@
+
+===============================================================
+  [Clarity Verification] WRAPPER 1: HOMEPAGE VERIFICATION
+===============================================================
+[Clarity Task] Navigating to Homepage...
+[Clarity Task] Current URL: https://detailedvehiclehistory.com/
+[Clarity Task] Smart waiting for deferred Microsoft Clarity initialization (~10-15s CWV window)...
+✓ [Clarity Task] window.clarity function detected on Homepage
+✓ [Clarity Task] Telemetry beacon detected: https://www.clarity.ms/tag/a242ziivdi
+✓ [Clarity Task] Homepage Clarity User ID: 18by1ip
+✓ [Clarity Task] Homepage Raw _clck: 18by1ip%5E2%5Egag%5E0%5E2484
+✓ [Clarity Task] Homepage Session Token: 1jcrcjs
+
+===============================================================
+  [Clarity Verification] WRAPPER 2: PREVIEW PAGE VERIFICATION
+===============================================================
+[Clarity Task] Submitting VIN to transition to Preview: WA1VABGE5KB008228
+[Clarity Task] Waiting for Preview page URL transition...
+✓ [Clarity Task] Landed on Preview Page: https://detailedvehiclehistory.com/vin-check/preview?vin=WA1VABGE5KB008228&type=vhr&wpPage=homepage
+✓ [Clarity Task] window.clarity active on Preview Page
+✓ [Clarity Task] Preview Clarity User ID: 18by1ip
+✓ [Clarity Task] Session continuity maintained from Homepage (Matched: true)
+✓ [Clarity Task] Preview Page Sequence / _clsk: 1l9n8y3%5E1792517734992%5E2%5E1%5El.clarity.ms%2Fcollect
+
+===============================================================
+  [Clarity Verification] WRAPPER 3: CHECKOUT PAGE VERIFICATION
+===============================================================
+[Clarity Task] Initiating Checkout navigation from Preview...
+[Clarity Task] Clicking Access Records CTA button...
+[Clarity Task] Entering email in modal: shahnawaz+43@empirepixel.com
+[Clarity Task] Clicking Proceed to Checkout...
+[Clarity Task] Waiting for Checkout page URL transition...
+✓ [Clarity Task] Landed on Checkout Page: https://detailedvehiclehistory.com/checkout?data=eyJjb2RlIjoiRFZIMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiJXQTFWQUJHRTVLQjAwODIyOCIsImVtYWlsIjoic2hhaG5hd2F6KzQzQGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4IiwiYWRkT25QcmljZSI6OS45OSwiYWRkT25MYWJlbCI6IlNhdmUgNTAlISBHZXQgYSBXaW5kb3cgU3RpY2tlciIsIm5vcyI6MSwiaXRlbUxhYmVsIjoiUmVwb3J0IiwicHJpY2UiOjE5Ljk5LCJjdXJyZW5jeVNpZ24iOiIkIiwiY3VycmVuY3kiOiJVU0QiLCJjb3VudHJ5IjoiVVMiLCJpcCI6IjE3Mi4xODIuMjQ1LjEzNCIsIndwUGFnZSI6ImhvbWVwYWdlIn0=
+✓ [Clarity Task] window.clarity active on Checkout Page
+✓ [Clarity Task] Checkout Clarity User ID: 18by1ip
+✓ [Clarity Task] 3-Wrapper Session Stitching Verified: Homepage -> Preview -> Checkout (UserId: 18by1ip)
+✓ [Clarity Task] Checkout Page Sequence / _clsk: 1l9n8y3%5E1792517734992%5E2%5E1%5El.clarity.ms%2Fcollect
+✓ [Clarity Task] Total Clarity Telemetry Beacons Captured: 14
+===============================================================
+
