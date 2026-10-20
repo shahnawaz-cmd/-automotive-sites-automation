@@ -1,0 +1,38 @@
+{
+  "url": "https://detailedvehiclehistory.com/",
+  "cookieState": {
+    "userId": "1nb5w9j",
+    "rawClck": "1nb5w9j%5E2%5Egag%5E0%5E2484",
+    "rawClsk": null,
+    "pageSequence": null,
+    "sessionToken": "1x2hnxs"
+  },
+  "beaconsCount": 6,
+  "recentBeacons": [
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1792515944390
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1792515944390
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=97A88DE102BD4579803E61D2B9AC4A51&RedC=c.clarity.ms&MXFR=0475D37077F96E4B12E2C48873F960F8",
+      "method": "GET",
+      "timestamp": 1792515944472
+    },
+    {
+      "url": "https://z.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792515944576
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=97A88DE102BD4579803E61D2B9AC4A51&MUID=3F36605170DB6403023C77A9711F65F7",
+      "method": "GET",
+      "timestamp": 1792515944583
+    }
+  ]
+}

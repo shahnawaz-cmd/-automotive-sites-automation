@@ -1,0 +1,7 @@
+
+❌ [Clarity Task FAILURE] Wrapper 3 (Checkout Page) Verification Failed!
+Page URL: https://detailedvehiclehistory.com/vin-check/preview?vin=1FMCU0F68LUB98870&type=vhr&wpPage=homepage
+Error: page.waitForURL: Timeout 45000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+============================================================

@@ -1,0 +1,41 @@
+
+===============================================================
+🚀 [Stealth Test] Starting Verification on Detailed Vehicle History (DVH)
+   Base URL: https://detailedvehiclehistory.com
+   Expected Website ID: dfid_Czs2Hy80SCi2wqeIdI6R7
+   Test Email: shahnawaz+89@empirepixel.com
+===============================================================
+
+🌐 [Step 1: Homepage] Navigating to https://detailedvehiclehistory.com/
+🎯 [DataFast Telemetry] Captured POST event: type=pageview, visitorId=fe34c6d6-82ff-416d-9733-52d0d907db08, websiteId=dfid_Czs2Hy80SCi2wqeIdI6R7
+✅ [DataFast DOM] Verified on Detailed Vehicle History (DVH) Homepage:
+   src: https://datafa.st/js/script.js
+   data-website-id: dfid_Czs2Hy80SCi2wqeIdI6R7
+   data-domain: detailedvehiclehistory.com
+✅ [DataFast Cookies] Verified on Detailed Vehicle History (DVH) Homepage:
+   datafast_visitor_id: fe34c6d6-82ff-416d-9733-52d0d907db08
+   datafast_session_id: saf836b18-ef2b-4f6e-8a1f-bbf193f31ab6
+
+🔍 [Step 2: Preview Page] Navigating to https://detailedvehiclehistory.com/vin-check/preview?vin=1HGCR2F83HA001234&type=vhr&wpPage=homepage
+🎯 [DataFast Telemetry] Captured POST event: type=pageview, visitorId=fe34c6d6-82ff-416d-9733-52d0d907db08, websiteId=dfid_Czs2Hy80SCi2wqeIdI6R7
+✅ [DataFast DOM] Verified on Detailed Vehicle History (DVH) Preview Page:
+   src: https://datafa.st/js/script.js
+   data-website-id: dfid_Czs2Hy80SCi2wqeIdI6R7
+   data-domain: detailedvehiclehistory.com
+✅ [DataFast Cookies] Verified on Detailed Vehicle History (DVH) Preview Page:
+   datafast_visitor_id: fe34c6d6-82ff-416d-9733-52d0d907db08
+   datafast_session_id: saf836b18-ef2b-4f6e-8a1f-bbf193f31ab6
+
+🛒 [Step 3: Checkout Page] Navigating to https://detailedvehiclehistory.com/checkout?data=eyJjb2RlIjoiRFZIMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiIxSEdDUjJGODNIQTAwMTIzNCIsImVtYWlsIjoic2hhaG5hd2F6Kzg5QGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4Iiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MTkuOTksImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsIndwUGFnZSI6ImhvbWVwYWdlIn0=
+🎯 [DataFast Telemetry] Captured POST event: type=pageview, visitorId=fe34c6d6-82ff-416d-9733-52d0d907db08, websiteId=dfid_Czs2Hy80SCi2wqeIdI6R7
+✅ [DataFast DOM] Verified on Detailed Vehicle History (DVH) Checkout Page:
+   src: https://datafa.st/js/script.js
+   data-website-id: dfid_Czs2Hy80SCi2wqeIdI6R7
+   data-domain: detailedvehiclehistory.com
+✅ [DataFast Cookies] Verified on Detailed Vehicle History (DVH) Checkout Page:
+   datafast_visitor_id: fe34c6d6-82ff-416d-9733-52d0d907db08
+   datafast_session_id: saf836b18-ef2b-4f6e-8a1f-bbf193f31ab6
+
+📡 Total DataFast Telemetry POST Events Captured: 3
+
+🎉 [Detailed Vehicle History (DVH)] COMPLETE: DataFast Telemetry & Stripe Visitor ID (fe34c6d6-82ff-416d-9733-52d0d907db08) Verified!

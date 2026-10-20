@@ -1,7 +1,0 @@
-
-──────────────────────────────────────────────────────────────────────
-💉 [GEO INJECTOR] Selected Region: Saudi Arabia (Country: SA, IP: 146.70.167.70)
-🎯 [GEO INJECTOR] Target Currency Code: "SAR"
-──────────────────────────────────────────────────────────────────────
-🔄 [Pricing] Reloading /vin-check-rates to activate regional session context...
-📡 [API Response] Currency Code: "USD" | Sign: "$" | Price: 19.99

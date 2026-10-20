@@ -1,7 +1,0 @@
-
-──────────────────────────────────────────────────────────────────────
-💉 [GEO INJECTOR] Selected Region: United Kingdom (Country: GB, IP: 172.99.190.215)
-🎯 [GEO INJECTOR] Target Currency Code: "GBP"
-──────────────────────────────────────────────────────────────────────
-🔄 [Pricing] Reloading /pricing to activate regional session context...
-📡 [API Response] Currency Code: "USD" | Sign: "$" | Price: 19.99

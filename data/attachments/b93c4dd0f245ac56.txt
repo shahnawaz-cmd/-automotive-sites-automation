@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Trabant, Model=P 601, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72431844
+{
+  "year": "1980",
+  "make": "Trabant",
+  "model": "P 601",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

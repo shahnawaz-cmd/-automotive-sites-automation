@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=DKW, Model=F12, Trim=Roadster Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57H5Z447395
+{
+  "year": "1964",
+  "make": "DKW",
+  "model": "F12",
+  "trim": "Roadster Convertible",
+  "isUnmappedFlow": false
+}
+
