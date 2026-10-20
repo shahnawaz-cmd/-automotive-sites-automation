@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1971, Make=Land Rover, Model=Series II, Trim=A 63 HP
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TF965262
+{
+  "year": "1971",
+  "make": "Land Rover",
+  "model": "Series II",
+  "trim": "A 63 HP",
+  "isUnmappedFlow": true
+}
+

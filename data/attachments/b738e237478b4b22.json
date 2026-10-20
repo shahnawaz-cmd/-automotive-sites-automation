@@ -1,0 +1,89 @@
+{
+  "url": "https://instantvinreports.com/checkout?data=eyJjb2RlIjoiSVZSMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiIxRk1DVTBGNjhMVUI5ODgxNyIsImVtYWlsIjoic2hhaG5hd2F6Kzg2QGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4IiwiYWRkT25QcmljZSI6OS45OSwiYWRkT25MYWJlbCI6IkFkZCBXaW5kb3cgU3RpY2tlciB0byB5b3VyIHB1cmNoYXNlIiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MjUsImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsImNvdW50cnkiOiJVUyIsImlwIjoiNTIuMjUwLjI0My4xMjgiLCJ3cFBhZ2UiOiJob21lcGFnZSJ9",
+  "cookieState": {
+    "userId": "fmswc9",
+    "rawClck": "fmswc9%5E2%5Egag%5E0%5E2484",
+    "rawClsk": "1hrmxpf%5E1792516962529%5E3%5E1%5Eb.clarity.ms%2Fcollect",
+    "pageSequence": 3,
+    "sessionToken": "1puqwun"
+  },
+  "matchedInitialUserId": true,
+  "totalBeaconsCaptured": 15,
+  "beacons": [
+    {
+      "url": "https://www.clarity.ms/tag/a244miz3er",
+      "method": "GET",
+      "timestamp": 1792516955170
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1792516955368
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1792516955368
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=0663388BF8F34F368676E0D0994D9CB1&RedC=c.clarity.ms&MXFR=18B56C6DD6246A9A3D8A7B95D22464B3",
+      "method": "GET",
+      "timestamp": 1792516955447
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=0663388BF8F34F368676E0D0994D9CB1&MUID=0BA2D4DE045560E70C1DC326052361AB",
+      "method": "GET",
+      "timestamp": 1792516955510
+    },
+    {
+      "url": "https://b.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792516955539
+    },
+    {
+      "url": "https://b.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792516956102
+    },
+    {
+      "url": "https://www.clarity.ms/tag/a244miz3er",
+      "method": "GET",
+      "timestamp": 1792516957062
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1792516957129
+    },
+    {
+      "url": "https://www.clarity.ms/tag/uet/295008366?conversions=1&insights=1",
+      "method": "GET",
+      "timestamp": 1792516957143
+    },
+    {
+      "url": "https://b.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792516957247
+    },
+    {
+      "url": "https://b.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792516957794
+    },
+    {
+      "url": "https://www.clarity.ms/tag/a244miz3er",
+      "method": "GET",
+      "timestamp": 1792516962193
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1792516962258
+    },
+    {
+      "url": "https://b.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792516962465
+    }
+  ]
+}
