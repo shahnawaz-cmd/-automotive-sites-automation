@@ -326,21 +326,30 @@ export class ClarityVerificationTask {
           .or(page.locator('button:has-text("Access Records"), button:has-text("Get Window Sticker")'))
           .first();
 
-        if (await accessBtn.isVisible({ timeout: 10000 }).catch(() => false)) {
-          console.log('[Clarity Task] Clicking Access Records CTA button...');
-          await accessBtn.click({ force: true });
-        }
+        await accessBtn.waitFor({ state: 'visible', timeout: 15000 });
+        console.log('[Clarity Task] Clicking Access Records CTA button...');
+        await accessBtn.click();
 
-        // 2. Fill email if popup or field is displayed
+        // 2. Wait for email popup to appear (do NOT use isVisible() as it returns false immediately without waiting)
         const emailField = page.locator('input[type="email"], input[placeholder*="email" i], input[name*="email" i]').first();
-        if (await emailField.isVisible({ timeout: 8000 }).catch(() => false)) {
+        const hasEmailModal = await emailField.waitFor({ state: 'visible', timeout: 12000 }).then(() => true).catch(async () => {
+          // If modal hasn't opened and not already on checkout, re-click CTA (handles Next.js hydration race in CI)
+          if (!page.url().includes('checkout')) {
+            console.log('[Clarity Task] Modal not detected yet, retrying CTA click...');
+            await accessBtn.click({ force: true }).catch(() => {});
+            return await emailField.waitFor({ state: 'visible', timeout: 8000 }).then(() => true).catch(() => false);
+          }
+          return false;
+        });
+
+        if (hasEmailModal) {
           const shortSuffix = Math.floor(Math.random() * 90 + 10);
           const randomEmail = `shahnawaz+${shortSuffix}@empirepixel.com`;
           console.log(`[Clarity Task] Entering email in modal: ${randomEmail}`);
           await emailField.fill(randomEmail);
 
           const phoneField = page.locator('input[type="tel"], input[placeholder*="phone" i], input[name*="phone" i]').first();
-          if (await phoneField.isVisible({ timeout: 2000 }).catch(() => false)) {
+          if (await phoneField.waitFor({ state: 'visible', timeout: 2000 }).then(() => true).catch(() => false)) {
             await phoneField.fill('(555) 234-5678');
           }
 
@@ -349,7 +358,7 @@ export class ClarityVerificationTask {
             .first();
 
           console.log('[Clarity Task] Clicking Proceed to Checkout...');
-          await proceedBtn.click({ force: true });
+          await proceedBtn.click();
         }
 
         // 3. Smart wait: URL transition to Checkout page
