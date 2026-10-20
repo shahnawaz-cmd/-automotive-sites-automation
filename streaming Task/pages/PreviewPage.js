@@ -467,21 +467,12 @@ class PreviewPage {
     ]);
   }
 
-  // Helper: Generate a unique email with short 2-digit suffix
+  // Helper: Generate a unique email with increment/unique string before @ to save bounce rate
   static generateUniqueEmail() {
-    const primaryEmails = [
-      'indus.shahnawaz1460@gmail.com',
-      'techworms134@gmail.com',
-      'h.m.shahnawaz123@gmail.com',
-      'hommy.stress123@gmail.com',
-      'working.with56@gmail.com'
-    ];
+    const baseEmail = 'shahnawaz@empirepixel.com';
+    const [localPart, domainPart] = baseEmail.split('@');
     
-    // Pick a random primary email from the list
-    const chosenEmail = primaryEmails[Math.floor(Math.random() * primaryEmails.length)];
-    const [localPart, domainPart] = chosenEmail.split('@');
-    
-    // Short 2-digit random suffix (e.g. +42) to keep email short and fully visible
+    // Short 2-digit suffix (e.g. 10-99) to keep email short and prevent bouncing
     const shortSuffix = Math.floor(Math.random() * 90 + 10);
     return `${localPart}+${shortSuffix}@${domainPart}`;
   }
