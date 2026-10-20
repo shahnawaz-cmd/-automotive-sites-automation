@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Heinkel, Model=A1 Series 103, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N480963
+{
+  "year": "1960",
+  "make": "Heinkel",
+  "model": "A1 Series 103",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

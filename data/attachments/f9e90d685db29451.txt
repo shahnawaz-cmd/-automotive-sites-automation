@@ -1,0 +1,7 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: Taiwan (Country: TW, IP: 185.189.161.137)
+🎯 [GEO INJECTOR] Target Currency Code: "TWD"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
+📡 [API Response] Currency Code: "USD" | Sign: "$" | Price: 19.99

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Chevrolet, Model=C30, Trim=Pickup 1 TON Crew CAB LWB
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N482064
+{
+  "year": "1980",
+  "make": "Chevrolet",
+  "model": "C30",
+  "trim": "Pickup 1 TON Crew CAB LWB",
+  "isUnmappedFlow": false
+}
+

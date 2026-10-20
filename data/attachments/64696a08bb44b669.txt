@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Austin, Model=Princess, Trim=Limousine Vanden Plas
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B849226
+{
+  "year": "1962",
+  "make": "Austin",
+  "model": "Princess",
+  "trim": "Limousine Vanden Plas",
+  "isUnmappedFlow": false
+}
+
