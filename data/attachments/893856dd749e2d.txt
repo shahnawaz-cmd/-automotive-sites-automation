@@ -1,0 +1,6 @@
+[HomePage] Navigating to window sticker path: /window-sticker (isVSR=false)
+🔄 [StreamingRevisitBannerTask] Verifying preview specs visible for text: "Window sticker found for"...
+🔄 [StreamingRevisitBannerTask] Navigating back to base URL using browser back button...
+[StreamingRevisitBannerTask] Waiting for Revisit Grab It button on: https://motorcyclevinlookup.com/window-sticker
+[StreamingRevisitBannerTask] Revisit button visible - clicking immediately
+✅ [StreamingRevisitBannerTask] Passed: Revisit banner flow verified.

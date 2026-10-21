@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1974, Make=Ferrari, Model=Dino, Trim=GT4 (208--308)
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: PH27G62108748
+{
+  "year": "1974",
+  "make": "Ferrari",
+  "model": "Dino",
+  "trim": "GT4 (208--308)",
+  "isUnmappedFlow": false
+}
+

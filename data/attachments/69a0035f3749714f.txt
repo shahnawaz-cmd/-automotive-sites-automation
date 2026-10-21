@@ -1,0 +1,6 @@
+LP Tab not found or not interactable within timeout: locator.waitFor: Timeout 22500ms exceeded.
+Call log:
+  - waiting for locator('button:has-text("By License Plate")').first() to be visible
+
+Skipping License Plate decode flow as the tab was not found or interactable.
+TC_07: page.close() executed.
