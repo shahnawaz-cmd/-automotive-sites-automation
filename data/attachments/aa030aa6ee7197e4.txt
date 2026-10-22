@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Skoda, Model=Octavia, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2236708
+{
+  "year": "1962",
+  "make": "Skoda",
+  "model": "Octavia",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+
