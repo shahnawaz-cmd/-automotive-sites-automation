@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1963, Make=AC, Model=Grayhound, Trim=2 Door Coupe 2 Plus 2
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57K5A704008
+{
+  "year": "1963",
+  "make": "AC",
+  "model": "Grayhound",
+  "trim": "2 Door Coupe 2 Plus 2",
+  "isUnmappedFlow": false
+}
+

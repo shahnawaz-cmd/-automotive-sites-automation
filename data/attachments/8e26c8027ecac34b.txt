@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1964, Make=Mercedes-Benz, Model=220B, Trim=4 Door Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N485814
+{
+  "year": "1964",
+  "make": "Mercedes-Benz",
+  "model": "220B",
+  "trim": "4 Door Sedan",
+  "isUnmappedFlow": false
+}
+

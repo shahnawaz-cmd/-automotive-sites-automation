@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Heinkel, Model=A2, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: PH27G62109408
+{
+  "year": "1961",
+  "make": "Heinkel",
+  "model": "A2",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
