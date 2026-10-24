@@ -1,0 +1,20 @@
+{
+  "targetUrl": "https://instantvinreports.com/",
+  "targetIp": "185.189.161.137",
+  "region": "TAIWAN",
+  "refreshes": [
+    {
+      "reloadIndex": 1,
+      "ipValue": "185.189.161.137",
+      "isMatched": true
+    },
+    {
+      "reloadIndex": 2,
+      "ipValue": "185.189.161.137",
+      "isMatched": true
+    }
+  ],
+  "newTabIp": "185.189.161.137",
+  "isMultiTabMatched": true,
+  "status": "VERIFIED_SESSION_STICKY"
+}

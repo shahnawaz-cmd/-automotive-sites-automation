@@ -1,0 +1,48 @@
+Step: Wrapper 2 Preview
+URL: https://instantvinreports.com/vin-check/preview?vin=WA1VABGE5KB008226&type=vhr&wpPage=homepage
+Error: page.waitForURL: Timeout 45000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+  navigated to "https://instantvinreports.com/vin-check/preview?vin=WA1VABGE5KB008226&type=vhr&wpPage=homepage"
+============================================================
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:232:20
+    at ClarityVerificationTask.verifyPreviewWrapper (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:212:12)
+    at ClarityVerificationTask.execute (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:459:26)
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/streaming Task/global_streaming_specs.spec.js:607:3
+Beacons: [
+  {
+    "url": "https://www.clarity.ms/tag/a244miz3er",
+    "method": "GET",
+    "timestamp": 1792808179638
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+    "method": "GET",
+    "timestamp": 1792808179794
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif",
+    "method": "GET",
+    "timestamp": 1792808179794
+  },
+  {
+    "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=168B9AA79D1F48199F2AA7980D563BBC&RedC=c.clarity.ms&MXFR=37BCAF4C7E1465E419BAB8B07A146BC6",
+    "method": "GET",
+    "timestamp": 1792808179876
+  },
+  {
+    "url": "https://q.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792808179949
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=168B9AA79D1F48199F2AA7980D563BBC&MUID=3FA31E3027086833041709CC2677694E",
+    "method": "GET",
+    "timestamp": 1792808179950
+  },
+  {
+    "url": "https://q.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792808180501
+  }
+]

@@ -1,0 +1,74 @@
+Step: Wrapper 3 Checkout
+URL: https://vehiclesreport.com/checkout?data=eyJjb2RlIjoiVlNSMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiIxRk1DVTBGNjhMVUI5ODg5MCIsImVtYWlsIjoic2hhaG5hd2F6Kzk4QGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4IiwiYWRkT25QcmljZSI6OS45OSwiYWRkT25MYWJlbCI6IkFkZCBXaW5kb3cgU3RpY2tlciB0byB5b3VyIHB1cmNoYXNlIiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MTkuOTksImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsImNvdW50cnkiOiJVUyIsImlwIjoiMTcyLjIwMy4yNTQuMjE1Iiwid3BQYWdlIjoiaG9tZXBhZ2UifQ==
+Error: Error: window.clarity function was not available on Checkout page within 20s
+
+window.clarity function was not available on Checkout page within 20s
+
+[2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32mtrue[39m
+Received: [31mfalse[39m
+
+Call Log:
+- Timeout 20000ms exceeded while waiting on the predicate
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:380:12
+    at ClarityVerificationTask.verifyCheckoutWrapper (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:316:12)
+    at ClarityVerificationTask.execute (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:462:5)
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/streaming Task/global_streaming_specs.spec.js:607:3
+Beacons: [
+  {
+    "url": "https://www.clarity.ms/tag/a24dy4no6c",
+    "method": "GET",
+    "timestamp": 1792807920470
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+    "method": "GET",
+    "timestamp": 1792807920506
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif",
+    "method": "GET",
+    "timestamp": 1792807920506
+  },
+  {
+    "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=F1160F1A62CE4B1D86005BCF564BBB78&RedC=c.clarity.ms&MXFR=008DB639BE4F640C0219A1C5BA4F6AB8",
+    "method": "GET",
+    "timestamp": 1792807920593
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=F1160F1A62CE4B1D86005BCF564BBB78&MUID=1442CB7EC2276ACD3599DC82C38A6BB0",
+    "method": "GET",
+    "timestamp": 1792807920631
+  },
+  {
+    "url": "https://a.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792807920676
+  },
+  {
+    "url": "https://a.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792807921182
+  },
+  {
+    "url": "https://www.clarity.ms/tag/a24dy4no6c",
+    "method": "GET",
+    "timestamp": 1792807943880
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+    "method": "GET",
+    "timestamp": 1792807943915
+  },
+  {
+    "url": "https://a.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792807944034
+  },
+  {
+    "url": "https://a.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792807944294
+  }
+]

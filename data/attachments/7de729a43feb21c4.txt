@@ -1,0 +1,48 @@
+Step: Wrapper 2 Preview
+URL: https://vinnumber.ca/vin-check/preview?vin=WA1VABGE5KB008283&type=vhr&wpPage=homepage
+Error: page.waitForURL: Timeout 45000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+  navigated to "https://vinnumber.ca/vin-check/preview?vin=WA1VABGE5KB008283&type=vhr&wpPage=homepage"
+============================================================
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:232:20
+    at ClarityVerificationTask.verifyPreviewWrapper (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:212:12)
+    at ClarityVerificationTask.execute (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:459:26)
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/streaming Task/global_streaming_specs.spec.js:607:3
+Beacons: [
+  {
+    "url": "https://www.clarity.ms/tag/ryjl7c3hl6",
+    "method": "GET",
+    "timestamp": 1792808272518
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+    "method": "GET",
+    "timestamp": 1792808272672
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif",
+    "method": "GET",
+    "timestamp": 1792808272672
+  },
+  {
+    "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=3C2CA093A280404C8464B06EB354BF98&RedC=c.clarity.ms&MXFR=06F28124D68E636E171196D8D28E6D85",
+    "method": "GET",
+    "timestamp": 1792808272758
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=3C2CA093A280404C8464B06EB354BF98&MUID=3F6BF3771FEB6AE803FAE48B1E1E6BAF",
+    "method": "GET",
+    "timestamp": 1792808272822
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792808272841
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792808273041
+  }
+]

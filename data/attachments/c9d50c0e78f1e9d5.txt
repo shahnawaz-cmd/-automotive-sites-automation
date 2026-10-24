@@ -1,0 +1,48 @@
+Step: Wrapper 2 Preview
+URL: https://instantvinreports.com/vin-check/preview?vin=1FMCU0F68LUB98888&type=vhr&wpPage=homepage
+Error: page.waitForURL: Timeout 45000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+  navigated to "https://instantvinreports.com/vin-check/preview?vin=1FMCU0F68LUB98888&type=vhr&wpPage=homepage"
+============================================================
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:232:20
+    at ClarityVerificationTask.verifyPreviewWrapper (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:212:12)
+    at ClarityVerificationTask.execute (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:459:26)
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/streaming Task/global_streaming_specs.spec.js:607:3
+Beacons: [
+  {
+    "url": "https://www.clarity.ms/tag/a244miz3er",
+    "method": "GET",
+    "timestamp": 1792808124435
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+    "method": "GET",
+    "timestamp": 1792808124585
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif",
+    "method": "GET",
+    "timestamp": 1792808124586
+  },
+  {
+    "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=2AA8951D815E48F99107D3687293021F&RedC=c.clarity.ms&MXFR=2087928FACF861C516F38573A8F86FA4",
+    "method": "GET",
+    "timestamp": 1792808124671
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=2AA8951D815E48F99107D3687293021F&MUID=3B0B5EDA052163C633F6492604D4621A",
+    "method": "GET",
+    "timestamp": 1792808124776
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792808124784
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1792808125046
+  }
+]

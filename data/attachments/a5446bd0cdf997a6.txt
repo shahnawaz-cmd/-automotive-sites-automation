@@ -1,0 +1,8 @@
+
+❌ [Clarity Task FAILURE] Wrapper 2 (Preview Page) Verification Failed!
+Page URL: https://vinnumber.ca/vin-check/preview?vin=3MW5R1J01M8B87061&type=vhr&wpPage=homepage
+Error: page.waitForURL: Timeout 45000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "domcontentloaded"
+  navigated to "https://vinnumber.ca/vin-check/preview?vin=3MW5R1J01M8B87061&type=vhr&wpPage=homepage"
+============================================================
