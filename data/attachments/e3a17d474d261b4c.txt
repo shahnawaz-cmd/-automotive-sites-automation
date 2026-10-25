@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1976, Make=Austin, Model=Maxi, Trim=I 90 HP
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B341219
+{
+  "year": "1976",
+  "make": "Austin",
+  "model": "Maxi",
+  "trim": "I 90 HP",
+  "isUnmappedFlow": false
+}
+

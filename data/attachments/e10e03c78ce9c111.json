@@ -1,0 +1,38 @@
+{
+  "url": "https://motorcyclevinlookup.com/",
+  "cookieState": {
+    "userId": "14wymz0",
+    "rawClck": "14wymz0%5E2%5Egal%5E0%5E2489",
+    "rawClsk": null,
+    "pageSequence": null,
+    "sessionToken": "1t2ipdb"
+  },
+  "beaconsCount": 6,
+  "recentBeacons": [
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1792893406695
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1792893406695
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=6FFF2D71401F4878AD5F6FAA982D0CF2&RedC=c.clarity.ms&MXFR=12CABB1C6B5A6CD500CAACE16F5A6224",
+      "method": "GET",
+      "timestamp": 1792893406757
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=6FFF2D71401F4878AD5F6FAA982D0CF2&MUID=25013B9B0A3F639208392C660B8362E3",
+      "method": "GET",
+      "timestamp": 1792893406819
+    },
+    {
+      "url": "https://i.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1792893406848
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "websiteId": "dfid_Czs2Hy80SCi2wqeIdI6R7",
+    "domain": "detailedvehiclehistory.com",
+    "href": "https://detailedvehiclehistory.com/",
+    "referrer": null,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "visitorId": "18a4c0b7-7de7-4371-a434-e339ff1096ab",
+    "sessionId": "sf5ca2383-bd54-4b1f-a9c1-513dea150148",
+    "visitorFirstSeenAt": "2026-10-25T01:56:35.791Z",
+    "visitorSessionNumber": 1,
+    "language": "en-US",
+    "timezone": "UTC",
+    "screenWidth": 1280,
+    "screenHeight": 800,
+    "type": "pageview",
+    "timestamp": 1792893395806
+  },
+  {
+    "websiteId": "dfid_Czs2Hy80SCi2wqeIdI6R7",
+    "domain": "detailedvehiclehistory.com",
+    "href": "https://detailedvehiclehistory.com/vin-check/preview?vin=1HGCR2F83HA001234&type=vhr&wpPage=homepage",
+    "referrer": null,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "visitorId": "18a4c0b7-7de7-4371-a434-e339ff1096ab",
+    "sessionId": "sf5ca2383-bd54-4b1f-a9c1-513dea150148",
+    "visitorFirstSeenAt": "2026-10-25T01:56:35.791Z",
+    "visitorSessionNumber": 1,
+    "language": "en-US",
+    "timezone": "UTC",
+    "screenWidth": 1280,
+    "screenHeight": 800,
+    "type": "pageview",
+    "timestamp": 1792893397203
+  },
+  {
+    "websiteId": "dfid_Czs2Hy80SCi2wqeIdI6R7",
+    "domain": "detailedvehiclehistory.com",
+    "href": "https://detailedvehiclehistory.com/checkout?data=eyJjb2RlIjoiRFZIMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiIxSEdDUjJGODNIQTAwMTIzNCIsImVtYWlsIjoic2hhaG5hd2F6KzkzQGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4Iiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MTkuOTksImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsIndwUGFnZSI6ImhvbWVwYWdlIn0=",
+    "referrer": null,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "visitorId": "18a4c0b7-7de7-4371-a434-e339ff1096ab",
+    "sessionId": "sf5ca2383-bd54-4b1f-a9c1-513dea150148",
+    "visitorFirstSeenAt": "2026-10-25T01:56:35.791Z",
+    "visitorSessionNumber": 1,
+    "language": "en-US",
+    "timezone": "UTC",
+    "screenWidth": 1280,
+    "screenHeight": 800,
+    "type": "pageview",
+    "timestamp": 1792893397564
+  }
+]

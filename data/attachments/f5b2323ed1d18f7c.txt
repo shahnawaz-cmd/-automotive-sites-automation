@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1961, Make=Dodge, Model=D200, Trim=3/4 TON Sweptline
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526913633
+{
+  "year": "1961",
+  "make": "Dodge",
+  "model": "D200",
+  "trim": "3/4 TON Sweptline",
+  "isUnmappedFlow": true
+}
+

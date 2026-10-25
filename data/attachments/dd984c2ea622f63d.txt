@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1975, Make=Lancia, Model=Stratos, Trim=2 Door Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2236766
+{
+  "year": "1975",
+  "make": "Lancia",
+  "model": "Stratos",
+  "trim": "2 Door Coupe",
+  "isUnmappedFlow": false
+}
+

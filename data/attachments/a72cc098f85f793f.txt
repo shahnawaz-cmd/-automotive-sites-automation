@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Maserati, Model=Mistral, Trim=Spyder 2 Door Convertible
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 609K043658
+{
+  "year": "1968",
+  "make": "Maserati",
+  "model": "Mistral",
+  "trim": "Spyder 2 Door Convertible",
+  "isUnmappedFlow": false
+}
+

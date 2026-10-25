@@ -1,0 +1,44 @@
+[
+  {
+    "name": "checkout_flow",
+    "value": "streaming",
+    "domain": "detailedvehiclehistory.com",
+    "path": "/",
+    "expires": 1792979810.490612,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cf_clearance",
+    "value": "8tpotFRpnfhw38rheoeca_TBBMDeV8OIx8oIOI5RnxE-1792893410-1.2.1.1-tcqOvAluWpsSLxx7lKH3qkMW7bzKbfSgBsSgQUlmqIqC6OzuFXCrgG7yQykt8Rw.MrOVJFnm1dsg1cNZ.uwd9MthHKVn8AEuFnrH36nYNOCQJkuzpM36xTnGa0jg5FsfqCRUMOrZ0Tn_stzceLmpRoziEM76m9lsq.OOscKza7fFZgrrQF36rZwcils_5PtSvgB8QiUTtJCSfNGNahcHyEAiUjtDwPA_DFvSUdy7.f7tnJsE23RKGZaP.0tFuqJJL9BAqrM07nWttql3MLlRE1rFvFCAQMURN1N9TjK.fT4id1c2m0KbMn59ynNbZ5Ie8EA35A_vAtBB.B4oPCc2DBIhGcvLYx6ifjb4nSKxRMc",
+    "domain": ".detailedvehiclehistory.com",
+    "path": "/",
+    "expires": 1824429410.831367,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://detailedvehiclehistory.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "cwa_ip",
+    "value": "132.196.21.176",
+    "domain": "detailedvehiclehistory.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cwa_country",
+    "value": "US",
+    "domain": "detailedvehiclehistory.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  }
+]
