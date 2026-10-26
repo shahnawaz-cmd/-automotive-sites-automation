@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Oldsmobile, Model=Toronado, Trim=2 Door Hardtop Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237M2Z396338
+{
+  "year": "1978",
+  "make": "Oldsmobile",
+  "model": "Toronado",
+  "trim": "2 Door Hardtop Coupe",
+  "isUnmappedFlow": true
+}
+

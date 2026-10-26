@@ -1,0 +1,474 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests/pricing_page.spec.ts >> Pricing Page Suite >> TC_PRICING_05 — Verify random regional IP & country cookie injection updates pricing to relevant currency code
+- Location: tests/pricing_page.spec.ts:97:7
+
+# Error details
+
+```
+Error: [UI FAILURE] Neither currency code "KRW" nor sign "KRW" appeared on the pricing cards!
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - checkbox "Toggle menu" [ref=e3]
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Vehicles Report logo" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Vehicles Report logo" [ref=e7]
+        - navigation [ref=e8]:
+          - link "VIN Check" [ref=e9] [cursor=pointer]:
+            - /url: /vin-check
+          - link "Window Sticker" [ref=e10] [cursor=pointer]:
+            - /url: /window-stickers
+          - group [ref=e11]:
+            - generic "Products" [ref=e12] [cursor=pointer]:
+              - text: Products
+              - img [ref=e13]
+          - link "Sample report" [ref=e15] [cursor=pointer]:
+            - /url: /sample
+          - link "Pricing" [ref=e16] [cursor=pointer]:
+            - /url: /pricing
+        - generic [ref=e18]:
+          - link "Login" [ref=e19] [cursor=pointer]:
+            - /url: /login
+          - link "Sign Up" [ref=e20] [cursor=pointer]:
+            - /url: /signup
+    - main [ref=e21]:
+      - navigation "Breadcrumb" [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e27]:
+            - img [ref=e28]
+            - generic "Pricing" [ref=e30]
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: Plans Built For Buyers
+          - heading "Cost-effective pricing for you" [level=1] [ref=e47]
+          - paragraph [ref=e49]: Say goodbye to overpaying with Carfax or AutoCheck! Get a more detailed report for nearly half the cost, and unlock a window sticker to know options, packages, features MSRP and more. Buy credits now, and use them later for reports or stickers!
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - img [ref=e54]
+            - generic [ref=e57]: 67% Cheaper Than Carfax
+          - generic [ref=e58]:
+            - img [ref=e60]
+            - generic [ref=e63]: Buy Credits, Use Anytime
+          - generic [ref=e64]:
+            - img [ref=e66]
+            - generic [ref=e69]: Reports + Window Stickers
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]: Plans For Every Buyer
+          - heading "Cost-effective pricing for you" [level=2] [ref=e81]
+          - paragraph [ref=e83]: Buy credits now, use them later for reports or stickers. Save up to 67% vs Carfax.
+        - generic [ref=e86]:
+          - generic [ref=e88]:
+            - button "Vehicle History Report" [ref=e89]
+            - button "Toggle product" [ref=e90]
+            - button "Window Sticker" [ref=e92]
+          - generic [ref=e94]:
+            - button "Personal" [ref=e95]
+            - button "Business Save 50%" [ref=e96]:
+              - text: Business
+              - generic [ref=e97]: Save 50%
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - heading "1 Report" [level=3] [ref=e101]
+                - generic [ref=e102]:
+                  - generic [ref=e103]: KRW
+                  - generic [ref=e104]: "26538"
+                  - generic [ref=e105]: /report
+                - generic [ref=e106]:
+                  - generic [ref=e107]: "Total:"
+                  - generic [ref=e108]: KRW26538
+                  - generic [ref=e109]: Full price
+                - paragraph [ref=e110]: Buy now, use later!
+              - button "Get Report" [ref=e113]
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - heading "5 Reports" [level=3] [ref=e116]
+                - generic [ref=e117]: Save 40%
+                - generic [ref=e118]:
+                  - generic [ref=e119]: KRW
+                  - generic [ref=e120]: "15928"
+                  - generic [ref=e121]: /report
+                - generic [ref=e122]:
+                  - generic [ref=e123]: "Total:"
+                  - generic [ref=e124]: KRW132690.00
+                  - generic [ref=e125]: KRW79640
+                - paragraph [ref=e126]: Buy now, use later!
+              - button "Get Reports" [ref=e128]
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - heading "10 Reports" [level=3] [ref=e131]
+                - generic [ref=e132]: Save 60%
+                - generic [ref=e133]:
+                  - generic [ref=e134]: KRW
+                  - generic [ref=e135]: "10619.10"
+                  - generic [ref=e136]: /report
+                - generic [ref=e137]:
+                  - generic [ref=e138]: "Total:"
+                  - generic [ref=e139]: KRW265380.00
+                  - generic [ref=e140]: KRW106191
+                - paragraph [ref=e141]: Buy now, use later!
+              - button "Get Reports" [ref=e143]
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - generic [ref=e147]:
+                  - heading "Unlimited VIN Check" [level=3] [ref=e148]
+                  - generic [ref=e149]: Best Value!
+                - paragraph [ref=e150]: Monthly Subscription
+                - paragraph [ref=e151]: Uncover the hidden history of any vehicle with unlimited access to basic VIN check reports.
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - generic [ref=e154]: KRW53089.00
+                  - generic [ref=e155]: /month
+                - paragraph [ref=e156]: Billed monthly · Cancel anytime!
+            - generic [ref=e157]:
+              - paragraph [ref=e158]: "Vehicle history report includes:"
+              - list [ref=e159]:
+                - listitem [ref=e160]:
+                  - img [ref=e161]
+                  - generic [ref=e163]: Detailed Vehicle Specifications
+                - listitem [ref=e164]:
+                  - img [ref=e165]
+                  - generic [ref=e167]: Vehicle Usage
+                - listitem [ref=e168]:
+                  - img [ref=e169]
+                  - generic [ref=e171]: Auction Records with photos
+                - listitem [ref=e172]:
+                  - img [ref=e173]
+                  - generic [ref=e175]: Accident & Damage Records
+                - listitem [ref=e176]:
+                  - img [ref=e177]
+                  - generic [ref=e179]: Past Sales History with Photos
+                - listitem [ref=e180]:
+                  - img [ref=e181]
+                  - generic [ref=e183]: Lemon & Flood Check
+            - generic [ref=e184]:
+              - button "Subscribe Now" [ref=e186]
+              - link "View a sample report" [ref=e187] [cursor=pointer]:
+                - /url: /sample
+            - generic [ref=e188]:
+              - heading "Why choose this plan?" [level=4] [ref=e189]
+              - list [ref=e190]:
+                - listitem [ref=e191]:
+                  - generic [ref=e193]: Unlimited access to basic reports
+                - listitem [ref=e194]:
+                  - generic [ref=e196]: Special 50% discount on full premium reports
+                - listitem [ref=e197]:
+                  - generic [ref=e199]: Free VIN decoding, recall check and upcoming maintenance checks
+                - listitem [ref=e200]:
+                  - generic [ref=e202]: Free access to a dashboard to manage your reports
+                - listitem [ref=e203]:
+                  - generic [ref=e205]: Early access for upcoming features and more!
+              - generic [ref=e206]:
+                - paragraph [ref=e207]: 100% money-back guaranteed
+                - paragraph [ref=e208]: Not satisfied? Get a full refund with our 100% money-back guarantee! Buy credits with confidence. Your satisfaction is our priority.
+      - generic [ref=e214]:
+        - generic [ref=e215]:
+          - generic [ref=e216]: Trusted Worldwide
+          - heading "Secure Checkout, Zero Risk" [level=2] [ref=e220]: Secure Checkout, Zero Risk
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - img [ref=e226]
+            - heading "Secure & Verified" [level=3] [ref=e229]
+            - paragraph [ref=e231]: TRUSTe-certified checkout. Your data is encrypted and never shared.
+          - generic [ref=e232]:
+            - img [ref=e235]
+            - heading "100% Money-Back" [level=3] [ref=e238]
+            - paragraph [ref=e240]: Not satisfied? Get a full refund. Buy with confidence.
+          - generic [ref=e241]:
+            - img [ref=e244]
+            - heading "All Major Cards & PayPal" [level=3] [ref=e246]
+            - paragraph [ref=e248]: Visa, Mastercard, Amex, Discover, PayPal, and bank transfer supported.
+      - generic [ref=e257]:
+        - generic [ref=e259]:
+          - generic [ref=e260]: Decode Before You Buy
+          - heading "Get the Vehicle History or Factory Options and Packages" [level=2] [ref=e264]
+          - paragraph [ref=e266]: Check the decoded VIN to view all its specifications and details, and then choose your preferred package.
+          - generic [ref=e267]:
+            - link "See Report Sample" [ref=e268] [cursor=pointer]:
+              - /url: /sample
+            - link "See Window Sticker Sample" [ref=e269] [cursor=pointer]:
+              - /url: /sample
+        - img "Sample vehicle history and window sticker report" [ref=e272]
+      - generic [ref=e278]:
+        - generic [ref=e279]:
+          - generic [ref=e280]: Pricing Questions Answered
+          - heading "Frequently Asked Questions" [level=2] [ref=e284]: Frequently Asked Questions
+        - generic [ref=e286]:
+          - group [ref=e287]:
+            - generic "What is included in a vehicle history report?" [ref=e288] [cursor=pointer]:
+              - heading "What is included in a vehicle history report?" [level=3] [ref=e289]
+          - group [ref=e293]:
+            - generic "What is a window sticker, and what does it include?" [ref=e294] [cursor=pointer]:
+              - heading "What is a window sticker, and what does it include?" [level=3] [ref=e295]
+          - group [ref=e299]:
+            - generic "How much does a vehicle history report and window sticker cost?" [ref=e300] [cursor=pointer]:
+              - heading "How much does a vehicle history report and window sticker cost?" [level=3] [ref=e301]
+          - group [ref=e305]:
+            - generic "Are subscription plans available?" [ref=e306] [cursor=pointer]:
+              - heading "Are subscription plans available?" [level=3] [ref=e307]
+          - group [ref=e311]:
+            - generic "Can I get a discount for purchasing in bulk?" [ref=e312] [cursor=pointer]:
+              - heading "Can I get a discount for purchasing in bulk?" [level=3] [ref=e313]
+          - group [ref=e317]:
+            - generic "What if the standard plans don't meet my business requirements?" [ref=e318] [cursor=pointer]:
+              - heading "What if the standard plans don't meet my business requirements?" [level=3] [ref=e319]
+          - group [ref=e323]:
+            - generic "Do you offer enterprise-level packages?" [ref=e324] [cursor=pointer]:
+              - heading "Do you offer enterprise-level packages?" [level=3] [ref=e325]
+          - group [ref=e329]:
+            - generic "Do you offer unlimited usage plans?" [ref=e330] [cursor=pointer]:
+              - heading "Do you offer unlimited usage plans?" [level=3] [ref=e331]
+          - group [ref=e335]:
+            - generic "Is there a trial option for businesses?" [ref=e336] [cursor=pointer]:
+              - heading "Is there a trial option for businesses?" [level=3] [ref=e337]
+          - group [ref=e341]:
+            - generic "Are there hidden fees?" [ref=e342] [cursor=pointer]:
+              - heading "Are there hidden fees?" [level=3] [ref=e343]
+          - group [ref=e347]:
+            - generic "Do you offer dedicated support for businesses?" [ref=e348] [cursor=pointer]:
+              - heading "Do you offer dedicated support for businesses?" [level=3] [ref=e349]
+          - group [ref=e353]:
+            - generic "What payment methods do you accept?" [ref=e354] [cursor=pointer]:
+              - heading "What payment methods do you accept?" [level=3] [ref=e355]
+      - generic [ref=e367]:
+        - generic [ref=e368]: Get Started
+        - heading "Ready to Check a VIN ?" [level=2] [ref=e372]
+        - paragraph [ref=e374]: Enter any VIN to see a full vehicle history report instantly. No credit card required to check record availability.
+        - generic [ref=e378]:
+          - generic [ref=e379]: Vehicle Identification Number (VIN)
+          - textbox "Vehicle Identification Number (VIN)" [ref=e381]:
+            - /placeholder: Enter VIN
+          - button "Search VIN" [ref=e382]
+    - contentinfo [ref=e383]:
+      - generic [ref=e384]:
+        - generic [ref=e385]:
+          - generic [ref=e386]:
+            - link "Vehicles Report logo (white)" [ref=e387] [cursor=pointer]:
+              - /url: /
+              - img "Vehicles Report logo (white)" [ref=e388]
+            - generic [ref=e389]:
+              - paragraph [ref=e390]: (800)-709-6297
+              - paragraph [ref=e391]: support@vehiclesreport.com
+            - generic [ref=e392]:
+              - link "Facebook" [ref=e393] [cursor=pointer]:
+                - /url: https://www.facebook.com/vehiclesreportcom
+                - img [ref=e394]
+              - link "LinkedIn" [ref=e396] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/vehicles-report/
+                - img [ref=e397]
+              - link "Instagram" [ref=e399] [cursor=pointer]:
+                - /url: https://www.instagram.com/vehiclesreport/
+                - img [ref=e400]
+              - link "YouTube" [ref=e403] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCgNt3drSJeZI57XjBrhvk9w
+                - img [ref=e404]
+          - generic [ref=e406]:
+            - heading "About Company" [level=4] [ref=e407]
+            - list [ref=e408]:
+              - listitem [ref=e409]:
+                - link "About Us" [ref=e410] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e411]:
+                - link "Contact Us" [ref=e412] [cursor=pointer]:
+                  - /url: /contact-us
+              - listitem [ref=e413]:
+                - link "Blog" [ref=e414] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e415]:
+                - link "Sample" [ref=e416] [cursor=pointer]:
+                  - /url: /sample
+          - generic [ref=e417]:
+            - heading "Products" [level=4] [ref=e418]
+            - list [ref=e419]:
+              - listitem [ref=e420]:
+                - link "Get window sticker" [ref=e421] [cursor=pointer]:
+                  - /url: /window-stickers
+              - listitem [ref=e422]:
+                - link "VIN Check" [ref=e423] [cursor=pointer]:
+                  - /url: /vin-check
+              - listitem [ref=e424]:
+                - link "Free VIN Decoder" [ref=e425] [cursor=pointer]:
+                  - /url: /vin-decoder
+              - listitem [ref=e426]:
+                - link "License plate lookup" [ref=e427] [cursor=pointer]:
+                  - /url: /license-plate
+              - listitem [ref=e428]:
+                - link "Recall Check" [ref=e429] [cursor=pointer]:
+                  - /url: /recall-check
+          - generic [ref=e430]:
+            - heading "Support" [level=4] [ref=e431]
+            - list [ref=e432]:
+              - listitem [ref=e433]:
+                - link "Privacy Policy" [ref=e434] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e435]:
+                - link "FAQ" [ref=e436] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e437]:
+                - link "Dealers" [ref=e438] [cursor=pointer]:
+                  - /url: /dealer
+              - listitem [ref=e439]:
+                - link "Request a Refund" [ref=e440] [cursor=pointer]:
+                  - /url: /request-refund
+              - listitem [ref=e441]:
+                - link "Terms & conditions" [ref=e442] [cursor=pointer]:
+                  - /url: /terms
+        - paragraph [ref=e444]: © 2026 Vehicles Report. All rights reserved.
+  - alert [ref=e445]
+```
+
+# Test source
+
+```ts
+  13  | /**
+  14  |  * Regional IP & Country Pool excluding USD (US) and CAD (Canada).
+  15  |  */
+  16  | export const NON_US_CAD_POOL: RegionalConfig[] = [
+  17  |   { country: 'KR', ip: '79.110.55.34', expectedCurrency: 'KRW', name: 'South Korea' },
+  18  |   { country: 'GB', ip: '172.99.190.215', expectedCurrency: 'GBP', name: 'United Kingdom' },
+  19  |   { country: 'DE', ip: '85.214.132.117', expectedCurrency: 'EUR', name: 'Germany' },
+  20  |   { country: 'CR', ip: '138.59.135.94', expectedCurrency: 'CRC', name: 'Costa Rica' },
+  21  |   { country: 'CL', ip: '45.250.252.51', expectedCurrency: 'CLP', name: 'Chile' },
+  22  |   { country: 'SA', ip: '146.70.167.70', expectedCurrency: 'SAR', name: 'Saudi Arabia' },
+  23  |   { country: 'NZ', ip: '180.149.231.71', expectedCurrency: 'NZD', name: 'New Zealand' },
+  24  |   { country: 'PA', ip: '190.97.167.149', expectedCurrency: 'PAB', name: 'Panama' },
+  25  |   { country: 'ZA', ip: '129.232.237.178', expectedCurrency: 'ZAR', name: 'South Africa' },
+  26  |   { country: 'TW', ip: '185.189.161.137', expectedCurrency: 'TWD', name: 'Taiwan' },
+  27  | ];
+  28  | 
+  29  | /**
+  30  |  * Returns a random non-USD/CAD regional configuration from the pool.
+  31  |  */
+  32  | export function getRandomRegionalConfig(): RegionalConfig {
+  33  |   const index = Math.floor(Math.random() * NON_US_CAD_POOL.length);
+  34  |   return NON_US_CAD_POOL[index];
+  35  | }
+  36  | 
+  37  | export class PricingRegionalCurrencyTask {
+  38  |   private config: RegionalConfig;
+  39  | 
+  40  |   constructor(customConfig?: RegionalConfig) {
+  41  |     this.config = customConfig || getRandomRegionalConfig();
+  42  |   }
+  43  | 
+  44  |   async performAs(page: Page, testInfo?: TestInfo) {
+  45  |     const context = page.context();
+  46  |     const { country, ip, expectedCurrency, name } = this.config;
+  47  | 
+  48  |     await test.step(`Step 1: Inject Regional IP (${ip}) and Country (${country}) into Session Cookies`, async () => {
+  49  |       console.log('\n' + '─'.repeat(70));
+  50  |       console.log(`💉 [GEO INJECTOR] Selected Region: ${name} (Country: ${country}, IP: ${ip})`);
+  51  |       console.log(`🎯 [GEO INJECTOR] Target Currency Code: "${expectedCurrency}"`);
+  52  |       console.log('─'.repeat(70));
+  53  | 
+  54  |       const domain = new URL(page.url()).hostname;
+  55  |       const cleanHost = domain.startsWith('.') ? domain.slice(1) : domain;
+  56  |       const parts = cleanHost.split('.');
+  57  |       const rootDomain = parts.length > 2 ? `.${parts.slice(-2).join('.')}` : `.${cleanHost}`;
+  58  | 
+  59  |       // Clear existing geo cookies to avoid collisions
+  60  |       await context.clearCookies({ name: 'cwa_ip' }).catch(() => {});
+  61  |       await context.clearCookies({ name: 'cwa_country' }).catch(() => {});
+  62  | 
+  63  |       const cookies = [
+  64  |         { name: 'cwa_ip', value: ip, domain: cleanHost, path: '/', secure: true, httpOnly: true, sameSite: 'Lax' as const },
+  65  |         { name: 'cwa_country', value: country, domain: cleanHost, path: '/', secure: true, httpOnly: false, sameSite: 'Lax' as const },
+  66  |       ];
+  67  | 
+  68  |       if (rootDomain !== cleanHost && rootDomain !== `.${cleanHost}`) {
+  69  |         cookies.push(
+  70  |           { name: 'cwa_ip', value: ip, domain: rootDomain, path: '/', secure: true, httpOnly: true, sameSite: 'Lax' as const },
+  71  |           { name: 'cwa_country', value: country, domain: rootDomain, path: '/', secure: true, httpOnly: false, sameSite: 'Lax' as const }
+  72  |         );
+  73  |       }
+  74  | 
+  75  |       await context.addCookies(cookies);
+  76  |     });
+  77  | 
+  78  |     const isDVH = page.url().includes('detailedvehiclehistory.com') || (testInfo?.project.use?.baseURL as string)?.includes('detailedvehiclehistory.com') || testInfo?.project.name?.includes('DetailedVehicleHistory');
+  79  |     const pricingRoute = isDVH ? '/vin-check-rates' : '/pricing';
+  80  | 
+  81  |     await test.step(`Step 2: Reload Pricing Page (${pricingRoute}) with Regional Context`, async () => {
+  82  |       console.log(`🔄 [Pricing] Reloading ${pricingRoute} to activate regional session context...`);
+  83  |       await page.goto(pricingRoute, { waitUntil: 'domcontentloaded' });
+  84  |       await page.waitForTimeout(1500);
+  85  |     });
+  86  | 
+  87  |     await test.step(`Step 3: Validate Pricing Currency Matches Expected Code (${expectedCurrency})`, async () => {
+  88  |       // 1. Backend validation via relative /api/pricing
+  89  |       const response = await page.request.get('/api/pricing?sticker=0&dealer=1');
+  90  |       expect(response.status()).toBe(200);
+  91  | 
+  92  |       const data = await response.json();
+  93  |       const firstPlan = data.reportUser?.credit_plans?.[0];
+  94  |       expect(firstPlan).toBeDefined();
+  95  | 
+  96  |       const apiCurrencyCode = firstPlan.currency_code;
+  97  |       const apiCurrencySign = firstPlan.currency_sign;
+  98  | 
+  99  |       console.log(`📡 [API Response] Currency Code: "${apiCurrencyCode}" | Sign: "${apiCurrencySign}" | Price: ${firstPlan.price}`);
+  100 |       expect(
+  101 |         apiCurrencyCode,
+  102 |         `[CURRENCY MISMATCH] Expected currency code "${expectedCurrency}", but API returned "${apiCurrencyCode}"`
+  103 |       ).toBe(expectedCurrency);
+  104 | 
+  105 |       // 2. UI validation: Check that price on UI contains the regional currency code/sign
+  106 |       const pageText = await page.evaluate(() => document.body.innerText);
+  107 |       const isCurrencyRenderedOnUI = pageText.includes(expectedCurrency) || pageText.includes(apiCurrencySign);
+  108 | 
+  109 |       console.log(`🖥️ [UI Render] Regional Currency "${expectedCurrency}" / "${apiCurrencySign}" visible on page: ${isCurrencyRenderedOnUI ? '✅ YES' : '❌ NO'}`);
+  110 |       expect(
+  111 |         isCurrencyRenderedOnUI,
+  112 |         `[UI FAILURE] Neither currency code "${expectedCurrency}" nor sign "${apiCurrencySign}" appeared on the pricing cards!`
+> 113 |       ).toBe(true);
+      |         ^ Error: [UI FAILURE] Neither currency code "KRW" nor sign "KRW" appeared on the pricing cards!
+  114 | 
+  115 |       console.log(`✅ [SUCCESS] Pricing successfully localized to ${name} (${expectedCurrency})!`);
+  116 |     });
+  117 | 
+  118 |     await test.step('Step 4: Capture Regional Currency Pricing Screenshot', async () => {
+  119 |       const screenshotDir = path.resolve(process.cwd(), 'test-results', 'screenshots');
+  120 |       if (!fs.existsSync(screenshotDir)) {
+  121 |         fs.mkdirSync(screenshotDir, { recursive: true });
+  122 |       }
+  123 | 
+  124 |       const filename = `pricing-${country.toLowerCase()}-${expectedCurrency.toLowerCase()}-${Date.now()}.png`;
+  125 |       const screenshotPath = path.join(screenshotDir, filename);
+  126 |       const buffer = await page.screenshot({ path: screenshotPath, fullPage: true });
+  127 | 
+  128 |       if (testInfo) {
+  129 |         await testInfo.attach(`pricing-${country}-${expectedCurrency}.png`, {
+  130 |           body: buffer,
+  131 |           contentType: 'image/png',
+  132 |         }).catch(() => {});
+  133 |       }
+  134 | 
+  135 |       console.log(`📸 [STDOUT SCREENSHOT] Regional pricing screenshot captured: ${screenshotPath}`);
+  136 |     });
+  137 |   }
+  138 | }
+  139 | 
+```

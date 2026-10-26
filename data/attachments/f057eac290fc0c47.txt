@@ -1,0 +1,7 @@
+🚀 [ReferralTest] Navigating to URL with referral parameters: /?ref=TESTREF&utm_source=google&utm_campaign=x
+📋 [ReferralTest] Total cookies found: 8
+✅ [ReferralTest] Verified "ref" cookie saved: "ref=TESTREF"
+✅ [ReferralTest] Verified UTM/traffic_source cookie saved: "traffic_source=google--x"
+✅ Dynamically selected plan at index 2: "5 Reports", Price: $19.99
+✅ Upsell selected. Price: $null
+✅ Order summary verified with valid checkout total: $69660
