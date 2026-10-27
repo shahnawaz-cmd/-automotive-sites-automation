@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1980, Make=Subaru, Model=GLF, Trim=2 Door Hardtop
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41V9C611334
+{
+  "year": "1980",
+  "make": "Subaru",
+  "model": "GLF",
+  "trim": "2 Door Hardtop",
+  "isUnmappedFlow": false
+}
+

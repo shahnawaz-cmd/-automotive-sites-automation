@@ -1,0 +1,38 @@
+{
+  "url": "https://instantvinreports.com/",
+  "cookieState": {
+    "userId": "s8uv1l",
+    "rawClck": "s8uv1l%5E2%5Egan%5E0%5E2491",
+    "rawClsk": null,
+    "pageSequence": null,
+    "sessionToken": "2dzky8"
+  },
+  "beaconsCount": 6,
+  "recentBeacons": [
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1793068606723
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1793068606723
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=DE3D3174CA824F6588DA665093BF0337&RedC=c.clarity.ms&MXFR=3D353DE8F95D676402442A17FD5D69F4",
+      "method": "GET",
+      "timestamp": 1793068606799
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=DE3D3174CA824F6588DA665093BF0337&MUID=33D2E67DB75968BF3F09F182B68A69CE",
+      "method": "GET",
+      "timestamp": 1793068606872
+    },
+    {
+      "url": "https://o.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793068606895
+    }
+  ]
+}

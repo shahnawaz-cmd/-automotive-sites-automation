@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Alpine, Model=A110, Trim=SX Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526598044
+{
+  "year": "1977",
+  "make": "Alpine",
+  "model": "A110",
+  "trim": "SX Coupe",
+  "isUnmappedFlow": true
+}
+
