@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Chevrolet, Model=C20, Trim=Pickup 3/4 TON Stepside
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B845976
+{
+  "year": "1962",
+  "make": "Chevrolet",
+  "model": "C20",
+  "trim": "Pickup 3/4 TON Stepside",
+  "isUnmappedFlow": false
+}
+

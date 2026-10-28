@@ -1,0 +1,33 @@
+
+===============================================================
+  [Clarity Verification] WRAPPER 1: HOMEPAGE VERIFICATION
+===============================================================
+[Clarity Task] Navigating to Homepage...
+[Clarity Task] Current URL: https://vehiclesreport.com/
+[Clarity Task] Smart waiting for deferred Microsoft Clarity initialization (~10-15s CWV window)...
+✓ [Clarity Task] window.clarity function detected on Homepage
+✓ [Clarity Task] Telemetry beacon detected: https://www.clarity.ms/tag/a24dy4no6c
+✓ [Clarity Task] Homepage Clarity User ID: 11zmvid
+✓ [Clarity Task] Homepage Raw _clck: 11zmvid%5E2%5Egao%5E0%5E2492
+✓ [Clarity Task] Homepage Session Token: fa3iia
+
+===============================================================
+  [Clarity Verification] WRAPPER 2: PREVIEW PAGE VERIFICATION
+===============================================================
+[Clarity Task] Submitting VIN to transition to Preview: WA1VABGE5KB008274
+[Clarity Task] Waiting for Preview page URL transition...
+✓ [Clarity Task] Landed on Preview Page: https://vehiclesreport.com/vin-check/preview?vin=WA1VABGE5KB008274&type=vhr&wpPage=homepage
+✓ [Clarity Task] window.clarity active on Preview Page
+✓ [Clarity Task] Preview Clarity User ID: 11zmvid
+✓ [Clarity Task] Session continuity maintained from Homepage (Matched: true)
+✓ [Clarity Task] Preview Page Sequence / _clsk: 7ragir%5E1793155611315%5E1%5E1%5Ef.clarity.ms%2Fcollect
+
+===============================================================
+  [Clarity Verification] WRAPPER 3: CHECKOUT PAGE VERIFICATION
+===============================================================
+[Clarity Task] Initiating Checkout navigation from Preview...
+[Clarity Task] Clicking Access Records CTA button...
+[Clarity Task] Entering email in modal: shahnawaz+76@empirepixel.com
+[Clarity Task] Clicking Proceed to Checkout...
+[Clarity Task] Waiting for Checkout page URL transition...
+✓ [Clarity Task] Landed on Checkout Page: https://vehiclesreport.com/checkout?data=eyJjb2RlIjoiVlNSMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiJXQTFWQUJHRTVLQjAwODI3NCIsImVtYWlsIjoic2hhaG5hd2F6Kzc2QGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4IiwiYWRkT25QcmljZSI6OS45OSwiYWRkT25MYWJlbCI6IkFkZCBXaW5kb3cgU3RpY2tlciB0byB5b3VyIHB1cmNoYXNlIiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MTkuOTksImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsImNvdW50cnkiOiJVUyIsImlwIjoiMjAuNTEuNTcuMTE2Iiwid3BQYWdlIjoiaG9tZXBhZ2UifQ==

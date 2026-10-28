@@ -1,0 +1,12 @@
+[
+  {
+    "name": "checkout_flow",
+    "value": "streaming",
+    "domain": "instantvinreports.com",
+    "path": "/",
+    "expires": 1793241904.905307,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  }
+]

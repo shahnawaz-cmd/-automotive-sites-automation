@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1969, Make=Enfield, Model=Interceptor, Trim=Base
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526405712
+{
+  "year": "1969",
+  "make": "Enfield",
+  "model": "Interceptor",
+  "trim": "Base",
+  "isUnmappedFlow": true
+}
+
