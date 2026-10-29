@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1967, Make=Meccanica Maniero, Model=4700 GT, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 237M2Z397097
+{
+  "year": "1967",
+  "make": "Meccanica Maniero",
+  "model": "4700 GT",
+  "trim": "Coupe",
+  "isUnmappedFlow": true
+}
+
