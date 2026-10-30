@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1967, Make=Buick, Model=Riviera, Trim=II
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B349319
+{
+  "year": "1967",
+  "make": "Buick",
+  "model": "Riviera",
+  "trim": "II",
+  "isUnmappedFlow": false
+}
+

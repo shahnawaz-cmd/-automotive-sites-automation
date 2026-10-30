@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Austin, Model=A60 Countryman, Trim=Station Wagon
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B344224
+{
+  "year": "1968",
+  "make": "Austin",
+  "model": "A60 Countryman",
+  "trim": "Station Wagon",
+  "isUnmappedFlow": false
+}
+

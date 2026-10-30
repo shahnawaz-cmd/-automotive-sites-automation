@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Nsu Fiat, Model=Jagst, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CL41M3C148057
+{
+  "year": "1960",
+  "make": "Nsu Fiat",
+  "model": "Jagst",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

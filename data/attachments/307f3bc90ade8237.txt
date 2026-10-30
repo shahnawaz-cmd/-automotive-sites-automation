@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1979, Make=Lancia, Model=Beta Montecarlo, Trim=Series 2 Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2572459
+{
+  "year": "1979",
+  "make": "Lancia",
+  "model": "Beta Montecarlo",
+  "trim": "Series 2 Coupe",
+  "isUnmappedFlow": false
+}
+

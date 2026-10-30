@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Dkw Malzoni, Model=GT, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 2G37T1N481100
+{
+  "year": "1966",
+  "make": "Dkw Malzoni",
+  "model": "GT",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+
