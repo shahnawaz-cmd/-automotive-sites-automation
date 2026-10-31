@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Daimler, Model=Sovereign, Trim=4 Door Saloon
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242W9N698354
+{
+  "year": "1966",
+  "make": "Daimler",
+  "model": "Sovereign",
+  "trim": "4 Door Saloon",
+  "isUnmappedFlow": false
+}
+

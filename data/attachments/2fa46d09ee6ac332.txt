@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1971, Make=Bultaco, Model=Metralla 250, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 4310770
+{
+  "year": "1971",
+  "make": "Bultaco",
+  "model": "Metralla 250",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

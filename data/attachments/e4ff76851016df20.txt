@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1975, Make=Triumph, Model=Toledo, Trim=Sedan 58 HP
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10526914167
+{
+  "year": "1975",
+  "make": "Triumph",
+  "model": "Toledo",
+  "trim": "Sedan 58 HP",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,106 @@
+🔍 [ErrorPageToHomeCollectionTask] Flow Check: "streaming"
+
+📋 [ErrorPageToHomeCollectionTask] Generated Wrong 17-char Alphabet VIN: "LJTEKVVZDYYFDMEVZ"
+✅ [ErrorPageToHomeCollectionTask] Wrong VIN submitted.
+⏳ [ErrorPageToHomeCollectionTask] Waiting for Preview page...
+📍 [ErrorPageToHomeCollectionTask] Landed on: https://vehiclesreport.com/vin-check/preview?vin=LJTEKVVZDYYFDMEVZ&type=vhr&wpPage=homepage
+🎉 [ErrorPageToHomeCollectionTask] Confirmed error condition: "Sorry — no record found for VIN# LJTEKVVZDYYFDMEVZ
+We couldn't find a vehicle for that VIN
+
+LJTEKVVZDYYFDMEVZ didn't match our records. Check the VIN and try again, or use the plate lookup below.
+
+VIN
+License plate
+Search
+or
+
+Sure you typed it right? Leave your email and we'll let you know if records show up for it.
+
+Notify me
+I'm checking this vehicle as a
+Buyer
+Seller
+Owner
+Just Checking
+Reveal records for this vehicle
+Accident & Damage
+Title & Brand Check
+Odometer & Mileage
+Theft Records
+Auction History
+Lien & Loan
+Ownership & Sales
+Market Value
+Reveal Records
+Unlock the history — choose your package
+1 Report
+$19.99/report
+$19.99
+5 Reports
+$12.00/report
+$59.99
+$99.95
+Save 40%
+10 Reports
+$8.00/report
+$79.99
+$199.90
+Save 60%
+Unlimited VIN Check
+Unlimited access
+Best Value
+$39.99/subscription
+Why choose this?
+?
+Add Window Sticker to your purchase
+View sample sticker
+$9.99
+$19.99
+Access Records
+
+Instant access · Secure checkout · Downloadable PDF
+
+View Sample Report
+View Sample Window Sticker
+Instant access
+Secure checkout
+Downloadable PDF
+Money-back guarantee
+We check for
+Ownership History
+Odometer Readings
+Title Information
+Accident History
+Junk & Salvage
+Total Loss History
+Theft & Recovery
+Auction Records
+Recalls & Defects
+Lien & Loan
+Market Value
+Vehicle Specifications
+
+Your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+
+© 2026 Vehicles Report. All Rights Reserved. · Terms · Privacy"
+✉️ [ErrorPageToHomeCollectionTask] Generated email: rolex.rolls12+akbr7h2@gmail.com
+✅ [Self-Healing Email Input] Located using strategy #1
+✅ [ErrorPageToHomeCollectionTask] Email entered.
+✅ [Self-Healing Notify Button] Located using strategy #1
+🚀 [ErrorPageToHomeCollectionTask] Clicking "Notify me" button...
+📡 [Captured API Payload]: [{"vin":"vinerrLJTEKVVZDYYFDMEVZ","email":"rolex.rolls12+akbr7h2@gmail.com"}]
+✅ [ErrorPageToHomeCollectionTask] API Response status: 200
+⏳ [ErrorPageToHomeCollectionTask] Validating success message...
+🎉 [ErrorPageToHomeCollectionTask] Success message confirmed: "Thanks — we'll be in touch the moment we have something."
+
+================================================================================
+✅ [ERROR PAGE TO HOME COLLECTION PASSED]
+📋 Wrong VIN:          LJTEKVVZDYYFDMEVZ
+📧 User Email:         rolex.rolls12+akbr7h2@gmail.com
+📡 Captured API URL:   https://vehiclesreport.com/vin-check/preview?vin=LJTEKVVZDYYFDMEVZ&type=vhr&wpPage=homepage
+📦 Captured Payload:   [{"vin":"vinerrLJTEKVVZDYYFDMEVZ","email":"rolex.rolls12+akbr7h2@gmail.com"}]
+📥 Captured Response:  N/A
+📸 Success Screenshot: /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/test-results/screenshots/error-page-home-collection-1793415360729.png
+================================================================================
+
+📎 [ErrorPageToHomeCollectionTask] Attached screenshot and payload to report.
