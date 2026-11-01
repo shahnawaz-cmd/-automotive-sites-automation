@@ -1,0 +1,74 @@
+{
+  "url": "https://vehiclesreport.com/checkout?data=eyJjb2RlIjoiVlNSMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiIzTVc1UjFKMDFNOEI4NzA0MyIsImVtYWlsIjoic2hhaG5hd2F6KzYzQGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4IiwiYWRkT25QcmljZSI6OS45OSwiYWRkT25MYWJlbCI6IkFkZCBXaW5kb3cgU3RpY2tlciB0byB5b3VyIHB1cmNoYXNlIiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MTkuOTksImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsImNvdW50cnkiOiJVUyIsImlwIjoiMTMuODMuMjM1LjE0NyIsIndwUGFnZSI6ImhvbWVwYWdlIn0=",
+  "cookieState": {
+    "userId": "16x12ka",
+    "rawClck": "16x12ka%5E2%5Egas%5E0%5E2496",
+    "rawClsk": "15otbxp%5E1793501484163%5E2%5E1%5Eg.clarity.ms%2Fcollect",
+    "pageSequence": 2,
+    "sessionToken": "1y62uuq"
+  },
+  "matchedInitialUserId": true,
+  "totalBeaconsCaptured": 12,
+  "beacons": [
+    {
+      "url": "https://www.clarity.ms/tag/a24dy4no6c",
+      "method": "GET",
+      "timestamp": 1793501482655
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1793501482866
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1793501482866
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=E990BCC8012F47A6B1A8AA8CCABDE6FD&RedC=c.clarity.ms&MXFR=00D31D4B92E8617A2219054F96E86FD0",
+      "method": "GET",
+      "timestamp": 1793501482951
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=E990BCC8012F47A6B1A8AA8CCABDE6FD&MUID=304D14EFB3116CED1B650CEBB22E6DA0",
+      "method": "GET",
+      "timestamp": 1793501483013
+    },
+    {
+      "url": "https://g.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793501483055
+    },
+    {
+      "url": "https://g.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793501483568
+    },
+    {
+      "url": "https://www.clarity.ms/tag/a24dy4no6c",
+      "method": "GET",
+      "timestamp": 1793501483632
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.72/clarity.js",
+      "method": "GET",
+      "timestamp": 1793501483956
+    },
+    {
+      "url": "https://g.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793501484093
+    },
+    {
+      "url": "https://g.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793501484826
+    },
+    {
+      "url": "https://www.clarity.ms/tag/a24dy4no6c",
+      "method": "GET",
+      "timestamp": 1793501484905
+    }
+  ]
+}

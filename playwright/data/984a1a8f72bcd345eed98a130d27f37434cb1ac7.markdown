@@ -1,0 +1,227 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: streaming Task/global_streaming_specs.spec.js >> TC_14_Classic_Manual_Input_Validation
+- Location: streaming Task/global_streaming_specs.spec.js:358:1
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: page.waitForTimeout: Target page, context or browser has been closed
+```
+
+# Test source
+
+```ts
+  278 | //   await page.waitForURL(/.*\/dashboard\?vin=[^&]+&generate=true&paid=true#window-sticker/, { timeout: TIMEOUT });
+  279 | //   await page.close();
+  280 | // });
+  281 | 
+  282 | // test('TC_11_Full_Checkout_Flow_Stripe_Generic_Decline_Validation', async ({ page }, testInfo) => {
+  283 | //   const home = new HomePage(page);
+  284 | //   const preview = new PreviewPage(page);
+  285 | //   const checkout = new CheckoutPage(page);
+  286 | //   await home.navigate();
+  287 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
+  288 | //   await preview.verifySpecsVisible();
+  289 | //   await preview.runCheckoutFlow();
+  290 | //   await expect(page).toHaveURL(/.*\/checkout.*/);
+  291 | //   await Promise.all([
+  292 | //     checkout.completeCheckoutProcess('generic_decline'),
+  293 | //     checkout.waitForPaymentFailureAndClose(),
+  294 | //   ]);
+  295 | //   await expect(page).not.toHaveURL(/.*\/success.*/);
+  296 | //   await page.close();
+  297 | // });
+  298 | 
+  299 | // test('TC_12_Full_Checkout_Flow_Stripe_3DS_Validation', async ({ page }, testInfo) => {
+  300 | //   const home = new HomePage(page);
+  301 | //   const preview = new PreviewPage(page);
+  302 | //   const checkout = new CheckoutPage(page);
+  303 | //   const apiCapture = new ApiResponseCapture(page, TIMEOUT);
+  304 | //   await home.navigate();
+  305 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
+  306 | //   await preview.verifySpecsVisible();
+  307 | //   await preview.runCheckoutFlow();
+  308 | //   await expect(page).toHaveURL(/.*\/checkout.*/);
+  309 | //   await Promise.all([
+  310 | //     checkout.completeCheckoutProcess('stripe_3ds'),
+  311 | //     apiCapture.waitForStripePaymentIntent(),
+  312 | //     apiCapture.waitForThreeDSAuthenticate(),
+  313 | //   ]);
+  314 | //   await Promise.all([
+  315 | //     checkout.complete3DSChallenge(),
+  316 | //     page.waitForURL(/.*\/(success|success-page).*/, { timeout: TIMEOUT }),
+  317 | //   ]);
+  318 | //   await expect(page).toHaveURL(/.*\/(success|success-page).*/);
+  319 | //   await page.close();
+  320 | // });
+  321 | 
+  322 | // Pool of Classic mapped VINs
+  323 | test('TC_13_Classic_VIN_YMM_Edit_Validation', async ({ page, context }, testInfo) => {
+  324 |   testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+  325 |   const home = new HomePage(page);
+  326 |   const preview = new PreviewPage(page);
+  327 |   const classicVin = ClassicVinGenerator.getRandomClassicVin(testInfo.workerIndex);
+  328 |   try {
+  329 |     await context.clearCookies();
+  330 |     await context.clearPermissions();
+  331 |     await home.navigate();
+  332 |     await home.decodeVin(classicVin);
+  333 |     await page.waitForURL(/.*\/preview.*/, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  334 |     await preview.verifySpecsVisible('Records found for', 60000);
+  335 |     const ymmTask = new StreamingYmmEditTask(page);
+  336 |     const selectedYMM = await ymmTask.execute();
+  337 | 
+  338 |     console.log(`\n📋 [TC_13] Classic YMM Selected Dropdowns:\nVIN: ${classicVin}\n${JSON.stringify(selectedYMM, null, 2)}\n`);
+  339 |     await testInfo.attach('TC_13_Selected_YMM_Data', {
+  340 |       body: JSON.stringify({ vin: classicVin, ...selectedYMM }, null, 2),
+  341 |       contentType: 'application/json',
+  342 |     });
+  343 | 
+  344 |     // Wait 5s+ for frontend to fully update with the modified data
+  345 |     await page.waitForTimeout(5000);
+  346 | 
+  347 |     // Capture screenshot of the updated frontend and attach to report
+  348 |     const ss13 = await page.screenshot({ fullPage: false });
+  349 |     await testInfo.attach('TC_13_Updated_Frontend_Screenshot', {
+  350 |       body: ss13,
+  351 |       contentType: 'image/png',
+  352 |     });
+  353 |   } finally {
+  354 |     await page.close();
+  355 |   }
+  356 | });
+  357 | 
+  358 | test('TC_14_Classic_Manual_Input_Validation', async ({ page, context }, testInfo) => {
+  359 |   const home = new HomePage(page);
+  360 |   const preview = new PreviewPage(page);
+  361 |   const classicVin = ClassicVinGenerator.getRandomClassicVin(testInfo.workerIndex);
+  362 |   try {
+  363 |     await context.clearCookies();
+  364 |     await context.clearPermissions();
+  365 |     await home.navigate();
+  366 |     await home.decodeVin(classicVin);
+  367 |     await page.waitForURL(/.*\/preview.*/, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  368 |     await preview.verifySpecsVisible('Records found for', 60000);
+  369 |     const specs = await preview.ClassicEditibleSpecsManualInput();
+  370 |     
+  371 |     console.log(`\n📋 [TC_14] Manual Classic Specs Input:\nVIN: ${classicVin}\n${JSON.stringify(specs, null, 2)}\n`);
+  372 |     await testInfo.attach('TC_14_Manual_Specs_Data', {
+  373 |       body: JSON.stringify({ vin: classicVin, ...specs }, null, 2),
+  374 |       contentType: 'application/json',
+  375 |     });
+  376 | 
+  377 |     // Wait 5s+ for frontend to fully update with the modified data
+> 378 |     await page.waitForTimeout(5000);
+      |                ^ Error: page.waitForTimeout: Target page, context or browser has been closed
+  379 | 
+  380 |     // Capture screenshot of the updated frontend and attach to report
+  381 |     const ss14 = await page.screenshot({ fullPage: false });
+  382 |     await testInfo.attach('TC_14_Updated_Frontend_Screenshot', {
+  383 |       body: ss14,
+  384 |       contentType: 'image/png',
+  385 |     });
+  386 |   } finally {
+  387 |     await page.close();
+  388 |   }
+  389 | });
+  390 | 
+  391 | test('TC_15_Classic_Editible_Specs_Update', async ({ page, context }, testInfo) => {
+  392 |   test.setTimeout(180000);
+  393 |   const home = new HomePage(page);
+  394 |   const preview = new PreviewPage(page);
+  395 |   const classicVin = ClassicVinGenerator.getRandomClassicVin(testInfo.workerIndex);
+  396 | 
+  397 |   try {
+  398 |     await context.clearCookies();
+  399 |     await context.clearPermissions();
+  400 |     await home.navigate();
+  401 |     await home.decodeVin(classicVin);
+  402 |     await page.waitForURL(/.*\/preview.*/, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  403 |     await preview.verifySpecsVisible('Records found for', 60000);
+  404 |     const task = new ClassicEditableSpecsUpdateTask(page);
+  405 |     const specs = await task.execute(preview, 60000, testInfo);
+  406 |     
+  407 |     console.log(`\n📋 [TC_15] Classic Editable Specs Update:\nVIN: ${classicVin}\n${JSON.stringify(specs, null, 2)}\n`);
+  408 |     await testInfo.attach('TC_15_Updated_Specs_Data', {
+  409 |       body: JSON.stringify({ vin: classicVin, ...specs }, null, 2),
+  410 |       contentType: 'application/json',
+  411 |     });
+  412 | 
+  413 |     // Wait 5s+ for frontend to fully update with the modified data
+  414 |     await page.waitForTimeout(5000);
+  415 | 
+  416 |     // Capture screenshot of the updated frontend and attach to report
+  417 |     const ss15 = await page.screenshot({ fullPage: false });
+  418 |     await testInfo.attach('TC_15_Updated_Frontend_Screenshot', {
+  419 |       body: ss15,
+  420 |       contentType: 'image/png',
+  421 |     });
+  422 |   } finally {
+  423 |     await page.close();
+  424 |   }
+  425 | });
+  426 | 
+  427 | // test('TC_16_PayPal_Successful_Payment', async ({ page, context }) => {
+  428 | //   const home = new HomePage(page);
+  429 | //   const preview = new PreviewPage(page);
+  430 | //   const checkout = new CheckoutPage(page);
+  431 | //   await home.navigate();
+  432 | //   await home.decodeVin('4JGED6EB0JA121898', 3);
+  433 | //   await preview.runCheckoutFlow();
+  434 | //   await checkout.paypal.selectPayPalOption();
+  435 | //   await page.waitForTimeout(4000);
+  436 | //   const popup = await checkout.paypal.clickPayPalButton(context, TIMEOUT);
+  437 | //   await checkout.paypal.loginPayPal(popup, {email: process.env.PAYPAL_EMAIL, password: process.env.PAYPAL_PASSWORD}, TIMEOUT);
+  438 | //   await checkout.paypal.approvePayPalPayment(popup, TIMEOUT);
+  439 | //   await page.waitForURL(url => url.toString().includes('paid=true'), { timeout: 60000 });
+  440 | //   await page.close();
+  441 | // });
+  442 | 
+  443 | test('TC_17_EU_VIN_Confirmation_No', async ({ page }, testInfo) => {
+  444 |   testInfo.setTimeout(process.env.CI ? 120000 : 90000);
+  445 |   const home = new HomePage(page);
+  446 |   const modifier = new EUVinModifier(page);
+  447 |   await home.navigate();
+  448 |   await home.decodeVin('SHHEU88701U002018', 3);
+  449 |   await modifier.modifyEUVinByYMMUsingNo();
+  450 |   await page.close();
+  451 | });
+  452 | 
+  453 | 
+  454 | test('TC_20_Default_Plan_Checking', async ({ page }) => {
+  455 |   const tcTimeout = process.env.CI ? 120000 : 60000;
+  456 |   test.setTimeout(tcTimeout);
+  457 |   const home = new HomePage(page);
+  458 |   const handler = new DefaultPlanCheckingHandler(page);
+  459 |   await handler.sitesettingDefaultPlansVerifies(home);
+  460 |   await page.close();
+  461 | });
+  462 | 
+  463 | test('TC_21_Window_Sticker_Default_Plan', async ({ page }) => {
+  464 |   const tcTimeout = 120000;
+  465 |   test.setTimeout(tcTimeout);
+  466 |   const home = new HomePage(page);
+  467 |   const handler = new DefaultPlanCheckingHandler(page);
+  468 |   await handler.sitesettingDefaultPlansVerifies(home, '4JGED6EB0JA121264', false, 'ws');
+  469 |   await page.close();
+  470 | });
+  471 | 
+  472 | test('TC_22_VHR_Upsell_Text_Validation', async ({ page }, testInfo) => {
+  473 |   const tcTimeout = 120000;
+  474 |   test.setTimeout(tcTimeout);
+  475 |   const home = new HomePage(page);
+  476 |   const upsellHandler = new UpsellTextMatched(page);
+  477 |   await home.navigate();
+  478 |   await home.decodeVin('4JGED6EB0JA121898', 3);
+```

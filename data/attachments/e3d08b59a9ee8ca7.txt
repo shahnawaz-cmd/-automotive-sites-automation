@@ -1,0 +1,6 @@
+
+──────────────────────────────────────────────────────────────────────
+💉 [GEO INJECTOR] Selected Region: Chile (Country: CL, IP: 45.250.252.51)
+🎯 [GEO INJECTOR] Target Currency Code: "CLP"
+──────────────────────────────────────────────────────────────────────
+🔄 [Pricing] Reloading /pricing to activate regional session context...
