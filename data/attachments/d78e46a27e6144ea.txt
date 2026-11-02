@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1976, Make=Mv Agusta, Model=750 S America, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10502643101
+{
+  "year": "1976",
+  "make": "Mv Agusta",
+  "model": "750 S America",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

@@ -1,6 +1,0 @@
-
-──────────────────────────────────────────────────────────────────────
-💉 [GEO INJECTOR] Selected Region: South Africa (Country: ZA, IP: 129.232.237.178)
-🎯 [GEO INJECTOR] Target Currency Code: "ZAR"
-──────────────────────────────────────────────────────────────────────
-🔄 [Pricing] Reloading /pricing to activate regional session context...

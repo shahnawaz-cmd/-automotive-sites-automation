@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1977, Make=Moto Morini, Model=3 1 2 Touring, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72434175
+{
+  "year": "1977",
+  "make": "Moto Morini",
+  "model": "3 1 2 Touring",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+

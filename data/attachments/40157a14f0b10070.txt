@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Bizzarrini, Model=5300 GT Strada, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57L5B840384
+{
+  "year": "1966",
+  "make": "Bizzarrini",
+  "model": "5300 GT Strada",
+  "trim": "Coupe",
+  "isUnmappedFlow": true
+}
+
