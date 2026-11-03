@@ -1,0 +1,293 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: streaming Task/global_streaming_specs.spec.js >> TC_29_Error_Page_To_Home_Collection_Validation
+- Location: streaming Task/global_streaming_specs.spec.js:567:1
+
+# Error details
+
+```
+Test timeout of 120000ms exceeded.
+```
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('h1, h2, h3, p, div, span, [role="alert"]').filter({ hasText: /We couldn'?t find a vehicle for that VIN|Sorry\s*[-—–]\s*no record found for VIN#?/i }).first()
+Expected: visible
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 120000ms
+  - waiting for locator('h1, h2, h3, p, div, span, [role="alert"]').filter({ hasText: /We couldn'?t find a vehicle for that VIN|Sorry\s*[-—–]\s*no record found for VIN#?/i }).first()
+
+```
+
+```yaml
+- text: Records found for 2022 BMW
+- main:
+  - heading "2022 BMW" [level=1]
+  - text: "VIN: WBSFZGVJDNDJTUWCX Manufacturer BMW M Gmbh I'm checking this vehicle as a"
+  - button "Buyer"
+  - button "Seller"
+  - button "Owner"
+  - button "Just Checking"
+  - heading "Reveal records for this vehicle" [level=2]
+  - text: Accident & Damage Title & Brand Check Odometer & Mileage Theft Records Auction History Lien & Loan Ownership & Sales Market Value Reveal Records
+  - complementary:
+    - heading "Unlock the history — choose your package" [level=2]
+    - button "1 Report $19.99/report $19.99" [pressed]
+    - button "5 Reports $12.00/report $59.99 $99.95 Save 40%"
+    - button "10 Reports $8.00/report $79.99 $199.90 Save 60%"
+    - button "Unlimited VIN Check Unlimited access Best Value $39.99/subscription Why choose this? Unlimited VIN Check plan information":
+      - text: Unlimited VIN Check Unlimited access Best Value $39.99/subscription Why choose this?
+      - button "Unlimited VIN Check plan information": "?"
+    - checkbox "Add Window Sticker to your purchase View sample sticker $9.99 $19.99"
+    - text: Add Window Sticker to your purchase
+    - link "View sample sticker":
+      - /url: https://vehiclesreport.com/sticker/vin/1GNALFEK1DZ134081-76267626-4848-F07A-DC46-290273643B8F
+    - text: $9.99 $19.99
+    - button "Access Records"
+    - paragraph: Instant access · Secure checkout · Downloadable PDF
+    - link "View Sample Report":
+      - /url: https://vehiclesreport.com/report/vin/2T1BURHE0FC320645
+    - link "View Sample Window Sticker":
+      - /url: https://vehiclesreport.com/sticker/vin/1GNALFEK1DZ134081-76267626-4848-F07A-DC46-290273643B8F
+  - text: Instant access Secure checkout Downloadable PDF Money-back guarantee
+- contentinfo:
+  - heading "We check for" [level=2]
+  - list:
+    - listitem: Ownership History
+    - listitem: Odometer Readings
+    - listitem: Title Information
+    - listitem: Accident History
+    - listitem: Junk & Salvage
+    - listitem: Total Loss History
+    - listitem: Theft & Recovery
+    - listitem: Auction Records
+    - listitem: Recalls & Defects
+    - listitem: Lien & Loan
+    - listitem: Market Value
+    - listitem: Vehicle Specifications
+  - paragraph: Your information is encrypted and transmitted using a Secure Sockets (SSL) protocol.
+  - paragraph:
+    - text: © 2026 Vehicles Report. All Rights Reserved. ·
+    - link "Terms":
+      - /url: https://app.vehiclesreport.com/terms-of-service
+    - text: ·
+    - link "Privacy":
+      - /url: https://app.vehiclesreport.com/privacy
+- alert
+```
+
+# Test source
+
+```ts
+  128 |         if (await loc.isVisible({ timeout: 2000 }).catch(() => false)) {
+  129 |           console.log(`✅ [Self-Healing Email Input] Located using strategy #${i + 1}`);
+  130 |           return loc;
+  131 |         }
+  132 |       } catch (e) {}
+  133 |     }
+  134 | 
+  135 |     // Default to primary locator
+  136 |     return strategies[0]();
+  137 |   }
+  138 | 
+  139 |   /**
+  140 |    * Self-healing Notify Me button locator on Preview Error Page
+  141 |    * Primary: getByRole('button', { name: 'Notify me' })
+  142 |    */
+  143 |   async getNotifyButton() {
+  144 |     const strategies = [
+  145 |       () => this.page.getByRole('button', { name: 'Notify me' }),
+  146 |       () => this.page.getByRole('button', { name: /notify\s*me/i }),
+  147 |       () => this.page.locator('button:has-text("Notify me")'),
+  148 |       () => this.page.locator('button:has-text("Notify")'),
+  149 |       () => this.page.locator('button[type="submit"]')
+  150 |     ];
+  151 | 
+  152 |     for (let i = 0; i < strategies.length; i++) {
+  153 |       try {
+  154 |         const loc = strategies[i]().locator('visible=true').first();
+  155 |         if (await loc.isVisible({ timeout: 2000 }).catch(() => false)) {
+  156 |           console.log(`✅ [Self-Healing Notify Button] Located using strategy #${i + 1}`);
+  157 |           return loc;
+  158 |         }
+  159 |       } catch (e) {}
+  160 |     }
+  161 | 
+  162 |     // Default to primary locator
+  163 |     return strategies[0]();
+  164 |   }
+  165 | 
+  166 |   /**
+  167 |    * Main execution flow:
+  168 |    * 1. Detect flow & navigate to home
+  169 |    * 2. Put wrong 17-char Alphabet VIN and submit decode
+  170 |    * 3. Navigate to preview page & assert error condition
+  171 |    * 4. Intercept vin-check/preview API payload
+  172 |    * 5. Input email and click "Notify me" with self-healing
+  173 |    * 6. Capture API payload and assert successful response
+  174 |    * 7. Verify success message and capture screenshot
+  175 |    */
+  176 |   async execute(testInfo, timeout = TIMEOUT) {
+  177 |     // 1. Initial Flow Detection
+  178 |     await this.page.goto('/');
+  179 |     await this.page.waitForLoadState('domcontentloaded');
+  180 |     const isStreaming = await this.ensureStreamingFlow(testInfo);
+  181 |     if (!isStreaming) return;
+  182 | 
+  183 |     // 2. Put Wrong VIN and Click Decode
+  184 |     const alphabetVin = ErrorPageToHomeCollectionTask.generateAlphabetVin(17);
+  185 |     expect(alphabetVin.length).toBe(17);
+  186 |     console.log(`\n📋 [ErrorPageToHomeCollectionTask] Generated Wrong 17-char Alphabet VIN: "${alphabetVin}"`);
+  187 | 
+  188 |     const vinInput = await this.getVinInput();
+  189 |     await vinInput.waitFor({ state: 'visible', timeout });
+  190 |     await vinInput.scrollIntoViewIfNeeded().catch(() => {});
+  191 |     await vinInput.fill(alphabetVin);
+  192 |     await vinInput.dispatchEvent('input').catch(() => {});
+  193 |     await vinInput.dispatchEvent('change').catch(() => {});
+  194 | 
+  195 |     const decodeBtn = await this.getDecodeButton();
+  196 |     await decodeBtn.scrollIntoViewIfNeeded().catch(() => {});
+  197 |     try {
+  198 |       await decodeBtn.click({ force: true });
+  199 |     } catch {
+  200 |       await vinInput.press('Enter');
+  201 |     }
+  202 |     console.log('✅ [ErrorPageToHomeCollectionTask] Wrong VIN submitted.');
+  203 | 
+  204 |     // 3. Land on Preview Error Page
+  205 |     console.log('⏳ [ErrorPageToHomeCollectionTask] Waiting for Preview page...');
+  206 |     await this.page.waitForURL(/.*(\/preview|\/vin-check|\/ws-preview).*/, {
+  207 |       waitUntil: 'domcontentloaded',
+  208 |       timeout
+  209 |     });
+  210 |     console.log(`📍 [ErrorPageToHomeCollectionTask] Landed on: ${this.page.url()}`);
+  211 |     await this.page.waitForLoadState('domcontentloaded');
+  212 |     await this.page.waitForTimeout(1500);
+  213 | 
+  214 |     // Verify expected error condition
+  215 |     const successCondition = this.page.locator('h1:has-text("Records found for"), button:has-text("Access Record"), text=We found detailed information').first();
+  216 |     const isSuccess = await successCondition.isVisible({ timeout: 2000 }).catch(() => false);
+  217 |     if (isSuccess) {
+  218 |       console.log('⚠️ [ErrorPageToHomeCollectionTask] VIN decode succeeded unexpectedly. Skipping test.');
+  219 |       if (testInfo && typeof testInfo.skip === 'function') {
+  220 |         testInfo.skip(true, 'VIN decode succeeded unexpectedly');
+  221 |       }
+  222 |       return;
+  223 |     }
+  224 | 
+  225 |     const errorLocator = this.page.locator('h1, h2, h3, p, div, span, [role="alert"]')
+  226 |       .filter({ hasText: /We couldn'?t find a vehicle for that VIN|Sorry\s*[-—–]\s*no record found for VIN#?/i })
+  227 |       .first();
+> 228 |     await expect(errorLocator).toBeVisible({ timeout });
+      |                                ^ Error: expect(locator).toBeVisible() failed
+  229 |     const errorText = (await errorLocator.innerText().catch(() => '')).trim();
+  230 |     console.log(`🎉 [ErrorPageToHomeCollectionTask] Confirmed error condition: "${errorText}"`);
+  231 | 
+  232 |     // 4. Setup API Payload Capture for vin-check/preview
+  233 |     let capturedApiUrl = '';
+  234 |     let capturedApiPayload = null;
+  235 |     let capturedApiResponse = null;
+  236 | 
+  237 |     const apiResponsePromise = this.page.waitForResponse(
+  238 |       (res) => res.url().includes('vin-check/preview') && res.request().method() === 'POST',
+  239 |       { timeout: 20000 }
+  240 |     ).catch(() => null);
+  241 | 
+  242 |     // Also attach request listener to ensure payload is reliably captured
+  243 |     const requestListener = (req) => {
+  244 |       if (req.url().includes('vin-check/preview') && req.method() === 'POST') {
+  245 |         try {
+  246 |           capturedApiUrl = req.url();
+  247 |           capturedApiPayload = req.postData();
+  248 |           console.log(`📡 [Captured API Payload]: ${capturedApiPayload}`);
+  249 |         } catch (e) {}
+  250 |       }
+  251 |     };
+  252 |     this.page.on('request', requestListener);
+  253 | 
+  254 |     // 5. Input Email and Click Notify Me with Self-Healing
+  255 |     const uniqueEmail = ErrorPageToHomeCollectionTask.generateEmail(this.baseEmail);
+  256 |     console.log(`✉️ [ErrorPageToHomeCollectionTask] Generated email: ${uniqueEmail}`);
+  257 | 
+  258 |     const emailInput = await this.getEmailAddressInput();
+  259 |     await emailInput.scrollIntoViewIfNeeded().catch(() => {});
+  260 |     await emailInput.click({ force: true });
+  261 |     await emailInput.fill(uniqueEmail);
+  262 |     await emailInput.dispatchEvent('input').catch(() => {});
+  263 |     await emailInput.dispatchEvent('change').catch(() => {});
+  264 |     console.log('✅ [ErrorPageToHomeCollectionTask] Email entered.');
+  265 | 
+  266 |     await this.page.waitForTimeout(500);
+  267 | 
+  268 |     const notifyBtn = await this.getNotifyButton();
+  269 |     await notifyBtn.scrollIntoViewIfNeeded().catch(() => {});
+  270 |     console.log('🚀 [ErrorPageToHomeCollectionTask] Clicking "Notify me" button...');
+  271 |     await notifyBtn.click({ force: true });
+  272 | 
+  273 |     // 6. Wait for API Response & Verify Payload
+  274 |     const apiResponse = await apiResponsePromise;
+  275 |     if (apiResponse) {
+  276 |       capturedApiUrl = apiResponse.url();
+  277 |       capturedApiPayload = apiResponse.request().postData() || capturedApiPayload;
+  278 |       try {
+  279 |         capturedApiResponse = await apiResponse.text();
+  280 |       } catch (e) {}
+  281 |       console.log(`✅ [ErrorPageToHomeCollectionTask] API Response status: ${apiResponse.status()}`);
+  282 |     }
+  283 | 
+  284 |     // Cleanup listener
+  285 |     this.page.off('request', requestListener);
+  286 | 
+  287 |     // 7. Verify Success Message on UI
+  288 |     console.log('⏳ [ErrorPageToHomeCollectionTask] Validating success message...');
+  289 |     const successLocator = this.page.locator('text=/Thanks\\s*[-—–]\\s*we\'?ll be in touch/i')
+  290 |       .or(this.page.getByText(/Thanks.*in touch/i))
+  291 |       .first();
+  292 | 
+  293 |     await expect(successLocator).toBeVisible({ timeout: 15000 });
+  294 |     const successText = (await successLocator.innerText().catch(() => '')).trim();
+  295 |     console.log(`🎉 [ErrorPageToHomeCollectionTask] Success message confirmed: "${successText}"`);
+  296 | 
+  297 |     // 8. Capture Screenshot of Success Message
+  298 |     const screenshotDir = path.resolve(process.cwd(), 'test-results', 'screenshots');
+  299 |     if (!fs.existsSync(screenshotDir)) {
+  300 |       fs.mkdirSync(screenshotDir, { recursive: true });
+  301 |     }
+  302 | 
+  303 |     const timestamp = Date.now();
+  304 |     const screenshotFilename = `error-page-home-collection-${timestamp}.png`;
+  305 |     const screenshotPath = path.join(screenshotDir, screenshotFilename);
+  306 | 
+  307 |     await this.page.screenshot({ path: screenshotPath, fullPage: false });
+  308 | 
+  309 |     // Mandatory STDOUT Summary
+  310 |     console.log('\n' + '='.repeat(80));
+  311 |     console.log('✅ [ERROR PAGE TO HOME COLLECTION PASSED]');
+  312 |     console.log(`📋 Wrong VIN:          ${alphabetVin}`);
+  313 |     console.log(`📧 User Email:         ${uniqueEmail}`);
+  314 |     console.log(`📡 Captured API URL:   ${capturedApiUrl || 'N/A'}`);
+  315 |     console.log(`📦 Captured Payload:   ${capturedApiPayload || 'N/A'}`);
+  316 |     console.log(`📥 Captured Response:  ${capturedApiResponse || 'N/A'}`);
+  317 |     console.log(`📸 Success Screenshot: ${screenshotPath}`);
+  318 |     console.log('='.repeat(80) + '\n');
+  319 | 
+  320 |     // Attach to Playwright / Allure report
+  321 |     if (testInfo && typeof testInfo.attach === 'function') {
+  322 |       const screenshotBuffer = fs.readFileSync(screenshotPath);
+  323 |       await testInfo.attach('Error_Page_Success_Screenshot', {
+  324 |         body: screenshotBuffer,
+  325 |         contentType: 'image/png'
+  326 |       });
+  327 | 
+  328 |       if (capturedApiPayload) {
+```

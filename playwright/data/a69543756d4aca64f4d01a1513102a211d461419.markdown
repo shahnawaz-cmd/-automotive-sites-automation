@@ -1,0 +1,233 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: streaming Task/global_streaming_specs.spec.js >> TC_31_Clarity_Three_Wrapper_Verification
+- Location: streaming Task/global_streaming_specs.spec.js:602:1
+
+# Error details
+
+```
+Error: Microsoft Clarity session cookie (_clck) or storage token (_cltk) was not set on Homepage within 20s
+
+Microsoft Clarity session cookie (_clck) or storage token (_cltk) was not set on Homepage within 20s
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+
+Call Log:
+- Timeout 20000ms exceeded while waiting on the predicate
+```
+
+# Test source
+
+```ts
+  68  |       const parts = decoded.split('^');
+  69  |       if (parts.length >= 3 && parts[2]) {
+  70  |         const parsed = parseInt(parts[2], 10);
+  71  |         if (!isNaN(parsed)) pageSequence = parsed;
+  72  |       }
+  73  |     }
+  74  | 
+  75  |     return {
+  76  |       userId,
+  77  |       rawClck: clck?.value || null,
+  78  |       rawClsk: clsk?.value || null,
+  79  |       pageSequence,
+  80  |       sessionToken
+  81  |     };
+  82  |   }
+  83  | 
+  84  |   /**
+  85  |    * Generates a randomized valid VIN to avoid caching issues during decode
+  86  |    */
+  87  |   private getRandomVin(customVin?: string): string {
+  88  |     if (customVin) return customVin;
+  89  |     const base = this.baseVinPool[Math.floor(Math.random() * this.baseVinPool.length)];
+  90  |     const randomSuffix = Math.floor(Math.random() * 90 + 10).toString();
+  91  |     return base.slice(0, -2) + randomSuffix;
+  92  |   }
+  93  | 
+  94  |   /**
+  95  |    * Ensures clarity.ms network routes are unblocked and starts telemetry beacon listening
+  96  |    */
+  97  |   private async setupClarityNetworkCapture(page: Page): Promise<void> {
+  98  |     // Unroute any generic tracker blocking that may have intercepted clarity.ms
+  99  |     await page.unroute(/.*clarity\.ms.*/i).catch(() => {});
+  100 | 
+  101 |     page.on('request', (req) => {
+  102 |       const url = req.url();
+  103 |       if (url.includes('clarity.ms')) {
+  104 |         this.capturedBeacons.push({
+  105 |           url,
+  106 |           method: req.method(),
+  107 |           timestamp: Date.now()
+  108 |         });
+  109 |       }
+  110 |     });
+  111 |   }
+  112 | 
+  113 |   /**
+  114 |    * Wrapper 1: Verify Homepage Microsoft Clarity script and deferred loading
+  115 |    */
+  116 |   async verifyHomepageWrapper(page: Page, context: BrowserContext, testInfo: TestInfo): Promise<ClarityCookieState> {
+  117 |     return await test.step('Wrapper 1: Verify Microsoft Clarity on Homepage (Deferred CWV Load)', async () => {
+  118 |       console.log('\n===============================================================');
+  119 |       console.log('  [Clarity Verification] WRAPPER 1: HOMEPAGE VERIFICATION');
+  120 |       console.log('===============================================================');
+  121 | 
+  122 |       // Navigate to homepage if not already there
+  123 |       if (!page.url() || page.url() === 'about:blank') {
+  124 |         console.log('[Clarity Task] Navigating to Homepage...');
+  125 |         await page.goto('/', { waitUntil: 'domcontentloaded' });
+  126 |       }
+  127 | 
+  128 |       console.log(`[Clarity Task] Current URL: ${page.url()}`);
+  129 |       console.log('[Clarity Task] Smart waiting for deferred Microsoft Clarity initialization (~10-15s CWV window)...');
+  130 | 
+  131 |       try {
+  132 |         // Smart wait: Poll for script tag or window.clarity function
+  133 |         await expect.poll(async () => {
+  134 |           return await page.evaluate(() => {
+  135 |             const hasScript = !!document.querySelector('script[src*="clarity.ms"]');
+  136 |             const hasClarityFn = typeof (window as any).clarity === 'function';
+  137 |             return hasScript || hasClarityFn;
+  138 |           });
+  139 |         }, {
+  140 |           message: 'Microsoft Clarity script or window.clarity function was not initialized on Homepage within 30s',
+  141 |           timeout: 30000,
+  142 |           intervals: [500, 1000, 2000]
+  143 |         }).toBe(true);
+  144 | 
+  145 |         console.log('✓ [Clarity Task] window.clarity function detected on Homepage');
+  146 | 
+  147 |         // Trigger gentle user micro-interaction to prompt Clarity session telemetry start
+  148 |         await page.mouse.move(150, 150).catch(() => {});
+  149 |         await page.mouse.wheel(0, 100).catch(() => {});
+  150 | 
+  151 |         // Smart wait: Poll for _clck cookie or session storage token
+  152 |         let state: ClarityCookieState = { userId: null, rawClck: null, rawClsk: null, pageSequence: null, sessionToken: null };
+  153 |         await expect.poll(async () => {
+  154 |           const cookies = await context.cookies();
+  155 |           const sessionToken = await page.evaluate(() => {
+  156 |             try {
+  157 |               return window.sessionStorage.getItem('_cltk');
+  158 |             } catch {
+  159 |               return null;
+  160 |             }
+  161 |           });
+  162 |           state = this.parseClarityCookies(cookies, sessionToken);
+  163 |           return !!state.userId || !!state.sessionToken;
+  164 |         }, {
+  165 |           message: 'Microsoft Clarity session cookie (_clck) or storage token (_cltk) was not set on Homepage within 20s',
+  166 |           timeout: 20000,
+  167 |           intervals: [500, 1000]
+> 168 |         }).toBe(true);
+      |            ^ Error: Microsoft Clarity session cookie (_clck) or storage token (_cltk) was not set on Homepage within 20s
+  169 | 
+  170 |         // Verify that tag script was requested
+  171 |         const tagBeacon = this.capturedBeacons.find(b => b.url.includes('/tag/') || b.url.includes('clarity.js'));
+  172 |         console.log(`✓ [Clarity Task] Telemetry beacon detected: ${tagBeacon ? tagBeacon.url.substring(0, 80) : 'Active'}`);
+  173 |         console.log(`✓ [Clarity Task] Homepage Clarity User ID: ${state.userId || 'Session token: ' + state.sessionToken}`);
+  174 |         console.log(`✓ [Clarity Task] Homepage Raw _clck: ${state.rawClck || 'Pending flush'}`);
+  175 |         console.log(`✓ [Clarity Task] Homepage Session Token: ${state.sessionToken || 'None'}`);
+  176 | 
+  177 |         await testInfo.attach('wrapper1-homepage-clarity.json', {
+  178 |           body: JSON.stringify({
+  179 |             url: page.url(),
+  180 |             cookieState: state,
+  181 |             beaconsCount: this.capturedBeacons.length,
+  182 |             recentBeacons: this.capturedBeacons.slice(-5)
+  183 |           }, null, 2),
+  184 |           contentType: 'application/json'
+  185 |         });
+  186 | 
+  187 |         return state;
+  188 |       } catch (err: any) {
+  189 |         console.error('\n❌ [Clarity Task FAILURE] Wrapper 1 (Homepage) Verification Failed!');
+  190 |         console.error(`Page URL: ${page.url()}`);
+  191 |         console.error(`Error: ${err.message}`);
+  192 |         console.error(`Total Beacons: ${this.capturedBeacons.length}`);
+  193 |         await testInfo.attach('wrapper1-failure-diagnostic.txt', {
+  194 |           body: `Step: Wrapper 1 Homepage\nURL: ${page.url()}\nError: ${err.stack || err.message}\nBeacons: ${JSON.stringify(this.capturedBeacons, null, 2)}`,
+  195 |           contentType: 'text/plain'
+  196 |         });
+  197 |         throw err;
+  198 |       }
+  199 |     });
+  200 |   }
+  201 | 
+  202 |   /**
+  203 |    * Wrapper 2: Verify Preview Page Microsoft Clarity script and session continuity
+  204 |    */
+  205 |   async verifyPreviewWrapper(
+  206 |     page: Page,
+  207 |     context: BrowserContext,
+  208 |     testInfo: TestInfo,
+  209 |     expectedUserId: string | null,
+  210 |     vin: string
+  211 |   ): Promise<ClarityCookieState> {
+  212 |     return await test.step('Wrapper 2: Verify Microsoft Clarity on Preview Page (Session Continuity)', async () => {
+  213 |       console.log('\n===============================================================');
+  214 |       console.log('  [Clarity Verification] WRAPPER 2: PREVIEW PAGE VERIFICATION');
+  215 |       console.log('===============================================================');
+  216 | 
+  217 |       try {
+  218 |         console.log(`[Clarity Task] Submitting VIN to transition to Preview: ${vin}`);
+  219 |         const vinInput = page.locator('input[name="vin"], input[name="vin_number"], input[placeholder*="VIN" i], input[type="text"]').first();
+  220 |         await vinInput.waitFor({ state: 'visible', timeout: 20000 });
+  221 |         await vinInput.fill(vin);
+  222 | 
+  223 |         const searchBtn = page.getByRole('button', { name: /search vin|get window sticker|search window sticker|search/i })
+  224 |           .or(page.locator('button[type="submit"]'))
+  225 |           .or(page.locator('button:has-text("Search VIN")'))
+  226 |           .first();
+  227 | 
+  228 |         await searchBtn.click();
+  229 | 
+  230 |         // Smart wait: URL transition to Preview page
+  231 |         console.log('[Clarity Task] Waiting for Preview page URL transition...');
+  232 |         await page.waitForURL(/.*(\/preview|\/vin-check|\/report|\/ws-preview).*/, {
+  233 |           timeout: 45000,
+  234 |           waitUntil: 'domcontentloaded'
+  235 |         });
+  236 | 
+  237 |         console.log(`✓ [Clarity Task] Landed on Preview Page: ${page.url()}`);
+  238 | 
+  239 |         // Smart wait: Clarity function active on Preview
+  240 |         await expect.poll(async () => {
+  241 |           return await page.evaluate(() => typeof (window as any).clarity === 'function');
+  242 |         }, {
+  243 |           message: 'window.clarity function was not available on Preview page within 20s',
+  244 |           timeout: 20000,
+  245 |           intervals: [500, 1000]
+  246 |         }).toBe(true);
+  247 | 
+  248 |         console.log('✓ [Clarity Task] window.clarity active on Preview Page');
+  249 | 
+  250 |         // Micro-interaction
+  251 |         await page.mouse.move(200, 200).catch(() => {});
+  252 |         await page.mouse.wheel(0, 80).catch(() => {});
+  253 | 
+  254 |         // Smart wait: Verify session stitching via _clck cookie continuity
+  255 |         let previewState: ClarityCookieState = { userId: null, rawClck: null, rawClsk: null, pageSequence: null, sessionToken: null };
+  256 |         await expect.poll(async () => {
+  257 |           const cookies = await context.cookies();
+  258 |           const sessionToken = await page.evaluate(() => {
+  259 |             try {
+  260 |               return window.sessionStorage.getItem('_cltk');
+  261 |             } catch {
+  262 |               return null;
+  263 |             }
+  264 |           });
+  265 |           previewState = this.parseClarityCookies(cookies, sessionToken);
+  266 | 
+  267 |           if (expectedUserId && previewState.userId) {
+  268 |             return previewState.userId === expectedUserId;
+```

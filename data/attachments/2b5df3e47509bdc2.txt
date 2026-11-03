@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1973, Make=DAF, Model=66, Trim=Sedan 57 HP
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548874676
+{
+  "year": "1973",
+  "make": "DAF",
+  "model": "66",
+  "trim": "Sedan 57 HP",
+  "isUnmappedFlow": false
+}
+

@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1973, Make=BMW, Model=3.0 CSL, Trim=Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CH41J0R547048
+{
+  "year": "1973",
+  "make": "BMW",
+  "model": "3.0 CSL",
+  "trim": "Coupe",
+  "isUnmappedFlow": false
+}
+

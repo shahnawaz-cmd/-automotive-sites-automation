@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1960, Make=Honda, Model=Dream 305, Trim=Base
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: CS45V0B346713
+{
+  "year": "1960",
+  "make": "Honda",
+  "model": "Dream 305",
+  "trim": "Base",
+  "isUnmappedFlow": false
+}
+
