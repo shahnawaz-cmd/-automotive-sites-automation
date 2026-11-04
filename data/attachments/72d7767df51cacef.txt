@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1966, Make=Prince, Model=B, Trim=200 Estate Station Wagon
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TF968880
+{
+  "year": "1966",
+  "make": "Prince",
+  "model": "B",
+  "trim": "200 Estate Station Wagon",
+  "isUnmappedFlow": true
+}
+

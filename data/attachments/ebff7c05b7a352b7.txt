@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+ℹ️ [StreamingYmmEditTask] Dropdown "Select make" is disabled, skipping.
+📋 [StreamingYmmEditTask] Selected Specs: Year=N/A, Make=N/A, Model=Special, Trim=Deluxe Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 242W9N690856
+{
+  "year": "N/A",
+  "make": "N/A",
+  "model": "Special",
+  "trim": "Deluxe Sedan",
+  "isUnmappedFlow": false
+}
+

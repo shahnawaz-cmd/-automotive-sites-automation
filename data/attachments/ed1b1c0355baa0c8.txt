@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1968, Make=Audi, Model=Super 90, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: XP29G72436666
+{
+  "year": "1968",
+  "make": "Audi",
+  "model": "Super 90",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+

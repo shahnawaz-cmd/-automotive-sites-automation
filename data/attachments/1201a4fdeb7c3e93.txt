@@ -1,6 +1,0 @@
-🔍 [ErrorPageToHomeCollectionTask] Flow Check: "streaming"
-
-📋 [ErrorPageToHomeCollectionTask] Generated Wrong 17-char Alphabet VIN: "WBSFZGVJDNDJTUWCX"
-✅ [ErrorPageToHomeCollectionTask] Wrong VIN submitted.
-⏳ [ErrorPageToHomeCollectionTask] Waiting for Preview page...
-📍 [ErrorPageToHomeCollectionTask] Landed on: https://vehiclesreport.com/vin-check/preview?vin=WBSFZGVJDNDJTUWCX&type=vhr&wpPage=homepage
