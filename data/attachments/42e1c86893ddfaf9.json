@@ -1,0 +1,79 @@
+{
+  "url": "https://motorcyclevinlookup.com/checkout?data=eyJjb2RlIjoiTVZMMSIsInR5cGUiOiJyZXBvcnQiLCJ2aW4iOiIxQzRSSkhCRzBQQzUzMzQ5MCIsImVtYWlsIjoic2hhaG5hd2F6KzY0QGVtcGlyZXBpeGVsLmNvbSIsInBob25lIjoiKzE1NTUyMzQ1Njc4IiwiYWRkT25QcmljZSI6OS45OSwiYWRkT25MYWJlbCI6IkFkZCBhIHdpbmRvdyBzdGlja2VyIHRvIHlvdXIgcHVyY2hhc2UgIiwibm9zIjoxLCJpdGVtTGFiZWwiOiJSZXBvcnQiLCJwcmljZSI6MjUsImN1cnJlbmN5U2lnbiI6IiQiLCJjdXJyZW5jeSI6IlVTRCIsImNvdW50cnkiOiJVUyIsImlwIjoiMy40Mi4xNTcuMjciLCJ3cFBhZ2UiOiJob21lcGFnZSJ9",
+  "cookieState": {
+    "userId": "18k8s6d",
+    "rawClck": "18k8s6d%5E2%5Egaw%5E0%5E2500",
+    "rawClsk": "1tow5ko%5E1793850864904%5E2%5E1%5Ee.clarity.ms%2Fcollect",
+    "pageSequence": 2,
+    "sessionToken": "jd5sk5"
+  },
+  "matchedInitialUserId": true,
+  "totalBeaconsCaptured": 13,
+  "beacons": [
+    {
+      "url": "https://www.clarity.ms/tag/szchu7m9p8",
+      "method": "GET",
+      "timestamp": 1793850863292
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.75/clarity.js",
+      "method": "GET",
+      "timestamp": 1793850863548
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1793850863548
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=6E1EE693DFEA4186BDBADD7CDB459A80&RedC=c.clarity.ms&MXFR=21CF3D2FF5DC69360B2A2527F1DC673B",
+      "method": "GET",
+      "timestamp": 1793850863600
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=6E1EE693DFEA4186BDBADD7CDB459A80&MUID=3ECCCA5BBE756B5D13A1D253BF8D6A83",
+      "method": "GET",
+      "timestamp": 1793850863660
+    },
+    {
+      "url": "https://e.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793850863746
+    },
+    {
+      "url": "https://e.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793850864414
+    },
+    {
+      "url": "https://www.clarity.ms/tag/szchu7m9p8",
+      "method": "GET",
+      "timestamp": 1793850864449
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.75/clarity.js",
+      "method": "GET",
+      "timestamp": 1793850864669
+    },
+    {
+      "url": "https://e.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793850864819
+    },
+    {
+      "url": "https://e.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1793850865294
+    },
+    {
+      "url": "https://www.clarity.ms/tag/szchu7m9p8",
+      "method": "GET",
+      "timestamp": 1793850865326
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.75/clarity.js",
+      "method": "GET",
+      "timestamp": 1793850865446
+    }
+  ]
+}

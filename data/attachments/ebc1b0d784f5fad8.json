@@ -1,0 +1,62 @@
+[
+  {
+    "websiteId": "dfid_0YC7hCJWv3PiWtBxCoD4T",
+    "domain": "instantvinreports.com",
+    "href": "https://instantvinreports.com/",
+    "referrer": null,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "visitorId": "9b81aa23-6721-423d-90b9-9b3fdc613581",
+    "sessionId": "sb4f239fb-d04e-4da0-82a7-e554e5e1cfab",
+    "visitorFirstSeenAt": "2026-11-05T03:53:42.411Z",
+    "visitorSessionNumber": 1,
+    "language": "en-US",
+    "timezone": "UTC",
+    "screenWidth": 1280,
+    "screenHeight": 800,
+    "type": "pageview",
+    "timestamp": 1793850822430
+  },
+  {
+    "websiteId": "dfid_0YC7hCJWv3PiWtBxCoD4T",
+    "domain": "instantvinreports.com",
+    "href": "https://instantvinreports.com/vin-check?vin=1HGCR2F83HA001234",
+    "referrer": null,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "visitorId": "9b81aa23-6721-423d-90b9-9b3fdc613581",
+    "sessionId": "sb4f239fb-d04e-4da0-82a7-e554e5e1cfab",
+    "visitorFirstSeenAt": "2026-11-05T03:53:42.411Z",
+    "visitorSessionNumber": 1,
+    "language": "en-US",
+    "timezone": "UTC",
+    "screenWidth": 1280,
+    "screenHeight": 800,
+    "type": "pageview",
+    "timestamp": 1793850822813
+  },
+  {
+    "websiteId": "dfid_0YC7hCJWv3PiWtBxCoD4T",
+    "domain": "instantvinreports.com",
+    "href": "https://instantvinreports.com/checkout?vin=1HGCR2F83HA001234&email=shahnawaz%2B24%40empirepixel.com",
+    "referrer": null,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "visitorId": "9b81aa23-6721-423d-90b9-9b3fdc613581",
+    "sessionId": "sb4f239fb-d04e-4da0-82a7-e554e5e1cfab",
+    "visitorFirstSeenAt": "2026-11-05T03:53:42.411Z",
+    "visitorSessionNumber": 1,
+    "language": "en-US",
+    "timezone": "UTC",
+    "screenWidth": 1280,
+    "screenHeight": 800,
+    "type": "pageview",
+    "timestamp": 1793850823068
+  }
+]
