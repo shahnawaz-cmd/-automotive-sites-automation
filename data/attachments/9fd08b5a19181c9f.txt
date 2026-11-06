@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+ℹ️ [StreamingYmmEditTask] Dropdown "Select make" is disabled, skipping.
+📋 [StreamingYmmEditTask] Selected Specs: Year=N/A, Make=N/A, Model=Giulietta Berlina TI, Trim=Sedan
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10502647331
+{
+  "year": "N/A",
+  "make": "N/A",
+  "model": "Giulietta Berlina TI",
+  "trim": "Sedan",
+  "isUnmappedFlow": false
+}
+
