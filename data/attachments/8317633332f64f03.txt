@@ -1,0 +1,15 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+⚡ [StreamingYmmEditTask] Unmapped VIN prompt detected ("No Fix it"). Clicking button...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1965, Make=Plymouth, Model=Barracuda, Trim=6 Series AV1 P Sport Hardtop
+✅ [StreamingYmmEditTask] Submitted unmapped specs via "Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 707TF966333
+{
+  "year": "1965",
+  "make": "Plymouth",
+  "model": "Barracuda",
+  "trim": "6 Series AV1 P Sport Hardtop",
+  "isUnmappedFlow": true
+}
+

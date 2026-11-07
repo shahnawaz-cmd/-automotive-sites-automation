@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1962, Make=Porsche, Model=356, Trim=B 1600 Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 609K041508
+{
+  "year": "1962",
+  "make": "Porsche",
+  "model": "356",
+  "trim": "B 1600 Coupe",
+  "isUnmappedFlow": false
+}
+
