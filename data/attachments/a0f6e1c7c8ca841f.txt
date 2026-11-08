@@ -1,0 +1,59 @@
+✅ [Self-Healing Input] Located visible field "VIN" using strategy #1
+✅ [Self-Healing Click] Located button "Search" using strategy #1
+[ClassicManualSpecsDataGenerator] Generated unique manual specifications:
+ {
+  "year": "1972",
+  "make": "Plymouth PBW2",
+  "model": "F-250 PBW2",
+  "engine": "Inline-6 PBW2",
+  "transmission": "Auto",
+  "door": "5",
+  "drive": "4WD"
+}
+[CaptureUpdateClassicDecode] Waiting for 'update-classic-decode' API response (Timeout: 90s)...
+
+🌐 [API Response] URL: https://motorcyclevinlookup.com/api-cwa/update-classic-decode (Status: 200)
+📦 [JSON Data]:
+{
+  "status": "success",
+  "data": {
+    "vin": "3N67K5M290943",
+    "year": "1972",
+    "make": "Plymouth PBW2",
+    "model": "F-250 PBW2",
+    "details": {
+      "vin": "3N67K5M290943",
+      "year": "1972",
+      "make": "Plymouth PBW2",
+      "model": "F-250 PBW2",
+      "transmission": "Auto",
+      "fuel": "Gasoline",
+      "engine": "Inline-6 PBW2",
+      "drive": "4WD",
+      "doors": "5",
+      "source": "Classic",
+      "model_id": null,
+      "series": "F-250 PBW2"
+    },
+    "model_id": null,
+    "series": "F-250 PBW2",
+    "mapping": null,
+    "marketValue": {
+      "market_data": [
+        {
+          "market_value": null
+        }
+      ]
+    },
+    "isEditable": true
+  },
+  "marketValue": {
+    "market_data": [
+      {
+        "market_value": null
+      }
+    ]
+  }
+}
+✅ Manual update successful
+TC_15: page.close() executed.

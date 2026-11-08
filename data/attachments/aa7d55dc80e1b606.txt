@@ -1,0 +1,12 @@
+🚀 [ReferralTest] Navigating to URL with referral parameters: https://motorcyclevinlookup.com/?ref=TESTREF&utm_source=google&utm_campaign=x
+📋 [ReferralTest] Total cookies found: 6
+✅ [ReferralTest] Verified "ref" cookie saved: "ref=TESTREF"
+✅ [ReferralTest] Verified UTM/traffic_source cookie saved: "traffic_source=google--x"
+[VIN Decode] Generated VIN (US): 1C4RJHBG0PC533424
+[VIN Decode] Bypassing success banner click as requested by task parameters.
+Success condition met.
+[Preview Redirection] Locating and clicking Access Records CTA...
+[Preview Redirection] Filling email: rolex.rolls12+yoo@gmail.com
+[Preview Redirection] Clicking Proceed to Checkout CTA...
+✅ [Self-Healing Click] Located button "Proceed to Checkout" using strategy #9
+TC_11: page.close() executed.

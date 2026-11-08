@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1973, Make=Mitsubishi, Model=Lancer, Trim=1600 GSR Coupe
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: 1H57H5Z717429
+{
+  "year": "1973",
+  "make": "Mitsubishi",
+  "model": "Lancer",
+  "trim": "1600 GSR Coupe",
+  "isUnmappedFlow": false
+}
+

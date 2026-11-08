@@ -1,0 +1,14 @@
+🚀 [StreamingYmmEditTask] Executing YMM Specs Modification Task...
+📋 [StreamingYmmEditTask] Selected Specs: Year=1978, Make=Opel, Model=Diplomat, Trim=B
+✅ [StreamingYmmEditTask] Submitted mapped specs via "Confirm & Get Records".
+
+📋 [TC_13] Classic YMM Selected Dropdowns:
+VIN: AR10548877698
+{
+  "year": "1978",
+  "make": "Opel",
+  "model": "Diplomat",
+  "trim": "B",
+  "isUnmappedFlow": false
+}
+

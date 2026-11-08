@@ -1,0 +1,7 @@
+
+❌ [Clarity Task FAILURE] Wrapper 3 (Checkout Page) Verification Failed!
+Page URL: https://detailedvehiclehistory.com/vin-check/preview?vin=WA1VABGE5KB008238&type=vhr&wpPage=homepage
+Error: locator.click: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: /proceed to checkout/i }).or(locator('button:has-text("Proceed to Checkout"), button:has-text("Continue to Checkout")')).first()
+
