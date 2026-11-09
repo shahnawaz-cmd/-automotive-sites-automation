@@ -1,0 +1,38 @@
+{
+  "url": "https://vinnumber.ca/",
+  "cookieState": {
+    "userId": "1s693vn",
+    "rawClck": "1s693vn%5E2%5Egb0%5E0%5E2504",
+    "rawClsk": null,
+    "pageSequence": null,
+    "sessionToken": "159mnln"
+  },
+  "beaconsCount": 6,
+  "recentBeacons": [
+    {
+      "url": "https://scripts.clarity.ms/0.8.73-beta/clarity.js",
+      "method": "GET",
+      "timestamp": 1794194082219
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1794194082219
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=63450E136A7C41A38127BAC351413843&RedC=c.clarity.ms&MXFR=065F9A9D3DD967292941829139D969EC",
+      "method": "GET",
+      "timestamp": 1794194082260
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=63450E136A7C41A38127BAC351413843&MUID=1D75FCD3F2CB65E22705E4DFF3476423",
+      "method": "GET",
+      "timestamp": 1794194082320
+    },
+    {
+      "url": "https://n.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1794194082648
+    }
+  ]
+}

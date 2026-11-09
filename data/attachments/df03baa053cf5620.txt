@@ -1,0 +1,67 @@
+Step: Wrapper 3 Checkout
+URL: https://detailedvehiclehistory.com/vin-check/preview?vin=1FMCU0F68LUB98867&type=vhr&wpPage=homepage
+Error: locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: /proceed to checkout/i }).or(locator('button:has-text("Proceed to Checkout"), button:has-text("Continue to Checkout")')).first()[22m
+
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:361:28
+    at ClarityVerificationTask.verifyCheckoutWrapper (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:316:12)
+    at ClarityVerificationTask.execute (/home/runner/work/-automotive-sites-automation/-automotive-sites-automation/tasks/ClarityVerificationTask.ts:462:5)
+    at /home/runner/work/-automotive-sites-automation/-automotive-sites-automation/streaming Task/global_streaming_specs.spec.js:607:3
+Beacons: [
+  {
+    "url": "https://www.clarity.ms/tag/a242ziivdi",
+    "method": "GET",
+    "timestamp": 1794194101750
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.77/clarity.js",
+    "method": "GET",
+    "timestamp": 1794194101767
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif",
+    "method": "GET",
+    "timestamp": 1794194101767
+  },
+  {
+    "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=E58B96E874C346E98D5CCF10E93BEC03&RedC=c.clarity.ms&MXFR=00FBA6217F0665A006BEBE2D7B066B6D",
+    "method": "GET",
+    "timestamp": 1794194101789
+  },
+  {
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=E58B96E874C346E98D5CCF10E93BEC03&MUID=3ABD48C3ACE566AE22B850CFAD9F67CA",
+    "method": "GET",
+    "timestamp": 1794194101856
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1794194101929
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1794194102391
+  },
+  {
+    "url": "https://www.clarity.ms/tag/a242ziivdi",
+    "method": "GET",
+    "timestamp": 1794194102455
+  },
+  {
+    "url": "https://scripts.clarity.ms/0.8.77/clarity.js",
+    "method": "GET",
+    "timestamp": 1794194102505
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1794194102844
+  },
+  {
+    "url": "https://k.clarity.ms/collect",
+    "method": "POST",
+    "timestamp": 1794194104689
+  }
+]

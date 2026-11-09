@@ -1,0 +1,38 @@
+{
+  "url": "https://vehiclesreport.com/",
+  "cookieState": {
+    "userId": "jd9mi5",
+    "rawClck": "jd9mi5%5E2%5Egb0%5E0%5E2504",
+    "rawClsk": "7xma2y%5E1794194081851%5E1%5E1%5Ef.clarity.ms%2Fcollect",
+    "pageSequence": 1,
+    "sessionToken": "xvbp0k"
+  },
+  "beaconsCount": 7,
+  "recentBeacons": [
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "method": "GET",
+      "timestamp": 1794194081334
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=BA34CBB5DC6A4B0AAC20864ED67C4C20&RedC=c.clarity.ms&MXFR=2DD57D7083D96D550D7F657C87D96358",
+      "method": "GET",
+      "timestamp": 1794194081419
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=BA34CBB5DC6A4B0AAC20864ED67C4C20&MUID=1E19DB9CD35C69333B30C390D263681F",
+      "method": "GET",
+      "timestamp": 1794194081460
+    },
+    {
+      "url": "https://f.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1794194081505
+    },
+    {
+      "url": "https://f.clarity.ms/collect",
+      "method": "POST",
+      "timestamp": 1794194083089
+    }
+  ]
+}

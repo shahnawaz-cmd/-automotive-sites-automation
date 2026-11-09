@@ -1,0 +1,41 @@
+
+===============================================================
+🚀 [Stealth Test] Starting Verification on Instant VIN Reports (IVR)
+   Base URL: https://instantvinreports.com
+   Expected Website ID: dfid_0YC7hCJWv3PiWtBxCoD4T
+   Test Email: shahnawaz+93@empirepixel.com
+===============================================================
+
+🌐 [Step 1: Homepage] Navigating to https://instantvinreports.com/
+🎯 [DataFast Telemetry] Captured POST event: type=pageview, visitorId=ffdc1d20-4730-44d5-9254-b04dfb66b2f1, websiteId=dfid_0YC7hCJWv3PiWtBxCoD4T
+✅ [DataFast DOM] Verified on Instant VIN Reports (IVR) Homepage:
+   src: https://datafa.st/js/script.js
+   data-website-id: dfid_0YC7hCJWv3PiWtBxCoD4T
+   data-domain: instantvinreports.com
+✅ [DataFast Cookies] Verified on Instant VIN Reports (IVR) Homepage:
+   datafast_visitor_id: ffdc1d20-4730-44d5-9254-b04dfb66b2f1
+   datafast_session_id: s7b201c07-f149-4a62-84b7-186fd784ccaa
+
+🔍 [Step 2: Preview Page] Navigating to https://instantvinreports.com/vin-check?vin=1HGCR2F83HA001234
+🎯 [DataFast Telemetry] Captured POST event: type=pageview, visitorId=ffdc1d20-4730-44d5-9254-b04dfb66b2f1, websiteId=dfid_0YC7hCJWv3PiWtBxCoD4T
+✅ [DataFast DOM] Verified on Instant VIN Reports (IVR) Preview Page:
+   src: https://datafa.st/js/script.js
+   data-website-id: dfid_0YC7hCJWv3PiWtBxCoD4T
+   data-domain: instantvinreports.com
+✅ [DataFast Cookies] Verified on Instant VIN Reports (IVR) Preview Page:
+   datafast_visitor_id: ffdc1d20-4730-44d5-9254-b04dfb66b2f1
+   datafast_session_id: s7b201c07-f149-4a62-84b7-186fd784ccaa
+
+🛒 [Step 3: Checkout Page] Navigating to https://instantvinreports.com/checkout?vin=1HGCR2F83HA001234&email=shahnawaz%2B93%40empirepixel.com
+🎯 [DataFast Telemetry] Captured POST event: type=pageview, visitorId=ffdc1d20-4730-44d5-9254-b04dfb66b2f1, websiteId=dfid_0YC7hCJWv3PiWtBxCoD4T
+✅ [DataFast DOM] Verified on Instant VIN Reports (IVR) Checkout Page:
+   src: https://datafa.st/js/script.js
+   data-website-id: dfid_0YC7hCJWv3PiWtBxCoD4T
+   data-domain: instantvinreports.com
+✅ [DataFast Cookies] Verified on Instant VIN Reports (IVR) Checkout Page:
+   datafast_visitor_id: ffdc1d20-4730-44d5-9254-b04dfb66b2f1
+   datafast_session_id: s7b201c07-f149-4a62-84b7-186fd784ccaa
+
+📡 Total DataFast Telemetry POST Events Captured: 3
+
+🎉 [Instant VIN Reports (IVR)] COMPLETE: DataFast Telemetry & Stripe Visitor ID (ffdc1d20-4730-44d5-9254-b04dfb66b2f1) Verified!
