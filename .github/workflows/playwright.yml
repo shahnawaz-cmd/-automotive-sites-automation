@@ -34,9 +34,6 @@ on:
           - MobileChrome
   pull_request:
     branches: [ main, master ]
-  schedule:
-    - cron: '0 0 * * *'   # Daily: core browsers only
-    # - cron: '0 0 * * 6'     # Weekly Saturday: core + extended browsers (Mobile Edge & Safari)
 
 concurrency:
   group: playwright-${{ github.ref }}
