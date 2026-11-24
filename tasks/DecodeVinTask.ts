@@ -76,8 +76,9 @@ export class DecodeVinTask {
     const vinField4 = page.getByPlaceholder(this.selectors.vinField1);
     const vinField5 = page.getByPlaceholder(this.selectors.vinField2);
     const vinField6 = page.getByPlaceholder(this.selectors.vinField3);
+    const vinFieldGeneric = page.locator('input[name="vin"], input[name="vin_number"], input[placeholder*="VIN" i]').first();
 
-    const vinInput = vinField1.or(vinField2).or(vinField3).or(vinField4).or(vinField5).or(vinField6).first();
+    const vinInput = vinField1.or(vinField2).or(vinField3).or(vinField4).or(vinField5).or(vinField6).or(vinFieldGeneric).first();
     
     await vinInput.waitFor({ state: 'visible', timeout: this.timeout });
     await vinInput.fill(vin);

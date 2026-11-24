@@ -43,16 +43,19 @@ class PlateErrorTask {
     const isIncluded =
       url.includes('instantvinreports.com') ||
       url.includes('vehiclesreport.com') ||
+      url.includes('premiumvin.com') ||
       projectName.startsWith('ivr') ||
       projectName.startsWith('vsr') ||
+      projectName.startsWith('premiumvin') ||
       projectName.includes('instantvinreports') ||
       contextBaseURL.includes('instantvinreports.com') ||
-      contextBaseURL.includes('vehiclesreport.com');
+      contextBaseURL.includes('vehiclesreport.com') ||
+      contextBaseURL.includes('premiumvin.com');
 
     if (isExcluded || !isIncluded) {
-      console.log('⚠️ [PlateErrorTask] License Plate Error test is only supported on IVR and VSR. Skipping on VNCA, MVL, VHREU.');
+      console.log('⚠️ [PlateErrorTask] License Plate Error test is only supported on IVR, VSR and PremiumVIN. Skipping on VNCA, MVL, VHREU.');
       if (testInfo && typeof testInfo.skip === 'function') {
-        testInfo.skip(true, 'TC_27 License Plate Error test only runs on IVR and VSR (skipped on VNCA, MVL, VHREU)');
+        testInfo.skip(true, 'TC_27 License Plate Error test only runs on IVR, VSR and PremiumVIN (skipped on VNCA, MVL, VHREU)');
       }
       return false;
     }

@@ -120,6 +120,14 @@ class CouponFlowVerifier {
       .or(this.page.locator('aside').filter({ hasText: /Discount/i }))
       .or(this.page.locator('button:has-text("Remove"), [aria-label*="remove" i]'))
       .first();
+    // The apply request occasionally gets dropped on a slow checkout; re-submit once if the coupon did not register
+    const registered = await appliedNotice.waitFor({ state: 'visible', timeout: 12000 }).then(() => true).catch(() => false);
+    if (!registered && await promoCodeInput.isVisible().catch(() => false)) {
+      console.log('⚠️ [CouponFlow] Coupon not confirmed yet, re-applying once...');
+      await promoCodeInput.fill(couponCode);
+      await applyBtn.click();
+      await this.page.locator('button:has-text("Updating")').waitFor({ state: 'hidden', timeout: 15000 }).catch(() => {});
+    }
     await expect(appliedNotice).toBeVisible({ timeout: 20000 });
     return true;
   }

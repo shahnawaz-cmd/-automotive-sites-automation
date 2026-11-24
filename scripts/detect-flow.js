@@ -3,6 +3,7 @@ const { chromium } = require('@playwright/test');
 require('dotenv').config();
 
 const ALL_DOMAINS = [
+  { name: 'PremiumVIN', url: 'https://premiumvin.com/' },
   { name: 'VSR', url: 'https://vehiclesreport.com/' },
   { name: 'MotorcycleVINLookup', url: 'https://motorcyclevinlookup.com/' },
   { name: 'VehicleHistoryEU', url: 'https://vehiclehistory.eu/' },

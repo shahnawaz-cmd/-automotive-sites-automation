@@ -201,10 +201,18 @@ class PreviewPage {
   }
 
   async closeAccessRecordPopup() {
-    const closeButton = this.page.getByRole('button', { name: /^Close$/ }).first();
-    await closeButton.waitFor({ state: 'visible', timeout: TIMEOUT });
-    await closeButton.click();
-    await closeButton.waitFor({ state: 'hidden', timeout: TIMEOUT });
+    const closeButton = this.page.getByRole('button', { name: /^Close$/i })
+      .or(this.page.locator('button[aria-label="Close" i]'))
+      .or(this.page.locator('button:has-text("✕")'))
+      .first();
+
+    const isCloseVisible = await closeButton.isVisible({ timeout: 5000 }).catch(() => false);
+    if (isCloseVisible) {
+      await closeButton.click();
+      await closeButton.waitFor({ state: 'hidden', timeout: 5000 }).catch(() => {});
+    } else {
+      console.log('ℹ️ [closeAccessRecordPopup] No modal Close button visible (inline preview form or no popup opened). Skipping close step.');
+    }
   }
 
   async triggerExitIntent() {
@@ -448,22 +456,89 @@ class PreviewPage {
   }
 
   async runCheckoutFlow() {
+    const startTime = Date.now();
+    console.log('\n--- [CHECKOUT NAVIGATION FLOW] Initiating Preview -> Checkout ---');
+
+    const generatedEmail = PreviewPage.generateUniqueEmail();
+    const generatedPhone = PreviewPage.generateUsPhoneNumber();
+
+    // Check if inline email form inside plan card / accordion is present
+    const inlineAccordion = this.page.getByRole('button', { name: /Where should we send your (Report|Sticker)\??/i })
+      .or(this.page.locator('button:has-text("Where should we send")')).first();
+    const isAccordionVisible = await inlineAccordion.isVisible({ timeout: 2000 }).catch(() => false);
+
+    let emailInput = this.page.locator('input[type="email"]').first();
+    let phoneInput = this.page.locator('input[type="tel"]').first();
+
+    if (isAccordionVisible) {
+      console.log('📬 [Inline Plan Flow] Detected inline email container / accordion. Expanding if collapsed...');
+      const isEmailVisible = await emailInput.isVisible().catch(() => false);
+      if (!isEmailVisible) {
+        await inlineAccordion.click({ force: true }).catch(() => {});
+        await this.page.waitForTimeout(500);
+      }
+    }
+
+    // If email input is visible inline (in plan card or page)
+    if (await emailInput.isVisible({ timeout: 2000 }).catch(() => false)) {
+      console.log(`📝 [Inline Form] Entering credentials directly in plan card:`);
+      console.log(`   ├─ Email: ${generatedEmail}`);
+      console.log(`   └─ Phone: ${generatedPhone}`);
+
+      await emailInput.fill(generatedEmail);
+      if (await phoneInput.isVisible().catch(() => false)) {
+        await phoneInput.fill(generatedPhone);
+      }
+
+      console.log('🚀 [Step 2/2] Clicking "Access Records" and awaiting Checkout navigation...');
+      const submitBtn = this.page.getByRole('button', { name: /^Access Records?$|^Access Record$/i })
+        .or(this.page.locator('button:has-text("Access Records"), button:has-text("Access Record")'))
+        .filter({ hasNotText: /Where should we send/i })
+        .first();
+
+      await submitBtn.waitFor({ state: 'visible', timeout: 10000 });
+      await submitBtn.scrollIntoViewIfNeeded().catch(() => {});
+
+      await Promise.all([
+        this.page.waitForURL(/.*\/checkout(?:-\d+)?(\?.*)?$/, { waitUntil: 'domcontentloaded', timeout: TIMEOUT }),
+        submitBtn.click({ timeout: 15000 }).catch(async () => {
+          await submitBtn.click({ force: true }).catch(() => {});
+        }),
+      ]);
+
+      const duration = Date.now() - startTime;
+      console.log(`✅ [Navigation Success] Transitioned to Checkout in ${duration}ms!`);
+      console.log(`   └─ Landed on: ${this.page.url()}\n`);
+      return;
+    }
+
+    // --- Legacy / Modal Checkout Flow Fallback ---
     // 1. Click Access Record
+    console.log('🔘 [Legacy Modal Step 1/3] Clicking "Access Record" button...');
     await this.clickAccessRecordButton();
 
     // 2. Wait for email popup and fill details
-    const emailInput = this.page.locator('input[type="email"]').first();
-    const phoneInput = this.page.locator('input[type="tel"]').first();
-    
+    emailInput = this.page.locator('input[type="email"]').first();
+    phoneInput = this.page.locator('input[type="tel"]').first();
+
     await emailInput.waitFor({ state: 'visible', timeout: TIMEOUT });
-    
-    await emailInput.fill(PreviewPage.generateUniqueEmail());
-    await phoneInput.fill(PreviewPage.generateUsPhoneNumber());
-    
+
+    console.log(`📝 [Legacy Modal Step 2/3] Email modal visible. Entering credentials:`);
+    console.log(`   ├─ Email: ${generatedEmail}`);
+    console.log(`   └─ Phone: ${generatedPhone}`);
+
+    await emailInput.fill(generatedEmail);
+    if (await phoneInput.isVisible().catch(() => false)) {
+      await phoneInput.fill(generatedPhone);
+    }
+
     // 3. Click Proceed to checkout and wait for the navigation together (domcontentloaded)
+    const proceedBtn = this.page.getByRole('button', { name: /proceed to checkout/i })
+      .or(this.page.locator('button:has-text("Proceed to Checkout"), button:has-text("Access Records")')).first();
+
     await Promise.all([
-      this.page.waitForURL(/.*\/checkout(?:-\d+)?.*/, { waitUntil: 'domcontentloaded', timeout: TIMEOUT }),
-      this.page.getByRole('button', { name: /proceed to checkout/i }).click(),
+      this.page.waitForURL(/.*\/checkout(?:-\d+)?(\?.*)?$/, { waitUntil: 'domcontentloaded', timeout: TIMEOUT }),
+      proceedBtn.click({ force: true }),
     ]);
   }
 
@@ -561,10 +636,23 @@ class PreviewToCheckoutPriceValidator {
   async validateOrderSummary(selectedData) {
     // Navigate to checkout if not already there
     if (!this.page.url().includes('/checkout')) {
-      const checkoutButton = this.page.getByRole('button', { name: /proceed to checkout/i });
+      // Check if inline email accordion needs expanding
+      const emailAccordion = this.page.locator('button:has-text("Where should we send your Report?")').first();
+      if (await emailAccordion.isVisible({ timeout: 2000 }).catch(() => false)) {
+        await emailAccordion.click();
+        await this.page.waitForTimeout(500);
+      }
+      const emailInput = this.page.locator('input[type="email"], input[placeholder*="email" i]').first();
+      if (await emailInput.isVisible({ timeout: 2000 }).catch(() => false)) {
+        await emailInput.fill(PreviewPage.generateUniqueEmail());
+      }
+
+      const checkoutButton = this.page.getByRole('button', { name: /proceed to checkout/i })
+        .or(this.page.locator('button:has-text("Access Records"), button:has-text("Access Record"), button:has-text("Proceed")'))
+        .first();
       await checkoutButton.waitFor({ state: 'visible', timeout: TIMEOUT });
       await checkoutButton.click({ force: true });
-      await this.page.waitForURL(/.*\/checkout.*/);
+      await this.page.waitForURL(/.*\/checkout(?:-\d+)?(\?.*)?$/, { timeout: TIMEOUT });
     }
 
     // Locate Order Summary container

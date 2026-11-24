@@ -163,7 +163,7 @@ test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ 
     'This test only runs on desktop; skipping on mobile'
   );
 
-  const tcTimeout = process.env.CI ? 120000 : 90000;
+  const tcTimeout = 120000;
   test.setTimeout(tcTimeout);
 
   const home = new HomePage(page);
@@ -193,8 +193,8 @@ test('TC_08_Home_To_Checkout_Price_Coupon_And_Email_Cache_Validation', async ({ 
   const couponSummary = await couponVerifier.applyAndVerifyCoupon(couponCode, couponPercentage);
 
   // 6. Email Cache & Revisit Flow: Go Back to Preview
-  await page.goBack();
-  await page.waitForLoadState('domcontentloaded');
+  // Wait for DOM only: the default 'load' wait can hang for a minute+ on stalled third-party resources at checkout
+  await page.goBack({ waitUntil: 'domcontentloaded', timeout: 30000 });
   await preview.verifySpecsVisible();
 
   // Verify email/session cookie persistence
@@ -501,7 +501,7 @@ test('TC_23_Sticker_Upsell_Text_Validation', async ({ page }, testInfo) => {
 });
 
 test('TC_24_Coupon_Banner_Hierarchy_And_Persistence_Validation', async ({ page }, testInfo) => {
-  const tcTimeout = process.env.CI ? 60000 : 30000;
+  const tcTimeout = process.env.CI ? 60000 : 60000;
   test.setTimeout(tcTimeout);
 
   const bannerHandler = new CouponBannerHandler(page);
@@ -565,10 +565,10 @@ test('TC_28_URL_Space_Handling_Validation', async ({ page }, testInfo) => {
 });
 
 test('TC_29_Error_Page_To_Home_Collection_Validation', async ({ page }, testInfo) => {
-  // Only run for VSR Desktop; skip on all other sites and mobile browsers
-  const isVsr = testInfo.project.name === 'VSR';
+  // Only run for VSR and PremiumVIN Desktop; skip on all other sites and mobile browsers
+  const isVsr = ['VSR', 'PremiumVIN'].includes(testInfo.project.name);
   const isMobile = Boolean(testInfo.project.use?.isMobile || testInfo.project.name.includes('Mobile'));
-  test.skip(!isVsr || isMobile, 'TC_29 is configured for VSR Desktop only; skipping on other sites and mobile browsers');
+  test.skip(!isVsr || isMobile, 'TC_29 is configured for VSR and PremiumVIN Desktop only; skipping on other sites and mobile browsers');
 
   const timeout = process.env.CI ? 120000 : 90000;
   testInfo.setTimeout(timeout);

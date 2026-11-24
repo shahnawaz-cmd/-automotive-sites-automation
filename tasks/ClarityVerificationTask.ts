@@ -321,17 +321,30 @@ export class ClarityVerificationTask {
       try {
         console.log('[Clarity Task] Initiating Checkout navigation from Preview...');
 
-        // 1. Click Access Records CTA button
         const accessBtn = page.getByRole('button', { name: /access records|get window sticker|view full report|reveal records|get records|instant access/i })
           .or(page.locator('button:has-text("Access Records"), button:has-text("Get Window Sticker")'))
           .first();
-
-        await accessBtn.waitFor({ state: 'visible', timeout: 15000 });
-        console.log('[Clarity Task] Clicking Access Records CTA button...');
-        await accessBtn.click();
-
-        // 2. Wait for email popup to appear (do NOT use isVisible() as it returns false immediately without waiting)
         const emailField = page.locator('input[type="email"], input[placeholder*="email" i], input[name*="email" i]').first();
+
+        // 1a. New plan-card flow: the email form is inline (inside a "Where should we send your Report?" accordion)
+        const inlineAccordion = page.getByRole('button', { name: /Where should we send your (Report|Sticker)\??/i })
+          .or(page.locator('button:has-text("Where should we send")'))
+          .first();
+        let isInlineFlow = await emailField.isVisible({ timeout: 2000 }).catch(() => false);
+        if (!isInlineFlow && await inlineAccordion.isVisible({ timeout: 2000 }).catch(() => false)) {
+          console.log('[Clarity Task] Inline plan-card email form detected. Expanding...');
+          await inlineAccordion.click({ force: true }).catch(() => {});
+          isInlineFlow = await emailField.isVisible({ timeout: 3000 }).catch(() => false);
+        }
+
+        // 1b. Legacy modal flow: click Access Records CTA button to open the email popup
+        if (!isInlineFlow) {
+          await accessBtn.waitFor({ state: 'visible', timeout: 15000 });
+          console.log('[Clarity Task] Clicking Access Records CTA button...');
+          await accessBtn.click();
+        }
+
+        // 2. Wait for the email field (do NOT use isVisible() as it returns false immediately without waiting)
         const hasEmailModal = await emailField.waitFor({ state: 'visible', timeout: 12000 }).then(() => true).catch(async () => {
           // If modal hasn't opened and not already on checkout, re-click CTA (handles Next.js hydration race in CI)
           if (!page.url().includes('checkout')) {
@@ -353,12 +366,22 @@ export class ClarityVerificationTask {
             await phoneField.fill('(555) 234-5678');
           }
 
+          // Legacy modal submits via "Proceed to Checkout"; the inline plan-card form submits via "Access Records"
           const proceedBtn = page.getByRole('button', { name: /proceed to checkout/i })
             .or(page.locator('button:has-text("Proceed to Checkout"), button:has-text("Continue to Checkout")'))
             .first();
+          const inlineSubmitBtn = page.getByRole('button', { name: /^Access Records?$/i })
+            .or(page.locator('button:has-text("Access Records"), button:has-text("Access Record")'))
+            .filter({ hasNotText: /Where should we send/i })
+            .first();
 
-          console.log('[Clarity Task] Clicking Proceed to Checkout...');
-          await proceedBtn.click();
+          const submitBtn = await proceedBtn.isVisible({ timeout: 2000 }).catch(() => false) ? proceedBtn : inlineSubmitBtn;
+          await submitBtn.waitFor({ state: 'visible', timeout: 10000 });
+          console.log('[Clarity Task] Submitting email to proceed to Checkout...');
+          await submitBtn.scrollIntoViewIfNeeded().catch(() => {});
+          await submitBtn.click({ timeout: 15000 }).catch(async () => {
+            await submitBtn.click({ force: true });
+          });
         }
 
         // 3. Smart wait: URL transition to Checkout page

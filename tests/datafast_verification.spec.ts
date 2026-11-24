@@ -53,11 +53,35 @@ test.describe('DataFast Stealth Telemetry & Cookie Verification Suite', () => {
       expectedDomain: 'instantvinreports.com',
       previewPath: (vin) => `/vin-check?vin=${vin}`,
       checkoutPath: (vin, email) => `/checkout?vin=${vin}&email=${encodeURIComponent(email)}`
+    },
+    {
+      name: 'PremiumVIN',
+      projectName: 'PremiumVIN',
+      baseUrl: 'https://premiumvin.com',
+      expectedWebsiteId: 'dfid_Km878EtGOiJTkUy9GMmBt',
+      expectedDomain: 'premiumvin.com',
+      previewPath: (vin) => `/vin-check/preview?vin=${vin}&type=vhr&wpPage=homepage`,
+      checkoutPath: (vin, email) => {
+        const payload = {
+          code: 'DTS2',
+          type: 'report',
+          vin: vin,
+          email: email,
+          phone: '+15552345678',
+          nos: 2,
+          itemLabel: 'Report',
+          price: 34.99,
+          currencySign: '$',
+          currency: 'USD',
+          wpPage: 'homepage'
+        };
+        return `/checkout?data=${Buffer.from(JSON.stringify(payload)).toString('base64')}`;
+      }
     }
   ];
 
   for (const site of TARGET_SITES) {
-    const testId = site.projectName === 'DetailedVehicleHistory' ? 'DVH' : 'IVR';
+    const testId = site.projectName === 'DetailedVehicleHistory' ? 'DVH' : site.projectName === 'PremiumVIN' ? 'PV' : 'IVR';
 
     test(`TC_DATAFAST_STEALTH_${testId} — Verify DataFast Telemetry, Cookies, and Funnel Continuity on ${site.name}`, async ({ browser }, testInfo) => {
       // Run only on the matching project (skip other projects and mobile viewports)

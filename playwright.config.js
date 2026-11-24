@@ -7,7 +7,7 @@ module.exports = defineConfig({
     timeout: 10000,
   },
   retries: process.env.CI ? 2 : 1,
-  workers: 1,
+  workers: 4,
   fullyParallel: true,
   use: {
     actionTimeout: 15000,
@@ -32,6 +32,19 @@ module.exports = defineConfig({
   ],
   projects: [
     // --- Desktop Chromium ---
+    {
+      name: 'PremiumVIN',
+      use: {
+        baseURL: 'https://premiumvin.com/',
+        headless: !!process.env.CI,
+        browserName: 'chromium',
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true,
+        launchOptions: {
+          args: ['--incognito'],
+        },
+      },
+    },
     {
       name: 'VSR',
       use: {
